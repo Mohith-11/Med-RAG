@@ -4,11 +4,11 @@ from sentence_transformers import SentenceTransformer
 
 load_dotenv()
 
-# ✅ Load E5 model
-model = SentenceTransformer("intfloat/e5-base")
+# Switched to e5-small-v2: naturally outputs 384-dim to match Pinecone index
+model = SentenceTransformer("intfloat/e5-small-v2")
 
-# 🔥 MRL dimension (change here if needed)
-EMBED_DIM = 384   # try 768 / 512 / 384 / 256
+# e5-small output dimension
+EMBED_DIM = 384
 
 
 # ✅ Embed passages (documents)

@@ -7,7 +7,7 @@ load_dotenv()
 pc = Pinecone(api_key=os.getenv("PINECONE_API_KEY"))
 
 index_name = "rag-project"
-INDEX_DIM   = 384
+INDEX_DIM   = 1024   # e5-large-v2 output dimension
 INDEX_METRIC = "cosine"
 
 

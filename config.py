@@ -16,9 +16,10 @@ TOP_K_RETRIEVE = 10
 TOP_K_RERANK = 5
 MIN_CHUNK_WORDS = 40
 
-# Embedding
-EMBEDDING_MODEL = "sentence-transformers/all-MiniLM-L6-v2"
-EMBEDDING_BATCH_SIZE = 64
+# Embedding  (e5-large-v2: 1024-dim, strong medical retrieval)
+EMBEDDING_MODEL      = "intfloat/e5-large-v2"
+EMBEDDING_DIM        = 1024
+EMBEDDING_BATCH_SIZE = 32   # smaller batch — larger model
 
 # Data
 PDF_FOLDER = "data/pdfs"

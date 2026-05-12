@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedSpace AI QA System</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+    <!-- Backgrounds -->
+    <canvas id="starfield"></canvas>
+    <div id="aurora-bg">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
+
+    <!-- Floating Paper Plane -->
+    <div id="cursor-plane">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="22" y1="2" x2="11" y2="13"></line>
+            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+        </svg>
+    </div>
+
+    <!-- App Container -->
+    <div class="app-container glass-panel">
+        <!-- Sidebar -->
+        <aside class="sidebar border-right">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <i class="fa-solid fa-staff-snake"></i>
+                    <h2>MedSpace AI</h2>
+                </div>
+                <button id="new-chat-btn" class="btn primary-btn"><i class="fa-solid fa-plus"></i> New Chat</button>
+            </div>
+            
+            <div class="sidebar-tabs">
+                <button class="tab-btn active" data-target="chat-view"><i class="fa-solid fa-message"></i> Chat</button>
+                <button class="tab-btn" data-target="eval-view"><i class="fa-solid fa-chart-line"></i> Evaluation</button>
+            </div>
+
+            <div class="chat-history-container">
+                <h3>Recent Chats</h3>
+                <ul id="chat-history-list">
+                    <!-- Chat items injected here -->
+                </ul>
+            </div>
+
+            <div class="sidebar-footer">
+                <button id="clear-history-btn" class="btn text-btn"><i class="fa-solid fa-trash-can"></i> Clear</button>
+                <div class="theme-toggle">
+                    <i class="fa-solid fa-sun light-icon"></i>
+                    <label class="switch">
+                        <input type="checkbox" id="theme-switch" checked>
+                        <span class="slider round"></span>
+                    </label>
+                    <i class="fa-solid fa-moon dark-icon"></i>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Chat View -->
+            <section id="chat-view" class="view-section active">
+                <div class="chat-header border-bottom">
+                    <h3 id="current-chat-title">New Conversation</h3>
+                    <div class="header-actions">
+                        <button class="icon-btn" title="Export Chat"><i class="fa-solid fa-download"></i></button>
+                    </div>
+                </div>
+                
+                <div id="chat-messages" class="chat-messages">
+                    <div class="message assistant welcome-msg">
+                        <div class="avatar"><i class="fa-solid fa-robot"></i></div>
+                        <div class="msg-content">
+                            <p>Greetings. I am MedSpace AI, your advanced medical knowledge assistant.</p>
+                            <p>How can I assist you with clinical information today?</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chat-input-container border-top">
+                    <div class="input-wrapper glass-panel">
+                        <textarea id="chat-input" placeholder="Ask a medical question... (Shift+Enter for new line)" rows="1"></textarea>
+                        <div class="input-actions">
+                            <button id="clear-input-btn" class="icon-btn hidden" title="Clear input"><i class="fa-solid fa-times"></i></button>
+                            <button id="send-btn" class="icon-btn primary-icon-btn" title="Send message"><i class="fa-solid fa-paper-plane"></i></button>
+                        </div>
+                    </div>
+                    <div class="input-footer">
+                        <span>Medical AI can make mistakes. Verify important information with qualified professionals.</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Evaluation View -->
+            <section id="eval-view" class="view-section">
+                <div class="eval-header border-bottom">
+                    <h3>RAG Evaluation Dashboard</h3>
+                    <button id="refresh-eval-btn" class="btn secondary-btn"><i class="fa-solid fa-rotate-right"></i> Refresh</button>
+                </div>
+                
+                <div class="eval-content">
+                    <div class="metrics-grid">
+                        <div class="metric-card glass-panel">
+                            <h4>Avg Confidence</h4>
+                            <div class="metric-value" id="metric-confidence">--</div>
+                        </div>
+                        <div class="metric-card glass-panel">
+                            <h4>Retrieval MRR</h4>
+                            <div class="metric-value" id="metric-mrr">--</div>
+                        </div>
+                        <div class="metric-card glass-panel">
+                            <h4>Answer F1</h4>
+                            <div class="metric-value" id="metric-f1">--</div>
+                        </div>
+                        <div class="metric-card glass-panel">
+                            <h4>Faithfulness</h4>
+                            <div class="metric-value" id="metric-faithfulness">--</div>
+                        </div>
+                    </div>
+
+                    <div class="charts-container">
+                        <div class="chart-card glass-panel">
+                            <h4>Retrieval Quality</h4>
+                            <canvas id="retrievalChart"></canvas>
+                        </div>
+                        <div class="chart-card glass-panel">
+                            <h4>Generation Lexical</h4>
+                            <canvas id="generationChart"></canvas>
+                        </div>
+                        <div class="chart-card glass-panel">
+                            <h4>LLM Judge Scores</h4>
+                            <canvas id="judgeChart"></canvas>
+                        </div>
+                    </div>
+
+                    <div class="table-container glass-panel">
+                        <div class="table-header">
+                            <h4>Detailed Query Results</h4>
+                            <div class="table-actions">
+                                <input type="text" id="eval-search" class="glass-input" placeholder="Search questions...">
+                                <button id="export-eval-btn" class="btn text-btn"><i class="fa-solid fa-file-export"></i> Export CSV</button>
+                            </div>
+                        </div>
+                        <div class="table-wrapper">
+                            <table id="eval-table">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Question</th>
+                                        <th>Category</th>
+                                        <th>Faithfulness</th>
+                                        <th>Answer F1</th>
+                                        <th>Judge Score</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="eval-table-body">
+                                    <!-- Rows injected via JS -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Details Modal -->
+    <div id="details-modal" class="modal-backdrop hidden">
+        <div class="modal-content glass-panel">
+            <div class="modal-header">
+                <h3 id="modal-title">Query Details</h3>
+                <button id="close-modal-btn" class="icon-btn"><i class="fa-solid fa-times"></i></button>
+            </div>
+            <div class="modal-body" id="modal-body">
+                <!-- Content injected via JS -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

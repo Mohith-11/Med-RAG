@@ -1,37 +1,49 @@
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 
+
 def hierarchical_chunk(pages):
-    # ✅ Bigger parent chunks (retain meaning)
+    """
+    Parent-child hierarchical chunking.
+
+    Parent  : 900 chars, 150 overlap  → preserves full medical context
+    Child   : 250 chars, 50  overlap  → fine-grained retrieval precision
+
+    Each child carries its parent text so the generator can use
+    the richer context even when the child was the retrieval hit.
+    """
+
     parent_splitter = RecursiveCharacterTextSplitter(
-        chunk_size=1000,
-        chunk_overlap=200
+        chunk_size=900,
+        chunk_overlap=150,
+        separators=["\n\n", "\n", ". ", " ", ""],
     )
 
-    # ✅ Bigger child chunks (better retrieval context)
     child_splitter = RecursiveCharacterTextSplitter(
-        chunk_size=400,
-        chunk_overlap=100
+        chunk_size=250,
+        chunk_overlap=50,
+        separators=["\n\n", "\n", ". ", " ", ""],
     )
 
     chunks = []
 
     for page_id, page in enumerate(pages):
-        text = page["text"] if isinstance(page, dict) else page
+        text     = page["text"]   if isinstance(page, dict) else page
         page_num = page.get("page", page_id) if isinstance(page, dict) else page_id
-        source = page.get("source", "unknown") if isinstance(page, dict) else "unknown"
+        source   = page.get("source", "unknown") if isinstance(page, dict) else "unknown"
 
         parents = parent_splitter.split_text(text)
 
-        for parent_id, p in enumerate(parents):
-            children = child_splitter.split_text(p)
+        for parent_idx, parent_text in enumerate(parents):
+            children = child_splitter.split_text(parent_text)
 
-            for child_id, c in enumerate(children):
+            for child_idx, child_text in enumerate(children):
                 chunks.append({
-                    "text": c,
-                    "parent": p,   # 🔥 keep full context
-                    "page": page_num,
-                    "source": source,
-                    "parent_id": f"{page_id}_{parent_id}"
+                    "text":      child_text,          # stored & embedded
+                    "parent":    parent_text,          # returned to generator
+                    "page":      page_num,
+                    "source":    source,
+                    "parent_id": f"{page_id}_{parent_idx}",
+                    "chunk_id":  f"{page_id}_{parent_idx}_{child_idx}",
                 })
 
     return chunks
