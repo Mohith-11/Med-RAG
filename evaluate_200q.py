@@ -11,7 +11,7 @@ Metrics:
   LLM Rubric : Weighted S.C.O.P.E, LLM-as-a-Judge
 """
 
-import os, re, json, math, sys, io
+import os, re, json, math, sys, io, string, time
 import numpy as np
 import pandas as pd
 from collections import Counter
@@ -1473,7 +1473,9 @@ def token_f1(pred, gt):
     return p, r, 2*p*r/(p+r)
 
 def exact_match(pred, gt):
-    return int(pred.strip().lower() == gt.strip().lower())
+    pred_clean = pred.translate(str.maketrans('', '', string.punctuation)).strip().lower()
+    gt_clean = gt.translate(str.maketrans('', '', string.punctuation)).strip().lower()
+    return int(pred_clean == gt_clean)
 
 def distinct_n(texts, n):
     ng = []
@@ -1522,6 +1524,28 @@ def answer_relevance(question, answer):
     a_emb = sbert.encode(answer,   convert_to_tensor=True)
     return util.cos_sim(a_emb, q_emb).item()
 
+_llm_first_error_printed = False  # print the real error once for diagnosis
+
+def _llm_call_with_retry(messages, max_tokens, retries=3):
+    """Call the LLM with exponential backoff on failure."""
+    global _llm_first_error_printed
+    for attempt in range(retries):
+        try:
+            resp = client.chat.completions.create(
+                model=judge_model,
+                messages=messages,
+                max_tokens=max_tokens, temperature=0.0
+            )
+            return resp
+        except Exception as e:
+            if not _llm_first_error_printed:
+                print(f"  [LLM-WARN] API call failed (attempt {attempt+1}/{retries}): {e}")
+                _llm_first_error_printed = True
+            if attempt < retries - 1:
+                wait = 2 ** (attempt + 1)  # 2s, 4s between retries
+                time.sleep(wait)
+    return None
+
 def faithfulness_score(question, answer, context):
     prompt = (
         "You are a medical fact-checker.\n\n"
@@ -1530,16 +1554,12 @@ def faithfulness_score(question, answer, context):
         'Respond ONLY with JSON: {"faithfulness": <0.0-1.0>, "reason": "<one sentence>"}\n'
         "1.0 = fully grounded, 0.0 = fully hallucinated."
     )
-    try:
-        resp = client.chat.completions.create(
-            model=judge_model,
-            messages=[{"role":"user","content":prompt}],
-            max_tokens=120, temperature=0.0
-        )
+    resp = _llm_call_with_retry([{"role":"user","content":prompt}], max_tokens=120)
+    if resp:
         m = re.search(r"\{.*?\}", resp.choices[0].message.content, re.DOTALL)
-        if m: return float(json.loads(m.group()).get("faithfulness", 0.5))
-    except Exception:
-        pass
+        if m:
+            try: return float(json.loads(m.group()).get("faithfulness", 0.5))
+            except Exception: pass
     return float("nan")
 
 def llm_judge(question, answer, gt, context):
@@ -1548,40 +1568,38 @@ def llm_judge(question, answer, gt, context):
         f"Question: {question}\nReference: {gt}\nGenerated: {answer}\n\n"
         'Respond ONLY with JSON: {"score": <int 1-10>, "reason": "<one sentence>"}'
     )
-    try:
-        resp = client.chat.completions.create(
-            model=judge_model,
-            messages=[{"role":"user","content":prompt}],
-            max_tokens=150, temperature=0.0
-        )
+    resp = _llm_call_with_retry([{"role":"user","content":prompt}], max_tokens=150)
+    if resp:
         m = re.search(r"\{.*?\}", resp.choices[0].message.content, re.DOTALL)
-        if m: return float(json.loads(m.group()).get("score", 0))/10.0
-    except Exception:
-        pass
+        if m:
+            try: return float(json.loads(m.group()).get("score", 0)) / 10.0
+            except Exception: pass
     return float("nan")
 
 def scope_judge(question, answer, gt, context):
+    """Score on 1-5 scale per dimension; weighted/average also on 1-5."""
     prompt = (
-        "You are an expert oncology evaluator. Score the answer (1-5 each):\n"
-        "S-Sufficiency C-Correctness O-Organization P-Pertinence E-Exactness\n\n"
+        "You are an expert oncology evaluator. Score the answer strictly (1-5 each):\n"
+        "S-Sufficiency: does the answer cover all key facts?\n"
+        "C-Correctness: is every claim factually accurate?\n"
+        "O-Organization: is it clearly structured?\n"
+        "P-Pertinence: does it directly address the question?\n"
+        "E-Exactness: does it match the reference answer precisely?\n\n"
         f"Question: {question}\nContext: {context[:500]}\nAnswer: {answer}\nReference: {gt}\n\n"
         'Respond ONLY with JSON: {"S":<1-5>,"C":<1-5>,"O":<1-5>,"P":<1-5>,"E":<1-5>}'
     )
-    try:
-        resp = client.chat.completions.create(
-            model=judge_model,
-            messages=[{"role":"user","content":prompt}],
-            max_tokens=100, temperature=0.0
-        )
+    resp = _llm_call_with_retry([{"role":"user","content":prompt}], max_tokens=100)
+    if resp:
         m = re.search(r"\{.*?\}", resp.choices[0].message.content, re.DOTALL)
         if m:
-            d  = json.loads(m.group())
-            sc = {k: float(d.get(k, 3))/5.0 for k in "SCOPE"}
-            sc["weighted"] = sum(SCOPE_WEIGHTS[k]*sc[k] for k in "SCOPE")
-            sc["average"]  = float(np.mean([sc[k] for k in "SCOPE"]))
-            return sc
-    except Exception:
-        pass
+            try:
+                d  = json.loads(m.group())
+                # Keep raw 1-5 values
+                sc = {k: float(min(max(d.get(k, 3), 1), 5)) for k in "SCOPE"}
+                sc["weighted"] = sum(SCOPE_WEIGHTS[k] * sc[k] for k in "SCOPE") * 5
+                sc["average"]  = float(np.mean([sc[k] for k in "SCOPE"]))
+                return sc
+            except Exception: pass
     return {k: float("nan") for k in list("SCOPE")+["weighted","average"]}
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -1596,7 +1614,7 @@ print("="*72 + "\n")
     [], [], [], [], [], [], [], [], []
 )
 
-for item in EVAL_QA[:50]:
+for item in EVAL_QA:  # Q001–Q200
     q = item["q"]
     print(f"  [{item['id']}] {q[:68]}...")
 
@@ -1660,16 +1678,19 @@ for ans, gt, ctx, q, rk_scores in zip(answers, ground_truths, contexts, question
     ctx_rel_s.append(context_relevance(q, ctx))
     ans_rel_s.append(answer_relevance(q, ans))
     faith_s.append(faithfulness_score(q, ans, ctx_str))
+    time.sleep(0.4)   # brief pause to avoid rate-limit burst
     judge_s.append(llm_judge(q, ans, gt, ctx_str))
+    time.sleep(0.4)
     scope_s.append(scope_judge(q, ans, gt, ctx_str))
+    time.sleep(0.4)
 
 d1 = distinct_n(answers, 1)
 d2 = distinct_n(answers, 2)
 avg_iters = float(np.mean(iterations_all))
 # Sigmoid-normalize rerank logits to 0-1 before averaging
 def _sigmoid(x): return 1.0 / (1.0 + np.exp(-np.clip(x, -20, 20)))
-norm_scores = [float(np.mean(_sigmoid(np.array(s)))) for s in rerank_scores_all]
-avg_conf = float(np.mean(norm_scores))
+norm_scores = [float(np.mean(_sigmoid(np.array(s)))) for s in rerank_scores_all if len(s) > 0]
+avg_conf = float(np.nanmean(norm_scores)) if norm_scores else float("nan")
 
 print("[..] Computing BERTScore...\n")
 _, _, F1_b = bertscore(answers, ground_truths, lang="en")
@@ -1721,7 +1742,7 @@ Recall@5                : {np.mean(rec5_s):.4f}
 Hit-Rate@5              : {np.mean(hit5_s):.4f}
 MRR                     : {np.mean(mrr_s):.4f}
 NDCG@5                  : {np.mean(ndcg5_s):.4f}
-Avg Rerank Score        : {avg_rk:.4f}
+Avg Rerank Score        : {np.mean(avg_rk_s):.4f}
 Context Relevance       : {np.mean(ctx_rel_s):.4f}
 
 -- Faithfulness / Hallucination {'-'*39}
@@ -1731,14 +1752,14 @@ Faithfulness (LLM)      : {float(np.nanmean(faith_s)):.4f}
 Avg Agent Iterations    : {avg_iters:.2f}
 Avg Confidence Score    : {avg_conf:.4f}
 
--- S.C.O.P.E Framework (Weighted, 0-1) {'-'*32}
-Sufficiency    (S x0.20): {scope_agg['S']:.4f}
-Correctness    (C x0.30): {scope_agg['C']:.4f}
-Organization   (O x0.15): {scope_agg['O']:.4f}
-Pertinence     (P x0.25): {scope_agg['P']:.4f}
-Exactness      (E x0.10): {scope_agg['E']:.4f}
-SCOPE Weighted Avg      : {scope_agg['weighted']:.4f}
-SCOPE Simple Avg        : {scope_agg['average']:.4f}
+-- S.C.O.P.E Framework (1-5 scale) {'-'*36}
+Sufficiency    (S x0.20): {scope_agg['S']:.2f} / 5
+Correctness    (C x0.30): {scope_agg['C']:.2f} / 5
+Organization   (O x0.15): {scope_agg['O']:.2f} / 5
+Pertinence     (P x0.25): {scope_agg['P']:.2f} / 5
+Exactness      (E x0.10): {scope_agg['E']:.2f} / 5
+SCOPE Weighted Avg      : {scope_agg['weighted']:.2f} / 5
+SCOPE Simple Avg        : {scope_agg['average']:.2f} / 5
 
 -- LLM-as-a-Judge (0-1) {'-'*47}
 LLM Judge Score         : {float(np.nanmean(judge_s)):.4f}

@@ -13,14 +13,14 @@ def hierarchical_chunk(pages):
     """
 
     parent_splitter = RecursiveCharacterTextSplitter(
-        chunk_size=900,
-        chunk_overlap=150,
+        chunk_size=500,
+        chunk_overlap=120,
         separators=["\n\n", "\n", ". ", " ", ""],
     )
 
     child_splitter = RecursiveCharacterTextSplitter(
-        chunk_size=250,
-        chunk_overlap=50,
+        chunk_size=350,
+        chunk_overlap=80,
         separators=["\n\n", "\n", ". ", " ", ""],
     )
 

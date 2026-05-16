@@ -82,6 +82,8 @@ _TOPIC_FILTERS = {
     "lymphoma":      ["lymphoma"],
     "leukemia":      ["leukemia", "leukaemia"],
     "thyroid":       ["thyroid"],
+    "thyroid nodule": ["thyroid", "basics_of_oncology"],
+    "cold nodule":   ["thyroid", "basics_of_oncology"],
     "brain":         ["brain", "glioma", "neuro"],
     "sarcoma":       ["sarcoma"],
     "testicular":    ["testicular", "germ cell"],
@@ -106,8 +108,13 @@ def _expand_query(query: str) -> str:
 
 def _topic_source_hints(query: str):
     q = query.lower()
+    # Check multi-word phrases first (more specific)
     for kw, hints in _TOPIC_FILTERS.items():
-        if kw in q:
+        if len(kw.split()) > 1 and kw in q:
+            return hints
+    # Then single-word keywords
+    for kw, hints in _TOPIC_FILTERS.items():
+        if len(kw.split()) == 1 and kw in q:
             return hints
     return []
 
@@ -124,7 +131,7 @@ def _sigmoid(x: float) -> float:
     return 1.0 / (1.0 + math.exp(-x))
 
 
-def retrieve(query: str, top_k: int = 12):
+def retrieve(query: str, top_k: int = 20):
     """
     Hybrid retrieval pipeline:
     1. Abbreviation expansion + oncology prefix for richer e5-large embedding.
@@ -138,7 +145,8 @@ def retrieve(query: str, top_k: int = 12):
     expanded = _expand_query(query)
     query_vec = embed_query(expanded)
 
-    raw = query_index(query_vec, top_k * 2)
+    # Fetch 4x candidates so specific factual chunks deep in Pinecone ranking are captured
+    raw = query_index(query_vec, top_k * 4)
 
     hints   = _topic_source_hints(query)
     unique  = {}
@@ -169,7 +177,9 @@ def retrieve(query: str, top_k: int = 12):
     def hybrid_score(idx):
         d_rank = dense_order[id(candidates[idx])]
         b_rank = bm25_rank.get(idx, len(candidates))
-        return 0.6 / (d_rank + 1) + 0.4 / (b_rank + 1)
+        # Equal weight (0.5/0.5) so BM25 lexical signal has full influence
+        # for specific fact retrieval (numbers, named terms, percentages)
+        return 0.5 / (d_rank + 1) + 0.5 / (b_rank + 1)
 
     scored = sorted(range(len(candidates)), key=hybrid_score, reverse=True)
     reordered = [candidates[i] for i in scored]

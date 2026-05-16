@@ -1,14 +1,16 @@
 import os
 from dotenv import load_dotenv
+import torch
 from sentence_transformers import SentenceTransformer
 
 load_dotenv()
 
-# Switched to e5-small-v2: naturally outputs 384-dim to match Pinecone index
-model = SentenceTransformer("intfloat/e5-small-v2")
+# Switched to e5-large-v2 for higher accuracy
+device = "cuda" if torch.cuda.is_available() else "cpu"
+model = SentenceTransformer("intfloat/e5-large-v2", device=device)
 
-# e5-small output dimension
-EMBED_DIM = 384
+# e5-large output dimension
+EMBED_DIM = 1024
 
 
 # ✅ Embed passages (documents)

@@ -246,7 +246,10 @@ function appendMessageUI(role, content, sources = null, save = true) {
         sourcesHTML = `<div class="sources-container">
             <div class="sources-title"><i class="fa-solid fa-book-medical"></i> Sources</div>
             <div class="sources-list">
-                ${sources.map(s => `<span class="source-chip" title="${s.text}">📄 ${s.title} (p.${s.page || 'N/A'})</span>`).join('')}
+                ${sources.map(s => {
+                    const safeText = (s.text || '').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+                    return `<span class="source-chip" title="${safeText}">📄 ${s.title} (p.${s.page || 'N/A'})</span>`;
+                }).join(' ')}
             </div>
         </div>`;
     }
