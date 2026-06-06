@@ -1,0 +1,62 @@
+
+========================================================================
+GENERATOR COMPARISON — Meditron-7B
+Ollama tag  : meditron
+Timestamp   : 2026-05-31 23:38:35
+Questions   : 50
+LLM Judge   : enabled
+========================================================================
+
+-- Accuracy & F1 ─────────────────────────────────────────────────────
+Exact Match (EM)        : 0.0000
+Token Precision         : 0.1216
+Token Recall            : 0.1280
+Token F1                : 0.1210
+
+-- BLEU / GLEU / METEOR ──────────────────────────────────────────────
+BLEU-1                  : 0.0931
+BLEU-4                  : 0.0082
+GLEU                    : 0.0265
+METEOR                  : 0.0793
+
+-- ROUGE ──────────────────────────────────────────────────────────────
+ROUGE-1                 : 0.1388
+ROUGE-2                 : 0.0158
+ROUGE-L                 : 0.1013
+ROUGE-Lsum              : 0.1039
+
+-- Diversity ──────────────────────────────────────────────────────────
+DISTINCT-1              : 0.2765
+DISTINCT-2              : 0.4904
+
+-- Semantic Similarity ─────────────────────────────────────────────────
+SBERT Cosine Sim        : 0.2532
+BERTScore F1            : 0.8210
+Answer Relevance        : 0.3228
+
+-- Retrieval Quality (proxy-labelled @ thresh=0.45) ──────
+Precision@5             : 0.7600
+Recall@5                : 0.9800
+Hit-Rate@5              : 0.9800
+MRR                     : 0.8807
+NDCG@5                  : 0.9023
+Avg Rerank Score        : 0.5494
+Context Relevance       : 0.5843
+Avg Confidence          : 0.5889
+
+-- Faithfulness / Hallucination ───────────────────────────────────────
+Faithfulness (LLM)      : 0.5426
+
+-- S.C.O.P.E Framework (1-5 scale) ────────────────────────────────────
+Sufficiency    (S x0.20): 2.49 / 5
+Correctness    (C x0.30): 2.71 / 5
+Organization   (O x0.15): 2.78 / 5
+Pertinence     (P x0.25): 2.80 / 5
+Exactness      (E x0.10): 2.09 / 5
+SCOPE Weighted Avg      : 2.64 / 5
+SCOPE Simple Avg        : 2.57 / 5
+
+-- LLM-as-a-Judge (0-1) ───────────────────────────────────────────────
+LLM Judge Score         : 0.2780
+
+========================================================================

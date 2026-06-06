@@ -1,0 +1,2075 @@
+{
+  "simulation": true,
+  "timestamp": "2026-05-23T23:00:23.117453",
+  "config": {
+    "model": "google/medgemma-4b-it",
+    "lora_rank": 64,
+    "lora_alpha": 16,
+    "use_rslora": true,
+    "rslora_scale": "alpha / sqrt(r)  =  16 / 8.0  =  2.000",
+    "lora_dropout": 0.05,
+    "target_modules": [
+      "q_proj",
+      "k_proj",
+      "v_proj",
+      "o_proj",
+      "gate_proj",
+      "up_proj",
+      "down_proj"
+    ],
+    "trainable_params": "41,943,040  (6.2% of 671M total)",
+    "epochs": 3,
+    "lr": 0.0002,
+    "batch_size": 1,
+    "grad_accum": 8,
+    "effective_batch": 8,
+    "max_seq_len": 512,
+    "quantisation": "4-bit NF4  (bitsandbytes)",
+    "optimizer": "adamw_8bit",
+    "scheduler": "cosine",
+    "gpu": "NVIDIA GeForce RTX 3050 Laptop GPU  (4 GB VRAM)",
+    "estimated_vram": "~3.6 GB"
+  },
+  "epoch_losses": [
+    {
+      "epoch": 1,
+      "train_loss": 1.3205,
+      "val_loss": 1.2894
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.8592,
+      "val_loss": 0.8175
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.4046,
+      "val_loss": 0.3715
+    }
+  ],
+  "eval_50q": [
+    {
+      "id": "Q001",
+      "category": "biomarker",
+      "difficulty": "complex",
+      "base_f1": 0.3646,
+      "rslora_f1": 0.5773,
+      "delta": 0.2128
+    },
+    {
+      "id": "Q002",
+      "category": "biomarker",
+      "difficulty": "complex",
+      "base_f1": 0.4229,
+      "rslora_f1": 0.6738,
+      "delta": 0.2509
+    },
+    {
+      "id": "Q003",
+      "category": "prognosis",
+      "difficulty": "complex",
+      "base_f1": 0.4947,
+      "rslora_f1": 0.6344,
+      "delta": 0.1398
+    },
+    {
+      "id": "Q004",
+      "category": "biomarker",
+      "difficulty": "complex",
+      "base_f1": 0.5564,
+      "rslora_f1": 0.7865,
+      "delta": 0.2301
+    },
+    {
+      "id": "Q005",
+      "category": "biomarker",
+      "difficulty": "complex",
+      "base_f1": 0.5059,
+      "rslora_f1": 0.6997,
+      "delta": 0.1938
+    },
+    {
+      "id": "Q006",
+      "category": "biomarker",
+      "difficulty": "complex",
+      "base_f1": 0.6978,
+      "rslora_f1": 0.7831,
+      "delta": 0.0853
+    },
+    {
+      "id": "Q007",
+      "category": "prognosis",
+      "difficulty": "complex",
+      "base_f1": 0.5399,
+      "rslora_f1": 0.7076,
+      "delta": 0.1677
+    },
+    {
+      "id": "Q008",
+      "category": "diagnosis",
+      "difficulty": "complex",
+      "base_f1": 0.4495,
+      "rslora_f1": 0.5803,
+      "delta": 0.1307
+    },
+    {
+      "id": "Q009",
+      "category": "diagnosis",
+      "difficulty": "complex",
+      "base_f1": 0.692,
+      "rslora_f1": 0.8041,
+      "delta": 0.1121
+    },
+    {
+      "id": "Q010",
+      "category": "biomarker",
+      "difficulty": "complex",
+      "base_f1": 0.3882,
+      "rslora_f1": 0.5236,
+      "delta": 0.1355
+    },
+    {
+      "id": "Q011",
+      "category": "treatment",
+      "difficulty": "complex",
+      "base_f1": 0.5153,
+      "rslora_f1": 0.5994,
+      "delta": 0.0841
+    },
+    {
+      "id": "Q012",
+      "category": "mechanism",
+      "difficulty": "complex",
+      "base_f1": 0.4249,
+      "rslora_f1": 0.6567,
+      "delta": 0.2318
+    },
+    {
+      "id": "Q013",
+      "category": "mechanism",
+      "difficulty": "complex",
+      "base_f1": 0.3943,
+      "rslora_f1": 0.5669,
+      "delta": 0.1726
+    },
+    {
+      "id": "Q014",
+      "category": "mechanism",
+      "difficulty": "complex",
+      "base_f1": 0.3377,
+      "rslora_f1": 0.506,
+      "delta": 0.1683
+    },
+    {
+      "id": "Q015",
+      "category": "biomarker",
+      "difficulty": "complex",
+      "base_f1": 0.29,
+      "rslora_f1": 0.4029,
+      "delta": 0.1129
+    },
+    {
+      "id": "Q016",
+      "category": "diagnosis",
+      "difficulty": "complex",
+      "base_f1": 0.5544,
+      "rslora_f1": 0.733,
+      "delta": 0.1785
+    },
+    {
+      "id": "Q017",
+      "category": "biomarker",
+      "difficulty": "complex",
+      "base_f1": 0.4547,
+      "rslora_f1": 0.6771,
+      "delta": 0.2224
+    },
+    {
+      "id": "Q018",
+      "category": "mechanism",
+      "difficulty": "complex",
+      "base_f1": 0.4105,
+      "rslora_f1": 0.6515,
+      "delta": 0.241
+    },
+    {
+      "id": "Q019",
+      "category": "biomarker",
+      "difficulty": "complex",
+      "base_f1": 0.3906,
+      "rslora_f1": 0.5589,
+      "delta": 0.1683
+    },
+    {
+      "id": "Q020",
+      "category": "side_effects",
+      "difficulty": "complex",
+      "base_f1": 0.5378,
+      "rslora_f1": 0.7227,
+      "delta": 0.1848
+    },
+    {
+      "id": "Q021",
+      "category": "side_effects",
+      "difficulty": "complex",
+      "base_f1": 0.5663,
+      "rslora_f1": 0.7012,
+      "delta": 0.1349
+    },
+    {
+      "id": "Q022",
+      "category": "side_effects",
+      "difficulty": "complex",
+      "base_f1": 0.5533,
+      "rslora_f1": 0.6696,
+      "delta": 0.1163
+    },
+    {
+      "id": "Q023",
+      "category": "mechanism",
+      "difficulty": "complex",
+      "base_f1": 0.8,
+      "rslora_f1": 0.9013,
+      "delta": 0.1013
+    },
+    {
+      "id": "Q024",
+      "category": "epidemiology",
+      "difficulty": "complex",
+      "base_f1": 0.6721,
+      "rslora_f1": 0.7344,
+      "delta": 0.0623
+    },
+    {
+      "id": "Q025",
+      "category": "epidemiology",
+      "difficulty": "complex",
+      "base_f1": 0.7065,
+      "rslora_f1": 0.7967,
+      "delta": 0.0902
+    },
+    {
+      "id": "Q026",
+      "category": "diagnosis",
+      "difficulty": "complex",
+      "base_f1": 0.5321,
+      "rslora_f1": 0.727,
+      "delta": 0.1949
+    },
+    {
+      "id": "Q027",
+      "category": "biomarker",
+      "difficulty": "complex",
+      "base_f1": 0.4306,
+      "rslora_f1": 0.685,
+      "delta": 0.2545
+    },
+    {
+      "id": "Q028",
+      "category": "biomarker",
+      "difficulty": "complex",
+      "base_f1": 0.562,
+      "rslora_f1": 0.731,
+      "delta": 0.1691
+    },
+    {
+      "id": "Q029",
+      "category": "prognosis",
+      "difficulty": "complex",
+      "base_f1": 0.5504,
+      "rslora_f1": 0.7025,
+      "delta": 0.1521
+    },
+    {
+      "id": "Q030",
+      "category": "epidemiology",
+      "difficulty": "complex",
+      "base_f1": 0.5711,
+      "rslora_f1": 0.683,
+      "delta": 0.1119
+    },
+    {
+      "id": "Q031",
+      "category": "epidemiology",
+      "difficulty": "complex",
+      "base_f1": 0.2799,
+      "rslora_f1": 0.4816,
+      "delta": 0.2017
+    },
+    {
+      "id": "Q032",
+      "category": "biomarker",
+      "difficulty": "complex",
+      "base_f1": 0.5246,
+      "rslora_f1": 0.7381,
+      "delta": 0.2135
+    },
+    {
+      "id": "Q033",
+      "category": "mechanism",
+      "difficulty": "complex",
+      "base_f1": 0.4697,
+      "rslora_f1": 0.602,
+      "delta": 0.1323
+    },
+    {
+      "id": "Q034",
+      "category": "diagnosis",
+      "difficulty": "complex",
+      "base_f1": 0.4115,
+      "rslora_f1": 0.6673,
+      "delta": 0.2558
+    },
+    {
+      "id": "Q035",
+      "category": "diagnosis",
+      "difficulty": "complex",
+      "base_f1": 0.3811,
+      "rslora_f1": 0.5123,
+      "delta": 0.1311
+    },
+    {
+      "id": "Q036",
+      "category": "general",
+      "difficulty": "complex",
+      "base_f1": 0.4796,
+      "rslora_f1": 0.6209,
+      "delta": 0.1413
+    },
+    {
+      "id": "Q037",
+      "category": "biomarker",
+      "difficulty": "complex",
+      "base_f1": 0.4581,
+      "rslora_f1": 0.5893,
+      "delta": 0.1311
+    },
+    {
+      "id": "Q038",
+      "category": "mechanism",
+      "difficulty": "complex",
+      "base_f1": 0.4417,
+      "rslora_f1": 0.638,
+      "delta": 0.1963
+    },
+    {
+      "id": "Q039",
+      "category": "diagnosis",
+      "difficulty": "complex",
+      "base_f1": 0.5157,
+      "rslora_f1": 0.6667,
+      "delta": 0.151
+    },
+    {
+      "id": "Q040",
+      "category": "biomarker",
+      "difficulty": "complex",
+      "base_f1": 0.5975,
+      "rslora_f1": 0.802,
+      "delta": 0.2045
+    },
+    {
+      "id": "Q041",
+      "category": "treatment",
+      "difficulty": "complex",
+      "base_f1": 0.4502,
+      "rslora_f1": 0.579,
+      "delta": 0.1289
+    },
+    {
+      "id": "Q042",
+      "category": "biomarker",
+      "difficulty": "complex",
+      "base_f1": 0.548,
+      "rslora_f1": 0.8205,
+      "delta": 0.2725
+    },
+    {
+      "id": "Q043",
+      "category": "diagnosis",
+      "difficulty": "complex",
+      "base_f1": 0.4829,
+      "rslora_f1": 0.6916,
+      "delta": 0.2087
+    },
+    {
+      "id": "Q044",
+      "category": "diagnosis",
+      "difficulty": "complex",
+      "base_f1": 0.4114,
+      "rslora_f1": 0.5379,
+      "delta": 0.1266
+    },
+    {
+      "id": "Q045",
+      "category": "staging",
+      "difficulty": "complex",
+      "base_f1": 0.3853,
+      "rslora_f1": 0.5159,
+      "delta": 0.1306
+    },
+    {
+      "id": "Q046",
+      "category": "side_effects",
+      "difficulty": "complex",
+      "base_f1": 0.6058,
+      "rslora_f1": 0.75,
+      "delta": 0.1442
+    },
+    {
+      "id": "Q047",
+      "category": "diagnosis",
+      "difficulty": "complex",
+      "base_f1": 0.536,
+      "rslora_f1": 0.6621,
+      "delta": 0.1261
+    },
+    {
+      "id": "Q048",
+      "category": "side_effects",
+      "difficulty": "complex",
+      "base_f1": 0.4435,
+      "rslora_f1": 0.6348,
+      "delta": 0.1914
+    },
+    {
+      "id": "Q049",
+      "category": "side_effects",
+      "difficulty": "complex",
+      "base_f1": 0.4558,
+      "rslora_f1": 0.6439,
+      "delta": 0.1882
+    },
+    {
+      "id": "Q050",
+      "category": "mechanism",
+      "difficulty": "complex",
+      "base_f1": 0.4104,
+      "rslora_f1": 0.5499,
+      "delta": 0.1395
+    }
+  ],
+  "eval_200q": [
+    {
+      "id": "Q001",
+      "category": "diagnosis",
+      "difficulty": "simple",
+      "base_f1": 0.18,
+      "rslora_f1": 0.3723,
+      "delta": 0.1923
+    },
+    {
+      "id": "Q002",
+      "category": "treatment",
+      "difficulty": "moderate",
+      "base_f1": 0.5151,
+      "rslora_f1": 0.6697,
+      "delta": 0.1546
+    },
+    {
+      "id": "Q003",
+      "category": "treatment",
+      "difficulty": "complex",
+      "base_f1": 0.4962,
+      "rslora_f1": 0.6818,
+      "delta": 0.1856
+    },
+    {
+      "id": "Q004",
+      "category": "diagnosis",
+      "difficulty": "simple",
+      "base_f1": 0.6496,
+      "rslora_f1": 0.771,
+      "delta": 0.1214
+    },
+    {
+      "id": "Q005",
+      "category": "epidemiology",
+      "difficulty": "moderate",
+      "base_f1": 0.6127,
+      "rslora_f1": 0.7413,
+      "delta": 0.1286
+    },
+    {
+      "id": "Q006",
+      "category": "staging",
+      "difficulty": "moderate",
+      "base_f1": 0.5734,
+      "rslora_f1": 0.7918,
+      "delta": 0.2184
+    },
+    {
+      "id": "Q007",
+      "category": "biomarker",
+      "difficulty": "complex",
+      "base_f1": 0.3744,
+      "rslora_f1": 0.5367,
+      "delta": 0.1623
+    },
+    {
+      "id": "Q008",
+      "category": "diagnosis",
+      "difficulty": "simple",
+      "base_f1": 0.6807,
+      "rslora_f1": 0.7559,
+      "delta": 0.0752
+    },
+    {
+      "id": "Q009",
+      "category": "prognosis",
+      "difficulty": "moderate",
+      "base_f1": 0.6457,
+      "rslora_f1": 0.8043,
+      "delta": 0.1586
+    },
+    {
+      "id": "Q010",
+      "category": "treatment",
+      "difficulty": "simple",
+      "base_f1": 0.5095,
+      "rslora_f1": 0.7207,
+      "delta": 0.2112
+    },
+    {
+      "id": "Q011",
+      "category": "diagnosis",
+      "difficulty": "complex",
+      "base_f1": 0.5248,
+      "rslora_f1": 0.6718,
+      "delta": 0.147
+    },
+    {
+      "id": "Q012",
+      "category": "diagnosis",
+      "difficulty": "moderate",
+      "base_f1": 0.512,
+      "rslora_f1": 0.6797,
+      "delta": 0.1676
+    },
+    {
+      "id": "Q013",
+      "category": "epidemiology",
+      "difficulty": "simple",
+      "base_f1": 0.4122,
+      "rslora_f1": 0.5567,
+      "delta": 0.1445
+    },
+    {
+      "id": "Q014",
+      "category": "diagnosis",
+      "difficulty": "moderate",
+      "base_f1": 0.3668,
+      "rslora_f1": 0.4829,
+      "delta": 0.1161
+    },
+    {
+      "id": "Q015",
+      "category": "epidemiology",
+      "difficulty": "complex",
+      "base_f1": 0.5167,
+      "rslora_f1": 0.726,
+      "delta": 0.2093
+    },
+    {
+      "id": "Q016",
+      "category": "diagnosis",
+      "difficulty": "moderate",
+      "base_f1": 0.4709,
+      "rslora_f1": 0.672,
+      "delta": 0.2011
+    },
+    {
+      "id": "Q017",
+      "category": "staging",
+      "difficulty": "moderate",
+      "base_f1": 0.6942,
+      "rslora_f1": 0.75,
+      "delta": 0.0558
+    },
+    {
+      "id": "Q018",
+      "category": "treatment",
+      "difficulty": "simple",
+      "base_f1": 0.629,
+      "rslora_f1": 0.807,
+      "delta": 0.178
+    },
+    {
+      "id": "Q019",
+      "category": "diagnosis",
+      "difficulty": "moderate",
+      "base_f1": 0.4787,
+      "rslora_f1": 0.6371,
+      "delta": 0.1583
+    },
+    {
+      "id": "Q020",
+      "category": "prognosis",
+      "difficulty": "simple",
+      "base_f1": 0.567,
+      "rslora_f1": 0.6655,
+      "delta": 0.0985
+    },
+    {
+      "id": "Q021",
+      "category": "epidemiology",
+      "difficulty": "moderate",
+      "base_f1": 0.4689,
+      "rslora_f1": 0.6895,
+      "delta": 0.2206
+    },
+    {
+      "id": "Q022",
+      "category": "epidemiology",
+      "difficulty": "moderate",
+      "base_f1": 0.3199,
+      "rslora_f1": 0.5214,
+      "delta": 0.2015
+    },
+    {
+      "id": "Q023",
+      "category": "diagnosis",
+      "difficulty": "moderate",
+      "base_f1": 0.5855,
+      "rslora_f1": 0.7415,
+      "delta": 0.156
+    },
+    {
+      "id": "Q024",
+      "category": "biomarker",
+      "difficulty": "simple",
+      "base_f1": 0.6246,
+      "rslora_f1": 0.7216,
+      "delta": 0.097
+    },
+    {
+      "id": "Q025",
+      "category": "prognosis",
+      "difficulty": "moderate",
+      "base_f1": 0.3862,
+      "rslora_f1": 0.5198,
+      "delta": 0.1336
+    },
+    {
+      "id": "Q026",
+      "category": "staging",
+      "difficulty": "complex",
+      "base_f1": 0.4357,
+      "rslora_f1": 0.5795,
+      "delta": 0.1438
+    },
+    {
+      "id": "Q027",
+      "category": "prognosis",
+      "difficulty": "moderate",
+      "base_f1": 0.5338,
+      "rslora_f1": 0.7134,
+      "delta": 0.1797
+    },
+    {
+      "id": "Q028",
+      "category": "diagnosis",
+      "difficulty": "simple",
+      "base_f1": 0.6792,
+      "rslora_f1": 0.7356,
+      "delta": 0.0564
+    },
+    {
+      "id": "Q029",
+      "category": "general",
+      "difficulty": "moderate",
+      "base_f1": 0.6735,
+      "rslora_f1": 0.7181,
+      "delta": 0.0446
+    },
+    {
+      "id": "Q030",
+      "category": "investigation",
+      "difficulty": "moderate",
+      "base_f1": 0.4969,
+      "rslora_f1": 0.6813,
+      "delta": 0.1844
+    },
+    {
+      "id": "Q031",
+      "category": "biomarker",
+      "difficulty": "simple",
+      "base_f1": 0.6051,
+      "rslora_f1": 0.802,
+      "delta": 0.1969
+    },
+    {
+      "id": "Q032",
+      "category": "treatment",
+      "difficulty": "simple",
+      "base_f1": 0.5486,
+      "rslora_f1": 0.6764,
+      "delta": 0.1278
+    },
+    {
+      "id": "Q033",
+      "category": "side_effects",
+      "difficulty": "simple",
+      "base_f1": 0.4421,
+      "rslora_f1": 0.5812,
+      "delta": 0.1391
+    },
+    {
+      "id": "Q034",
+      "category": "epidemiology",
+      "difficulty": "complex",
+      "base_f1": 0.6428,
+      "rslora_f1": 0.7637,
+      "delta": 0.1209
+    },
+    {
+      "id": "Q035",
+      "category": "mechanism",
+      "difficulty": "moderate",
+      "base_f1": 0.5724,
+      "rslora_f1": 0.7165,
+      "delta": 0.1441
+    },
+    {
+      "id": "Q036",
+      "category": "treatment",
+      "difficulty": "complex",
+      "base_f1": 0.4248,
+      "rslora_f1": 0.6337,
+      "delta": 0.2089
+    },
+    {
+      "id": "Q037",
+      "category": "treatment",
+      "difficulty": "moderate",
+      "base_f1": 0.4732,
+      "rslora_f1": 0.5924,
+      "delta": 0.1192
+    },
+    {
+      "id": "Q038",
+      "category": "diagnosis",
+      "difficulty": "simple",
+      "base_f1": 0.627,
+      "rslora_f1": 0.7516,
+      "delta": 0.1247
+    },
+    {
+      "id": "Q039",
+      "category": "diagnosis",
+      "difficulty": "complex",
+      "base_f1": 0.5879,
+      "rslora_f1": 0.6878,
+      "delta": 0.1
+    },
+    {
+      "id": "Q040",
+      "category": "staging",
+      "difficulty": "moderate",
+      "base_f1": 0.5333,
+      "rslora_f1": 0.7583,
+      "delta": 0.225
+    },
+    {
+      "id": "Q041",
+      "category": "epidemiology",
+      "difficulty": "moderate",
+      "base_f1": 0.622,
+      "rslora_f1": 0.828,
+      "delta": 0.206
+    },
+    {
+      "id": "Q042",
+      "category": "prognosis",
+      "difficulty": "simple",
+      "base_f1": 0.5203,
+      "rslora_f1": 0.6532,
+      "delta": 0.133
+    },
+    {
+      "id": "Q043",
+      "category": "prognosis",
+      "difficulty": "moderate",
+      "base_f1": 0.5206,
+      "rslora_f1": 0.635,
+      "delta": 0.1144
+    },
+    {
+      "id": "Q044",
+      "category": "biomarker",
+      "difficulty": "complex",
+      "base_f1": 0.4255,
+      "rslora_f1": 0.6475,
+      "delta": 0.222
+    },
+    {
+      "id": "Q045",
+      "category": "prognosis",
+      "difficulty": "moderate",
+      "base_f1": 0.4828,
+      "rslora_f1": 0.6464,
+      "delta": 0.1637
+    },
+    {
+      "id": "Q046",
+      "category": "biomarker",
+      "difficulty": "simple",
+      "base_f1": 0.5081,
+      "rslora_f1": 0.6965,
+      "delta": 0.1884
+    },
+    {
+      "id": "Q047",
+      "category": "diagnosis",
+      "difficulty": "simple",
+      "base_f1": 0.7047,
+      "rslora_f1": 0.7429,
+      "delta": 0.0382
+    },
+    {
+      "id": "Q048",
+      "category": "pathology",
+      "difficulty": "moderate",
+      "base_f1": 0.4565,
+      "rslora_f1": 0.6679,
+      "delta": 0.2113
+    },
+    {
+      "id": "Q049",
+      "category": "prognosis",
+      "difficulty": "moderate",
+      "base_f1": 0.3451,
+      "rslora_f1": 0.5665,
+      "delta": 0.2214
+    },
+    {
+      "id": "Q050",
+      "category": "pathology",
+      "difficulty": "complex",
+      "base_f1": 0.2725,
+      "rslora_f1": 0.4061,
+      "delta": 0.1336
+    },
+    {
+      "id": "Q051",
+      "category": "biomarker",
+      "difficulty": "moderate",
+      "base_f1": 0.6588,
+      "rslora_f1": 0.7715,
+      "delta": 0.1127
+    },
+    {
+      "id": "Q052",
+      "category": "diagnosis",
+      "difficulty": "moderate",
+      "base_f1": 0.5801,
+      "rslora_f1": 0.8275,
+      "delta": 0.2474
+    },
+    {
+      "id": "Q053",
+      "category": "diagnosis",
+      "difficulty": "complex",
+      "base_f1": 0.4758,
+      "rslora_f1": 0.6499,
+      "delta": 0.1741
+    },
+    {
+      "id": "Q054",
+      "category": "diagnosis",
+      "difficulty": "simple",
+      "base_f1": 0.3468,
+      "rslora_f1": 0.5276,
+      "delta": 0.1808
+    },
+    {
+      "id": "Q055",
+      "category": "diagnosis",
+      "difficulty": "complex",
+      "base_f1": 0.4321,
+      "rslora_f1": 0.6374,
+      "delta": 0.2053
+    },
+    {
+      "id": "Q056",
+      "category": "epidemiology",
+      "difficulty": "moderate",
+      "base_f1": 0.3915,
+      "rslora_f1": 0.5436,
+      "delta": 0.1522
+    },
+    {
+      "id": "Q057",
+      "category": "epidemiology",
+      "difficulty": "moderate",
+      "base_f1": 0.4888,
+      "rslora_f1": 0.6296,
+      "delta": 0.1408
+    },
+    {
+      "id": "Q058",
+      "category": "prognosis",
+      "difficulty": "moderate",
+      "base_f1": 0.5487,
+      "rslora_f1": 0.7014,
+      "delta": 0.1528
+    },
+    {
+      "id": "Q059",
+      "category": "biomarker",
+      "difficulty": "complex",
+      "base_f1": 0.5799,
+      "rslora_f1": 0.7125,
+      "delta": 0.1326
+    },
+    {
+      "id": "Q060",
+      "category": "diagnosis",
+      "difficulty": "simple",
+      "base_f1": 0.5217,
+      "rslora_f1": 0.6121,
+      "delta": 0.0904
+    },
+    {
+      "id": "Q061",
+      "category": "treatment",
+      "difficulty": "moderate",
+      "base_f1": 0.439,
+      "rslora_f1": 0.5606,
+      "delta": 0.1216
+    },
+    {
+      "id": "Q062",
+      "category": "diagnosis",
+      "difficulty": "complex",
+      "base_f1": 0.6003,
+      "rslora_f1": 0.7805,
+      "delta": 0.1802
+    },
+    {
+      "id": "Q063",
+      "category": "general",
+      "difficulty": "simple",
+      "base_f1": 0.5123,
+      "rslora_f1": 0.6977,
+      "delta": 0.1854
+    },
+    {
+      "id": "Q064",
+      "category": "prognosis",
+      "difficulty": "moderate",
+      "base_f1": 0.6329,
+      "rslora_f1": 0.7358,
+      "delta": 0.1029
+    },
+    {
+      "id": "Q065",
+      "category": "treatment",
+      "difficulty": "moderate",
+      "base_f1": 0.4559,
+      "rslora_f1": 0.6436,
+      "delta": 0.1877
+    },
+    {
+      "id": "Q066",
+      "category": "treatment",
+      "difficulty": "simple",
+      "base_f1": 0.4734,
+      "rslora_f1": 0.6505,
+      "delta": 0.1771
+    },
+    {
+      "id": "Q067",
+      "category": "treatment",
+      "difficulty": "complex",
+      "base_f1": 0.4667,
+      "rslora_f1": 0.6417,
+      "delta": 0.175
+    },
+    {
+      "id": "Q068",
+      "category": "diagnosis",
+      "difficulty": "moderate",
+      "base_f1": 0.2924,
+      "rslora_f1": 0.493,
+      "delta": 0.2005
+    },
+    {
+      "id": "Q069",
+      "category": "treatment",
+      "difficulty": "complex",
+      "base_f1": 0.3943,
+      "rslora_f1": 0.4718,
+      "delta": 0.0775
+    },
+    {
+      "id": "Q070",
+      "category": "treatment",
+      "difficulty": "moderate",
+      "base_f1": 0.423,
+      "rslora_f1": 0.5556,
+      "delta": 0.1325
+    },
+    {
+      "id": "Q071",
+      "category": "treatment",
+      "difficulty": "complex",
+      "base_f1": 0.4776,
+      "rslora_f1": 0.6322,
+      "delta": 0.1547
+    },
+    {
+      "id": "Q072",
+      "category": "epidemiology",
+      "difficulty": "simple",
+      "base_f1": 0.5281,
+      "rslora_f1": 0.7843,
+      "delta": 0.2563
+    },
+    {
+      "id": "Q073",
+      "category": "diagnosis",
+      "difficulty": "complex",
+      "base_f1": 0.365,
+      "rslora_f1": 0.4919,
+      "delta": 0.1269
+    },
+    {
+      "id": "Q074",
+      "category": "treatment",
+      "difficulty": "moderate",
+      "base_f1": 0.4551,
+      "rslora_f1": 0.6195,
+      "delta": 0.1644
+    },
+    {
+      "id": "Q075",
+      "category": "treatment",
+      "difficulty": "complex",
+      "base_f1": 0.503,
+      "rslora_f1": 0.7022,
+      "delta": 0.1991
+    },
+    {
+      "id": "Q076",
+      "category": "pathology",
+      "difficulty": "moderate",
+      "base_f1": 0.6805,
+      "rslora_f1": 0.7373,
+      "delta": 0.0568
+    },
+    {
+      "id": "Q077",
+      "category": "treatment",
+      "difficulty": "complex",
+      "base_f1": 0.5683,
+      "rslora_f1": 0.7381,
+      "delta": 0.1697
+    },
+    {
+      "id": "Q078",
+      "category": "diagnosis",
+      "difficulty": "moderate",
+      "base_f1": 0.3532,
+      "rslora_f1": 0.5027,
+      "delta": 0.1495
+    },
+    {
+      "id": "Q079",
+      "category": "prognosis",
+      "difficulty": "simple",
+      "base_f1": 0.3952,
+      "rslora_f1": 0.6138,
+      "delta": 0.2186
+    },
+    {
+      "id": "Q080",
+      "category": "treatment",
+      "difficulty": "simple",
+      "base_f1": 0.551,
+      "rslora_f1": 0.6462,
+      "delta": 0.0952
+    },
+    {
+      "id": "Q081",
+      "category": "prognosis",
+      "difficulty": "moderate",
+      "base_f1": 0.4895,
+      "rslora_f1": 0.6708,
+      "delta": 0.1813
+    },
+    {
+      "id": "Q082",
+      "category": "staging",
+      "difficulty": "moderate",
+      "base_f1": 0.5467,
+      "rslora_f1": 0.7062,
+      "delta": 0.1596
+    },
+    {
+      "id": "Q083",
+      "category": "treatment",
+      "difficulty": "complex",
+      "base_f1": 0.3769,
+      "rslora_f1": 0.604,
+      "delta": 0.2271
+    },
+    {
+      "id": "Q084",
+      "category": "biomarker",
+      "difficulty": "simple",
+      "base_f1": 0.6335,
+      "rslora_f1": 0.8068,
+      "delta": 0.1733
+    },
+    {
+      "id": "Q085",
+      "category": "treatment",
+      "difficulty": "moderate",
+      "base_f1": 0.4394,
+      "rslora_f1": 0.5753,
+      "delta": 0.1359
+    },
+    {
+      "id": "Q086",
+      "category": "biomarker",
+      "difficulty": "complex",
+      "base_f1": 0.3752,
+      "rslora_f1": 0.5462,
+      "delta": 0.1709
+    },
+    {
+      "id": "Q087",
+      "category": "epidemiology",
+      "difficulty": "complex",
+      "base_f1": 0.485,
+      "rslora_f1": 0.6984,
+      "delta": 0.2134
+    },
+    {
+      "id": "Q088",
+      "category": "biomarker",
+      "difficulty": "simple",
+      "base_f1": 0.63,
+      "rslora_f1": 0.7873,
+      "delta": 0.1573
+    },
+    {
+      "id": "Q089",
+      "category": "epidemiology",
+      "difficulty": "moderate",
+      "base_f1": 0.4854,
+      "rslora_f1": 0.6215,
+      "delta": 0.1362
+    },
+    {
+      "id": "Q090",
+      "category": "diagnosis",
+      "difficulty": "moderate",
+      "base_f1": 0.4301,
+      "rslora_f1": 0.5964,
+      "delta": 0.1663
+    },
+    {
+      "id": "Q091",
+      "category": "mechanism",
+      "difficulty": "moderate",
+      "base_f1": 0.655,
+      "rslora_f1": 0.7561,
+      "delta": 0.1012
+    },
+    {
+      "id": "Q092",
+      "category": "epidemiology",
+      "difficulty": "moderate",
+      "base_f1": 0.5448,
+      "rslora_f1": 0.7092,
+      "delta": 0.1644
+    },
+    {
+      "id": "Q093",
+      "category": "treatment",
+      "difficulty": "simple",
+      "base_f1": 0.5376,
+      "rslora_f1": 0.6566,
+      "delta": 0.119
+    },
+    {
+      "id": "Q094",
+      "category": "diagnosis",
+      "difficulty": "moderate",
+      "base_f1": 0.5224,
+      "rslora_f1": 0.6211,
+      "delta": 0.0987
+    },
+    {
+      "id": "Q095",
+      "category": "epidemiology",
+      "difficulty": "complex",
+      "base_f1": 0.6707,
+      "rslora_f1": 0.7462,
+      "delta": 0.0755
+    },
+    {
+      "id": "Q096",
+      "category": "investigation",
+      "difficulty": "simple",
+      "base_f1": 0.7304,
+      "rslora_f1": 0.7949,
+      "delta": 0.0645
+    },
+    {
+      "id": "Q097",
+      "category": "treatment",
+      "difficulty": "moderate",
+      "base_f1": 0.371,
+      "rslora_f1": 0.4845,
+      "delta": 0.1135
+    },
+    {
+      "id": "Q098",
+      "category": "biomarker",
+      "difficulty": "complex",
+      "base_f1": 0.2405,
+      "rslora_f1": 0.4532,
+      "delta": 0.2127
+    },
+    {
+      "id": "Q099",
+      "category": "diagnosis",
+      "difficulty": "simple",
+      "base_f1": 0.3666,
+      "rslora_f1": 0.4964,
+      "delta": 0.1297
+    },
+    {
+      "id": "Q100",
+      "category": "biomarker",
+      "difficulty": "moderate",
+      "base_f1": 0.5459,
+      "rslora_f1": 0.6556,
+      "delta": 0.1096
+    },
+    {
+      "id": "Q101",
+      "category": "treatment",
+      "difficulty": "complex",
+      "base_f1": 0.5461,
+      "rslora_f1": 0.7312,
+      "delta": 0.1851
+    },
+    {
+      "id": "Q102",
+      "category": "epidemiology",
+      "difficulty": "simple",
+      "base_f1": 0.3805,
+      "rslora_f1": 0.4837,
+      "delta": 0.1031
+    },
+    {
+      "id": "Q103",
+      "category": "epidemiology",
+      "difficulty": "complex",
+      "base_f1": 0.4248,
+      "rslora_f1": 0.5723,
+      "delta": 0.1475
+    },
+    {
+      "id": "Q104",
+      "category": "biomarker",
+      "difficulty": "simple",
+      "base_f1": 0.4744,
+      "rslora_f1": 0.6453,
+      "delta": 0.1709
+    },
+    {
+      "id": "Q105",
+      "category": "prognosis",
+      "difficulty": "moderate",
+      "base_f1": 0.464,
+      "rslora_f1": 0.6501,
+      "delta": 0.1861
+    },
+    {
+      "id": "Q106",
+      "category": "prognosis",
+      "difficulty": "simple",
+      "base_f1": 0.5024,
+      "rslora_f1": 0.7026,
+      "delta": 0.2002
+    },
+    {
+      "id": "Q107",
+      "category": "investigation",
+      "difficulty": "simple",
+      "base_f1": 0.5921,
+      "rslora_f1": 0.7693,
+      "delta": 0.1772
+    },
+    {
+      "id": "Q108",
+      "category": "diagnosis",
+      "difficulty": "complex",
+      "base_f1": 0.4314,
+      "rslora_f1": 0.5276,
+      "delta": 0.0962
+    },
+    {
+      "id": "Q109",
+      "category": "epidemiology",
+      "difficulty": "simple",
+      "base_f1": 0.6347,
+      "rslora_f1": 0.8058,
+      "delta": 0.1711
+    },
+    {
+      "id": "Q110",
+      "category": "pathology",
+      "difficulty": "moderate",
+      "base_f1": 0.46,
+      "rslora_f1": 0.604,
+      "delta": 0.144
+    },
+    {
+      "id": "Q111",
+      "category": "prognosis",
+      "difficulty": "complex",
+      "base_f1": 0.5752,
+      "rslora_f1": 0.7704,
+      "delta": 0.1952
+    },
+    {
+      "id": "Q112",
+      "category": "prognosis",
+      "difficulty": "moderate",
+      "base_f1": 0.5785,
+      "rslora_f1": 0.7037,
+      "delta": 0.1252
+    },
+    {
+      "id": "Q113",
+      "category": "diagnosis",
+      "difficulty": "moderate",
+      "base_f1": 0.4905,
+      "rslora_f1": 0.5712,
+      "delta": 0.0807
+    },
+    {
+      "id": "Q114",
+      "category": "epidemiology",
+      "difficulty": "simple",
+      "base_f1": 0.4886,
+      "rslora_f1": 0.6047,
+      "delta": 0.1161
+    },
+    {
+      "id": "Q115",
+      "category": "treatment",
+      "difficulty": "complex",
+      "base_f1": 0.4937,
+      "rslora_f1": 0.7101,
+      "delta": 0.2164
+    },
+    {
+      "id": "Q116",
+      "category": "general",
+      "difficulty": "moderate",
+      "base_f1": 0.4839,
+      "rslora_f1": 0.5605,
+      "delta": 0.0766
+    },
+    {
+      "id": "Q117",
+      "category": "mechanism",
+      "difficulty": "simple",
+      "base_f1": 0.6398,
+      "rslora_f1": 0.7828,
+      "delta": 0.143
+    },
+    {
+      "id": "Q118",
+      "category": "investigation",
+      "difficulty": "moderate",
+      "base_f1": 0.4782,
+      "rslora_f1": 0.583,
+      "delta": 0.1047
+    },
+    {
+      "id": "Q119",
+      "category": "mechanism",
+      "difficulty": "complex",
+      "base_f1": 0.3594,
+      "rslora_f1": 0.5573,
+      "delta": 0.1979
+    },
+    {
+      "id": "Q120",
+      "category": "treatment",
+      "difficulty": "moderate",
+      "base_f1": 0.5684,
+      "rslora_f1": 0.7654,
+      "delta": 0.197
+    },
+    {
+      "id": "Q121",
+      "category": "diagnosis",
+      "difficulty": "simple",
+      "base_f1": 0.6301,
+      "rslora_f1": 0.7917,
+      "delta": 0.1616
+    },
+    {
+      "id": "Q122",
+      "category": "pathology",
+      "difficulty": "moderate",
+      "base_f1": 0.5105,
+      "rslora_f1": 0.6288,
+      "delta": 0.1183
+    },
+    {
+      "id": "Q123",
+      "category": "biomarker",
+      "difficulty": "moderate",
+      "base_f1": 0.5314,
+      "rslora_f1": 0.7251,
+      "delta": 0.1937
+    },
+    {
+      "id": "Q124",
+      "category": "treatment",
+      "difficulty": "moderate",
+      "base_f1": 0.5673,
+      "rslora_f1": 0.7624,
+      "delta": 0.1951
+    },
+    {
+      "id": "Q125",
+      "category": "epidemiology",
+      "difficulty": "simple",
+      "base_f1": 0.6388,
+      "rslora_f1": 0.8005,
+      "delta": 0.1618
+    },
+    {
+      "id": "Q126",
+      "category": "epidemiology",
+      "difficulty": "simple",
+      "base_f1": 0.5306,
+      "rslora_f1": 0.6819,
+      "delta": 0.1513
+    },
+    {
+      "id": "Q127",
+      "category": "mechanism",
+      "difficulty": "complex",
+      "base_f1": 0.4497,
+      "rslora_f1": 0.5878,
+      "delta": 0.1381
+    },
+    {
+      "id": "Q128",
+      "category": "side_effects",
+      "difficulty": "moderate",
+      "base_f1": 0.4519,
+      "rslora_f1": 0.61,
+      "delta": 0.1581
+    },
+    {
+      "id": "Q129",
+      "category": "epidemiology",
+      "difficulty": "simple",
+      "base_f1": 0.505,
+      "rslora_f1": 0.739,
+      "delta": 0.234
+    },
+    {
+      "id": "Q130",
+      "category": "mechanism",
+      "difficulty": "complex",
+      "base_f1": 0.4793,
+      "rslora_f1": 0.6942,
+      "delta": 0.215
+    },
+    {
+      "id": "Q131",
+      "category": "treatment",
+      "difficulty": "moderate",
+      "base_f1": 0.371,
+      "rslora_f1": 0.572,
+      "delta": 0.201
+    },
+    {
+      "id": "Q132",
+      "category": "staging",
+      "difficulty": "complex",
+      "base_f1": 0.5838,
+      "rslora_f1": 0.7722,
+      "delta": 0.1885
+    },
+    {
+      "id": "Q133",
+      "category": "prognosis",
+      "difficulty": "moderate",
+      "base_f1": 0.4955,
+      "rslora_f1": 0.6544,
+      "delta": 0.1589
+    },
+    {
+      "id": "Q134",
+      "category": "treatment",
+      "difficulty": "moderate",
+      "base_f1": 0.18,
+      "rslora_f1": 0.2927,
+      "delta": 0.1127
+    },
+    {
+      "id": "Q135",
+      "category": "diagnosis",
+      "difficulty": "complex",
+      "base_f1": 0.4034,
+      "rslora_f1": 0.6053,
+      "delta": 0.2019
+    },
+    {
+      "id": "Q136",
+      "category": "epidemiology",
+      "difficulty": "simple",
+      "base_f1": 0.5755,
+      "rslora_f1": 0.6735,
+      "delta": 0.098
+    },
+    {
+      "id": "Q137",
+      "category": "epidemiology",
+      "difficulty": "moderate",
+      "base_f1": 0.5559,
+      "rslora_f1": 0.6131,
+      "delta": 0.0573
+    },
+    {
+      "id": "Q138",
+      "category": "epidemiology",
+      "difficulty": "simple",
+      "base_f1": 0.4857,
+      "rslora_f1": 0.6484,
+      "delta": 0.1627
+    },
+    {
+      "id": "Q139",
+      "category": "treatment",
+      "difficulty": "moderate",
+      "base_f1": 0.5069,
+      "rslora_f1": 0.6789,
+      "delta": 0.172
+    },
+    {
+      "id": "Q140",
+      "category": "epidemiology",
+      "difficulty": "simple",
+      "base_f1": 0.4238,
+      "rslora_f1": 0.5337,
+      "delta": 0.1099
+    },
+    {
+      "id": "Q141",
+      "category": "investigation",
+      "difficulty": "moderate",
+      "base_f1": 0.5079,
+      "rslora_f1": 0.7237,
+      "delta": 0.2158
+    },
+    {
+      "id": "Q142",
+      "category": "treatment",
+      "difficulty": "simple",
+      "base_f1": 0.5558,
+      "rslora_f1": 0.6867,
+      "delta": 0.1309
+    },
+    {
+      "id": "Q143",
+      "category": "treatment",
+      "difficulty": "moderate",
+      "base_f1": 0.4332,
+      "rslora_f1": 0.5468,
+      "delta": 0.1136
+    },
+    {
+      "id": "Q144",
+      "category": "biomarker",
+      "difficulty": "complex",
+      "base_f1": 0.5352,
+      "rslora_f1": 0.799,
+      "delta": 0.2638
+    },
+    {
+      "id": "Q145",
+      "category": "treatment",
+      "difficulty": "moderate",
+      "base_f1": 0.522,
+      "rslora_f1": 0.6728,
+      "delta": 0.1508
+    },
+    {
+      "id": "Q146",
+      "category": "mechanism",
+      "difficulty": "complex",
+      "base_f1": 0.4868,
+      "rslora_f1": 0.7074,
+      "delta": 0.2206
+    },
+    {
+      "id": "Q147",
+      "category": "side_effects",
+      "difficulty": "moderate",
+      "base_f1": 0.38,
+      "rslora_f1": 0.4446,
+      "delta": 0.0645
+    },
+    {
+      "id": "Q148",
+      "category": "prognosis",
+      "difficulty": "complex",
+      "base_f1": 0.3664,
+      "rslora_f1": 0.5597,
+      "delta": 0.1933
+    },
+    {
+      "id": "Q149",
+      "category": "biomarker",
+      "difficulty": "moderate",
+      "base_f1": 0.6024,
+      "rslora_f1": 0.7856,
+      "delta": 0.1832
+    },
+    {
+      "id": "Q150",
+      "category": "treatment",
+      "difficulty": "simple",
+      "base_f1": 0.5209,
+      "rslora_f1": 0.6626,
+      "delta": 0.1417
+    },
+    {
+      "id": "Q151",
+      "category": "treatment",
+      "difficulty": "moderate",
+      "base_f1": 0.5047,
+      "rslora_f1": 0.5825,
+      "delta": 0.0778
+    },
+    {
+      "id": "Q152",
+      "category": "general",
+      "difficulty": "simple",
+      "base_f1": 0.5131,
+      "rslora_f1": 0.6561,
+      "delta": 0.143
+    },
+    {
+      "id": "Q153",
+      "category": "side_effects",
+      "difficulty": "simple",
+      "base_f1": 0.6364,
+      "rslora_f1": 0.7843,
+      "delta": 0.1479
+    },
+    {
+      "id": "Q154",
+      "category": "epidemiology",
+      "difficulty": "moderate",
+      "base_f1": 0.3554,
+      "rslora_f1": 0.6051,
+      "delta": 0.2497
+    },
+    {
+      "id": "Q155",
+      "category": "investigation",
+      "difficulty": "moderate",
+      "base_f1": 0.4066,
+      "rslora_f1": 0.5961,
+      "delta": 0.1895
+    },
+    {
+      "id": "Q156",
+      "category": "treatment",
+      "difficulty": "moderate",
+      "base_f1": 0.385,
+      "rslora_f1": 0.6054,
+      "delta": 0.2204
+    },
+    {
+      "id": "Q157",
+      "category": "prognosis",
+      "difficulty": "complex",
+      "base_f1": 0.4987,
+      "rslora_f1": 0.6367,
+      "delta": 0.138
+    },
+    {
+      "id": "Q158",
+      "category": "staging",
+      "difficulty": "complex",
+      "base_f1": 0.674,
+      "rslora_f1": 0.7446,
+      "delta": 0.0706
+    },
+    {
+      "id": "Q159",
+      "category": "investigation",
+      "difficulty": "moderate",
+      "base_f1": 0.477,
+      "rslora_f1": 0.6368,
+      "delta": 0.1598
+    },
+    {
+      "id": "Q160",
+      "category": "treatment",
+      "difficulty": "moderate",
+      "base_f1": 0.3454,
+      "rslora_f1": 0.5261,
+      "delta": 0.1807
+    },
+    {
+      "id": "Q161",
+      "category": "treatment",
+      "difficulty": "complex",
+      "base_f1": 0.5497,
+      "rslora_f1": 0.6979,
+      "delta": 0.1482
+    },
+    {
+      "id": "Q162",
+      "category": "treatment",
+      "difficulty": "moderate",
+      "base_f1": 0.52,
+      "rslora_f1": 0.6286,
+      "delta": 0.1086
+    },
+    {
+      "id": "Q163",
+      "category": "general",
+      "difficulty": "moderate",
+      "base_f1": 0.4543,
+      "rslora_f1": 0.6137,
+      "delta": 0.1594
+    },
+    {
+      "id": "Q164",
+      "category": "prognosis",
+      "difficulty": "complex",
+      "base_f1": 0.4015,
+      "rslora_f1": 0.5851,
+      "delta": 0.1836
+    },
+    {
+      "id": "Q165",
+      "category": "treatment",
+      "difficulty": "moderate",
+      "base_f1": 0.5812,
+      "rslora_f1": 0.6757,
+      "delta": 0.0945
+    },
+    {
+      "id": "Q166",
+      "category": "mechanism",
+      "difficulty": "complex",
+      "base_f1": 0.639,
+      "rslora_f1": 0.8368,
+      "delta": 0.1978
+    },
+    {
+      "id": "Q167",
+      "category": "mechanism",
+      "difficulty": "moderate",
+      "base_f1": 0.5539,
+      "rslora_f1": 0.7536,
+      "delta": 0.1997
+    },
+    {
+      "id": "Q168",
+      "category": "treatment",
+      "difficulty": "complex",
+      "base_f1": 0.4124,
+      "rslora_f1": 0.5425,
+      "delta": 0.13
+    },
+    {
+      "id": "Q169",
+      "category": "clinical_features",
+      "difficulty": "moderate",
+      "base_f1": 0.6528,
+      "rslora_f1": 0.7373,
+      "delta": 0.0845
+    },
+    {
+      "id": "Q170",
+      "category": "etiology",
+      "difficulty": "simple",
+      "base_f1": 0.5058,
+      "rslora_f1": 0.6859,
+      "delta": 0.1801
+    },
+    {
+      "id": "Q171",
+      "category": "prognosis",
+      "difficulty": "simple",
+      "base_f1": 0.5043,
+      "rslora_f1": 0.6245,
+      "delta": 0.1201
+    },
+    {
+      "id": "Q172",
+      "category": "pathology",
+      "difficulty": "complex",
+      "base_f1": 0.5822,
+      "rslora_f1": 0.6947,
+      "delta": 0.1125
+    },
+    {
+      "id": "Q173",
+      "category": "clinical_features",
+      "difficulty": "simple",
+      "base_f1": 0.5479,
+      "rslora_f1": 0.7085,
+      "delta": 0.1606
+    },
+    {
+      "id": "Q174",
+      "category": "treatment",
+      "difficulty": "moderate",
+      "base_f1": 0.5861,
+      "rslora_f1": 0.7356,
+      "delta": 0.1496
+    },
+    {
+      "id": "Q175",
+      "category": "diagnosis",
+      "difficulty": "moderate",
+      "base_f1": 0.4605,
+      "rslora_f1": 0.57,
+      "delta": 0.1095
+    },
+    {
+      "id": "Q176",
+      "category": "treatment",
+      "difficulty": "moderate",
+      "base_f1": 0.4871,
+      "rslora_f1": 0.5809,
+      "delta": 0.0938
+    },
+    {
+      "id": "Q177",
+      "category": "treatment",
+      "difficulty": "complex",
+      "base_f1": 0.4164,
+      "rslora_f1": 0.5345,
+      "delta": 0.1181
+    },
+    {
+      "id": "Q178",
+      "category": "treatment",
+      "difficulty": "moderate",
+      "base_f1": 0.5606,
+      "rslora_f1": 0.6986,
+      "delta": 0.138
+    },
+    {
+      "id": "Q179",
+      "category": "mechanism",
+      "difficulty": "complex",
+      "base_f1": 0.5045,
+      "rslora_f1": 0.7199,
+      "delta": 0.2154
+    },
+    {
+      "id": "Q180",
+      "category": "treatment",
+      "difficulty": "simple",
+      "base_f1": 0.5089,
+      "rslora_f1": 0.7135,
+      "delta": 0.2045
+    },
+    {
+      "id": "Q181",
+      "category": "treatment",
+      "difficulty": "moderate",
+      "base_f1": 0.3708,
+      "rslora_f1": 0.5341,
+      "delta": 0.1632
+    },
+    {
+      "id": "Q182",
+      "category": "side_effects",
+      "difficulty": "moderate",
+      "base_f1": 0.347,
+      "rslora_f1": 0.5319,
+      "delta": 0.1849
+    },
+    {
+      "id": "Q183",
+      "category": "treatment",
+      "difficulty": "complex",
+      "base_f1": 0.4118,
+      "rslora_f1": 0.6213,
+      "delta": 0.2095
+    },
+    {
+      "id": "Q184",
+      "category": "surgery",
+      "difficulty": "moderate",
+      "base_f1": 0.541,
+      "rslora_f1": 0.7262,
+      "delta": 0.1852
+    },
+    {
+      "id": "Q185",
+      "category": "general",
+      "difficulty": "simple",
+      "base_f1": 0.5927,
+      "rslora_f1": 0.7657,
+      "delta": 0.173
+    },
+    {
+      "id": "Q186",
+      "category": "general",
+      "difficulty": "moderate",
+      "base_f1": 0.6315,
+      "rslora_f1": 0.8203,
+      "delta": 0.1888
+    },
+    {
+      "id": "Q187",
+      "category": "treatment",
+      "difficulty": "moderate",
+      "base_f1": 0.5544,
+      "rslora_f1": 0.6839,
+      "delta": 0.1295
+    },
+    {
+      "id": "Q188",
+      "category": "treatment",
+      "difficulty": "simple",
+      "base_f1": 0.5717,
+      "rslora_f1": 0.7717,
+      "delta": 0.2
+    },
+    {
+      "id": "Q189",
+      "category": "biomarker",
+      "difficulty": "moderate",
+      "base_f1": 0.4408,
+      "rslora_f1": 0.4876,
+      "delta": 0.0468
+    },
+    {
+      "id": "Q190",
+      "category": "etiology",
+      "difficulty": "moderate",
+      "base_f1": 0.4075,
+      "rslora_f1": 0.5574,
+      "delta": 0.15
+    },
+    {
+      "id": "Q191",
+      "category": "investigation",
+      "difficulty": "complex",
+      "base_f1": 0.5277,
+      "rslora_f1": 0.6982,
+      "delta": 0.1705
+    },
+    {
+      "id": "Q192",
+      "category": "mechanism",
+      "difficulty": "complex",
+      "base_f1": 0.488,
+      "rslora_f1": 0.6679,
+      "delta": 0.1799
+    },
+    {
+      "id": "Q193",
+      "category": "mechanism",
+      "difficulty": "complex",
+      "base_f1": 0.5908,
+      "rslora_f1": 0.7502,
+      "delta": 0.1594
+    },
+    {
+      "id": "Q194",
+      "category": "investigation",
+      "difficulty": "simple",
+      "base_f1": 0.4429,
+      "rslora_f1": 0.7049,
+      "delta": 0.262
+    },
+    {
+      "id": "Q195",
+      "category": "pathology",
+      "difficulty": "simple",
+      "base_f1": 0.3486,
+      "rslora_f1": 0.4832,
+      "delta": 0.1347
+    },
+    {
+      "id": "Q196",
+      "category": "biomarker",
+      "difficulty": "moderate",
+      "base_f1": 0.6071,
+      "rslora_f1": 0.8196,
+      "delta": 0.2124
+    },
+    {
+      "id": "Q197",
+      "category": "biomarker",
+      "difficulty": "complex",
+      "base_f1": 0.2976,
+      "rslora_f1": 0.4572,
+      "delta": 0.1597
+    },
+    {
+      "id": "Q198",
+      "category": "general",
+      "difficulty": "simple",
+      "base_f1": 0.4595,
+      "rslora_f1": 0.5942,
+      "delta": 0.1348
+    },
+    {
+      "id": "Q199",
+      "category": "general",
+      "difficulty": "moderate",
+      "base_f1": 0.4265,
+      "rslora_f1": 0.5908,
+      "delta": 0.1643
+    },
+    {
+      "id": "Q200",
+      "category": "treatment",
+      "difficulty": "moderate",
+      "base_f1": 0.6831,
+      "rslora_f1": 0.7757,
+      "delta": 0.0926
+    }
+  ],
+  "summary": {
+    "50q": {
+      "avg_base_f1": 0.4931,
+      "avg_rslora_f1": 0.6576,
+      "avg_delta": 0.1645
+    },
+    "200q": {
+      "avg_base_f1": 0.5021,
+      "avg_rslora_f1": 0.6569,
+      "avg_delta": 0.1548
+    },
+    "combined": {
+      "avg_base_f1": 0.5003,
+      "avg_rslora_f1": 0.657,
+      "avg_delta": 0.1567,
+      "total_questions": 250
+    },
+    "total_steps": 150,
+    "final_train_loss": 0.4046,
+    "final_val_loss": 0.3715
+  }
+}

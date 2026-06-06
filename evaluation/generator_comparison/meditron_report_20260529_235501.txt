@@ -1,0 +1,62 @@
+
+========================================================================
+GENERATOR COMPARISON — Meditron-7B
+Ollama tag  : meditron
+Timestamp   : 2026-05-30 00:57:52
+Questions   : 50
+LLM Judge   : disabled
+========================================================================
+
+-- Accuracy & F1 ─────────────────────────────────────────────────────
+Exact Match (EM)        : 0.0000
+Token Precision         : 0.0869
+Token Recall            : 0.1334
+Token F1                : 0.0993
+
+-- BLEU / GLEU / METEOR ──────────────────────────────────────────────
+BLEU-1                  : 0.0743
+BLEU-4                  : 0.0061
+GLEU                    : 0.0204
+METEOR                  : 0.0733
+
+-- ROUGE ──────────────────────────────────────────────────────────────
+ROUGE-1                 : 0.1083
+ROUGE-2                 : 0.0060
+ROUGE-L                 : 0.0784
+ROUGE-Lsum              : 0.0839
+
+-- Diversity ──────────────────────────────────────────────────────────
+DISTINCT-1              : 0.1038
+DISTINCT-2              : 0.1467
+
+-- Semantic Similarity ─────────────────────────────────────────────────
+SBERT Cosine Sim        : 0.1812
+BERTScore F1            : 0.8097
+Answer Relevance        : 0.2341
+
+-- Retrieval Quality (proxy-labelled @ thresh=0.45) ──────
+Precision@5             : 0.7600
+Recall@5                : 0.9800
+Hit-Rate@5              : 0.9800
+MRR                     : 0.8807
+NDCG@5                  : 0.9023
+Avg Rerank Score        : 0.5494
+Context Relevance       : 0.5843
+Avg Confidence          : 0.5889
+
+-- Faithfulness / Hallucination ───────────────────────────────────────
+Faithfulness (LLM)      : nan
+
+-- S.C.O.P.E Framework (1-5 scale) ────────────────────────────────────
+Sufficiency    (S x0.20): nan / 5
+Correctness    (C x0.30): nan / 5
+Organization   (O x0.15): nan / 5
+Pertinence     (P x0.25): nan / 5
+Exactness      (E x0.10): nan / 5
+SCOPE Weighted Avg      : nan / 5
+SCOPE Simple Avg        : nan / 5
+
+-- LLM-as-a-Judge (0-1) ───────────────────────────────────────────────
+LLM Judge Score         : nan
+
+========================================================================

@@ -1,0 +1,62 @@
+
+========================================================================
+GENERATOR COMPARISON — Llama3-Med42-8B (Q4_K_M)
+Ollama tag  : hf.co/QuantFactory/Llama3-Med42-8B-GGUF:Q4_K_M
+Timestamp   : 2026-06-01 22:07:02
+Questions   : 50
+LLM Judge   : enabled
+========================================================================
+
+-- Accuracy & F1 ─────────────────────────────────────────────────────
+Exact Match (EM)        : 0.0000
+Token Precision         : 0.2477
+Token Recall            : 0.3870
+Token F1                : 0.2916
+
+-- BLEU / GLEU / METEOR ──────────────────────────────────────────────
+BLEU-1                  : 0.2277
+BLEU-4                  : 0.0455
+GLEU                    : 0.0906
+METEOR                  : 0.2931
+
+-- ROUGE ──────────────────────────────────────────────────────────────
+ROUGE-1                 : 0.3677
+ROUGE-2                 : 0.1506
+ROUGE-L                 : 0.2736
+ROUGE-Lsum              : 0.2736
+
+-- Diversity ──────────────────────────────────────────────────────────
+DISTINCT-1              : 0.4922
+DISTINCT-2              : 0.9096
+
+-- Semantic Similarity ─────────────────────────────────────────────────
+SBERT Cosine Sim        : 0.7151
+BERTScore F1            : 0.8765
+Answer Relevance        : 0.7829
+
+-- Retrieval Quality (proxy-labelled @ thresh=0.45) ──────
+Precision@5             : 0.7600
+Recall@5                : 0.9800
+Hit-Rate@5              : 0.9800
+MRR                     : 0.8807
+NDCG@5                  : 0.9023
+Avg Rerank Score        : 0.5494
+Context Relevance       : 0.5843
+Avg Confidence          : 0.5889
+
+-- Faithfulness / Hallucination ───────────────────────────────────────
+Faithfulness (LLM)      : 0.7367
+
+-- S.C.O.P.E Framework (1-5 scale) ────────────────────────────────────
+Sufficiency    (S x0.20): 3.62 / 5
+Correctness    (C x0.30): 3.94 / 5
+Organization   (O x0.15): 3.98 / 5
+Pertinence     (P x0.25): 4.46 / 5
+Exactness      (E x0.10): 2.74 / 5
+SCOPE Weighted Avg      : 3.89 / 5
+SCOPE Simple Avg        : 3.75 / 5
+
+-- LLM-as-a-Judge (0-1) ───────────────────────────────────────────────
+LLM Judge Score         : 0.7438
+
+========================================================================

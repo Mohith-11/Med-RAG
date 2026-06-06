@@ -1,0 +1,168 @@
+PS C:\Users\mohit\Documents\QA\rag_project> python evaluate_top25.py 
+Loading weights: 100%|███████████████████████████████████████████| 391/391 [00:00<00:00, 2969.25it/s]
+Loading weights: 100%|███████████████████████████████████████████| 201/201 [00:00<00:00, 2870.03it/s]
+Loading weights: 100%|███████████████████████████████████████████| 103/103 [00:00<00:00, 3247.39it/s]
+
+========================================================================
+  ONCOLOGY RAG -- CURATED TOP-25 EVALUATION
+========================================================================
+
+  [Q001] (1/25) ETA ~0.0min  What are the three main anatomical divisions of the lar
+       done in 26.6s  | answer: The larynx is divided into three subsites: glottis, supraglottis, and subglottis
+  [Q010] (2/25) ETA ~10.7min  What is the mainstay of treatment for early-stage head 
+       done in 8.4s  | answer: The mainstay for treatment of early-stage head and neck cancer is single modalit
+  [Q013] (3/25) ETA ~6.7min  How common are paraneoplastic syndromes in lung cancer 
+       done in 8.4s  | answer: Paraneoplastic syndromes are found in 10% of patients with lung cancer, most com
+  [Q020] (4/25) ETA ~5.3min  What is the primary determinant of 5-year survival in c
+       done in 6.9s  | answer: Nodal involvement is the primary determinant of 5-year survival.
+  [Q032] (5/25) ETA ~4.4min  What does 'neoadjuvant treatment' refer to in oncology?
+       done in 6.4s  | answer: Neoadjuvant treatment refers to chemotherapy administered prior to surgery.
+  [Q035] (6/25) ETA ~3.8min  What enzyme helps cancer cells maintain immortality by 
+       done in 10.7s  | answer: **** Telomerase is an enzyme that replenishes the ends of chromosomes in cancer
+  [Q037] (7/25) ETA ~3.6min  What does 'palliation' mean in the context of incurable
+       done in 8.8s  | answer: Palliation means improvement of symptoms and function but does not mean reductio
+  [Q042] (8/25) ETA ~3.3min  What role does involuntary weight loss play as a progno
+       done in 8.3s  | answer: Involuntary weight loss greater than 5% in 6 months is often a prognostic indica
+  [Q046] (9/25) ETA ~3.0min  What tumor markers are useful for monitoring the respon
+       done in 10.5s  | answer: Serum tumor markers, such as CEA, CA-125, CA-19-9, and CA-15-3, can be helpful i
+  [Q047] (10/25) ETA ~2.8min  What is the typical presentation of testicular cancer?
+       done in 6.8s  | answer: The most common presentation (>90%) is a painless scrotal mass.
+  [Q057] (11/25) ETA ~2.5min  What defines the Stewart-Treves syndrome?
+       done in 9.4s  | answer: Stewart-Treves syndrome is lymphangiosarcoma in chronically lymphedematous extre
+  [Q063] (12/25) ETA ~2.4min  What is the main objective of primary prevention in onc
+       done in 8.2s  | answer: The main objectives of primary prevention in oncology are reduction of incidence
+  [Q069] (13/25) ETA ~2.2min  Why is cetuximab used in head and neck cancer treatment
+       done in 9.6s  | answer: Cetuximab was associated with significant improvements in loco-regional control
+  [Q072] (14/25) ETA ~2.0min  What is the significance of the BRCA1 and BRCA2 genes i
+       done in 7.9s  | answer: BRCA1 and BRCA2 are associated with hereditary breast cancer, increased incidenc
+  [Q080] (15/25) ETA ~1.8min  What is the basic surgical treatment for testicular can
+       done in 7.0s  | answer: The basic surgical treatment procedure is always radical inguinal orchiectomy.
+  [Q084] (16/25) ETA ~1.6min  What is the most frequently used tumor marker for epith
+       done in 9.1s  | answer: Cancer antigen 125 (CA 125) is a sensitive but not specific marker for non-mucin
+  [Q088] (17/25) ETA ~1.4min  What tumor marker is useful in the diagnosis and monito
+       done in 8.2s  | answer: CA 19-9 is widely used for the diagnosis and follow-up of patients with pancreat
+  [Q091] (18/25) ETA ~1.3min  What is the role of the p53 gene in cancer development?
+       done in 24.3s  | answer: The p53 tumor suppressor gene is mutated in approximately 55% of all human cance
+  [Q092] (19/25) ETA ~1.2min  How does alcohol act synergistically with tobacco in he
+       done in 17.2s  | answer: Alcohol ingestion probably is less important as an etiologic agent than for othe
+  [Q096] (20/25) ETA ~1.1min  What is 'liquid biopsy' in oncology?
+       done in 8.9s  | answer: Liquid biopsy involves the analysis of circulating tumour cells, circulating cel
+  [Q100] (21/25) ETA ~0.9min  What is the significance of the Philadelphia chromosome
+       done in 10.4s  | answer: The Philadelphia chromosome results from a reciprocal translocation between chro
+  [Q102] (22/25) ETA ~0.7min  What role does the Epstein-Barr virus (EBV) play in onc
+       done in 11.2s  | answer: EBV contributes to cellular transformation through oncogenic genes like LMP-1, L
+  [Q109] (23/25) ETA ~0.5min  What is the primary risk factor for developing mesothel
+       done in 6.1s  | answer: Asbestos exposure is causally linked to malignant mesothelioma.
+  [Q112] (24/25) ETA ~0.3min  How does human papillomavirus (HPV) status affect oroph
+       done in 8.2s  | answer: Human papillomavirus infection is associated with a slightly better prognosis co
+  [Q121] (25/25) ETA ~0.2min  What is the most common presenting sign of newly diagno
+       done in 6.7s  | answer: The most common presenting sign of newly diagnosed breast cancer is a breast lum
+
+[OK] Pipeline done in 4.2 min. Computing metrics...
+
+[Computing BERTScore...]
+Loading weights: 100%|███████████████████████████████████████████| 389/389 [00:00<00:00, 5175.74it/s]
+[transformers] RobertaModel LOAD REPORT from: roberta-large
+Key                       | Status     |
+--------------------------+------------+-
+lm_head.dense.weight      | UNEXPECTED |
+lm_head.bias              | UNEXPECTED |
+lm_head.layer_norm.bias   | UNEXPECTED |
+lm_head.layer_norm.weight | UNEXPECTED |
+lm_head.dense.bias        | UNEXPECTED |
+pooler.dense.bias         | MISSING    |
+pooler.dense.weight       | MISSING    |
+
+Notes:
+- UNEXPECTED:   can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:      those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+
+========================================================================
+  ONCOLOGY RAG -- CURATED TOP-25 EVALUATION REPORT
+  Generated: 2026-05-12 21:29:46
+  Questions : 25
+========================================================================
+
+-- Generation Lexical ──────────────────────────────────────────────────
+Token-F1                : 0.4476
+Exact Match             : 0.0000
+BLEU-1                  : 0.3211
+BLEU-4                  : 0.1537
+GLEU                    : 0.1980
+METEOR                  : 0.3316
+
+-- ROUGE ──────────────────────────────────────────────────────────────
+ROUGE-1                 : 0.4637
+ROUGE-2                 : 0.2581
+ROUGE-L                 : 0.4279
+ROUGE-Lsum              : 0.4279
+
+-- Semantic Similarity ─────────────────────────────────────────────────
+SBERT Cosine Sim        : 0.7146
+BERTScore F1            : 0.9051
+Answer Relevance        : 0.7483
+
+-- Retrieval Quality (proxy @ thresh=0.6) ───────────────
+Precision@5             : 0.6507
+Recall@5                : 0.9600
+Hit-Rate@5              : 0.9600
+MRR                     : 0.8680
+NDCG@5                  : 0.8809
+Avg Rerank Score        : 5.1612
+Context Relevance       : 0.6388
+
+-- Faithfulness / Hallucination ───────────────────────────────────────
+Faithfulness (LLM)      : 0.8520
+
+-- Agentic Metrics ────────────────────────────────────────────────────
+Avg Agent Iterations    : 1.00
+Avg Confidence Score    : 5.1612
+
+-- S.C.O.P.E Framework (Weighted, 1-5) ────────────────────────────────
+Sufficiency    (S x0.20): 4.28 / 5
+Correctness    (C x0.30): 4.48 / 5
+Organization   (O x0.15): 4.32 / 5
+Pertinence     (P x0.25): 4.00 / 5
+Exactness      (E x0.10): 4.12 / 5
+SCOPE Weighted Avg      : 4.26 / 5
+SCOPE Simple Avg        : 4.24 / 5
+
+-- LLM-as-a-Judge (0-1) ───────────────────────────────────────────────
+LLM Judge Score         : 0.8200
+
+========================================================================
+
+-- Per-question breakdown -----------------------------------------------
+ID     Cat            Diff        F1   R-1  SBERT  Faith  Judge   NDCG
+----------------------------------------------------------------------
+Q001   diagnosis      simple   0.640 0.640  0.747  0.800  0.800  1.000
+Q010   treatment      simple   1.000 1.000  0.864  1.000  1.000  0.956
+Q013   epidemiology   simple   0.865 0.865  0.854  1.000  1.000  1.000
+Q020   prognosis      simple   1.000 1.000  0.587  1.000  1.000  0.387
+Q032   treatment      simple   0.222 0.222  0.878  0.800  0.800  1.000
+Q035   mechanism      moderate 0.483 0.552  0.754  1.000  0.900  0.983
+Q037   treatment      moderate 0.682 0.682  0.731  1.000  1.000  0.967
+Q042   prognosis      simple   0.389 0.389  0.753  0.800  0.700  1.000
+Q046   biomarker      simple   0.294 0.439  0.648  0.800  0.700  0.631
+Q047   diagnosis      simple   0.414 0.414  0.593  0.800  0.800  1.000
+Q057   epidemiology   moderate 0.303 0.294  0.618  0.800  0.800  0.000
+Q063   general        simple   0.714 0.714  0.905  1.000  1.000  1.000
+Q069   treatment      moderate 0.150 0.146  0.641  0.800  0.800  1.000
+Q072   epidemiology   simple   0.162 0.216  0.881  0.800  0.800  1.000
+Q080   treatment      simple   0.667 0.640  0.376  1.000  0.900  1.000
+Q084   biomarker      simple   0.357 0.345  0.591  0.900  0.800  0.693
+Q088   biomarker      simple   0.552 0.625  0.678  0.800  0.800  1.000
+Q091   mechanism      moderate 0.294 0.353  0.704  0.800  0.800  0.956
+Q092   epidemiology   moderate 0.049 0.098  0.743  0.200  0.200  0.983
+Q096   investigation  simple   0.435 0.431  0.804  0.900  0.800  0.947
+Q100   biomarker      moderate 0.216 0.211  0.624  0.800  0.800  0.906
+Q102   epidemiology   simple   0.207 0.176  0.591  0.800  0.700  0.920
+Q109   epidemiology   simple   0.500 0.500  0.702  0.900  0.900  0.693
+Q112   prognosis      moderate 0.186 0.178  0.716  0.800  0.800  1.000
+Q121   diagnosis      simple   0.410 0.462  0.883  1.000  0.900  1.000
+
+[OK] Report -> evaluation/top25_report_20260512_212946.txt
+[OK] Excel  -> evaluation/top25_results_20260512_212946.xlsx
+
+[DONE] Top-25 Evaluation complete!
+PS C:\Users\mohit\Documents\QA\rag_project> 

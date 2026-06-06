@@ -1,0 +1,1102 @@
+{
+  "Q001": {
+    "contexts": [
+      "369 Secretory carcinoma Definition Secretory carcinoma (SC) is a monophasic salivary carcinoma composed of cells with abundant eosinophilic or bubbly secretions, arranged in microcystic, tubular, and solid structures. It is usually characterized by a specific rearrangement of the ETV6 or RET gene, and harbours ETV6::NTRK3 or ETV6::RET fusion in most cases",
+      ". Expert Rev Anticancer Ther . 2012;12(9):1161-1168. 39. Vekony H, Ylstra B, Wilting SM, et al. DNA copy number gains at loci of growth factors and their receptors in salivary gland ade- noid cystic carcinoma. Clin Cancer Res. 2007;13(11):3133-3139. 40. Mitani Y, Li J, Rao PH, et al. Comprehensive analysis of the MYB-NFIB gene fusion in salivary adenoid cystic carcinoma: incidence, variability, and clinicopathologic significance. Clin Cancer Res. 2010;16(19):4722-4731. 41",
+      ". FNAB cytopathology attempts to grade as only low and high grade. Lymphocytes may be prominent. Very occasional focal partial keratinization may be present in some cases but extensive keratinization is not seen and if present in a high grade lesion, is in keeping with squamous cell carcinoma. Diagnostic molecular pathology Among salivary tumours, CRTC1::MAML2 fusion gene is specific for MEC and useful in diagnostic workups",
+      "373 #26551 Secretory carcinoma (SC) of parotid gland with ETV6-RET fusion SC has a prominent fibrosclerotic stroma and solid/microcystic structure. The tumor cells have bland vesicular round to oval nuclei, and distinctive centrally located nucleoli. #28156 Secretory carcinoma Perineural invasion is seen in upper right corner.",
+      "371 #25212 Secretory carcinoma (SC) Histology of SC with classic ETV6::NTRK3 fusion demonstrates a microcystic/cribriform growth pattern and homogenous and bubbly eosinophilic secretory material. #25213 Secretory carcinoma (SC) of buccal mucosa The tumour cells of SC have low-grade vesicular nuclei with finely granular chromatin and distinctive centrally located nucleoli, surrounded by pale pink granular or vacuolated cytoplasm.",
+      "372 #25214 Secretory carcinoma of parotid gland with ETV6::NTRK3 fusion Papillary-cystic architectural pattern shows some degree of cyst formation with micropapillary features and hobnailing of the cells. #25475 Secretory carcinoma, fusion ETV6-NTRK3, FNAC, Papanicolaou stain Papillary-like structures and clusters of epithelial cells with rich finely granulated cytoplasm with round to oval mildly polymorphic nuclei and discernible nucleoli in a mucinous background.",
+      "464 #25804 Salivary carcinoma, NOS. Adenocarcinoma, not otherwise specified, intermediate grade This submandibular gland tumour consisted of one cell type with monotonous dark nuclei, arranged as infiltrative solid and cribriform nests, cords, and ducts in a myxoid stroma. The tumour was negative for fusions by RNA sequencing. #25811 Salivary carcinoma, NOS",
+      ". The tumour was negative for fusions by RNA sequencing. #25811 Salivary carcinoma, NOS. Adenocarcinoma, not otherwise specified, high grade This submandibular gland tumour has irregular ducts lined by pleomorphic cells with necrosis and a high mitotic rate. There are no overtly apocrine features, and androgen receptor (not shown) was negative."
+    ],
+    "rerank_scores": [
+      0.8711451888084412,
+      0.7558214068412781,
+      0.6435202956199646,
+      0.2594151496887207,
+      0.14182421565055847,
+      0.13554146885871887,
+      0.08290689438581467,
+      0.06419428437948227
+    ]
+  },
+  "Q002": {
+    "contexts": [
+      ". The former alteration is found in >50% of cases and the latter in approximately 5% of cases { 28594149 }. MYB::MYBL1 activation due to gene fusion or other mechanisms is a key event in AdCC pathogenesis { 26829750 ; 28954282 ; 31877778 ; 32001675 }. Losses of 1p, 6q, and 15q are associated with high-grade tumours, and loss of 14q is exclusively seen in low-grade tumours { 22505352 ; 29619555 }",
+      "367 #28387 Acinic cell carcinoma Strong nuclear expression of NR4A2 in neoplastic cells in an acinic cell carcinoma that harbored a NR4A2::NURR1 fusion. #24305 Acinic cell carcinoma The tumour reveals a multilobular growth pattern. It is composed of solid and microcystic patterns. The neoplastic cells are mostly of acinar serous type with multiple basophilic zymogen granules in the cytoplasm, although glandular and clear cells can be also seen.",
+      "918 Etiologic factors have not been identified, although exceptionally an association with prior radiotherapy has been reported { 29336183 }. Pathogenesis In nearly all cases, a specific chromosomal translocation t(X;18)(p11;q11) acts as driver mutation leading to formation of a SS18::SSX1 or SSX2 fusion genes. This translocation has not been found in any other human neoplasm { 25614489 }. Molecular variants involving SSX4, SS18L1, or NEDD4 are very rare { 32559641 }",
+      "254 9p21.3 CDKN2A deletion 25% { 19827123 } Adenoid cystic carcinoma 6q22-23 MYB fusion/activation/ amplification ~80% { 21572406 ; 2682975 0 } 8q13 MYBL1 fusion/activati on/amplification ~10% { 26631609 } 9q34.3 NOTCH mutations 14% { 27870570 } Acinic cell carcinoma 9q31 NR4A3 fusion/activatio n 86% { 30664630 } 19q31.1 MSANTD3 fusion/amplification 4% { 30520817 } Secretory carcinoma t(12;15) (p13;q2 5) ETV6::NTRK3 fusion > 90% { 20410810 } t(12;10) (p13;q1 1) ETV6::RET fusion 2–5% { 29076873 }",
+      ". FNAB cytopathology attempts to grade as only low and high grade. Lymphocytes may be prominent. Very occasional focal partial keratinization may be present in some cases but extensive keratinization is not seen and if present in a high grade lesion, is in keeping with squamous cell carcinoma. Diagnostic molecular pathology Among salivary tumours, CRTC1::MAML2 fusion gene is specific for MEC and useful in diagnostic workups",
+      ". Etiology Unknown Pathogenesis One case harboured an EGFR::ZNF267 gene fusion, and another case displayed monoclonality by human androgen receptor X-chromosome inactivation assay, supporting the hypothesis of a neoplastic process { 31698004 }. Mitochondrial DNA revealed a slightly increased mutation rate mainly in heteroplasmy, consistent with a benign neoplasm { 20922408 }. Macroscopic appearance",
+      ". Diagnostic molecular pathology Approximately 90% of SC harbour a characteristic chromosomal rearrangement, t(12;15) (p13;q25) resulting in an ETV6::NTRK3 fusion { 20410810 }. Small subset of cases demonstrate divergent molecular findings with alternate ETV6::RET { 25651470 ; 26492182 ; 29076873 }, ETV6::MET { 29683815 }, ETV6::MA ML3 { 30130630 }, and VIM::RET { 32675658 } gene fusions",
+      ". Epidemiology SC usually presents in adults with a mean patient age of 46.5 (range 10-86 years) and an equal sex distribution { 20410810 ; 21989350 ; 23459839 ; 23821207 ; 25078757 }. Etiology No known causative factors have been identified. Pathogenesis Most cases of SC harbour a characteristic chromosomal translocation, t(12;15) (p13;q25) resulting in an ETV6::NTRK3 fusion { 20410810 }"
+    ],
+    "rerank_scores": [
+      0.11901859939098358,
+      0.11323259770870209,
+      0.11218687891960144,
+      0.10150309652090073,
+      0.023911919444799423,
+      0.015104508027434349,
+      0.013522827066481113,
+      0.0120050935074687
+    ]
+  },
+  "Q003": {
+    "contexts": [
+      "517 #26694: Oral cavity squamous cell carcinoma demonstrating perineural invasion. #27658: Although the tumour appears to have a cohesive invading front, a detached tumour satellite > 1mm from the main tumour is a worst pattern on invasion 5 and an adverse prognostic factor.",
+      ". Prognosis and prediction Prognosis is generally poor. Outcomes are similar to stage IV oral squamous cell carcinoma with overall five year survival of around 45%, Radical resection with neck dissection is the most frequent treatment, with adjunctive radiotherapy providing a benefit. Recurrence is frequent (up to 60%) and is associated with poor outcome. Distant metastasis is rare but typically to the lung",
+      ". Loss of heterozygosity at 11q23 in squamous cell carcinoma of the head and neck is associated with recurrent disease. Clin Cancer Res 1998;4:2787. 89. Mineta H, Miura K, Suzuki I, et al. Low p27 expression correlates with poor prognosis for patients with oral tongue squamous cell carcioma. Cancer 1999;85:1011. 90. Venkatesan TK, Kuropkat C, Caldarelli DD, et al. Prognostic significance of p27 expression in carcinoma of the oral cavity and oropharynx. Laryngoscope 1999;109:1329. 91",
+      ". 554. Strong EW. Carcinoma of the tongue. Otolaryngol Clin North Am 1979;12:107. 555. Yamamoto E, Mijakawa, Kohama G. Mode of invasion and lymph node metastasis in squamous cell carcinoma of the oral cavity. Head Neck Surg 1984;6:938. 556. Poleksic S, Kalwaic HJ. Prognostic value of vascular invasion in squamous cell carcinoma of the head and neck. Plast Reconstr Surg 1978;61:234. 557. Schantz SP, Byers RM, Goepfert H, Shallenberger RS, Beddingfield N",
+      ". #25606 Table 1. Subtypes of squamous cell carcinoma [SCC] of the oral cavity and mobile tongue Oral SCC subtype Acantholytic SCC Squamous carcinoma with acantholysis in epithelial islands creating a gland or duct-like appearance Rare in oral cavity, may occur on the lip, has poor prognosis {15045535} { 21410819 } {17071808} {25364162} Adenosquamous carcinoma Carcinoma with both squamous and adenocarcinoma components",
+      ". They are usually round and have a stippled “pepper-and-salt” chromatin. 198 Pathologic features associated with a poor prognosis include presence of necrosis (P=.001), squamous pattern (P=.002), presence of oxyphil cells in the tumor and absence of cells with intermediate cytoplasm ( P=.02), and less than 50% calcitonin immunoreactivity (P=.04).199 CLINICAL PRESENTATION AND DIAGNOSIS The clinical symptoms at the time of presentation vary, dependent on the situation for each patient",
+      ". There is pronounced nuclear anaplasia, and invasion of surrounding tissue may be seen. When comparing patients with similar Gleason sums, it is important to note that the major Gleason pattern score may have additional prognostic value. For instance, patients with 3+4 disease tend to do better than those with",
+      ". Conventional histologic grading corresponds poorly with clinical outcomes { 15644773 }. Histological factors associated with a worse prognosis include a non-cohesive pattern of invasion, tumour budding, perineural and lymphovascular invasion, and bone invasion (See Table 2 #25609)"
+    ],
+    "rerank_scores": [
+      0.9416675567626953,
+      0.6931822896003723,
+      0.34488922357559204,
+      0.10715243220329285,
+      0.032817110419273376,
+      0.015411877073347569,
+      0.006953412666916847,
+      0.0067129312083125114
+    ]
+  },
+  "Q004": {
+    "contexts": [
+      ". Polymorphous adenocarcinoma, cribriform (cribriform adenocarcinoma of the salivary glands; CASG) is characterized by predominant papillary and glomeruloid growth pattern, clear nuclei, and common PRDK1, PRKD2, or PRKD3 fusions",
+      ". 2) MEF2C::SS18 fusion > 90% { 33982215 } Polymorp hous adenocarc inoma Classic subtype 14q12 PRKD1 mutations 73% { 25240283 } Cribrifor m subtype 14q12 PRKD1 fusions 38% { 24942367 } 19q13.2 PRKD2 fusions 14% { 24942367 } 2p22.2 PRKD3 fusions 19% { 24942367 } Hyalinizin g clear cell carcinoma t(12;22) (q21;q1 2) EWSR1::ATF1 fusions 93% { 21484932 } EWSR1::CREM fusion s <5% { 29975250 } Basal cell adenocarc inoma 16q12.1 CYLD mutations 29% { 29463883 } Intraducta l carcinoma Intercalate d duct",
+      "389 #28729 Polymorphous adenocarcinoma, classic subtype Various patterns, including tubules, trabeculae, microcysts, and cribriform architecture, are seen with a mucoid/myxoid background. The tumour is often arranged in a targetoid or streaming fashion in the periphery or around nerves. #23467 Polymorphous adenocarcinoma originating from the palate Various patterns, including tubules, trabeculae, microcysts, and cribriform architecture, are seen",
+      "adenocarcinoma, conventional subtype Polymorphous adenocarcinoma, cribriform subtype (cribriform adenocarcinoma of the salivary glands; CASG) Localization Over 95% of PAC involves minor salivary glands or seromucous glands of the upper aerodigestive tract",
+      ". #23924 Polymorphous adenocarcinoma, classic subtype The tumour cells have uniform small oval nuclei, scanty cytoplasm, open chromatin and inconspicuous nucleoli. Neurotrophism is seen.",
+      "388 #27750 Polymorhous adenocarcinoma, cribriform subtype Numerous patterns, with easily identified papillary structures and glomeruloid bodies. The nuclei show open chromatin. Fibrous connective tissue stroma is present. #27751 Polymorhous adenocarcinoma, cribriform subtype Solid growth pattern and optically clear nuclei reminiscent of papillary thyroid cancer nuclei.",
+      ". Occasional cases are focally SMA- positive. Differential Secretory carcinoma has more abundant cytoplasm, pink secretions, mammaglobin positivity, and harbors different fusions (usually ETV6::NTRK3). Polymorphous adenocarcinoma shows more architectural diversity and different genetic alterations (mutations or rearrangements of PRKD1, 2 or 3). Adenoid cystic carcinoma has two cell populations, is far more infiltrative, and harbors rearrangements of MYB, MYBL1 and/or NFIB",
+      "382 Polymorphous adenocarcinoma Definition Polymorphous adenocarcinoma, conventional (PAC) is a malignant epithelial tumour characterized by cytological uniformity, morphological diversity, an infiltrative growth pattern, and is usually associated with alterations in PRDK gene family"
+    ],
+    "rerank_scores": [
+      0.9391254186630249,
+      0.9348006844520569,
+      0.732051432132721,
+      0.5434854030609131,
+      0.5002158880233765,
+      0.37652140855789185,
+      0.3595390319824219,
+      0.22158685326576233
+    ]
+  },
+  "Q005": {
+    "contexts": [
+      ". Expert Rev Anticancer Ther . 2012;12(9):1161-1168. 39. Vekony H, Ylstra B, Wilting SM, et al. DNA copy number gains at loci of growth factors and their receptors in salivary gland ade- noid cystic carcinoma. Clin Cancer Res. 2007;13(11):3133-3139. 40. Mitani Y, Li J, Rao PH, et al. Comprehensive analysis of the MYB-NFIB gene fusion in salivary adenoid cystic carcinoma: incidence, variability, and clinicopathologic significance. Clin Cancer Res. 2010;16(19):4722-4731. 41",
+      "377 Microsecretory adenocarcinoma Definition Microsecretory adenocarcinoma (MSA) is a low-grade malignancy with an intercalated duct-like phenotype and MEF2C::SS18 fusion",
+      ". FNAB cytopathology attempts to grade as only low and high grade. Lymphocytes may be prominent. Very occasional focal partial keratinization may be present in some cases but extensive keratinization is not seen and if present in a high grade lesion, is in keeping with squamous cell carcinoma. Diagnostic molecular pathology Among salivary tumours, CRTC1::MAML2 fusion gene is specific for MEC and useful in diagnostic workups",
+      "390 #23468 Cribriform adenocarcinoma of salivary gland The tumour originated from the base of tongue. Fluorescence in situ hybridization detects PRKD3 translocation in this tumour. Hyalinizing clear cell carcinoma Definition Hyalinizing clear cell carcinoma (HCCC) is a carcinoma composed of clear and eosinophilic cells in a variably hyalinized stroma, usually associated with EWSR1 rearrangement",
+      ". However, there are instances where the genomic context of a single gene within a cancer will be of high impact for specific therapeutic agents (see Table 16.1). Pathway Directed Anticancer Therapy One of the earliest success stories illustrating pathway-driven ther- apeutics is with CML. The hallmark chromosomal abnormality of this disease is the translocation of chromosomes 9 and 22 that ultimately produces the fusion gene BCR-ABL",
+      ". 175 The translocation results in the fusion of these genes, producing a chimeric NPM-ALK gene and message. Reverse transcriptase–polymerase chain reaction assays for this translocation have been positive in all cases with cytogenetic evidence of the t(2;5) and in several cases of ALCL with a normal karyotype. Clinical Presentation The clinical presenting features of large cell lymphoma in children are more varied than those for lymphoblastic or Burkitt's lymphoma",
+      ". In 97.5% of cases, there is a reciprocal translocation between chromosomes 9 and 22, which, in most cases, can be recognized in standard karyotypes as a philadelphia chromosome (small chromosome 22). this t(9;22) results in a new fusion gene called BCR-ABL1. the protein product of this gene behaves as an abnormal tK and is the cause of the leukaemia. Knowledge of its pathogenesis has been utilized to develop highly effective targeted therapeutic agents for CML",
+      ". This translocation breakpoint has been molecularly characterized as an in-frame fusion between a new Ewing's sarcoma gene, EWS, on chromosome 22 and an ETS transcription family member, FLI-1, on chromosome 22.61,62 and 63 In addition to this fusion transcript being identified in peripheral primitive neuroectodermal tumor, other variants, notably the chest wall Askin's tumor and soft tissue Ewing's sarcoma, previously treated as a RMS because of its location in soft tissue, were also shown to"
+    ],
+    "rerank_scores": [
+      0.7033106088638306,
+      0.6149356961250305,
+      0.47540006041526794,
+      0.37101081013679504,
+      0.229312926530838,
+      0.21153606474399567,
+      0.15171901881694794,
+      0.10986415296792984
+    ]
+  },
+  "Q006": {
+    "contexts": [
+      ". The most common molecular alterations were included in the definition of the following entities: mucoepidermoid carcinoma, adenoid cystic carcinoma, secretory carcinoma, polymorphous adenocarcinoma, hyalinizing clear cell carcinoma, mucinous adenocarcinoma, and microsecretory adenocarcinoma",
+      "408 Epidemiology SDC has a distinct male predilection with peak incidence in the fifth to seventh decades of life { 25871467 ; 31764219 }. Etiology None Pathogenesis Androgen receptor (AR) copy-number gain and splice variants have been reported { 25316813 }. The most frequent genetic alterations are mutations in TP53 (55%), HRAS (23%), PIK3CA (23%), amplification of ERBB2 (35%) { 27103403 }, PTEN deletion, and BRAF mutations { 25723113 ; 29416736 ; 32421944 }",
+      ". The most common genetic alteration in nonfamilial basal cell carcinoma is loss of heterozygosity at chromosome 9q22, which contains the PTC locus. This loss of heterozygosity has been observed even in very small tumors, suggesting that alteration of PTC is an early event",
+      ". Occasional cases are focally SMA- positive. Differential Secretory carcinoma has more abundant cytoplasm, pink secretions, mammaglobin positivity, and harbors different fusions (usually ETV6::NTRK3). Polymorphous adenocarcinoma shows more architectural diversity and different genetic alterations (mutations or rearrangements of PRKD1, 2 or 3). Adenoid cystic carcinoma has two cell populations, is far more infiltrative, and harbors rearrangements of MYB, MYBL1 and/or NFIB",
+      "254 9p21.3 CDKN2A deletion 25% { 19827123 } Adenoid cystic carcinoma 6q22-23 MYB fusion/activation/ amplification ~80% { 21572406 ; 2682975 0 } 8q13 MYBL1 fusion/activati on/amplification ~10% { 26631609 } 9q34.3 NOTCH mutations 14% { 27870570 } Acinic cell carcinoma 9q31 NR4A3 fusion/activatio n 86% { 30664630 } 19q31.1 MSANTD3 fusion/amplification 4% { 30520817 } Secretory carcinoma t(12;15) (p13;q2 5) ETV6::NTRK3 fusion > 90% { 20410810 } t(12;10) (p13;q1 1) ETV6::RET fusion 2–5% { 29076873 }",
+      ". A next generation sequencing panel for the members of the sonic hedgehog pathway reported an inactivating mutation rate of 93% with biallelic inactivation in 80% { 25458233 }. Other genetic alterations including mutations in PTCH2, NUFU and BRAF p.V600E have also been reported, but at a much lower frequency and not always confirmed { 25458233 ; 31987674 ; 29272070 } and sequencing showed no pathogenic changes in commonly mutated oncogenes and tumor suppressor genes { 29272070 }",
+      "duct adenoma and hyperplasia Striated duct adenoma Sclerosing polycystic adenoma Keratocystoma Malignant epithelial tumours Mucoepidermoid carcinoma Adenoid cystic carcinoma Acinic cell carcinoma Secretory carcinoma Microsecretory adenocarcinoma Polymorphous adenocarcinoma Hyalinizing clear cell carcinoma Basal cell adenocarcinoma Intraductal carcinoma Salivary duct carcinoma Myoepithelial carcinoma Epithelial-myoepithelial carcinoma Mucinous adenocarcinoma Sclerosing microcystic adenocarcinoma",
+      ". Differential Unlike true adenoid cystic carcinomas, HMSC is restricted to the sinonasal tract in all reported cases, is often associated with surface squamous dysplasia, and harbors HPV, requiring direct HPV-specific testing. Furthermore, HMSC does not harbour the MYB, MYBL1, and/or NFIB fusions that characterize most adenoid cystic carcinomas"
+    ],
+    "rerank_scores": [
+      0.8214854001998901,
+      0.4815346598625183,
+      0.3730137050151825,
+      0.31394892930984497,
+      0.06795942783355713,
+      0.027899185195565224,
+      0.025996292009949684,
+      0.018365774303674698
+    ]
+  },
+  "Q007": {
+    "contexts": [
+      ". Compared with no budding { 29190636 } Perineural invasion HR 2.01 (1.10-3.7) Compared with no invasion { 28359633 } Lymphovascular invasion HR 1.55; (1.43-1.69) Compared with no invasion { 33309267 } Worst pattern of invasion 5 HR 2.77 (1.66-4.64) Compared to worst pattern of invasion 1 to 4 { 33661329 } Tumor-stroma ratio DSS HR 2.10 (1.56–2.84) >50% stroma in deeply invasive tumor { 33931044 } Bone invasion HR 2.14; (1.46-5.61) HR 1.52; (1.02-2.25)",
+      ". The median follow-up time for the entire group was 44 months. The 5-year recurrence-free survival rate was 96% for the RT group compared with 86% for the radical hysterectomy group (P value not signifi- cant). On multivariate analysis in this group of stage IB1 lesions, tumor size <2 cm was not an independent predictor of outcome, but both LVSI and deep stromal invasion retained independent predictive value ( P = .033 and P = .005, respectively)",
+      ". The most significant prognostic factors are tumour size, depth of invasion, nodal status and distant metastases. Stage at diagnosis and oral cancer mortality varies by site of cancer, with low stage at diagnosis in lip cancers and highest mortality in tongue cancers { 30652378 }. Conventional histologic grading corresponds poorly with clinical outcomes { 15644773 }",
+      ". Prognosis and prediction Prognosis is generally poor. Outcomes are similar to stage IV oral squamous cell carcinoma with overall five year survival of around 45%, Radical resection with neck dissection is the most frequent treatment, with adjunctive radiotherapy providing a benefit. Recurrence is frequent (up to 60%) and is associated with poor outcome. Distant metastasis is rare but typically to the lung",
+      ". The surgical margins were classified as wide in 109 cases and radical in ten cases. The overall local recurrence rate was 2.3%: 4.3% for amputation and/or rotationplasty and 1.2% for limb-sparing surgery. The overall survival rate was significantly influenced by tumor volume ( P = .0018), response to chemotherapy (P = .039), and presence of metastases at the time of diagnosis (P = .0001)",
+      ". The treat- ment-related mortality rate was significantly higher in the surgical arm (12.8% vs 3.5%; P = .03). The clinical tumor response to induction chemotherapy was the only independent prognostic factor for OS (HR, 0.30; 95% CI, 0.19-0.47; P < .0001). The results of this study suggested that adding surgery to chemoradiother - apy improves local tumor control but not survival in patients with locally advanced esophageal squamous cell cancer",
+      "FIGURE 36.2-2. Relationship between tumor diameter and the disease-specific survival rates of 1526 patients with stage IB squamous cell carcinomas of the cervix treated with radiotherapy at M. D. Anderson Cancer Center. Numbers in parentheses represent the number of patients at risk at 10 or 20 years. (Reprinted from ref. 148, with permission.) Lymph node metastasis is also an important predictor of prognosis",
+      ". In addition, anatomical invasive depth (invading to intrinsic muscles) is an independent predictive factor for delayed cervical lymph node metastasis after partial glossectomy for patients with clinically node-negative tongue squamous cell carcinoma { 27186852 }. Narrow tumour bed margins < 4 mm { 23271033 } and high grade dysplasia at the mucosal margins have been reported to correlate with local recurrence { 11896817 }"
+    ],
+    "rerank_scores": [
+      0.40577515959739685,
+      0.15009264647960663,
+      0.13530582189559937,
+      0.11682964861392975,
+      0.0759350135922432,
+      0.058315861970186234,
+      0.052087631076574326,
+      0.011123554781079292
+    ]
+  },
+  "Q008": {
+    "contexts": [
+      ". Both carcinoma cuniculatum and verrucous carcinoma are described separately from conventional oral squamous cell carcinoma on the basis of distinctive presentation, histopatholoigcal appearances and behaviour. The oral cavity is the most common location in the head and neck for both these entities { 11443616 ; 30607347 }",
+      ". Histopathology Most cancers in the oral cavity and mobile tongue are conventional keratinizing SCC. However, other subtypes can rarely occur (See Table 1 #25606. Well-differentiated neoplasms contain large nests, cords and islands of cells with pink cytoplasm, prominent intercellular bridging, with round, often hyperchromatic, nuclei. Squamous pearls and dyskeratotic cells are also prominent",
+      ". Tumours with certain mo - lecular markers have been shown to have distinct clinical behaviour. In a data set that included both high-grade and low-grade gliomas , tumours were classified into five groups on the basis of mutations in the TERT promoter, mutations in IDH, and co-deletion of chro - mosome arms 1p and 19q (1p/19q co-deletion); the molecular groups were strongly associated with age at diagnosis, survival, grade, and spe - cific germline variants [5]",
+      ". Note the lack of surface ulceration or mass, carcinoma cuniculatum is primarily an endophytic lesion. Tumours of uncertain histogenesis Congenital granular cell epulis Definition Congenital granular cell epulis (CGCE) is a rare benign lesion occurring on the alveolar ridge of the newborn, composed of sheets of cells with abundant granular cytoplasm",
+      "515 Basaloid SCC Carcinoma with islands composed of basaloid cells, often with comedo necrosis and a high mitotic rate High-grade carcinoma, which often metastasises, with overall survival similar to conventional OSCC {23946211} {25120708} { 31912260 } Carcinoma cuniculatum Very well differentiated, lacking cytological malignancy, burrowing invasion pattern Destructive bone invasion but no metastases { 22085046 } { 30607347 } { 25443811 } Lymphoepithelial carcinoma Carcinoma with minimal",
+      "tobacco, and moist snuff) also causes cancers of the oral cavity.18,24,25,26,27 and 28 Tobacco use is responsible for more than 90% of tumors of the oral cavity among men and 60% among women.27 Spit tobacco is a significant cause of leukoplakia,27,28,29 and 30 an abnormal thickening and keratinization of the oral mucosa that is recognized as a precursor of malignancy",
+      ". ICD-O coding 8071/3 Squamous cell carcinoma ICD-11 coding 2B6E.0 Squamous cell carcinoma of other or ill-defined sites in the lip, oral cavity or pharynx Related terminology Not recommended: epithelioma cuniculatum Subtype(s) None Localization The gingivo-alveolar complex of the mandible is the commonest site, followed by that of the maxilla. The tongue, buccal mucosa and lower lip are rarely affected { 30607347 }",
+      ". Rice, and Dennis A. Casciato Principles Epidemiology and etiology Pathology and natural history Diagnosis Staging system and prognostic factors Prevention Management Special clinical problems Specific Head and Neck Cancers Lip (sites: vermilion border and mucosal surfaces) Oral cavity Oropharynx Nasopharynx Hypopharynx Larynx Nasal cavity and paranasal sinuses Salivary glands Principles Head and neck cancers comprise a heterogeneous group of tumors exclusive of intracranial lesions"
+    ],
+    "rerank_scores": [
+      0.9076318144798279,
+      0.21058696508407593,
+      0.08295944333076477,
+      0.05338967591524124,
+      0.01842624507844448,
+      0.01216258853673935,
+      0.011205095797777176,
+      0.00930909812450409
+    ]
+  },
+  "Q009": {
+    "contexts": [
+      ". Morphological diagnostic approach to CUP in the head and neck",
+      "1130 #24689 Clinical, pathologic and molecular characteristics of FA and sporadic head and neck squamous cell carcinomas (HNSCC)",
+      ". Basaloid squamous cell carcinoma Definition Basaloid squamous cell carcinoma (BSCC) is a distinctive form of squamous cell carcinoma (SCC) characterized by prominent basaloid morphology, squamous differentiation, and aggressive behavior",
+      ". K-NPC can arise de novo or as a radiation-associated carcinoma occurring many years after radiation therapy for NK-NPC { 10685638 ; 19142643 }. Basaloid squamous cell carcinoma Basaloid squamous cell carcinoma, morphologically identical to analogous tumours more commonly occurring in other head and neck sites, has infrequently been reported in the nasopharynx { 83286 ; 1384369 ; 1542993 ; 8625035 ; 10983946 ; 11190760 }",
+      ". Essential and desirable diagnostic criteria Essential: tumour with prominent basaloid morphology, presence of squamous differentiation and absence of neuroendocrine or myoepithelial differentiation by histology and/or immunohistochemistry Desirable: high-grade histologic features, myxoid to hyaline stromal alterations Staging Staging uses the Union for International Cancer Control (UICC) system Prognosis and prediction BSCC is traditionally regarded as an aggressive type of hypopharyngeal and",
+      "167 Basaloid-squamous cell carcinoma Essential: invasive high-grade basaloid carcinoma with nested growth pattern and frequent comedonecrosis Squamous cell carcinoma component in the form of abrupt keratinization in the basaloid nests, conventional invasive squamous cell carcinoma or dysplasia/carcinoma in-situ in surface epithelium Desirable: variable myxoid to hyaline stroma Staging The 8th edition of the Union for International Cancer Control (UICC)/ American Joint Committee on Cancer (AJCC)",
+      "218 #24880 Basaloid squamous cell carcinoma Within one of the basaloid nests are numerous deposits of hyaline basement membrane- like material, resulting in a pseudocribriform appearance. The tumour cells are pleomorphic, with vesicular chromatin and prominent nucleoli. #24881 Basaloid squamous cell carcinoma The tumour is characteristically positive for p40 in a strong, diffuse pattern which helps to distinguish it from mimickers like adenoid cystic carcinoma and small cell carcinoma.",
+      ". Some recent studies, however, have disputed the notion that BSCC behaves differently when matched stage-for-stage { 20614328 ; 23765951 ; 24158536 }. Studies that include more indolent HPV-positive oropharyngeal cases in their cohorts are difficult to interpret. #24878 Basaloid squamous cell carcinoma The tumour is characterized by compact solid nests and trabeculae of basaloid cells arranged in a jigsaw puzzle-like arrangement, separated by myxoid stroma"
+    ],
+    "rerank_scores": [
+      0.7310205101966858,
+      0.5882328748703003,
+      0.32096418738365173,
+      0.24177823960781097,
+      0.17364653944969177,
+      0.1596917361021042,
+      0.11871199309825897,
+      0.1031736433506012
+    ]
+  },
+  "Q010": {
+    "contexts": [
+      ". **Ventana SP142 scored with the following cut-offs: TCs: TC0 <1%, TC1 ≥1%–<5%, TC2 ≥5%–<50%, TC3 ≥50%; ICs: IC0 <1%, IC1 ≥1%–<5%, IC2 ≥5%–<10%, IC3 ≥10%. Abbreviations: EU, European Union; IC, immune cell; N/A, not applicable; NSCLC, non-small cell lung cancer; NSQ, non-squamous; PD-L1, programmed death-ligand 1; SQ, squamous; TC, tumour cell; US, United States.",
+      ". It is impractical for laboratories to carry multiple testing platforms for essentially the same biomarker. Concerted efforts in harmonising these tests has led to some welcome rationalisa- tion (Table 1). Studies reveal good correlation between the pharmDx 22C3, pharmDx 28-8 and Ventana SP263 assays, assessing expression on TCs. In contrast, the Ventana SP142 assay reveals a higher threshold for PD-L1 expression by TCs, but a higher sensitivity for immune cells",
+      ". Relevant expression is the sometimes delicate delineation of the cell membrane (Figure 1). Cytoplasmic expression is ignored. For all assays except SP142, when used in NSCLC, only TCs are assessed – the tumour proportion score (TPS) is expressed as a percentage. The Ventana SP142 assay is more complex, since TPS and the area of tumour infil- trated by PD-L1-expressing immune cells are both assessed (Table 1)",
+      "159 ORR was obtained in 15% (45/310) of patients, with 5% experiencing CR. Patients with a higher expression of PD-L1 (i.e. IC score 2 or 3 using the Ventana antibody SP142) in the infiltrating ICs in the tumour microenvironment had better ORR (26%) than patients with no or weak expression (IC 0-1)",
+      ". Due to parallel development of immune check- point inhibitors (ICIs), a number of antibodies (28-8, 22C3, SP142, SP263) using various platforms (Dako, Ventana, Leica), methodologies, tumour material, scoring methods and PD-L1 thresholds have been devel- oped. A robust consensus cannot currently be reached, and harmonisation as well as quality assessment efforts are urgently needed. Peters and Zimmermann",
+      ". Currently, PD-L1 expression level by immunohistochemistry (IHC) on TCs and possibly on tumour infiltrating immune cells is the only bio- marker of immunotherapy response of clinical relevance, and the only biomarker having been prospectively validated in at least one randomised trial. PD-L1 expression can be used to prioritise treatment sequencing (i.e",
+      ". The use of immunohistochemistry (IHC) to determine PD-L1 expression within tumours is by far the most widely developed biomarker for ICI therapy and this will be considered first. PD-L1 Immunohistochemistry The only biomarker currently in widespread use for selecting patients for anti-PD-1 axis agents in the treatment of NSCLC is the expression of PD-L1 on the surface of TCs and the immune cells that infiltrate it",
+      ". 211 Table 1 PD-L1 Detection in Studies Testing Immunotherapy for HNSCC Nivolumab Pembrolizumab Atezolizumab Durvalumab Type of assay Dako/Agilent 28-8 Dako/Agilent 22c3 Ventana SP142 Ventana SP263 Type of cells Tumour cells Tumour cells Stromal cells Tumour cells Stromal cells Tumour cells Cut-off ≥1%, ≥5%, ≥10% ≥50% tumour cells ≥1% stromal cells ≥1%, ≥5%, ≥10% ≥25% Abbreviations: HNSCC, head and neck squamous cell carcinoma; PD-L1, programmed death-ligand 1"
+    ],
+    "rerank_scores": [
+      0.9771310091018677,
+      0.9573574066162109,
+      0.7765123844146729,
+      0.42563289403915405,
+      0.21347953379154205,
+      0.18684254586696625,
+      0.18567505478858948,
+      0.11182534694671631
+    ]
+  },
+  "Q011": {
+    "contexts": [
+      ". Approval was based on the pivotal data of the CheckMate 067 trial, with an objective response rate (ORR) of 72.1% with nivolumab plus ipilimumab versus 21.3% with ipilimumab alone and statistically significant updated OS results for the combination ver - sus ipilimumab (not reached [NR] versus 19.9 months in the ipilimumab group)",
+      ". 4 Objective responses were seen in 18% of patients with NSCLC, 28% with melanoma, and 27% with renal cell cancer. 4 Grade 3/4 adverse events occurred in 14% of patients, including those previously seen with ipilimumab (dermatitis, colitis, hepatitis, thyroiditis, hypophy- sitis, and pneumonitis). Nine patients developed pneumonitis, six of whom was reversible, and three (1%) with grade 3/4 died despite steroids and infliximab therapy",
+      ". Ipilimumab was associ- ated with a high rate of toxicity, with 41.6% of grade 3–4 irAEs and five deaths. This trial led to the approval of adjuvant ipilimumab (10 mg/kg) by the FDA, but ipilimumab was not submitted to the EMA for approval. More recently, the results of CheckMate 238 were reported (Table 2). This trial tested nivolumab versus ipilimumab for 1 year and included",
+      ". This approach was initially investigated in the phase II CheckMate 069 and in the phase III CheckMate 067 trials. The latter compared ipilimumab 3 mg/kg plus nivolumab 1 mg/kg or placebo for 4 cycles, followed by nivolumab 3 mg/kg q2w or placebo, versus single-agent nivolumab or ipilimumab 3 mg/kg. The trial was designed to compare the nivolumab arms with ipilimumab, but not to compare the nivolumab arms directly. ORR and median PFS were significantly higher for the combination arm (Table 1)",
+      "Response Rate in mRCC Toxicity: Grade 3 or Higher Ipilimumab (77) Phase II, mccRCC, any number of previous treatments allowed All risk groups Arm A: 3 mg/kg × 1 then 1 mg/kg Arm B: 3 mg/kg 1/29 (3.4%) 5/40 (12.5%) 14% 43%, 2 deaths Nivolumab (anti-PD-1) (78) Abstract only Phase II, mccRCC, one prior VEGF, ≤3 prior therapies All risk groups Arm A: 0.3 mg/kg Arm B: 2 mg/kg Arm C: 10 mg/kg 20% 22% 20% 5% 17% 13% Nivolumab (Nivo) plus ipilimumab (Ipi) (79) Abstract only Phase I, mccRCC No or any",
+      ". CheckMate 032 (single-agent nivolumab data). CheckMate 032 is a phase I/II non-randomised study of nivolumab (anti-PD-1) versus com- bination nivolumab + ipilimumab (anti-cytotoxic T-lymphocyte antigen 4 [CTLA-4]) at two different dose schedules in non-Asian patients with previously treated gastro-oesophageal cancer, unselected for PD-L1 status. The primary endpoint of the study was objective response rate (ORR). In CheckMate 032, 59 patients were treated with nivolumab 3 mg/kg every 2 weeks",
+      ". Only one patient experienced a recurrence of his ipilimumab-related toxicity and five patients developed a new irAE. These were all grade 2 in severity, manageable with medical treatment and did not require discontinuation. The response rate in this group was 46%. The resumption of anti-PD-1 treatment subsequent to toxicity with combination anti-PD-1/anti-CTLA-4 therapy was examined in 2018 in a series of 80 patients by Pollack et al",
+      ". In the KEYNOTE-012 study, patients with both adenocarcinoma and OSCC were recruited. Of 17 patients with OSCC, the objective radiological response rate was 29%. In a phase II non-randomised study of nivolumab in chemorefractory OSCC, 65 patients were treated, with a centrally reviewed objective radiological response rate of 17%"
+    ],
+    "rerank_scores": [
+      0.9990977048873901,
+      0.9575949907302856,
+      0.8743507862091064,
+      0.8626144528388977,
+      0.758120059967041,
+      0.5684711933135986,
+      0.4094545245170593,
+      0.3267061114311218
+    ]
+  },
+  "Q012": {
+    "contexts": [
+      ". Therefore, tumours expressing the IFN-γ gene signature, highly producing IFN-γ (inflamed gene expression profile [GEP]), have a higher probability to respond to anti-PD-1/PD-L1 drugs and to improve OS and PFS. Another determinant of response is the tumour mutation burden (TMB). In advanced tumours, response to immunotherapy was higher if TMB was higher (Le et al, 2015). This is due to a higher exposition of neo- antigens in highly-mutated tumours",
+      ". There is also a fundamental need to explore additional predictive markers for immunotherapy in SCLC. Whole-exome sequencing (WES) techniques have been employed to characterise the mutational landscape in SCLC tumour samples. Explor- atory data from CheckMate 032 (NCT01928394) found a correlation between high tumour mutation burden (TMB) and improved response rate to combination checkpoint blockade. Further prospective data are warranted to confirm the predictive nature of TMB",
+      ". Many solid tumours have a high mutational burden, especially lung cancers and malignant melanoma, related to tobacco and ultraviolet light car - cinogenesis. A high tumour mutation burden (TMB) infers, but does not guarantee, a high neoantigen load. High antigenicity infers the possibil- ity of high immunogenicity, but this is also not guaranteed. These steps may fail in malignant cells for various reasons",
+      "10 in NSCLC and with atezolizumab in bladder cancers. It is currently believed that a high tumour mutation burden (TMB) yields numerous immunogenic cancer cell neo-epitopes, that may be recognised by T cells upon presentation by MHC molecules. However, the TMB seems to be a prognostic marker independent of the intratumoural inflammatory gene expression profile. The assessment of TMB is currently evaluated from either tumour samples or circulating tumour DNA",
+      ". A range of regulatory mechanisms (cellular or molecular) may control and negate the immune response at the point of efficacy in the tumour microenvironment (TME) – several of these are incorporated into the ‘cancer immunogram’, including checkpoints, soluble immune inhibi- tors and inhibitory tumour metabolism leading to an immune-suppres- sive microenvironment",
+      "571.5 Resistance to Immunotherapy T umour-intrinsic Mechanisms of ICI Resistance Innate Mechanisms The impact of the mutational status on ICI resistance The tumour mutation burden (TMB) is a quantitative measure of the total number of mutations per coding area of the tumour genome, and is con- sidered a new clinical marker able to predict response to immunotherapy",
+      ". Assumptions Regarding Efficacy of Immunotherapy with High T umour Burden In the pre-checkpoint inhibitor immunotherapy era, assumptions were some- times made regarding the ability of a vaccine to stimulate effective anti- tumour immunity in a patient with a significant tumour burden and a degree of immunoparesis due to the presence of advanced disease. Immunotherapy was therefore felt to be a special case in comparison with conventional treat- ments",
+      ". Adding further complexity to first-line immunotherapy, a high tumour mutational burden (TMB), defined as ≥10 mutations (somatic, coding base substitutions and short indels) per megabase of genome by the FoundationOne CDx assay, defines a population that derives a significant PFS benefit from an ipilimumab and nivolumab combination as com- pared with platinum-based doublet ChT (HR for disease progression or death 0.58), with 43% versus 13% of patients being progression-free at 1 year"
+    ],
+    "rerank_scores": [
+      0.9322788715362549,
+      0.9144043326377869,
+      0.9029829502105713,
+      0.6095648407936096,
+      0.592341959476471,
+      0.5889580845832825,
+      0.5209717750549316,
+      0.4847087562084198
+    ]
+  },
+  "Q013": {
+    "contexts": [
+      ". In preclinical models, blockade of these immune checkpoint pathways leads to HCC eradication and, in clinical samples, markers of T cell exhaustion in tumoural tissue often portend worse disease-specific survival outcomes. Finally, alterations in the cellular compartment of the TME, such as the presence of myeloid-derived suppressor cells (MDSCs), tumour-associated macrophages (TAMs) and T regulatory cells (T regs), serve to further suppress an effective immune response in HCC",
+      ". Importantly, these progenitors, like their more differentiated derivatives, have demonstrable tumor-promoting activity. Of par- ticular interest, a class of tumor-infiltrating myeloid cells has been shown to suppress CTL and NK cell activity, having been identi- fied as MDSCs that function to block the attack on tumors by the adaptive (i.e., CTL) and innate (i.e., NK) arms of the immune system",
+      "38 n Immunosuppression (indoleamine 2,3-dioxygenase [IDO], myeloid- derived suppressor cells [MDSCs], M2 macrophages and regulatory T cells [T regs]) n Poor intra-tumour T cell infiltration n Tumour-specific T cell anergy/exhaustion n Up-regulation of immune checkpoints and specific ligands in the tumour microenvironment (CTLA-4, PD-1, programmed death-ligand 1 [PD-L1], T cell immunoglobulin and mucin domain 3 [TIM-3], lym- phocyte-activation gene 3 [LAG-3], etc.) Nevertheless, the recent",
+      ". The blockade of immune checkpoints in cancer immunotherapy. Nat Rev Cancer 2012;12:252–264. 190. Motz GT, Coukos G. Deciphering and reversing tumor immune suppres- sion. Immunity 2013;39:61–73. 191. Gabrilovich DI, Nagaraj S. Myeloid-derived suppressor cells as regulators of the immune system. Nat Rev Immunol 2009;9:162–174. 192. Mougiakakos D, Choudhury A, Lladser A, et al. Regulatory T cells in cancer. Adv Cancer Res 2010;107:57–117. 195. You JS, Jones PA",
+      ". Recent evidence suggests that blocking CD47 may unleash antibody-dependent cel - lular cytotoxicity and phagocytosis mediated by TAMs [13]. TAMs and other myeloid cells – for example, op- erationally defined myeloid-derived suppressor cells (MDSCs) [14] – have now been shown to have im - pacts on diverse aspects of cancer progression, including tumour cell proliferation and invasion, construc - tion of a metastatic niche , angio - genesis, and immunosuppression",
+      ". 187–189 Yet other localized immunosuppressive mechanisms operate through the recruitment of inflammatory cells that can actively suppress CTL activity, in- cluding regulatory T cells (Tregs) and myeloid-derived suppressor cells (MDSC). 174,190–193 In summary, these eight hallmarks each contribute qualita- tively distinct capabilities that seem integral to most lethal forms of human cancer",
+      ". It is now generally accepted that a wide variety of immunosuppressive mechanisms operating in HCC tissue play a critical role in the generation of cancer microenvironment, and interference with these immunological pathways leads to therapeutic benefit in advanced HCC patients. Herein, we will focus on the current understanding of HCC immunobiology and the state of the art in HCC immunotherapies.",
+      ". A different composition of extracellular matrix (ECM) molecules is also able to influence the recruitment of immune-suppres- sive cells and/or to exclude T cell infiltration, and could be considered a possible mechanism for ICI resistance. Indeed, high-grade breast can- cers with high expression of ECM molecules show a suppressive envi- ronment characterised by the enrichment in myeloid-derived suppressor cells (MDSCs) and the lack of T cells, together with EMT features. Sangaletti et al."
+    ],
+    "rerank_scores": [
+      0.9161504507064819,
+      0.7877638936042786,
+      0.7307673692703247,
+      0.7145611643791199,
+      0.6529032588005066,
+      0.5591187477111816,
+      0.47289058566093445,
+      0.45467689633369446
+    ]
+  },
+  "Q014": {
+    "contexts": [
+      ". These factors are taken into account in the LQ model using the alpha / beta parameter. The alpha parameter takes into account the cell population in the tissue that responds to the irradiation with lethal damage; the number of cells killed is proportional to the dose of radiation applied (decreases linearly)",
+      ". Linear quadratic model a t clinically relevant doses, cancers and early-reacting tissues respond to ionizing radiation with a linear relationship between the dose and cell kill—the linear or α component. In the late-reacting tissues, a large part of the effect of radiation is related to the square of the individual dose given—the quadratic element or β component",
+      ". The linear-quadratic model predicts that, at high total doses, reducing the rate at which the total dose is received or giving the dose in multiple small fractions reduces the risk. This makes sense when considering acute effects of radiation. A dose of 4 Gy delivered instantaneously would have the chance of being lethal in a short time, whereas that same dose accumulated over a lifetime would not produce such acutely lethal effects",
+      ". Microscopic lesions may most likely be eradicated at 50 Gy, but for macroscopic tumors doses of 60 Gy or more are required. To describe the effects of radiation on the organism (healthy tissue), the linear-quadratic (LQ) model is used. It is a physical calculation expressing the relationship (the dependency) of cell population survival on the dose administered",
+      ". twice a day at 1.2 Gy at intervals of 6-8 hours) worsens the development and degree of acute reaction, but does not increase late reactions; hypofractionation (larger doses less frequently) will reduce the acute reaction but will result in more chronic reactions; mathematically, this radiobiological fact is described by the LQ model, which makes it possible to determine equivalent biological doses of different fractionation schemes according to the alpha / beta ratio, ▪ radiation response",
+      ". The important implication of the linear quadratic model is that, by giv - ing radiotherapy in many small doses, damage in the late-reacting tissues should be minimized, with little or no alteration in the response of the early-reacting normal tissues and, most importantly, the cancer. Number of treatments Traditionally, radiotherapy has been delivered once daily, Monday to Friday, and two different fractionation schedules are widely used",
+      ". With the linear-quadratic model, risk at low doses is linearly related to dose, whereas at higher doses, the risk increases more rapidly as a function of dose. In this region, risk increases as a function of the square of the dose. As a result, the dose response takes the form I = aD + bD 2. The linear-quadratic model is based on biophysical theories of radiation interactions",
+      ". The linear-quadratic model is based on biophysical theories of radiation interactions. The bD 2 component represents effects produced by the interaction of multiple ionization tracks, whereas the aD component represents effects produced by single ionization tracks. For sparsely ionizing low LET radiation at low doses, the probability is that only a few ionization tracks will traverse a cell (at very low doses perhaps only one such ionization track might traverse a cell)"
+    ],
+    "rerank_scores": [
+      0.9819002151489258,
+      0.3088599443435669,
+      0.12751871347427368,
+      0.1080220639705658,
+      0.06531435996294022,
+      0.042401883751153946,
+      0.02159230224788189,
+      0.010277658700942993
+    ]
+  },
+  "Q015": {
+    "contexts": [
+      ". CHRONIC MYELOGENOUS LEUKEMIA CML is a clonal myeloproliferative disease of hematopoietic stem cell origin, characterized by an early chronic phase of 3 to 5 years' duration followed by an accelerated phase of 3 to 6 months, which ultimately terminates in a fatal blastic phase",
+      ". The t(3;21)(q26;q22) noted in myelodysplastic syndromes (MDS), AML, and blast crisis of chronic myeloid leukemia (CML) results in a fusion of CBFA2 with the EVI1 gene, where the zinc finger DNA-binding domains of EVI1 fuse with the amino terminus (runt homology) domain of CBFA2, similar to that described previously for CBFA2-CBFA2T1.23,24 However, like the CBFA2 fusion partner CBFA2T1, EVI1 also has properties that may contribute to leukemogenesis",
+      ". 40 The t(9;12)(q34;p13) fuses the TEL gene with another tyrosine kinase called ABL, named after its homologue, the Abelson leukemia virus oncogene. 41ABL is best known as the fusion partner with BCR (breakpoint cluster region) in CML (see Philadelphia-Positive Chronic Myeloid Leukemia and Acute Lymphoblastic Leukemia Result from a Fusion of BCR with the Tyrosine Kinase ABL, later in this chapter)",
+      ". In 97.5% of cases, there is a reciprocal translocation between chromosomes 9 and 22, which, in most cases, can be recognized in standard karyotypes as a philadelphia chromosome (small chromosome 22). this t(9;22) results in a new fusion gene called BCR-ABL1. the protein product of this gene behaves as an abnormal tK and is the cause of the leukaemia. Knowledge of its pathogenesis has been utilized to develop highly effective targeted therapeutic agents for CML",
+      "224 Section II: Disease-Specific Part and combination identification, clofarabine will be tested as a front-line agent in adult ALL. CHRONIC MYELOGENOUS LEUKEMIA CML is a myeloproliferative disorder defined by the pres- ence of the BCR/ABL chimeric gene, a product of a recipro- cal t(9;22) occurring in a hematopoietic stem cell (3). BCR/ ABL plays a central role in the development of CML",
+      ". May be inhibited by the “designer drug” imatinib mesylate  Philadelphia chromosome may also occur in acute lymphoblastic leukemia (ALL) and rarely in AML; however, breakpoints of the fusion gene BCR-ABL1 are different: CML: fusion protein is p210 in BCR-ABL1; ALL: fusion protein is p190 in BCR-ABL1 Natural History  Chronic phase: usually oligo- or asymptomatic, sometimes persisting for years  Accelerated phase: characterized by an increase in the size of the spleen and with occurrence of",
+      "62 Section I Leukemia CHAPTER 4 Ph-negative CML or atypical CML carry a poor prog- nosis. The Ph chromosome joins the proto-oncogene c-abl from chromosome 9 to the breakpoint cluster region (BCR) gene in chromosome 22, generating a novel fusion BCR-ABL1 oncogene. Depending on the breakpoint region in BCR, several variants including those of 190, 210 (most common; 95% of Ph-positive cases), or 230 kDa molecular weight can be formed",
+      ". BCR/ ABL plays a central role in the development of CML. It is transcribed into a hybrid BCR / ABL mRNA in which exon 1 of ABL is replaced by variable numbers of 5′ BCR exons. The BCR/ABL fusion proteins, p210 BCR/ABL , contain NH 2 - terminal domains of BCR from exon one up to either exon 13 or exon 14 fused to exon two of ABL. A rare breakpoint, occurring at exon 19 of BCR , yields a fusion protein of 230 kDa"
+    ],
+    "rerank_scores": [
+      0.9347859025001526,
+      0.8134914040565491,
+      0.7701948285102844,
+      0.7618452310562134,
+      0.7614498138427734,
+      0.6837430000305176,
+      0.6829385161399841,
+      0.5911073088645935
+    ]
+  },
+  "Q016": {
+    "contexts": [
+      ". One must be a first-degree relative of the other two 2. At least two successive generations must be affected 3. At least one of the relatives must have received the diagnosis before age 50 Amsterdam II Similar to Amsterdam I, but may include any combination of cancers associated with HNPCC (e.g., colorectal, endometrial, gastric, ovarian, ureter or renal pelvis, brain, small bowel, hepatobiliary tract, sebaceous gland adenomas, keratoacanthomas) Bethesda Guidelines 1",
+      ". Table 24-4 Original and Revised ICG-HNPCC Criteria (“Amsterdam” Criteria I and II) Original Criteria (Amsterdam Criteria I) Revised Criteria (Amsterdam Criteria II) There should be at least three relatives with colorectal cancer; all the following criteria should be present: There should be at least three relatives with an HNPCC-associated cancer (colorectal cancer; cancer of endometrium, small bowel, ureter, or renal pelvis): One should be a first- degree relative of the other two",
+      ". 103,104,105 and 106 In 1991, the International Collaborative Group on HNPCC established the minimum clinical criteria required to help identify families with HNPCC. The so-called Amsterdam criteria are: (1) colorectal cancer in three or more relatives, one of whom is the first-degree relative of the other two; (2) at least two generations of affected individuals with colorectal cancer; and (3) one or more of the cancers has been diagnosed before the age of 50. FAP must be excluded",
+      ". The International Collaborative Group on HNPCC has proposed that the diagnosis be based on the following findings (called the Amsterdam criteria): three or more relatives with histologically diagnosed colorectal cancer, of whom one is a first-degree relative to the other two; cancers involve at least two generations; at least one case diagnosed before age 50; and exclusion of FAP",
+      ". Amsterdam criteria are met 2. Two colorectal or HNPCC-related cancers, including synchronous and meta- chronous presentation 3. Colorectal cancer and a first-degree relative with colorectal and/or an HNPCC- related cancer and/or a colonic adenoma; one of the cancers must be diagnosed before age 45 and the adenoma diagnosed before age 40 4. Colorectal or endometrial cancer diagnosed before age 45 5",
+      ". The pattern of inheritance is autosomal dominant, with 90% penetrance. The incidence of ne w mutations in FAP patients is Amsterdam Criteria and Bethesda Guidelines 11.2 TABLE Amsterdam I At least three relatives must have histologically verified colorectal cancer 1. One must be a first-degree relative of the other two 2. At least two successive generations must be affected 3",
+      ". More recently, however, common human cancers have been linked to abnormalities in repair processes. One example is the hereditary nonpolyposis colon cancer (HNPCC) syndrome. HNPCC is an inherited syndrome characterized by increased risk for colon cancer without the associated polyposis seen in carriers of another hereditable cancer syndrome, adenomatous polyposis coli. Affected individuals with HNPCC show signs of a defect in the repair of DNA mismatches",
+      ". All patients with colorectal cancer at MD Anderson are screened for HNPCC. Table 24-4 summarizes the Amsterdam Criteria (both original and modified) to assess the risk of HNPCC ( 12). Microsatellite insta - bility, which is a hallmark of HNPCC, also occurs in about 15% of spontaneous colon cancers. Histology that suggests an MSI tumor may include mucinous fea- tures, poor differentiation, or the presence of tumor- infiltrating lymphocytes (Fig. 24-1)"
+    ],
+    "rerank_scores": [
+      0.9913418889045715,
+      0.9470592141151428,
+      0.7914366722106934,
+      0.6274076104164124,
+      0.5437449216842651,
+      0.2661433517932892,
+      0.06324449181556702,
+      0.055960990488529205
+    ]
+  },
+  "Q017": {
+    "contexts": [
+      ". • 1p/19q deletions predict a better survival and chemosensitivity in oligodendroglioma. Controversies and limitations Whilst these developments provide great hope for the individualization of cancer therapies, they also present significant problems: • realistically, must have short turnaround time to allow the integration of the biomarker into the therapeutic decision-making process of the MD t",
+      ". 1p,19q deletion and O6-methylguanine-DNa methyl transferase (mGmT) expression, predict increased chemosensitivity in oligodendrogliomas. The dominant prognostic factors for brain tumours are a combination of the histological type and clinical features such as age and performance sta - tus. Spread to regional lymph nodes and blood-borne spread to distant sites are rare in the majority of pathologies",
+      ". sunitinib • cellular hypoxia-inducible factors (hIFs) • basic fibroblast growth factor (bFGF) • VHL mutation and the VhL protein—no proven correlation with therapeutic outcome. Central nervous system tumours • epigenetic silencing of the DNa repair gene MGMt by promoter methylation is associated with temozolomide chemosensitivity in glioblastoma. • 1p/19q deletions predict a better survival and chemosensitivity in oligodendroglioma",
+      "that lack 1p and 19q loss are only chemosensitive approximately 25% of the time and only rarely have complete neuroradiologic responses; as a result, patients whose anaplastic oligodendrogliomas lack 1p and 19q loss have median survivals of approximately 2 years.64 Thus, molecular genetic analysis of 1p/19q allelic status has already become a clinically useful test in neurooncology and is most likely an indication of the utility of molecular diagnostic approaches in neurooncology",
+      ". Molecular genetic subsets of glioblastoma multiforme (see text for details). PCV, procarbazine, CCNU, and vincristine. Anaplastic oligodendrogliomas have proven to be the first brain tumor for which molecular genetic analysis has had practical clinical ramifications: Anaplastic oligodendrogliomas that have allelic losses of chromosomes 1p and 19q follow different clinical courses from those tumors that do not have these genetic changes",
+      ". In addition to the acquisition of TP53 mutations, ATRX mutations are often noted in WHO grade II and III astrocytomas and secondary GBMs ( 30). Predictive and Prognostic Factors In anaplastic oligodendrogliomas (AODs), allelic losses of chromosomes 1p and 19q (1p19q LOH) have emerged as markers of chemotherapeutic response and longer survival (31), qualifying 1p19q loss as a prognos- tic factor. Recent studies have confirmed that 1p/19q LOH is also predictive of response to chemotherapy",
+      ". 23,60,61 Because of the frequent loss of these loci in low-grade as well as anaplastic oligodendrogliomas and oligoastrocytomas, the 1p and 19q tumor suppressors are probably important early in oligodendroglial tumorigenesis. Mapping of the chromosome 19q locus has demonstrated that the gene resides in the same vicinity as the astrocytoma gene and is likely the same gene.25,62 Similar mapping of chromosome 1p has implicated the telomeric region of 1p",
+      ". 61,62 Interestingly, chromosome 1p and 19q losses are closely associated; oligodendroglial tumors with 1p loss typically also have loss of 19q, suggesting that these two putative tumor suppressor genes may be involved in biologically distinct pathways. 60,61 In fact, microdissection of the oligodendroglial and astrocytic components in oligoastrocytomas has shown that, despite the histologic differences, the molecular changes are identical in these two components"
+    ],
+    "rerank_scores": [
+      0.9889197945594788,
+      0.9559251070022583,
+      0.9097984433174133,
+      0.8245795965194702,
+      0.7794628739356995,
+      0.7474840879440308,
+      0.7316186428070068,
+      0.7067763209342957
+    ]
+  },
+  "Q018": {
+    "contexts": [
+      ". • an example of a prototype Gpat is the bacterial enzyme nitroreductase: • the nitroreductase gene could be introduced into tumours by direct injection • the enzyme nitroreductase converts the pro-drug CB1954 (which can be safely administered IV or intraperitoneally) to a highly toxic alkylating agent nitrobenzamidine that cross-links DNa • systemic administration of CB1954 could result in the conversion to the cytotoxic nitrobenzamidine, only where the activating gene had been incorporated •",
+      "GeNetIC pr O-Dr UG a CtIV atION 765 A gene encoding a drug- activating enzyme is incorporated only into tumour cells. Systemic administration of an inactive pro-drug. The drug-activating enzyme converts the inactive pro-drug into a toxic metabolite. Localized generation of a toxic metabolite. TUMOUR DEATH ‘Bystander eﬀect’ causes additional cell death Fig. 39.1 p otential mechanisms of tumour targeting using a pro-drug system in combination with gene therapy",
+      "764 Chapter 39 Gene therapy and genetic immunotherapy Genetic pro-drug activation • the fundamental problem with current chemotherapy is its lack of selectivity and hence its associated toxicity. targeting of therapy can potentially be increased by gene transfer techniques. the aim is to maximize cell kill, whilst minimizing toxicity",
+      ". 39.1 p otential mechanisms of tumour targeting using a pro-drug system in combination with gene therapy. Gene therapy techniques could enhance the specificity of anti-cancer agents by preferentially targeting malignant cells.",
+      ". • Genetic pro-drug activation. • Genetic immunomodulation: • non-specific immunotherapy (see Chapter 9) • specific immunotherapy. Immunotherapy aims to use immune mechanisms to influence the course of a disease. this may either be by enhancing the natural host immune responses or by the use of exogenous biological agents. Immunotherapy may be: • non-specific (see Chapter 9), or • specific—targeting a tumour-related antigen.",
+      ". the aim is to maximize cell kill, whilst minimizing toxicity. • this method is variously known as: • genetic pro-drug activation therapy (Gpat) • gene-directed enzyme pro-drug therapy (GDept) • virus-directed enzyme pro-drug therapy (VDept), if gene transfer is via a viral vector • suicide gene therapy. • t argeting could be achieved by the sequence of events shown in Fig. 39.1",
+      ". • Much effort goes into the design and implementation of cancer gene therapies and immunogenetic strategies. however, our incomplete understanding of the biological system means we have a limited ability to predict true targets in vivo. Strategies for cancer gene therapy • Somatic correction of gene defect: • expression of tumour suppressor gene • anti-sense oligonucleotide to mutant oncogene. • Genetic pro-drug activation",
+      ". The activation of these genes could theoretically increase the resistance of cells to the following chemotherapeutic agents: methotrexate, 2-chlorodeoxyadenosine, hydroxyurea, fludarabine, cytosine arabinoside, and 5-fluorouracil. Furthermore, the action of an entire array of the most effective natural product antitumor agents could be suppressed through stimulation of the mdr-1 promoter directly by a mutant form of p53"
+    ],
+    "rerank_scores": [
+      0.4505837559700012,
+      0.24972014129161835,
+      0.14197643101215363,
+      0.1150280237197876,
+      0.09849105775356293,
+      0.089237280189991,
+      0.013024406507611275,
+      0.004122691694647074
+    ]
+  },
+  "Q019": {
+    "contexts": [
+      ". Pharmacological biomarkers Deactivating enzymes Measurement of drug-specific metabolic enzyme activities can be predictive of toxicity or efficacy for a number of anti-cancer drugs or: • thiopurine methyltransferase—low levels predict toxicity, unless 6-Mp doses are reduced in the treatment of aLL • dihydropyridine dehydrogenase—deficiency leads to increased toxicity with fluorouracil and capecitabine • uridine diphosphate glucuronyltransferase—low levels predict toxicity from irinotecan",
+      "metabolite and potential decreased efficacy in patients with low enzyme levels Dihydropyrimidine dehydrogenase (DPYD) 5-Fluorouracil Decreased elimination and increased risk of myelosuppression, diarrhea, and mucositis in patients with low enzyme levels Glucose-6-phosphate dehydrogenase (G6PD) Rasburicase Risk of severe hemolysis in patients with G6PD deficiency Thiopurine methyltransferase (TPMT) Mercaptopurine, thioguanine, azathioprine Decreased methylation of the active metabolite resulting",
+      ". Most of these cases involve agents for which elimination is critically dependent on a rate-limiting breakdown by a polymorphic en- zyme (e.g., 6-mercaptopurine by thiopurine-S-methyltransferase; 5-fluorouracil by dihydropyrimidine dehydrogenase) or when a polymorphic enzyme is involved in the formation of a toxic me- tabolite (e.g., tamoxifen by CYP2D6)",
+      ". These prodrugs must be activated to thioguanine nucleo- tides in order to have antiproliferative effects. However, most of the variability in the formation of active metabolites is mediated by methylation via thiopurine methyltransferase (TPMT). 29 TPMT is a cytosolic enzyme that catalyzes S-methylation of thiopurine agents, resulting in an inactive metabolite",
+      ". In addition, molecular diagnostics is beginning to play a role in predicting host metabolism of drugs—for example, in predicting fast versus slow thiopurine me- tabolizers using polymorphisms in the thiopurine methyltransferase (TPMT) allele and in use in dosing patients with thiopurine drugs. 1 Molecular diagnostics has also had a major impact on assessing an engraftment after bone marrow transplantation and in tissue typing for bone marrow and solid organ transplantation",
+      "cancer Rearranged during transfection (RET) Vandetanib Medullary thyroid cancer Germ-Line Mutation Examples Gene Mutation Drug Effect Cytochrome P450 (CYP) 2C19 Voriconazole Decreased serum levels of active drug and potential decreased efficacy in patients with high enzyme levels (ultrarapid metabolizers) CYP2D6 Tamoxifen, codeine, ondansetron Decreased production of active metabolite and potential decreased efficacy in patients with low enzyme levels Dihydropyrimidine dehydrogenase (DPYD)",
+      ". One of the major factors responsible for failure in modern oncologic therapy is inappropriate target selection; therefore, target identification and validation are critical steps in new targeted oncologic drug discovery",
+      ". 5-FU metabolites have been shown to have neuropathic action in experimental animals. 61 However, it may also be due to parent drug, and not metabolites, because patients have been reported who developed severe toxic symptoms due to a genetic deficiency of the initial enzyme necessary for catabolizing 5-FU.62 Patients with complete or partial deficiency of this enzyme, dihydropyrimidine dehydrogenase, appear particularly subject"
+    ],
+    "rerank_scores": [
+      0.6908546090126038,
+      0.1898328810930252,
+      0.16087190806865692,
+      0.06324437260627747,
+      0.039581507444381714,
+      0.0374588668346405,
+      0.037012889981269836,
+      0.03124629706144333
+    ]
+  },
+  "Q020": {
+    "contexts": [
+      ". ESOPHAGEAL TOXICITY. Since the esophagus has a central location, it is exposed to high-dose radiation during the treatment of most NSCLCs and can be a major dose-limiting factor. Radiation may induce acute esophagitis during the course of therapy. Histologic changes occur during the first week of treatment, 229 although clinical symptoms typically begin during the second through fourth weeks of treatment",
+      ". colostomy) Also consider Haemorrhage/bleeding with grade 3 or 4 thrombocytopenia, Haemorrhage/bleeding without grade 3 or 4 thrombocytopenia, Pain due to radiation notes: fistula is graded separately as Fistula—rectal/anal Proctitis occurring >90 days after the start of radiation therapy is graded in the RTOG/EORTC late radiation morbidity scoring scheme (see E RTOG/ EORTC late radiation morbidity scoring scheme, p",
+      ". The colon and rectum are organs with slightly higher tolerance to radiation doses. In the acute phase, toxicity may be manifested in the form of tenesmus, irritable bowel, more frequent stools and stool urges. A typical example of late toxicity is radiation proctitis usually manifested 1.5-2 years after termination of RT. The base is inflammatory mucosa, sanguineous, easily bleeding. The source of bleeding is telangiectasia and ulceration",
+      ". Occasionally, nutritional supplementation may be required through a gastrostomy tube. 2. Esophageal stricture is a rare late complication that is more common when chemotherapy, particularly doxorubicin or methotrexate, is given concomitantly. Dilation is performed in patients with symptoms. C. Radiation enteritis 1. Acute radiation enteritis a. Manifestations are usually related to the volume of the bowel irradiated and to the daily dose. Most injuries involve the terminal ileum. 1",
+      ". The most carefully documented acute radiation-related toxicity data are from the control arm of RTOG 85-01 in which patients received radiation therapy alone to a dose of 64 Gy.255,366 The incidence of acute grade III toxicity was 25%, and grade IV toxicity was 3%; the incidence of long-term grade III+ toxicity was 23% and grade IV+ was 2%.346 There were no treatment-related deaths. As with surgery, radiation therapy can produce esophageal strictures",
+      ". The most severe form of late skin radiation toxicity is chronic non-healing ulcer with necrosis of the base. Oral mucosa and mucosa of ENT area Acute changes manifest as enanthem, edema, exudation, turning into epithelolysis with fibrin coatings, foci may coincide in confluent mucositis. Acute reactions greater than 2nd degree on mucous membranes have a typical appearance of so-called speckled reaction. Late changes affect the taste buds with a gradual loss of taste",
+      ". A majority (76%) of patients experienced grade 3–4 toxicity; however, the most common toxicities observed were consistent with ChT: neutropaenia (64%), stomatitis (20%) and poor appetite/anaemia and fatigue (8%). 187 Figure 1 Algorithm for management of gastro-oesophageal cancer with use of immunotherapy. 2.5.2 Gastric and Oesophageal Malignancies Squamous Oesophageal Cancer There are few data reported relating to the utility of ICB in oesophageal squamous cell carcinoma (OSCC)",
+      ". In a separate toxicity analysis from Coia and associates,359 the results of 90 patients with clinical stages I to IV squamous and adenocarcinomas of the esophagus were reported; the incidence of grade III toxicity was 22%, and grade IV toxicity was 6%. There were no treatment-related deaths. Calais et al.387 reported the results of 53 patients with clinically unresectable disease who received 5-FU, cisplatin, and mitomycin C plus 65 Gy"
+    ],
+    "rerank_scores": [
+      0.44769394397735596,
+      0.1907109171152115,
+      0.18475808203220367,
+      0.1599084436893463,
+      0.08364143967628479,
+      0.07204782962799072,
+      0.06232259422540665,
+      0.060123514384031296
+    ]
+  },
+  "Q021": {
+    "contexts": [
+      ". A score of 4 is needed to make the diagnosis (77). Clinically, patients have persistent or progressive patches and thin plaques on sun-shielded areas. Lesion morphology is variable, and patients can also exhibit poikiloderma. Histologically, MF is characterized by an atypical lymphocytic infiltrate in the superficial dermis and epidermis (epidermotropism). Epidermot - ropism is not always seen, especially in folliculotropic mycosis fungoides and SS",
+      "COMMOn TO xICITY CRITERIA (CTC) 787 Grade Adverse event 0 1 2 3 4 Serum sickness none – – Present – Urticaria is graded in the dERMATOLOGY/SKIn category, if it occurs as an isolated symptom",
+      ". colostomy) Also consider Haemorrhage/bleeding with grade 3 or 4 thrombocytopenia, Haemorrhage/bleeding without grade 3 or 4 thrombocytopenia, Pain due to radiation notes: fistula is graded separately as Fistula—rectal/anal Proctitis occurring >90 days after the start of radiation therapy is graded in the RTOG/EORTC late radiation morbidity scoring scheme (see E RTOG/ EORTC late radiation morbidity scoring scheme, p",
+      ". Int J Radiat Oncol Biol Phys 1985;11:1111. 70. Price NM. Radiation dermatitis following electron beam therapy. Arch Dermatol 1978;114:63. 71. Licata AG, Wilson LD, Braverman IM, et al. Malignant melanoma and other second cutaneous malignancies in cutaneous T-cell lymphoma (the influence of additional therapy after total skin electron beam radiation). Arch Dermatol 1995;131:432. 72. Abel EA, Sendagorta E, Hoppe RT",
+      ". Electrolytes, renal function, and hematologic param - eters are checked weekly. Topical barrier creams are prescribed for grades 1 to 3 perineal radiation dermati- tis. Should grade 2 or higher nonhematologic toxicity develop (excluding radiation dermatitis), concurrent chemotherapy is held until resolution but radiation is continued. After chemoradiation, perianal pain and ulceration, anorexia, and diarrhea typically subside within 2 to 3 weeks",
+      ". Because the cutaneous manifestations may be misinterpreted clinically as acute radiation-induced dermatitis, this condition may be more prevalent than reports suggest. F. Therapy of systemic fungal infections 1. Fluconazole and itraconazole have become the primary antifungal agents used in systemic infections. These agents are far safer than amphotericin B or even liposomal amphotericin B and have excellent efficacy",
+      ". Pulmonary radia- tion injury. Chest. 1997;111(4):1061-1076. 34. Schweitzer VG, Juillard GJ, Bajada CL, RG. P . Radiation recall dermatitis and pneumonitis in a patient treated with paclitaxel. Cancer. 1995;76(6):1069-1072. 35. Schwarte S, Wagner K, Karstens JH, Bremer M. Radiation recall pneumonitis induced by gemcitabine. Strahlenther Onkol. 2007;183:215-217. 36. Ding K, Ji W, Li J, et al. Radiation recall pneumonitis induced by chemotherapy after thoracic radiotherapy for lung cancer",
+      ". Radiologically there may be a detectable mass and characteristic thickening of the skin over the breast. This clinical presentation is due to tumor embolization of dermal lymphatics. The tumor of inflammatory carcinoma is classified T4d. Paget's Disease of the Nipple Paget's disease of the nipple without an associated tumor mass (clinical) or invasive carcinoma (pathologic) is classified Tis"
+    ],
+    "rerank_scores": [
+      0.020978813990950584,
+      0.012327221222221851,
+      0.01172132883220911,
+      0.010829604230821133,
+      0.00833594799041748,
+      0.007833342999219894,
+      0.006079383194446564,
+      0.0013945018872618675
+    ]
+  },
+  "Q022": {
+    "contexts": [
+      ". Dose reductions are recommended for patients who are homozygous for the UGT1A1*28 allele, for which an FDA-approved test for detection of the UGT1A1*28 allele in patients is available. 42,43 Additionally, dose reductions of irinotecan are recommended for patients with hepatic dysfunction, with bilirubin greater than 1.5 mg/mL",
+      "(TPMT) Mercaptopurine, thioguanine, azathioprine Decreased methylation of the active metabolite resulting decreased elimination and increased risk of neutropenia in patients with low enzyme levels UDP-glucuronosyltransferase (UGT) 1A1 Irinotecan Decreased glucuronidation of the active metabolite resulting decreased elimination and increased risk of neutropenia and diarrhea in patients with low enzyme levels tahir99 - UnitedVRG",
+      ". Clin Cancer Res 1999;5:917. 120. Iyer L, King CD, Whitington PF, et al. Genetic predisposition to the metabolism of irinotecan (CPT-11): role of uridine diphosphate glucuronosyltransferase isoform 1A1 in the glucuronidation of its active metabolite (SN-38) in human liver microsomes. J Clin Invest 1999;101:847. 121. Chu XY, Kato Y, Niinuma K, et al",
+      ". Thus, other nonrenal routes (e.g., metabolism) of topotecan elimination are yet to be identified.115 In contrast, irinotecan itself has little in vitro cytotoxicity116 and requires conversion, by the carboxylesterase enzyme, to 7-ethyl-10-hydroxycamptothecin (SN-38) for antitumor activity. In vitro studies have shown decreased carboxylesterase activity may be a mechanism of cellular resistance to irinotecan",
+      ". 117 Furthermore, transfection of carboxylesterases into tumor cells increases the activation and cytotoxicity of irinotecan. 118,119 SN-38 is conjugated to glucuronic acid at the C 10 position by UGT1A1, and this metabolite has no intrinsic antitumor activity",
+      ". J Pharmacol Exp Ther 1997;281:304. 122. Sugiyama Y, Kato Y, Chu X. Multiplicity of biliary excretion mechanisms for the camptothecin derivative irinotecan (CPT-11), its metabolite SN-38, and its glucuronide: role of canalicular multispecific organic anion transporter and P-glycoprotein. Cancer Chemother Pharmacol 1998;42[Suppl]:S44. 123. Gupta E, Lestingi TM, Mick R, et al. Metabolic fate of irinotecan in humans: correlation of glucuronidation with diarrhea. Cancer Res 1994;54:3723. 124",
+      ". Metabolic fate of irinotecan in humans: correlation of glucuronidation with diarrhea. Cancer Res 1994;54:3723. 124. Rivory LP, Riou JF, Hazz MC, et al. Identification and properties of a major plasma metabolite of irinotecan (CPT-11) isolated from the plasma of patients. Cancer Res 1996;56:3689. 125. Dodds HM, Haaz MC, Riou JF, Robert J, Rivory LP. Identification of a new metabolite of CPT-11 (irinotecan): pharmacological properties and activation to SN-38. J Pharmacol Exp Ther 1998;286:578",
+      ". Cancer Chemother Pharmacol 1997;39:440. 144. Ratain MJ, Goh BC, Iyer L, et al. A phase I study of irinotecan with pharmacokinetic modulation by cyclosporine A and phenobarbital. Proc Am Soc Clin Oncol 1999;18:202a(abst). 145. Gupta E, Safa AR, Wang X, Ratain MJ. Pharmacokinetic modulation of irinotecan and metabolites by cyclosporin A. Cancer Res 1996;56:1309. 146. Hashimoto H, Chatterjee S, Berger NA. Mutagenic activity of topoisomerase I inhibitors. Clin Cancer Res 1995;1:369. 147"
+    ],
+    "rerank_scores": [
+      0.7358049750328064,
+      0.3721354901790619,
+      0.36181461811065674,
+      0.14540886878967285,
+      0.11354102194309235,
+      0.0381341390311718,
+      0.033012643456459045,
+      0.02626030519604683
+    ]
+  },
+  "Q023": {
+    "contexts": [
+      ". Topoisomerases are essential for such events as transcription, replication, and mitosis. Of all the topoisomerases, groups I and II are the targets of cytotoxic agents. Camptothecin derivatives (irinotecan, topotecan) exert their cytotoxic effect by inhibiting topoisomerase I. Epipodophyllotoxin derivatives (etoposide, teniposide) inhibit topoisomerase II. Drugs from other classes (e.g., amsacrine and the anthracyclines) also inhibit topoisomerases as part of their mechanism of action",
+      "TOpOiSOMeRASe iNhiBiTORS 99 T opoisomerase II inhibitors etoposide and teniposide exert their action on topo ii by: • inhibiting the ability of the enzyme to relegate the cleaved DNA complex • generating high levels of DNA with potentially toxic double-stranded breaks • promoting mutation • permanent double-stranded breaks • illegitimate recombination • apoptosis",
+      ". It is critical to understand that the cytotoxic mechanism of topoisomerase inhibitors requires the drugs to trap the topoisom- erase cleavage complexes rather than block catalytic activity. This sets apart topoisomerase inhibitors from classical enzyme inhibi- tors such as antifolates. Indeed, knocking out Top1 renders yeast cells totally immune to camptothecin, 17,18 and reducing enzyme levels in cancer cells confers drug resistance",
+      ". Under hypoxic conditions, these free radicals can rearrange to form metabolites capable of covalently binding to DNA. Although the anthracyclines are associated with all of these reactions, it is their interaction with top II that is the most important mechanism of cytotoxicity. 152 With the exception of idarubicin, none of the anthracyclines are administered orally",
+      ". 44 Cytotoxic Mechanisms of T op2cc-T argeted Drugs (Intercalators and Demethyl Epipodophyllotoxins) Contrary to camptothecins, Top2 inhibitors kill cancer cells with- out requiring DNA replication fork collisions. Indeed, even after a 30-minute exposure, doxorubicin and other Top2cc-targeted drugs can kill over 99% of the cells, which is in vast excess of the frac- tion of S-phase cells in tissue culture (generally less than 50%)",
+      ". 32 Finally, it is not excluded that topologic defects resulting from Top2 sequestration by the drug-induced cleavage complexes could contribute to the cyto- toxicity of Top2cc-targeted drugs (see Fig. 20.2D). Such topologic defects would include persistent DNA knots and catenanes, poten- tially leading to chromosome breaks during mitosis",
+      ". Drug-induced G 2 arrest has been associated with a failure to activate cdc2 kinase. Because the cytotoxicity associated with top I interactive agents is highly dependent on DNA synthesis, any deregulation of cyclins, cell cycle–regulated kinases, or phosphatases may influence the cytotoxicity of top I interactive agents (see Fig. 19.6-1)",
+      ". 19.6-1). Several other types of chemotherapeutic agents, such as doxorubicin or actinomycin D, inhibit both top I and top II by a similar mechanism, but at different sites in the DNA. Top II is the molecular target for many anticancer drugs, such as the aminoacridines, anthracyclines, and epipodophyllotoxins. 13 These drugs inhibit religation of DNA cleaved by top II and induce protein-linked breaks in the DNA, as documented by DNA alkaline elution assays"
+    ],
+    "rerank_scores": [
+      0.9668680429458618,
+      0.9404371380805969,
+      0.937747061252594,
+      0.928244411945343,
+      0.7199835777282715,
+      0.6286628246307373,
+      0.21032556891441345,
+      0.15348514914512634
+    ]
+  },
+  "Q024": {
+    "contexts": [
+      ". Inherited syndromes associated with risk of pancreatic cancer Syndrome Genes mutated Published risk estimates Peutz–Jeghers syndrome STK11 Cumulative risk: 32–36% by age 70 years Familial atypical multiple mole melanoma (FAMMM) syndrome CDKN2A Cumulative risk: 17% by age 75 years Familial pancreatic cancer Unknown Overall: SIR = 9.0 Three affected first-degree relatives: SIR = 32 Hereditary pancreatitis PRSS1 Cumulative risk: 44% by age 70 years Hereditary breast and ovarian cancer syndrome",
+      ". Although the majority of melanomas are sporadic, these nevi can be inherited in a familial pattern. The familial atypical multiple mole and melanoma (FAMMM) syndrome is an autosomal dominant disorder characterized by the occurrence of melanoma in one or more first- or second-degree rela - tives and the presence of a high number of acquired nevi or atypical nevi. This syndrome is associated with germline mutations of the CDKN2A gene and is also",
+      ". familial atypical multiple mole and melanoma (FaMM) syndrome, dysplastic naevus syndrome • a melanoma susceptibility gene CDKN2A on chromosome 9p21.3 has been identified as a tumour suppressor gene (mutated in F aMM) • it is likely that multiple genes will eventually be implicated in the development of melanoma • germline mutations are implicated in up to 40% of patients with familial melanoma and may have a role in sporadic cases. • Benign pigmented naevi (see Fig. 23.1 and Fig",
+      ". Gastroenterology 1991;101:465. 56. Swift M, Sholman L, Perry M, et al. Malignant neoplasms in the families of patients with ataxia telangiectasia. Cancer Res 1976;36:209. 57. Lynch HT, Fusaro RM. Pancreatic cancer and the familial atypical multiple mole (FAMMM) syndrome. Pancreas 1991;6:127. 58. Goldstein AM, Fraser MC, Struewing JP, et al. Increased risk of pancreatic cancer in melanoma-prone kindreds with p16INK4 mutations. N Engl J Med 1995;333:970. 59. Whelan AJ, Bartsch D, Goodfellow PJ",
+      ". than 3-fold [15], with an elevated risk of all except the invasive mu - cinous histotype [17]. A family his - tory of breast cancer is also as - sociated with an increased risk of ovarian cancer; the cumulative risk to age 80 year s is 44% for carri - ers of BRCA1 mutations and 17% for carriers of BRCA2 mutations [18]",
+      ". Arch Dermatol 1999;135:282. 42. Lynch HT, Fusaro RM, Pester J, Lynch JF. Familial atypical multiple mole melanoma (FAMMM) syndrome: genetic heterogeneity and malignant melanoma. Br J Cancer 1980;42:58. 43. Clark WH, Reimer RR, Greene M. Origin of familiar malignant melanomas from heritable melanocytic lesions. Arch Dermatol 1978;114:732. 44. Greene MH, Clark WH Jr, Tucker MA, et al. High risk of malignant melanoma in melanoma-prone families with dysplastic nevi. Ann Intern Med 1985;102:458. 45",
+      "= 32 Hereditary pancreatitis PRSS1 Cumulative risk: 44% by age 70 years Hereditary breast and ovarian cancer syndrome BRCA1 BRCA2 Relative risk: 2.6 Relative risk: 3.5–5.9 Lynch syndrome MLH1, MSH2, MSH6, PMS2 Cumulative risk: 3–4% by age 70 years ATM, PALB2 Unknown SIR, standardized incidence ratio.",
+      ". The presence of atypical nevi identifies patients with a high risk of melanoma among family members with this syndrome. 44 The risk conferred by the presence of multiple atypical nevi in such individuals approaches 100% by age 70. 30,44,45 and 46 This risk is more complex than that of a discrete precursor lesion that progresses stepwise into malignancy. Although many melanomas have been identified to arise within atypical nevi, most occur in areas of skin that show neither gross nor histologic"
+    ],
+    "rerank_scores": [
+      0.9958136677742004,
+      0.9872103929519653,
+      0.9862847328186035,
+      0.8727202415466309,
+      0.8374691009521484,
+      0.7494901418685913,
+      0.26672616600990295,
+      0.24259856343269348
+    ]
+  },
+  "Q025": {
+    "contexts": [
+      ". Several inherited cancer syndromes are associated with pancreatic cancer, including Peutz-Jeghers syndrome, hereditary breast–ovarian cancer syndrome (associated with BRCA1 or BRCA2 mutations), familial atypical multiple mole melanoma syndrome, and possibly hereditary nonpolyposis colon cancer syndrome. Up to 10% of all pancreatic can- cers are familial, and a person’s risk of developing pancreatic cancer appears to increase with the number of people in his or her family who have the disease",
+      ". Inherited syndromes associated with risk of pancreatic cancer Syndrome Genes mutated Published risk estimates Peutz–Jeghers syndrome STK11 Cumulative risk: 32–36% by age 70 years Familial atypical multiple mole melanoma (FAMMM) syndrome CDKN2A Cumulative risk: 17% by age 75 years Familial pancreatic cancer Unknown Overall: SIR = 9.0 Three affected first-degree relatives: SIR = 32 Hereditary pancreatitis PRSS1 Cumulative risk: 44% by age 70 years Hereditary breast and ovarian cancer syndrome",
+      ". Consistent with the view that BRCA2 defects have an important role in a subset of pancreatic cancers, in addition to the very elevated risk of breast cancer in those carrying a germline BRCA2 mutation, the lifetime risk of pancreatic carcinoma for BRCA2 mutation carriers appears to be increased by three- to fivefold relative to the general population",
+      ". Cancer Res 1996;56:5360. 64. Su GH, Hruban RH, Bansal RK, et al. Germline and somatic mutations of the STK11/LKB1 Peutz-Jeghers gene in pancreatic and biliary cancers. Am J Pathol 1999;154:1835. 65. Moskaluk CA, Hruban RH, Schutte M, et al. Genomic sequencing of DPC4 in the analysis of familial pancreatic carcinoma. Diagn Mol Pathol 1997;6:85. 66. Lynch HT. Genetics and pancreatic cancer. Arch Surg 1994;129:266. 67. Steinberg WM, Barkin J, Bradley EL III, et al",
+      ". and II. type (often this may be the first manifestation of pancreatic cancer). A small percentage of cancers are genetically determined. Carriers of BRCA2 mutation, patients with Lynch, Peutz-Jeghers, Li-Fraumeni syndrome and individuals with a history of chronic pancreatitis or infected by Helicobacter pylori are at higher risk. 18.3 SYMPTOMATOLOGY In the early stages symptoms are very uncharacteristic and may resemble functional dyspeptic syndromes",
+      ". • Duodenal tumours tend to be polypoid, whilst jejunal and ileal tumours are larger and annular. • Patients with a ° small bowel carcinoma should be monitored for the development of a second malignant tumour, most commonly in the colon. • Genetic link, as patients with HNPCC have a 4% lifetime risk for adenocarcinoma, this being 100-fold that of the general population. One in 40 patients with Peutz–Jeghers syndrome develops cancers",
+      ". If untreated, death occurs before the age of 50; therefore, total colectomy is recommended for prevention. Peutz-Jeghers syndrome is autosomal dominant characterized by hamartomatous polyps of the GI tract and mucocutaneous pigmentation of the lips, face, and oral mucosa and is commonly associated with both benign and malignant neoplasms.264,265,266,267 and 268 There is a risk of approximately 2% to 3% of adenocarcinomas of the GI tract, and the carcinomas may arise in the hamartomatous polyps",
+      ". In people with hereditary pancreatitis, the lifetime risk of pancreatic can - cer is about 40%. Family history and genetic risk factors also play a role in risk of pancreatic cancer. Up to 8–10% of patients with pancreatic cancer carry a pathogenic germline vari - ant in a known cancer risk gene (including ATM, BRCA1, BRCA2, CDKN2A , EPCAM, MLH1, MSH2, MSH6, PALB2, PMS2, STK11, and TP53) [18–20]; these confer a life - time risk of pancreatic cancer that ranges from 3% to 58%"
+    ],
+    "rerank_scores": [
+      0.9747377634048462,
+      0.9519863724708557,
+      0.866343080997467,
+      0.8660063743591309,
+      0.8501749038696289,
+      0.648378312587738,
+      0.6287335157394409,
+      0.6161400675773621
+    ]
+  },
+  "Q026": {
+    "contexts": [
+      ". The family of liquid biopsy analytes includes cir - culating tumour cells (CTCs) , circu - lating cell-free tumour DNA (ctDNA), circulating non-coding nucleic acids such as microRNAs (miRNAs) and long non-coding RNAs (lncRNAs) , extracellular vesicles, and tumour- educated platelets [2–6]. Over the past 10 years, many liquid biopsy tests have been estab - lished and validated [3]",
+      ". Liquid biopsy beyond ctDNA and CTC analyses In addition, the analysis of circulat - ing non-coding nucleic acids such as miRNAs and lncRNAs (see Chapter 3.8) is a highly promising liquid biopsy approach [4]. miRNAs and lncRNAs were found to provide additional lev- els of transcriptional and translational regulation and to be strongly involved in cancer development",
+      ". CTCs for early detection and monitoring of minimal residual disease Over the past decade, in addition to the measurement of ctDNA , various methods have been developed to detect CTCs in the peripheral blood of patients with cancer [16]. As for any other liquid biopsy analyte, quantification and characterization of CTCs in the blood of patients with cancer at any particular time provides a snapshot of the actual disease status",
+      ". 6.7.1. Liquid biopsy in cancer. Schematic representation of the liquid biopsy concept as the analysis of circulating tumour cells (CTCs), circulating cell-free tumour DNA (ctDNA), non-coding RNAs (ncRNAs), exosomes, and tumour-educated platelets in the blood of patients with cancer. Key applications of liquid biopsy are listed.",
+      ". ctDNA for monitoring of minimal residual disease in patients with early- stage cancer Liquid biopsy tests for the detection and monitoring of minimal residual disease in patients with early-stage FUNDAMENTALS ■ The analysis of circulating tumour cells, circulating cell- free tumour DNA, and other tumour-derived products detectable in the blood and other body fluids has been referred to as liquid biopsy",
+      ". The analysis of tumour cells and tumour-derived products detectable in blood and other body fluids, which was introduced by Pantel and Alix- Panabieres and has been referred to as a liquid biopsy [1], has garnered substantial interest in recent years (see Chapter 5.12)",
+      ". 166 The detection of tumor-specific genetic alterations in pa- tients’ blood (often referred to as liquid biopsies ) has several applications in the field of oncology, which are summarized as follows. Analyses of cfDNA can be used to genotype tumors when a tissue sample is not available or is difficult to obtain",
+      ". ● Recent approaches have com - bined the evaluation of soluble tumour biomarkers with ctDNA analysis of cancer-related mu - tations in multiple genes. ● These technologies face chal - lenges, including low concen - trations of ctDNA and other liq - uid biomarker analytes. ● Progress in technology (e.g. next-generation sequencing) is paving the way for the develop - ment of diagnostic tests for early detection of cancer and the in - troduction of precision medicine into clinical practice"
+    ],
+    "rerank_scores": [
+      0.9950518012046814,
+      0.9877869486808777,
+      0.9455457925796509,
+      0.9105191230773926,
+      0.5804567933082581,
+      0.5049605965614319,
+      0.3463490307331085,
+      0.3437565267086029
+    ]
+  },
+  "Q027": {
+    "contexts": [
+      "52 Principles of Oncology Method Advantages Disadvantages Analytic Sensitivity Examples of Applications in Oncology Next-generation sequencing (NGS) Quantitative detection of variable single nucleotide substitutions, small insertions and deletions, chromosomal translocations, and gene copy number variations Highly multiplexed High throughput Requires costly investment in instrumentation and bioinformatics Technology is rapidly evolving Higher error rates for insertion and deletion mutations",
+      ". 58 NGS can be used for the detection of single nucleotide vari- ants, small insertions and deletions, translocations, inversions, alternative splicing, and copy number variations given sufficient depth of genomic DNA sequence (Fig. 3.10). Technical limita- tions of this technique include difficulty in sequencing guanine-cy- tosine (GC)–rich genomic regions, and erroneous sequencing of homologous DNA regions (e.g., pseudogenes) that may confound interpretation",
+      "171 One major limitation of using NGS for solely MSI screening is the uti- lisation of expensive targeted gene-capture sequencing. However, tech- nologies such as MiSeq allow for a less costly platform using smaller NGS machinery and a streamlined data processing pipeline which is eas- ier to operate, does not require a large computational infrastructure and requires less time",
+      ". 64 They can also be coupled to other procedures such as those involv- ing paired-end reads, allowing for the identification of multiple structural alterations, such as insertions, deletions, and rearrange- ments, that commonly occur in cancer genomes. 63 Nonetheless, next-generation sequencing still presents some limitations that are mainly derived from the relatively high error rate in the short reads generated during the sequencing process",
+      ". Further, it can provide semiquantitative information regarding the relative amount of mutated alleles. Limitations of this approach include the inabil- ity to objectively quantitate mutant allele burdens, the inability to determine the exact change in nucleotide sequence, and the inability to detect non–length-affecting mutations such as substitu- tion mutations. Examples of fragment analysis applications in oncology in- clude the detection of NPM1 insertion mutations (Fig",
+      ". Researchers have used various targeted DNA sequencing tech - niques, such as digital PCR (quan- titative PCR), BEAMing (beads, emulsion, amplification, magnetics) technology, the safe-sequencing system, CAPP-Seq, and tagged- amplicon deep sequencing [33]. These methods can reach ctDNA detection limits of less than 0.01%. A disadvantage of these technolo - gies is the requirement for detailed prior information on the mutational spectrum of the tumour in the indi - vidual patient",
+      ". Moreover, they have a series of advantages over Sanger sequencing, which are of special interest for the analysis of cancer genomes. 62 First, next-generation sequencing approaches are more sensitive than Sanger methods and can detect somatic mutations even when they are present in only a subset of tumor cells. 63 Moreover, these new sequencing strategies are quantitative and can be used to simultaneously de- termine both nucleotide sequence and copy number variations",
+      "gold standard for mutation detection Low throughput Low analytic sensitivity limits application in specimens with low tumor burden Does not detect copy number changes or large (>500 bp) insertions and deletions Low KIT mutations in GIST and melanoma CEBPA mutations in AML EGFR mutations in NSCLC Pyrosequencing Higher analytical sensitivity than Sanger sequencing Detects variable single nucleotide substitutions and small insertions and deletions Provides quantitative information about mutation"
+    ],
+    "rerank_scores": [
+      0.993370771408081,
+      0.9830337166786194,
+      0.9732900857925415,
+      0.9565469622612,
+      0.8154319524765015,
+      0.7437904477119446,
+      0.6661068797111511,
+      0.21786627173423767
+    ]
+  },
+  "Q028": {
+    "contexts": [
+      ". Mutations appear as new peaks in the pyrogram sequence or variations of the expected peak heights. 43 Pyrosequencing is particularly useful for the detection of point mutations and insertion/deletion mutations that occur at short stretches in mutational hotspots. This method has higher analytical sensitivity than Sanger sequencing and can provide quantitative information about mutation levels in a sample",
+      "gold standard for mutation detection Low throughput Low analytic sensitivity limits application in specimens with low tumor burden Does not detect copy number changes or large (>500 bp) insertions and deletions Low KIT mutations in GIST and melanoma CEBPA mutations in AML EGFR mutations in NSCLC Pyrosequencing Higher analytical sensitivity than Sanger sequencing Detects variable single nucleotide substitutions and small insertions and deletions Provides quantitative information about mutation",
+      ". By way of this technology, multiple genes or the entire exome or genome can be interrogated simultaneously in multiple parallel reactions instead of a single-gene basis as in Sanger sequencing or pyrosequencing. Currently, the most common NGS approach for cancer testing in the clinical set- ting employs targeted sequencing of specific genes and mutation hotspot regions",
+      "Chapter 3 Molecular Methods in Cancer 55 PRINCIPLES OF ONCOLOGY Pyrosequencing Pyrosequencing, also known as sequencing by synthesis , is based on the real-time detection of pyrophosphate release by nucleotide incorporation during DNA synthesis. 42 In the pyrosequencing reac- tion, as nucleotides are added to the nucleic acid chain by poly- merase, pyrophosphate molecules are released and subsequently converted to ATP by ATP sulfurylase",
+      ". Moreover, they have a series of advantages over Sanger sequencing, which are of special interest for the analysis of cancer genomes. 62 First, next-generation sequencing approaches are more sensitive than Sanger methods and can detect somatic mutations even when they are present in only a subset of tumor cells. 63 Moreover, these new sequencing strategies are quantitative and can be used to simultaneously de- termine both nucleotide sequence and copy number variations",
+      ". Clini- cally, it has been employed for analyses of mutational hotspots in multiple genes involved in melanomas, non–small-cell lung can- cers, breast cancers, and metastatic colorectal cancers. 49 The assay has higher analytical sensitivity than Sanger sequencing and can detect low-level mutations in FFPE-derived DNA, making it ad- vantageous for biopsy specimens with limited tumor involvement",
+      ". 43 Examples of pyrosequencing applications in oncology include the mutational analysis of BRAF (codon 600),44,45 KRAS (codons 12, 13, 61),45 NRAS (codon 61),45 and the methylation analysis of MGMT in glioblastoma multiforme.46,47 Single Nucleotide Extension Assay (SNaPshot®) The single nucleotide extension assay is a variant of dideoxy se- quencing",
+      ". Haematologica Oct 2008;93(10):1560–1564. 41. Sanger F, Nicklen S, Coulson AR. DNA sequencing with chain-terminating inhibitors. Proc Natl Acad Sci U S A 1977;74(12):5463–5467. 42. Ronaghi M, Uhlén M, Nyrén P. A sequencing method based on real-time pyrophosphate. Science 1998;281(5375):363, 365. 43. Ronaghi M, Shokralla S, Gharizadeh B. Pyrosequencing for discovery and anal- ysis of DNA sequence variations. Pharmacogenomics 2007;8(10):1437–1441. 44. Shigaki H, Baba Y, Watanabe M, et al"
+    ],
+    "rerank_scores": [
+      0.8421970009803772,
+      0.627281665802002,
+      0.5710660815238953,
+      0.2917001247406006,
+      0.16698791086673737,
+      0.041932929307222366,
+      0.03953595459461212,
+      0.01941533572971821
+    ]
+  },
+  "Q029": {
+    "contexts": [
+      ". 137 The diagnosis of nonseminomatous germ cell tumors can often be made without tissue biopsy.144 In many centers, the presence of an anterior mediastinal mass in a young male with elevated serum tumor markers (AFP and b-HCG) is adequate to initiate treatment. If a tissue diagnosis is deemed necessary, fine-needle guided aspiration with cytologic staining for tumor markers may be used for confirmation",
+      "812 Section IX Genitourinary Malignancies CHAPTER 39 Prognosis The International Germ Cell Cancer Collaborative Group (IGCCCG) established a standard risk classifi - cation for both seminomas and NSGCTs ( Table 39-2). Patients with metastatic seminoma are divided into either good- or intermediate-risk categories, with no definable “poor-risk” seminoma. The one characteris- tic that predicted worse outcome for seminoma was the presence of nonpulmonary visceral metastases (intermediate prognosis)",
+      ". Table 10.3 Testis Cancer Classification by the International Germ Cell Cancer Collaborative Group Good prognosis Nonseminoma Testis/retroperitoneal primary AND Good markers* AND No nonpulmonary visceral mets *Good markers AFP <1000 ng/ml AND HCG <1000 ng/ml (<5000 lU/l) AND LDH <1.5 × N ( N = upper limit of normal) Seminoma Any primary site AND Any markers AND No nonpulmonary visceral mets Intermediate prognosis Nonseminoma Testis/retroperitoneal primary AND Intermediate markers* AND No",
+      ". Primary mediastinal nonseminomatous germ cell tumor b. Nonpulmonary visceral metastases c. Serum HCG level higher than 50,000 mIU/mL d. a-FP level higher than 10,000 ng/mL e. Serum LDH level more than 10 times the upper limit of normal V. Prevention and early detection. Cryptorchidism should be surgically corrected before puberty because the risk for malignancy is substantial",
+      ". Serum tumor markers for HCG and AFP are useful in the diagnosis and management of these tumors. They are often divided clinically into dysgerminoma and nondysgerminoma germ cell tumors. DIAGNOSIS Abdominal pain, pelvic fullness, and urinary symptoms are common in patients with germ cell tumors of the ovary. In a minority of patients (approximately 10%), abdominal pain can be severe, usually the result of hemorrhage, rupture, or torsion of the tumor",
+      ". If residual mass greater than 1cm is detected on follow- up staging, surgical resection is recommended. Management of Good-Risk Stages IIC and III Nonseminoma Germ Cell Tumors Patients with bulky retroperitoneal disease of greater than 5 cm or pulmonary metastasis with relatively low serum markers constitute those with advanced dis - ease, but still with favorable prognosis",
+      ". 108 Nonpulmonary visceral metastasis was the only significant prognostic factor in seminoma patients. Investigators agreed on three strata of good-, intermediate-, and poor-prognosis patients with nonseminomatous GCT; no poor-risk stratum could be defined in seminoma ( Table 35-5)",
+      ". Elevated levels of b-HCG are seen in 30% to 50% of patients, and AFP is detected in 60% to 80%. These tumors carry a poorer prognosis than either pure extragonadal seminoma or their gonadal nonseminomatous counterparts, and all patients with primary mediastinal nonseminomatous germ cell tumors fall into the poor risk category of the new International Germ Cell Consensus Classification. 150 Eighty-five percent to 95% of patients have obvious distant metastases at the time of diagnosis"
+    ],
+    "rerank_scores": [
+      0.4882311522960663,
+      0.43489235639572144,
+      0.42085498571395874,
+      0.39475980401039124,
+      0.3354794681072235,
+      0.29711684584617615,
+      0.17318220436573029,
+      0.10223271697759628
+    ]
+  },
+  "Q030": {
+    "contexts": [
+      ". In countries in transition towards higher HDI levels, breast cancer mortality trends have tended to par - allel the increasing incidence trends; rising mortality rates have consis - tently been observed in countries in Asia and Latin America (Fig. 1.2. 3b) [8], for all age groups and also for women in the targeted screening age group (which suggests an absence of effective screening programmes)",
+      ". They found that in the regions with the highest HDI in 2008, breast cancer , lung cancer , colorectal cancer , and prostate cancer accounted for more than half of the cancer burden. In regions with low HDI , other cancer types were more common: stom - ach cancer , liver cancer , oesopha - geal cancer , and cervical cancer . Together, these cancers accounted for 62% of the cancer burden in re - gions with low HDI . In both settings, lung cancer was the most common cancer diagnosed",
+      ". and their chances of leading a flour - ishing life. This unequal distribution of health-damaging experiences is not in any sense a ‘natural’ phenom- enon but is the result of a toxic com- bination of poor social policies and programmes, unfair economic ar - rangements, and bad politics...” [23]. Bray et al. [16] used four tiers of HDI (low, medium, high, and very high HDI) to evaluate cancer- specific patterns in 2008 and trends over the period 1988–2002",
+      ". The geographical loca - tion may also play a role in these disparities . Women living in rural ar- eas have the lowest screening rates and the highest incidence rates of cervical cancer, both in countries with low HDI and in countries with high HDI [21]. These disparities across socio - economic, racial, and ethnic groups have also been documented both in other countries with high HDI and in countries with low HDI (see Chapter 1.3)",
+      ". Consistent with the declines in incidence, colorectal cancer mor - tality rates have decreased in coun - tries with high HDI (e.g. Australia, Canada, the United Kingdom, and the USA) in both sexes (Fig. 1.2. 5b and Fig. 1.2.6b). These decreases can be linked partly to improving survival through the adoption of best practices in cancer treatment and management, in addition to ear- lier detection of colorectal cancer in these countries [10]",
+      ". Cancer now features in global development targets, in - cluding the United Nations 2030 Sustainable Development Goals, and is a critical element of universal health coverage. However, the reality for cancer patients suggests that progress has been inadequate and inequita - ble, particularly in low- and middle- income countries. At the current rate, global targets to reduce prema- ture mortality will not be achieved",
+      ". Would this be a measure of the global bur - den of “sporadic cancers”? A counterpoint epidemiologi - cal perspective on the stem cell hypothesis in human carcinogen - esis will now be summarized",
+      ". It is especially relevant to the ﬁ eld of oncology. When cure is beyond all probability and remaining life is, or is likely to become, increasingly miserable, doctors, nurses and other associated experts who develop special expertise in relieving distressing symptoms and making remaining life more comfortable and tolerable make up the palliative care team"
+    ],
+    "rerank_scores": [
+      0.2519579827785492,
+      0.03973997011780739,
+      0.01828663796186447,
+      0.016520977020263672,
+      0.013905772008001804,
+      0.009608607739210129,
+      0.0074351574294269085,
+      0.001532282098196447
+    ]
+  },
+  "Q031": {
+    "contexts": [
+      ". The Risk Estimation for Hepa - tocellular Carcinoma in Chronic Hep atitis B (REACH-B) scoring systems were derived from the community cohort of the REVEAL- HBV study and validated inter - nationally in hospital cohorts. Important risk predictors includ - ing age, sex, HBeAg serostatus, and serum levels of ALT, HBV DNA, and HBsAg were incorpo - rated into the REACH-B scores. These scores have high validity for HCC risk prediction. Table B5",
+      ". Integer risk scores are assigned to various groups of eight predictors: sex, age, family history of HCC, alcohol intake, serum alanine aminotransferase (ALT) level, HBV e antigen (HBeAg) serostatus, serum HBV DNA level, and HBV genotype. Both 5-year and 10-year risks of HCC by summed risk score are depicted in the nomogram. It is easy to identify the long-term HCC risk by summing the risk scores",
+      ". A total of 4155 HBsAg-seropositive and 1313 anti-HCV-seropositive participants were enrolled, and among them 384 new cases of HCC occurred until 30 June 2008. A series of HCC risk calculators were developed and validated for patients with chronic hepatitis B and those with chronic hepatitis C, from the REVEAL study [2,3]",
+      ". 5.6.5. Nomograms from the Risk Evaluation of Viral Load Elevation and Associated Liver Disease/Cancer of Hepatitis B Virus (REVEAL-HBV) study are some of the earliest risk calculators for predicting risk of cirrhosis or hepatocellular carcinoma (HCC) in patients with chronic hepatitis B",
+      ". genotype C or basal core promoter (BCP) A1762T/G1764A double mu - tations, and co-infection with HCV or HIV. In the Risk Evaluation of Viral Load Elevation and Associated Liver Disease/Cancer (REVEAL) study, for patients with chronic hepatitis B the lifetime (ages 30– 75 years) cumulative incidence of HCC was 27% for men and 8%",
+      ". When HCC develops, the patient usually has had chronic HBV infection for three to four decades. The risk factors for the development of HCC in HBsAg carriers are the presence of cirrhosis; family history of HCC; increasing age; male sex; Asian or African race; cofactors (such as alcohol, aflatoxin, and perhaps smoking); and the duration of the carrier state. In Asia, HBV is transmitted vertically from mother to infant in the first few months of life; in Africa, HBV is transmitted horizontally",
+      ". Overall, HCC has a very poor prognosis, with a 5-year survival rate of 5%. EPIDEMIOLOGY As shown in Table 22-1, HCC represents approxi - mately 85% of all primary liver cancers ( 16). The dis- tribution of HCC varies significantly by geography; it is endemic in parts of the world where hepatitis B virus (HBV) is also endemic. In Western countries, HCV infection and alcoholic cirrhosis are the principal risk factors for HCC",
+      ". Projected risk of developing hepatocellular carcinoma in patients with chronic hepatitis B, from the Risk Estimation for Hepatocellular Carcinoma in Chronic Hepatitis B (REACH-B) IIa prediction model Predictor Risk score Cumulative (summed) risk score Projected risk of developing hepatocellular carcinoma (%) 3-year 5-year 10-year Sex 0 0.002 0.007 0.02 Female 0 1 0.003 0.01 0.03 Male 2 2 0.006 0.02 0.06 Age, 5-year increment 1 3 0.01 0.03 0.09 Serum ALT level (U/L) 4 0.02 0.05 0.15 < 15 0 5"
+    ],
+    "rerank_scores": [
+      0.9196876287460327,
+      0.8632552623748779,
+      0.8080400228500366,
+      0.7805933952331543,
+      0.2798774838447571,
+      0.1345292627811432,
+      0.05315235257148743,
+      0.04822329804301262
+    ]
+  },
+  "Q032": {
+    "contexts": [
+      ". Gastric car- cinoma occasionally develops in families with germline mutations in p53 (Li–Fraumeni syndrome) and BRCA2. Germline mutations in the gene CDH1 encoding the cell adhesion protein E-cadherin results in an autosomal-dominant predisposition to gastric carcinoma, referred to as hereditary diffuse gastric cancer. This mutation is seen in 1% to 3% of gastric cancers and has a penetrance of about 70% in women and 80% in men. Prophylactic gastrectomy is offered to carriers of this mutation",
+      ". 31,32 This loss of E-cadherin function arises via several different mechanisms. In familial gastric carcinomas, germline mutations in the E-cadherin gene predispose individuals to develop malignant cancer. Mutations in b-catenin are found in many primary tumors, including prostatic cancer, melanoma, and gastric and colon cancer. Another mechanism disrupting E-cadherin function during tumor progression is hypermethylation of the E-cadherin promoter, resulting in decreased gene expression",
+      ". Genetics and genomics Genetic susceptibility Hereditary gastric cancer makes up about 1–3% of cases of gastric cancer. It includes mainly heredi - tary diffuse gastric cancer , gastric adenocarcinoma and proximal pol - yposis of the stomach , and familial intestinal gastric cancer [18]. About 30–40% of cases of he - reditary diffuse gastric cancer are linked to a dominant germline patho- genic mutation in CDH1 , which en - codes E-cadherin",
+      "Chapter 5.4 • Stomach cancer 339 SECTION 5 CHAPTER 5.4 Marker Alteration Clinical purpose Detection method Metastasis-related genes Growth factors HER2, FGFR, PI3K/Akt/mTOR ( PIK3CA), MET, VEGF (VEGFR2, VEGFD) Overexpression Diagnostic, prognostic, therapeutic Tissue Cell-cycle regulation TP53 Mutation Diagnostic Tissue Adhesion molecule E-cadherin ( CDH1) Mutation, epigenetic alteration Diagnostic, prognostic Tissue, blood Immune checkpoint PD -L1 Mutation Prognostic, therapeutic Tissue",
+      ". A study by Zheng et al showed a positive rate of E-cadherin promoter methylation in dysplasia, early cancer, and advanced cancer ( 12). Furthermore, 30% of hereditary diffuse gastric cancer (HDGC) families show CDH1 germline mutations, whereas the rest remain genetically unexplained ( 13). Cur - rently, many families with HDGC have CDH1 germline mutations. Inheritance is dominant",
+      ". In contrast to intestinal-type gastric cancer, diffuse-type gastric adenocarcinoma results from defective intracellular adhesion molecules, which is the consequence of loss of E-cadherin protein expression, which is encoded by the cadherin 1 (CDH1) gene. This can occur through germline or somatic mutation, loss of heterozygosity, or epi - genetic silencing of gene transcription through aberrant methylation of the CDH1 promoter",
+      ". The detection of CDH1 promoter methylation in blood samples has been proposed as a diagnostic tool [38]. Other non-invasive biomarkers have been proposed for gastric cancer diag - nosis and follow-up, including long non-coding RNAs and small non- coding RNAs such as microRNAs , 100 80 60 40 20 0 Other Fusobacteria Actinobacteria Bacteroidetes Firmicutes Non-Helicobacter Proteobacteria Helicobacter spp. Overall Chronic gastritis Gastric carcinoma Relative abundance (%) Fig. 5.4.5",
+      ". Moreover, increased expression of E-cadherin has been well established as an antagonist of invasion and metastasis, whereas a reduction of its expression is known to potentiate these behaviors. The frequently observed downregulation and occasional mutational inactivation of the E-cadherin–encoding gene, CDH1, in human carcino- mas provides strong support for its role as a key suppressor of the invasion– metastasis hallmark capability"
+    ],
+    "rerank_scores": [
+      0.8375771045684814,
+      0.8200897574424744,
+      0.7427746057510376,
+      0.7377367615699768,
+      0.6126246452331543,
+      0.4746350049972534,
+      0.3396000266075134,
+      0.33634546399116516
+    ]
+  },
+  "Q033": {
+    "contexts": [
+      ". They clearly converged on four major genomic subtypes of gastric cancer with distinct features and classes of molecular alterations: • Tumors containing EBV, along with recurrent mutations in the PIK3CA gene pathway, extreme DNA hypermethylation, amplification of Janus Table 20-1 Summary of Selected Recurrent Cytogenetic Abnormalities and Frequent Molecular Changes Associated With Gastric Cancer Conventional Cytogenetics Simple Karyotypes Complex Karyotypes +X, +8, +9, +19, del(7q), i(8q) 1,",
+      ". The global distribution frequencies of gastric cancer subtypes are indicated as percentages. TCGA subtypes: MSI, microsatellite instability; CIN, chromosomal instability; EBV+, positive for Epstein–Barr virus; GS, genomically stable. ACRG subtypes: MSI, microsatellite instability; MSS/TP53−, microsatellite stable with inactive TP53; MSS/TP53+, microsatellite stable with active TP53; MSS/EMT, microsatellite stable with features of epithelial–mesenchymal transition",
+      "179 (EBV+) gastric tumours. Mismatch repair-deficient (dMMR) gastric can- cers display a hypermutated genome and are also associated with high lev- els of PD-L1 expression and tumour infiltrating lymphocytes. EBV and MSI gastric tumours also demonstrate a high interferon (IFN)-γ response gene signature compared with chromosomal instable (CIN) and genomic stable (GS) tumours; this signature has been associated with increased sen- sitivity to anti-programmed cell death protein 1 (PD-1) therapy",
+      ". The EBV-positive subtype was as - sociated with the most favourable prognosis, followed by the MSI and chromosomal instability subtypes. ACRG reported a similar classi - fication of gastric cancer and distin - guished the following four molecular subtypes (Fig",
+      ". • The fourth group was termed genomically stable because they lacked the molecular features of the other three types. These tumors, making up 20% of the specimens, were largely those of a specific class of gastric cancer enriched for the diffuse-type histologic variant, with approximately 30% of these tumors having genomic alterations in the Ras homolog gene family, member A (RHOA) signaling pathway",
+      ". Epstein-Barr virus (EBV)–associated gastric can- cers have distinct clinicopathologic characteristics, including male predominance, preferential location in the gastric cardia or postsurgical gastric stump, lymphocytic infiltration, and a more favorable prognosis ( 15, 16 ). Despite recent progress, the precise etiologic characteristics of gastric cancer and the relationship between the environment and host are unknown",
+      ". This subtype of tumor is frequently found in the junction between the stomach and the esophagus, a type of gastric cancer that has been dramatically increasing in the United States. • The fourth group was termed genomically stable because they lacked the molecular features of the other three types",
+      ". For squamous cell oesophageal cancer, there are no targeted therapies available. The Immune Environment in Gastro-oesophageal Cancer Molecular Subtypes and the Immune Response Epstein-Barr virus (EBV) and microsatellite instability (MSI) subtypes of gastric cancer have characteristics associated with enhanced rates of response to immuno-oncology therapies"
+    ],
+    "rerank_scores": [
+      0.9135668873786926,
+      0.9100011587142944,
+      0.48989903926849365,
+      0.38911014795303345,
+      0.35835686326026917,
+      0.3426062762737274,
+      0.2275102734565735,
+      0.12329157441854477
+    ]
+  },
+  "Q034": {
+    "contexts": [
+      "550 SUMMARY ● The analysis of tumour-derived products, including circulating cell-free tumour DNA (ctDNA) and related biomarkers, in body fluids is increasingly recognized as an aid in the early diagnosis of malignant disease. ● For application in screening or early diagnosis, ctDNA analy - sis and related techniques re - quire well-validated tests with exceptionally high sensitivity and specificity",
+      ". ■ Analysis of therapy-relevant genomic aberrations in circu - lating tumour cells and circulat - ing cell-free tumour DNA ena - bles the guidance of precision therapy and the prediction of resistance to therapy. cancer face similar challenges to tests for early detection , including low concentrations of ctDNA and other liquid biomarker analytes [7]. Tie et al",
+      ". However, programmes for early detection or screening require well-validated tests with exceptionally high sensitivity and specificity. In the context of the TRACERx study, Abbosh et al. investigated the potential of ctDNA analysis for early diagnosis and monitoring in patients with non-small cell lung carcinoma (NSCLC)",
+      ". ctDNA for monitoring of minimal residual disease in patients with early- stage cancer Liquid biopsy tests for the detection and monitoring of minimal residual disease in patients with early-stage FUNDAMENTALS ■ The analysis of circulating tumour cells, circulating cell- free tumour DNA, and other tumour-derived products detectable in the blood and other body fluids has been referred to as liquid biopsy",
+      ". Technologies for detection of ctDNA and CTCs Circulating cell-free DNA (cfDNA) in blood plasma is highly fragmented DNA derived mainly from apoptotic cells. The concentration of ctDNA in blood may be less than 0.01% of the total cfDNA concentration, in particular during the early stages of cancer that are relevant to early detection programmes",
+      ". 6.7.2. A patient receiving chemotherapy in the context of cancer management. The currently available data suggest improved clinical management based on the power of circulating cell-free tumour DNA (ctDNA) analysis to detect and monitor minimal residual disease in patients with cancer.",
+      ". The initial clinical analysis to discriminate DNA released from tumor cells (ctDNA) from circulating normal DNA. Discerning ctDNA from normal cfDNA is aided by the fact that tumor DNA is defined by the presence of mutations. These somatic mutations, commonly single base pair substitutions, are present only in the genomes of cancer cells or precancerous cells and are present in the DNA of normal cells of the same individual. Accordingly, ctDNA of- fers exquisite specificity as a biomarker",
+      ". Thus, liquid biopsy is set to become an essential element of personalized medicine (Fig. 6.7.1). This chapter discusses some of the recent highlights on the use of ctDNA and CTCs for early detection and monitoring of cancer. ctDNA for early detection of cancer Early detection of cancer in the context of a screening programme for healthy individuals at high risk is a much sought-after goal in can - cer research"
+    ],
+    "rerank_scores": [
+      0.6374088525772095,
+      0.40300944447517395,
+      0.3706108331680298,
+      0.29925212264060974,
+      0.20703952014446259,
+      0.1621769815683365,
+      0.1194242537021637,
+      0.09536918252706528
+    ]
+  },
+  "Q035": {
+    "contexts": [
+      ". These markers are summarized in Table 25.3. Antiplatelet antibodies (e.g., to CD41 or CD61) are useful in differentiating megakaryoblastic (M7) leukemia. In some centers, flow cytometry has largely replaced cytochemistry. Table 25.3 Immunologic cell-surface markers in acute leukemias 3. Cytochemistry. Identifying the type of early cell may be difficult but is facilitated by readily available and traditionally used histochemical techniques ( Table 25.4)",
+      "In the small subset of cases in which lineage cannot be indicated by morphology or cytochemistry, immunophenotyping using specific monoclonal antibodies usually determines lineage to be myeloid. 69,70,73 This group is designated AML-M0. The poorer prognosis of this subgroup makes their distinction from L2-ALL and other AML subtypes important. Another subgroup that is difficult to classify due to its pleomorphic morphology and unhelpful cytochemistry is acute megakaryoblastic leukemia (AML-M7)",
+      ". Furthermore there are leukemias that express M6 and M7 markers, and which are described as erythromegakaryocytic. Cytogenetics Fluorescence in situ hybridization (FISH) and polymerase chain reaction (PCR) tech- niques (Chap 2) detect subtypes of AML according to specific chromosomal abnor- malities that correlate to alterations in cell survival, cell differentiation, and cell cycle regulation",
+      ". MORPHOLOGY AND CYTOCHEMISTRY The French-American-British (FAB) group has proposed a widely used classification of eight different types of AMLs (M0 to M7) and three types of ALLs (L1 to L3) based on morphology and cytochemistry66,67,69; monoclonal antibody–based immunophenotype is also used in undifferentiated cases in which morphology and cytochemistry are inconclusive69,70 (Table 46.2-2)",
+      "331Classification FAB classification of acute myelogenous leukemia M0 Immature myeloblastic leukemia M1 Myeloblastic leukemia  Blasts with few azurophile granules or Auer rods  Positive peroxidase or Sudan black (>5% of blasts) reaction can be helpful M2 Myeloblastic leukemia with signs of maturation  Myeloblasts and leukemic promyelocytes represent the majority of nucleus-containing bone marrow cells  Auer rods common M3 Promyelocytic leukemia  Mostly abnormal promyelocytes with lots of",
+      ". II. Pathology and natural history A. Classification. The FAB classification of acute leukemia is summarized in Table 25.2. Table 25.2 Classification of acute leukemias 1. Auer rods are abnormal condensations of cytoplasmic granules. Their presence in the immature cells distinguishes AML from ALL; their absence is not diagnostically helpful. 2. Immunologic markers distinguish subsets of ALL with similar morphologies (usually L1 or L1/L2) and usually distinguish ALL and AML",
+      ". Biphenotypic leukemia expresses myeloid and lymphoid markers. Therefore more than one marker of the other cell lineage has to be expressed. Biphenotypic leuke- mia has to be distinguished from mixed-lineage leukemia, which shows blasts with more than one phenotype. Furthermore there are leukemias that express M6 and M7 markers, and which are described as erythromegakaryocytic",
+      ". 70,71 and 72 TABLE 46.2-2. Classification of Acute Leukemia The FAB classification of AML, as modified by the National Cancer Institute, 71 is based on morphologic examination for lineage, confirmation of lineage by cytochemical stains, quantitation of the number of blasts, and estimation of the degree of differentiation of the cells (see Table 46.2-2)"
+    ],
+    "rerank_scores": [
+      0.9891497492790222,
+      0.8581405878067017,
+      0.7201999425888062,
+      0.6798747777938843,
+      0.5635589957237244,
+      0.38241633772850037,
+      0.33607417345046997,
+      0.2672217786312103
+    ]
+  },
+  "Q036": {
+    "contexts": [
+      ". The following section discusses several other types of outcomes frequently evaluated in cancer clinical trials: toxic effects, tumor response, biomarkers, quality of life, and economic measures. Toxic (Adverse) Effects Toxicity is an important measurement in cancer clinical tri- als as most therapeutic interventions in cancer cause sig- nificant morbidity",
+      ". Among the most important and most used in clinical oncology studies (usually used to compare new treatment plan to current one) are: ▪ overall survival, OS – time till death (all causes mortality) ▪ cause-specific survival – time till death caused by observed disease, other causes of death are not counted ▪ disease free survival, DFS – time period, during which the patient is alive and healthy and has no signs of disease after previous successful treatment of primary tumor (surgery,",
+      ". Because individuals with cancer are highly heterogeneous and oncology trials usually have relatively small sample sizes (compared with trials for some other diseases), clinical investi - gators have always had the concerns described. This design solves this important problem. The related research has been published in Statistics in Medicine (6). Innovative statistical designs can help conduct clini- cal trials more ethically and more efficiently",
+      ". Whilst several similar results have now been reported it is too early in this clinical study to speculate what percentage of patients so treated will have similar responses or for how long such responses will be maintained. This is an example of the cutting edge of clinical studies in cancer treatment. Such studies are practiced in all areas of cancer treatment, especially where there is no established successful alternative",
+      ". Cancer 1999; 85: 1186–96. 79. Aaronson NK, Ahmedzai S, Bergman B et al. The European Organization for Research and Treatment of Cancer QLQ-C30: a quality-of-life instrument for use in international clinical trials in oncology. J Natl Cancer Inst 1993; 85: 365–76. 80. Knobel H, Loge JH, Brenne E et al. The validity of EORTC QLQ-C30 fatigue scale in advanced cancer patients and can- cer survivors. Palliat Med 2003; 17: 664–72. 81. Sood A, Barton DL, Loprinzi CL",
+      ". In this case, the metaanalysis may be useful for answering important questions about a class of treatments that the individual trials cannot address reliably. For example, trials evaluating adjuvant treatment of primary breast cancer often are designed to detect differences in disease-free survival, and a metaanalysis is often required to evaluate survival. Similarly, subset analysis can usually be meaningfully evaluated",
+      ". This concept was analyzed in a prospective trial, Optimized 5-FU and Oxaliplatin Study (OPTIMOX1). It demonstrated that switching to a nonoxaliplatin maintenance regimen (5-FU/ leu - covorin) after 6 cycles of FOLFOX, with reintroduc- tion of oxaliplatin after 12 cycles of maintenance therapy or at disease progression, did not worsen clinical outcomes when compared to continuous FOLFOX until disease progression",
+      ". If, at some point during the trial, the posterior probability that p1 – p0³0 becomes large—say greater than 0.95—one might terminate the trial and conclude that the new regimen appears better than the historical control. In this case, one could continue entry of patients if it were desirable to study the regimen further in a phase II setting. The trial is designed with a maximum number of patients, nmax, that limits sample size even if neither early termination condition occurs"
+    ],
+    "rerank_scores": [
+      0.023797856643795967,
+      0.014867734163999557,
+      0.010229789651930332,
+      0.007623161654919386,
+      0.0026999793481081724,
+      0.0024852158967405558,
+      0.0014268700033426285,
+      0.001107377465814352
+    ]
+  },
+  "Q037": {
+    "contexts": [
+      ". However, the functional and prognostic sig- nificance of TMRPSS2-ERG remain poorly understood. Currently, detection and measurement of TMPRSS2- ERG are not performed in standard clinical practice. Additional studies have sought to refine the diagnos- tic classification of prostate cancer through molecular methods. Unfortunately, no consensus yet exists about the usefulness of molecular phenotypic (or genotypic) characterization in prostate cancer",
+      ". As the therapeutic benefit of postopera- tive radiation therapy is better appreciated, the impor- tance of these aspects has proportionally increased. Molecular Genetics of Prostate Cancer In prostate cancer, gene fusions between TMPRSS2 (21q22.3), an androgen-regulated gene, and ERG, from the ETS family of transcription factors (21q22.2), are common (28). However, the functional and prognostic sig- nificance of TMRPSS2-ERG remain poorly understood",
+      ". Therefore, knowledge of biomark - ers that predict the likelihood of ag - gressive disease may have clinical utility. These biomarkers include the TMPRSS2-ERG gene fusion [25], Ki-67 expression [26], and bio - markers involved in androgen me - tabolism [27]. Multigene genomic classifiers have been identified that assess prostate tumour aggres - siveness or prognosis [28]",
+      ". Identification of translocations is important in the diagnosis and subtyping of acute leukemias (e.g., detection of PML-RARA and variant translocations in acute promyelocytic leukemia) and is also extremely important for the diagnosis of sarcomas such as Ewing sarcoma. The discovery of chromosomal translocations, such as the TMPRSS-ETS in prostate cancer and ALK translocations in non– small-cell lung cancer, portends an importance of detecting trans- locations in solid tumors",
+      ". the Stockholm-3 test, the 4Kscore test, and multiparametric magnetic resonance imaging [mpMRI]). These results suggest that molecular signa- tures, perhaps in combination with clinical or other traits, may aid in un - derstanding the biological underpin - nings of prostate cancer disparities and identify precision surveillance and treatment regimens",
+      ". One explanation proposed for this response is that such patients harbor AR gene mutations similar to those found in the prostate cancer cell line LNCaP (Thr to Ala change at codon 868), which alters the ligand specificity of the receptor such that both estrogens and antiandrogens, as well as androgens, act as agonists.132,133 The frequency of such mutations in prostate cancer patients is unknown, but a study by Taplin et al",
+      ". Prostate 1998;35:63. 137. Craft N, Shostak Y, Carey M, Sawyers CH. A mechanism for hormone-independent prostate cancer through modulation of androgen receptor signaling by the HER-2/neu tyrosine kinase. Nat Med 1999;5:280. 138. Brothman AR, Peehl DM, Patel AM, McNeal JE. Frequency and pattern of karyotypic abnormalities in human prostate cancer. Cancer Res 1990;50:3795. 139. Lundgren R, Mandahl N, Heim S, et al. Cytogenetic analysis of 57 primary prostatic adenocarcinomas",
+      ". 596. The Leuprolide Study Group. Leuprolide versus diethylstilbestrol for metastatic prostate cancer. N Engl J Med 1984;311:1281. 597. Bonkhoff H, Fixemer T, Hunsicker I, Remberger K. Estrogen receptor expression in prostate cancer and premalignant prostatic lesions. Am J Pathol 1999;155(2):641. 598. Byar DP. The Veterans Administration Cooperative Urological Research Group's studies of cancer of the prostate. Cancer 1973;32:1126. 599. Shearer RJ, Hendry WF, Sommerville IF, et al"
+    ],
+    "rerank_scores": [
+      0.9243803024291992,
+      0.8254735469818115,
+      0.6378950476646423,
+      0.04712945595383644,
+      0.0051116966642439365,
+      0.0010568746365606785,
+      0.0010167533764615655,
+      0.0008159190183505416
+    ]
+  },
+  "Q038": {
+    "contexts": [
+      ". 52,71 Although germline or somatic mutation of known mismatch repair genes are infrequent, inactivation of the MLH1 gene via epigenetic changes, such as DNA hypermethylation of the MLH1 promoter, appears to be a causal factor in the majority of “sporadic” colorectal cancer cases with the MI/RER+ phenotype. 72,73 The vast majority of the mutations arising in cells with the MI/RER+ phenotype are likely to have either no effect on cell growth or detrimental effects",
+      ". Further testing for germline mutations may follow an uninformative IHC stain. In particu- lar, the absence of the MLH1 protein on IHC staining calls for the testing of the BRAF gene, where a BRAF mutation signifies the downregulation of MLH1 gene expression not through a germline mutation, but rather somatic promoter hypermethylation (13)",
+      ". The highest increase of risk is for development of endometrial and colorectal cancers. On the other hand, epigenetic silencing of the MLH1 promoter gene seems to be the pri- mary cause of sporadic MSI, and is associated with a global increase of aberrant DNA methylation of CpG islands. Additionally, sporadic MSI is often associated with a somatic BRAF V600E mutation, which is less common in Lynch-associated cancers",
+      ". although rarely mutated in sporadic cancer, HMLH1 is often epigenetically inactivated via methylation in a large proportion of colorectal cancers that exhibit microsatellite instability, a hall- mark of mismatch repair deficiency.",
+      ". The primacy of repair over growth regulation is also seen in the MLH1 and MSH2 genes that are responsible for the syndrome of hereditary nonpolyposis colorectal cancer. The respective gene products are involved in the recognition and repair of mismatches between complementary DNA strands: When these mismatch repair (MMR) genes are mutated, the mechanism for the correction of nucleotide mismatches is defective",
+      ". Cancer in patients with HNPCC is due to heterozygous germline mu- tations, predominantly in MSH2 or MLH1, and the subsequent somatic inactivation of the remaining wild- type allele in the colonic epithelium. HNPCC mouse models in which in - activation of mismatch repair genes is targeted to the intestinal epithe - lium exhibit a high frequency of in - testinal adenocarcinomas within the first year of life",
+      ". This might have arisen somatically or it might be an inherited predisposition. Somatic loss of function due to hypermethylation of the hMLH1 mismatch repair gene accounts for some 10% to 15% of all colorectal cancers",
+      ". Only a fraction of the 15% of apparently sporadic colorectal cancers with the MI/RER phenotype develop as the result of a germline mutation in a known mismatch repair gene, such as MSH2 or MLH1. Similarly, somatic mutations in MSH2, MLH1, or other mismatch repair genes are present in only a small fraction of the apparently sporadic cancers with the MI/RER+ phenotype"
+    ],
+    "rerank_scores": [
+      0.934904158115387,
+      0.7217219471931458,
+      0.5896953344345093,
+      0.5362883806228638,
+      0.37887343764305115,
+      0.3208559453487396,
+      0.31968435645103455,
+      0.3166601359844208
+    ]
+  },
+  "Q039": {
+    "contexts": [
+      ". Although there is interobserver variation, grading retains prognostic significance { 19034903 ; 30500292 }. Perineural invasion affects survival after salvage surgery for laryngeal cancer { 28681422 } as the perineural plane is a preferential pathway for spread",
+      ". This is sometimes considered to be associated with HNPCC or with a high incidence of microsatellite instability. 184 Many of these adjunctive characteristics of the histopathologic assessment of a tumor are subject to considerable intraobserver and interobserver variability in reporting. DEGREE OF LOCAL INVASION. Invasion into the submucosa is the hallmark of the development of the potential for metastatic spread and is the key histopathologic characteristic of colorectal cancer",
+      "201 location and T2 (vs T1) stage, but not on histological grade { 32487468 }. Tumour budding predicts distant metastasis and survival { 30475254 ; 31328847 }. Interobserver variation is the major problem in histological grading. A histologic risk model composed of worst pattern of invasion and lymphocytic host response (both at advancing tumour edge), and perineural invasion correlates with local recurrence and overall survival { 20414102 }",
+      ". Invasive SCC has the potential to involve nerves. 72,148 Regional lymph node and distant metastases may increase with perineural involvement. SCCs on the skin of the head and neck may metastasize to cervical lymph nodes and distantly to the central nervous system, the latter either hematogenously or via the perineural space, which directly connects to the subarachnoid space. SCCs on the midface and lip are prone to neural involvement. These patients show a lower 10-year survival (23% vs",
+      ". Approximately 15% of head and neck cancer patients will develop distant metastasis. In addition to the traditional prognostic markers, depth of invasion, perineural invasion and perivascular invasion at the primary tumor site, and lymph node extracapsular spread are associated with worse progno- sis. Survival for early-stage disease (stages I and II) across sites falls in the 80% to 90% range, but drops to 3% to 40% for stage III and IV disease",
+      ". 10.9%), primary SCC of the lip (5.8% vs. 18.7%), recurrent SCC (10% vs. 23.3%), SCC with perineural invasion (0% vs. 47%), SCC larger than 2 cm (25.2 vs. 41.7%), and poorly differentiated SCC (32.6% vs. 53.6%). 148 MMS has proven useful in SCC involving the nail unit110 and has been used as a limb-sparing procedure in cases of SCC arising in osteomyelitis. 144 RT may be used for head and neck cutaneous SCC in which there is no spread to bone or cartilage and there is no evidence of metastasis",
+      ". Studies have assessed its presence or absence and found that it was an important predictor of nodal metastasis ( 35). The pathologist should specifically comment on the pres - ence or absence of vascular invasion in the surgical specimen. Perineural invasion was found to be present in 36% of cases analyzed in a multi-institutional data",
+      "National Cancer Grid Head & Neck Cancer Management Guidelines 2019 Page 20 of 62 # For patients undergoing Total Laryngectomy, a Tracheo-Esophageal Prosthesis (TEP) for speech rehabilitation is appropriate and optimal **- Indications for adjuvant post-op radiotherapy are T3-T4 primary, Node positivity, perineural invasion, lymphovascular invasion, and poorly differentiated disease"
+    ],
+    "rerank_scores": [
+      0.8911274671554565,
+      0.11273117363452911,
+      0.0413859486579895,
+      0.03830694034695625,
+      0.03378963842988014,
+      0.011440547183156013,
+      0.010609514079988003,
+      0.008434740826487541
+    ]
+  },
+  "Q040": {
+    "contexts": [
+      "single nucleotide substitutions and small insertions and deletions Provides quantitative information about mutation level Short read lengths limit analysis to mutational hotspots Low throughput Medium KRAS and BRAF mutations in solid tumors Single nucleotide extension assay (SNaPshot) Simultaneous detection of targeted nucleotide substitution mutations Multiplex capability Detects only targeted mutations High Small gene panels (3–10) for melanoma, NSCLC, breast cancer, and metastatic colorectal",
+      ". These include: (1) a diagnostic advan - tage in terms of better sampling of tumors and better tissue quality acquired for IHC and molecular diagno - sis; (2) a symptomatic advantage through relief of mass effect, leading to improved performance status and enhanced tolerance to RT; (3) an oncologic advantage by reducing the number of neoplastic cells by almost two logs; and (4) a research advantage by harvesting ample tissue material for molecular analysis and fin - gerprinting, with the",
+      "nucleotide substitutions, small length mutations (deletions, insertions), and translocations High sensitivity is beneficial for residual disease testing and specimens with limited tumor content Adaptable to quantitative assays Detects only specific targeted mutations/ chromosomal translocations Not suitable for variable mutations May not determine the exact change in nucleotide sequence Very high KRAS, BRAF , and EGFR mutations in solid tumors JAK2 V617F and MPL mutations in myeloproliferative",
+      "52 Principles of Oncology Method Advantages Disadvantages Analytic Sensitivity Examples of Applications in Oncology Next-generation sequencing (NGS) Quantitative detection of variable single nucleotide substitutions, small insertions and deletions, chromosomal translocations, and gene copy number variations Highly multiplexed High throughput Requires costly investment in instrumentation and bioinformatics Technology is rapidly evolving Higher error rates for insertion and deletion mutations",
+      ". 48 Mutations are identified based on amplicon size and fluorophore color via capillary electrophoresis. When a mu- tation is present, an alternative dideoxynucleotide triphosphate is incorporated, resulting in a different colored peak with a different amplicon length than the expected wild-type one. The single nucleotide extension assay is particularly useful for the simultaneous detection of recurrent point mutations",
+      ". 43 Examples of pyrosequencing applications in oncology include the mutational analysis of BRAF (codon 600),44,45 KRAS (codons 12, 13, 61),45 NRAS (codon 61),45 and the methylation analysis of MGMT in glioblastoma multiforme.46,47 Single Nucleotide Extension Assay (SNaPshot®) The single nucleotide extension assay is a variant of dideoxy se- quencing",
+      ". The technique is particularly appealing to the study of solid tumors where precise information on DNA sequence variants or gene mutations contained, such as activating oncogene point mutations, or inactivating small deletions in a tumor sup- pressor gene. Automated sequencing of PCR products has now become the most widely used approach in molecular diagnostics. Applications of PCR-based techniques are listed in Table 1.5",
+      "gold standard for mutation detection Low throughput Low analytic sensitivity limits application in specimens with low tumor burden Does not detect copy number changes or large (>500 bp) insertions and deletions Low KIT mutations in GIST and melanoma CEBPA mutations in AML EGFR mutations in NSCLC Pyrosequencing Higher analytical sensitivity than Sanger sequencing Detects variable single nucleotide substitutions and small insertions and deletions Provides quantitative information about mutation"
+    ],
+    "rerank_scores": [
+      0.729447066783905,
+      0.27710092067718506,
+      0.10540463775396347,
+      0.09698934853076935,
+      0.06948020309209824,
+      0.034265242516994476,
+      0.025947026908397675,
+      0.016866052523255348
+    ]
+  },
+  "Q041": {
+    "contexts": [
+      ". Targetable molecular alterations with therapeutic agents under investigation are: BRAF, KIT, SF3B1 (inhibitor of alternative splicing). Evaluation of genomic alterations is critical to determine efficacy of targeted therapies. #27397: Oral mucosal melanoma, Epithelioid tumour cells infiltrating the basal layer of squamous epithelium as single cells and the subepithelial tissue as nests. Melanin is noted.",
+      ". In our experience, patients with molecular alterations in the PI3K/AKT/mTOR pathway treated with targeted therapies have shorter survival compared to patients with alterations in the RAS/RAF/MEK or EGFR/HER/other pathways treated with the matched targeted agents, perhaps due to less-effective therapies than those for other pathways or intrinsic resistance (unpublished data)",
+      "Chapter 6 Philadelphia Chromosome-Negative Myeloproliferative Neoplasms 125 CHAPTER 6 Table 6-11 World Health Organization Diagnostic Criteria for Systemic Mastocytosis Major Criteria 1. Multifocal, dense infiltrates of mast cells (≥15 mast cells in aggregates) in bone marrow biopsy sections and/or in other extracutaneous organ(s) Minor Criteria 1. Greater than 25% mast cells in bone marrow or other extracutaneous organ(s) show an atypical morphology (typically spindle shaped) 2",
+      ". In smaller studies, sunitinib or nilotinib also had antitumor activity (76, 77). Mastocytosis One of the indications of imatinib is the treatment of adults with systemic mastocytosis and a non- KIT D816V mutation (or unknown KIT mutation status). A KIT D816V mutation, which occurs in most patients with mastocytosis, is resistant to imatinib. In a phase II clinical trial, dasatinib was associated with symptom - atic benefit in patients with mastocytosis harboring a KIT D816V mutation ( 78)",
+      ". Observations of epigenetic alterations regulating distinct molecular pathways that occur frequently at presentation and relapse have identified a “hyper - methylator” phenotype of ALL ( 27). These patients may respond favorably to treatment with hypometh - ylating agents (azacitidine or decitabine). Identification of these and other molecular and cytogenetic changes in adult ALL drives the development of risk-adapted and targeted therapies, particularly in high-risk groups (Table 1-3) (28)",
+      ". Targeted cancer therapy has significantly changed the way many cancer patients are currently treated. In addition to serological biomarker evaluation, molecular profiling is now incorpo- rated into the baseline histological assessment of many patients’ can- cers. The short-term, intermittent intravenous administration of traditional high-dose cytotoxic chemotherapy is being replaced with the long-term, continuous oral administration of low-dose targeted thera- pies",
+      ". J Clin Invest. 1993;92(4):1736-1744. 113. Garcia-Montero AC, Jara-Acevedo M, Teodosio C, et al. KIT mutation in mast cells and other bone marrow hematopoi - etic cell lineages in systemic mast cell disorders: a prospective study of the Spanish Network on Mastocytosis (REMA) in a series of 113 patients. Blood. 2006;108(7):2366-2372. 114. Tefferi A, Levine RL, Lim KH, et al. Frequent TET2 mutations in systemic mastocytosis: clinical, KITD816V and FIP1L1-PDG- FRA correlates. Leukemia",
+      ". Frequent TET2 mutations in systemic mastocytosis: clinical, KITD816V and FIP1L1-PDG- FRA correlates. Leukemia. 2009;23(5):900-904. 115. Worobec AS. Treatment of systemic mast cell disorders. Hema- tol Oncol Clin North Am. 2000;14(3):659-687, vii. 116. Kaplan AP . Clinical practice. Chronic urticaria and angioedema. N Engl J Med. 2002;346(3):175-179. 117. Casassus P , Caillat-Vigneron N, Martin A, et al"
+    ],
+    "rerank_scores": [
+      0.09436086565256119,
+      0.04980084300041199,
+      0.046399783343076706,
+      0.03791263327002525,
+      0.02875024639070034,
+      0.01776142232120037,
+      0.01565948873758316,
+      0.01531501766294241
+    ]
+  },
+  "Q042": {
+    "contexts": [
+      ". Commercial genetic testing can now identify the APC gene mutation by sequencing. Since the complete sequencing of the APC gene, studies have correlated the specific genetic mutations identified with the differing phenotypes of extraintestinal manifestations of FAP . Genetic testing and counseling should be offered to all patients in whom FAP is suspected. Surveillance for FAP should begin at the age of 10 to 12 with annual endoscopic evaluations",
+      ". Familial Adenomatous Polyposis Familial adenomatous polyposis is caused by a muta - tion of APC leading to the functional loss of both APC alleles, one inherited as a germline mutation and the other mutated in early childhood. Familial adenoma - tous polyposis has high penetrance, manifesting as thousands of adenomatous polyps—some invariably progress to cancer, thereby warranting a prophylac - tic colorectal resection",
+      ". 34,35 Although a fraction of germline mutations in FAP patients extinguish APC gene expression, more than 95% of the known mutations lead to premature truncation of APC protein synthesis. The mutations are located predominantly in the 5' half of the gene, and two “hot spots” at codons 1061 and 1309 account for approximately 35% of the germline mutations identified (Fig",
+      ". there are other predictors of risk, and family history is becoming impor - tant in this respect, particularly as it is now possible to detect specific genetic mutations from blood samples and to use these to screen close relatives. examples of this are mutations in the APC gene in Fap, in the Dna mismatch repair genes in hnpCC, and in the BRCA1 and 2 genes in familial breast and ovarian cancers. a screening test must be acceptable and safe, so that it will be adopted by the target population",
+      ". i incidence of pancreatic, ♂ breast, and prostate cancers also reported • RB1 gene—on chromosome 13. Encodes a nuclear protein, which acts as a tumour suppressor. Mutations may be hereditary or acquired. Inactivation of both alleles causes retinoblastoma • APC gene—on chromosome 5. Mutations result in familial adenomatous polyposis (Fap), which classically causes the development of numerous colonic adenomas, with subsequent malignant transformation",
+      ". UNCONTROLLED CLINICAL STUDIES OF SULINDAC IN PATIENTS WITH FAMILIAL ADENOMATOUS POLYPOSIS The early rodent experiments prompted Waddell and Loughry 6 to test whether the prodrug sulindac inhibits adenomatous polyps in the rare hereditary condition of FAP. Adenomatous polyps are the precursor to most human colorectal cancers. Patients with FAP inherit a germline mutation inactivating one allele of the adenomatous polyposis coli (APC) gene",
+      ". Patients with FAP inherit a germline mutation inactivating one allele of the adenomatous polyposis coli (APC) gene. Loss of the remaining functional APC allele results in hundreds to thousands of adenomatous polyps by the second or third decade of life. Patients who do not undergo prophylactic colectomy almost invariably develop colorectal cancer by the age of 40 to 50 years",
+      ". 33.1-1).35 Some phenotypic variation among those with FAP appears to be because of the specific mutant APC allele present.34 In spite of the genotype-phenotype associations noted, however, patients with identical APC mutations can display distinct clinical features. For instance, some patients with germline mutations between APC codons 1403 and 1578 manifest Gardner's syndrome features, whereas others with the identical mutation do not"
+    ],
+    "rerank_scores": [
+      0.4886052906513214,
+      0.29036471247673035,
+      0.2003854513168335,
+      0.15589694678783417,
+      0.13300590217113495,
+      0.10990874469280243,
+      0.1063908189535141,
+      0.10144290328025818
+    ]
+  },
+  "Q043": {
+    "contexts": [
+      ". ▪ Progressive disease (PD) means enlargement of the tumor or existing measurable pathological change by more than 25 % or discovering new, previously unknown lesion. Currently most used system for rating therapeutic response in solid tumors is RECIST version 1.1 from 2009. The most essential changes compared to WHO are measurement of only one biggest diameter, definition of measurable lesions and specifications of their maximum quantity",
+      ". The iRECIST guideline describes a standard approach to solid tumour measurement and definitions for objective change in tumour size for use in immunotherapy clinical trials. Initial response is measured according to RECIST v1.1. If the RECIST v1.1 criteria for tumour progression are met, this is defined as unconfirmed progressive disease (iUPD) for which confirmation is required. In the absence of clinical deterioration, patients continue treatment until the confirmation scan 4–8 weeks later",
+      ". When using RECIST criteria, a significant one-dimensional increase in the size of tumour lesions, the development of new lesions and/or, in exceptional circumstances, an unequivocal increase in non-target disease are consid- ered disease progression. In contrast to when there is partial or complete tumour response, a confirmatory scan for progression is not required. The majority of immunotherapy trials have used RECIST v1.1 to define the primary response-based endpoints",
+      ". The majority of immunotherapy trials have used RECIST v1.1 to define the primary response-based endpoints. This is due to the lack of vali- dated alternatives and because regulatory agencies continue to base the approvals of novel agents on RECIST-defined outcomes. The recognition that pseudoprogression followed by delayed responses may result in an inaccurate estimation of the true data of progression prompted the devel- opment and use of immune-related response criteria (irRC)",
+      ". Investigators need to be aware that post-progression treatment should be allowed if there is evidence of any lesion responding. RECIST v1.1 is currently the standard methodol- ogy for response evaluation. iRECIST is still exploratory. If iRECIST proves to be clinically useful with further evaluation, it may become a new standard. Summary Immunotherapy represents a new challenge in trial design",
+      ". Abbreviations: iCPD, confirmed progressive disease; iUPD, unconfirmed progressive disease; PD, progressive disease; RECIST, Response Evaluation Criteria In Solid Tumours; SOM, sum of measurement. 3.2 Immune Checkpoint Blockade: Response Patterns and Assessment of Response",
+      ". Much confusion related to the effectiveness of cancer immunotherapy has resulted from the lack of proper evaluation of the results of therapy using standard, ac- cepted oncologic criteria such as the World Health Organization or the Response Evaluation Criteria in Solid Tumors ( RECIST). Many clinical trials reported a positive use of soft criteria such as lymphoid infiltration or tumor necrosis that can occur in the nat- ural course of cancer growth",
+      "between involved and uninvolved FLC levels If unmeasurable serum and urine M-protein serum FLC assay, ≥50% reduction in plasma cells is required in place of M-protein, as long as baseline bone marrow plasma cell percentage was ≥30% In addition to above criteria, a ≥50% reduction in the size of any baseline soft tissue plasmacytoma is required SD Not meeting criteria for CR, VGPR, PR, or progressive disease PD Increase of ≥25% from baseline in at least one of the following: Serum M-component"
+    ],
+    "rerank_scores": [
+      0.9836493730545044,
+      0.9741125106811523,
+      0.9604088068008423,
+      0.548737108707428,
+      0.32225677371025085,
+      0.06098993867635727,
+      0.026245422661304474,
+      0.02615925669670105
+    ]
+  },
+  "Q044": {
+    "contexts": [
+      "ing and others regressing. Pseudoprogression has also been described with lesions getting larger before having a delayed response, and finally new lesions can appear before a delayed response. Concern has therefore been raised whether RECIST adequately identifies patients who are ben- efiting from immunotherapy. Modified RECIST criteria, iRECIST, have been developed to take account of this variability in quality of response",
+      ". Although ini- tially reported as an early event, more recent observations indicate that pseudoprogression can also occur later during the course of therapy after an initial period of stable disease (SD) or even partial response (PR). Although pseudoprogression has been well described and the phenome- non has attracted much attention, it is important to recognise that the true incidence of pseudoprogression in cancer patients treated with immune checkpoint inhibitors (ICIs) is low",
+      ". The majority of immunotherapy trials have used RECIST v1.1 to define the primary response-based endpoints. This is due to the lack of vali- dated alternatives and because regulatory agencies continue to base the approvals of novel agents on RECIST-defined outcomes. The recognition that pseudoprogression followed by delayed responses may result in an inaccurate estimation of the true data of progression prompted the devel- opment and use of immune-related response criteria (irRC)",
+      ". It is important to recognise that iRECIST is a guideline for the manage- ment of data collection and has not yet been formally validated as new criteria for response-based endpoints for clinical trials of immune-based therapies. This approach was adopted because it was clear in the rapidly moving environment of immune-based cancer therapies that multiple different criteria were being developed that would limit the ability to cre- ate a warehouse",
+      "cannot be measured with conventional criteria such as World Health Organization (WHO) or Response Evaluation Criteria In Solid Tumours (RECIST). In some cases, the initial response is characterised by an apparent increase in tumour size that, however, is not due to enhanced tumour cell proliferation but rather to increased T cell infiltration. This phenomenon, referred to as ‘pseudoprogression’, prompted the proposal of new response criteria in 2009, the immune-related response criteria (irRC)",
+      "280 end of the scale, this may manifest itself as pseudoprogression, where tumours grow before a delayed response. This is well described but rela- tively rare with most active immunotherapies. At the other end of the scale, it may be possible for durable benefit to be obtained with improve- ment in OS, but without this benefit being reflected with a significant improvement in PFS endpoints. Trial design for immunotherapy therefore needs to take account of these issues",
+      ". Investigators need to be aware that post-progression treatment should be allowed if there is evidence of any lesion responding. RECIST v1.1 is currently the standard methodol- ogy for response evaluation. iRECIST is still exploratory. If iRECIST proves to be clinically useful with further evaluation, it may become a new standard. Summary Immunotherapy represents a new challenge in trial design",
+      ". The significance of this finding as a rationale for the assessment of immune checkpoint inhibitors (ICIs) targeting PD-1 or PD-L1 remains debatable, given: n The high frequency of PD-1 and PD-L1 expression in the non-neo- plastic thymus n The fact that in thymomas, the presence of immature and mature T cells surrounding tumour cells is part of the prototypic architecture, and not a marker of actual antitumour response n The potential immune modulation induced by ChT or targeted agents (such as"
+    ],
+    "rerank_scores": [
+      0.8531792163848877,
+      0.6307452917098999,
+      0.5767646431922913,
+      0.1088813915848732,
+      0.05942993238568306,
+      0.054091475903987885,
+      0.03986251354217529,
+      0.031266700476408005
+    ]
+  },
+  "Q045": {
+    "contexts": [
+      ". Meyers RL, Maibach R, and Hiyama E, et al (2017) Risk-stratified staging in paediatric hepatoblastoma: a unified analysis from the Children’s Hepatic tumors International Collaboration Lancet Oncol 18(1) 122–131 48. Nejmeddine A, Bassem A, and Salah B, et al (2010) Spontaneous rupture of hepatocellular carcinoma in children Afr J Paediatr Surg 7(3) 188–190 49",
+      ". The widely accepted system is the Barcelona Clinic Liver Cancer score [13], which is correlated with Child–Pugh system. In practice, the pretreatment extent of disease (PRETEXT) system, developed in the HB classification and amended in 2017 [14, 15], may be suitable for the physicians and surgeons who treat paediatric liver tumours including HB and HCN-NOS and currently used in the Pediatric Hepatic International Tumour Trial (PHITT)",
+      ". 249 The Children's Cancer Study Group staging system is shown in Table 33.5-11.250 Overall long-term survival varies between 15% and 37%.249,251,252 and 253 Poor prognosis is associated with unresectable tumors and tumors demonstrating aneuploidy and anaplastic characteristics. 251,254,255 TABLE 33.5-11. Children's Cancer Study Group Staging for Hepatoblastoma Complete resection is possible in 50% to 65% of children with hepatoblastoma and is associated with cure rates between 30% and 70%",
+      ". Results from the Pediatric Intergroup Study (CCG 8881/POG 8945). Proc Am Soc Clin Oncol 1994;13:420(abst 1439). 421. von Schweinitz D, Hecker H, Schmidt-von-Arndt G, et al. Prognostic factors and staging systems in childhood hepatoblastoma. Int J Cancer 1997;74:593. 422. Haas JE, Muczynski KA, Krailo M, et al. Histopathology and prognosis in childhood hepatoblastoma and hepatocarcinoma. Cancer 1989;64:1082.",
+      ". Clinical Staging System for Childhood Hepatic Tumors TREATMENT Surgery Resection is the cornerstone of treatment for hepatoblastoma and HCC. Long-term survival is rare for patients who have not undergone a successful resection. 397 Hepatoblastoma is generally unifocal, arising at one site within the liver parenchyma, whereas HCC is frequently multifocal. HCC has an invasive pattern of spread across anatomic planes and is generally unresponsive to current forms of chemotherapy",
+      ". Improved outcome for children with hepatoblastoma. Br J Surg 1995;82:386. 401. Takahiko S, Ando H, Watanabe Y, et al. Treatment of hepatoblastoma: less extensive hepatectomy after effective preoperative chemotherapy with cisplatin and adriamycin. Surgery 1998;123:407. 402. King DR, Ortega J, Campbell J, et al. The surgical management of children with incompletely resected hepatic cancer is facilitated by intensive chemotherapy. J Pediatr Surg 1991;26:1074. 403",
+      ". continuous infusion (CI) for the treatment of hepatoblastoma (HB). Results from the Pediatric Intergroup Hepatoma Study (CCG-8881 hPOG-8945). Proc Am Soc Clin Oncol 1994;13:416(abst). 415. Ehrlich PF, Greenberg ML, Filler RM. Improved long-term survival with preoperative chemotherapy for hepatoblastoma. J Pediatr Surg 1997;32:999. 416. Uchiyama M, Iwafuchi M, Naito M, et al. A study of therapy for pediatric hepatoblastoma: prevention and treatment of pulmonary metastasis",
+      ". A study of therapy for pediatric hepatoblastoma: prevention and treatment of pulmonary metastasis. Eur J Pediatr Surg 1999;9:142. 417. von Schweinitz D, Byrd DJ, Hecker H, et al. Efficiency and toxicity of ifosfamide, cisplatin and doxorubicin in the treatment of childhood hepatoblastoma. Eur J Cancer 1997; 33:1243. 418. Reynolds M, Douglass EC, Finegold M, Cantor A, Glicksman A. Chemotherapy can convert unresectable hepatoblastoma. J Pediatr Surg 1992;27:1080. 419"
+    ],
+    "rerank_scores": [
+      0.29480668902397156,
+      0.1533055454492569,
+      0.0908680334687233,
+      0.08452985435724258,
+      0.07802595943212509,
+      0.07499942928552628,
+      0.05152711644768715,
+      0.02822345308959484
+    ]
+  },
+  "Q046": {
+    "contexts": [
+      ". anti-oestrogens/androgens or additional hormones). The symptoms/signs include tumour pain, inflammation of visible tumour, hypercalcaemia, diffuse bone pain, and other electrolyte disturbances Tumour lysis syndrome Absent – – Present – Also consider Hyperkalaemia, Creatinine Urinary electrolyte wasting (e.g. Fanconi’s syndrome, renal tubular acidosis) is graded in the REnAL/GEnITOURInARY category Syndromes—Other (specify,___________) none Mild Moderate Severe Life-threatening or disabling",
+      "COMMOn TO xICITY CRITERIA (CTC) 839 Grade Adverse event 0 1 2 3 4 Fanconi’s syndrome is graded as Urinary electrolyte wasting in the REnAL/GEnITOURInARY category Renal tubular acidosis is graded as Urinary electrolyte wasting in the REnAL/GEnITOURInARY category Stevens–Johnson syndrome (erythema multiforme) is graded in the dERMATOLOGY/SKIn category SIAdH is graded in the EndOCRInE category Thrombotic microangiopathy (e.g",
+      ". 2. Differential diagnosis of hypophosphatemia a. Renal phosphate wasting accompanies certain syndromes associated with malignancies, including myeloma (Fanconi’s syndrome), multiple endocrine neoplasia (hyperparathyroidism), and oncogenic osteomalacia (hypocalcemia, see section II) b. Therapy with phosphate-binding antacid gels c. Starvation or malabsorption (decreased phosphate intake) d. Cachexia e. Alcoholism f",
+      ". 141,142 and 143 Clinical manifestations include tubular dysfunction, Fanconi's syndrome, and a rising serum creatinine. The tubular injury is indicated by aminoaciduria, glycosuria, renal tubular acidosis, hypokalemia, proteinuria, and phosphaturia with hypophosphatemia",
+      ". These include electrolyte imbal - ance (hypomagnesemia, hypokalemia, hypocalce- mia), metabolic derangements (hypothyroidism), and certain cancer therapies including chemotherapeutic agents (Table 54-6). It is of clinical importance to cor - rect any concomitant contributing factors that may predispose to or worsen QT interval prolongation",
+      "1058 Section XIV Supportive Care CHAPTER 52 that regulate secretion of antidiuretic hormone from cells in the paraventricular and supraoptic nuclei, the hypothalamic thirst center, and the kidneys. Disruption of any of these regulators may lead to a disturbance in free water clearance and subsequent abnormalities in serum sodium levels. Syndrome of Inappropriate Antidiuretic Hormone Secretion and Hyponatremia Hyponatremia is a relatively common electrolyte abnormality in patients with cancer",
+      ". 2. Laboratory studies a. Cancer patients who complain of weakness should have serum electrolytes measured. Hypokalemia and metabolic alkalosis may be severe (serum potassium as low as 1 mEq/L, bicarbonate more than 30 mEq/L) in patients with ectopic ACTH syndrome. b. The diagnosis of ectopic ACTH syndrome may be quickly made by demonstrating the failure of dexamethasone to suppress ACTH levels in most cases (see Chapter 15, section V.C.2). 3. Differential diagnosis a",
+      ". The typical features of adrenal or pituitary Cushing’s syndrome are often absent. Presenting signs usually are cachexia, weakness, and hypertension. Slower-growing cancers and benign tumors give rise to the characteristic rounded facies, truncal obesity, purple striae in skin stretch areas, and overt diabetes mellitus. 2. Laboratory studies a. Cancer patients who complain of weakness should have serum electrolytes measured"
+    ],
+    "rerank_scores": [
+      0.7790399789810181,
+      0.36610814929008484,
+      0.06243530660867691,
+      0.03776492923498154,
+      0.016104990616440773,
+      0.0025033261626958847,
+      0.001621014322154224,
+      0.0009127958910539746
+    ]
+  },
+  "Q047": {
+    "contexts": [
+      ". Revised WHO classification In 2016, the WHO classification of malignant tumours of the central nervous system was revised to in - clude molecular data, along with histology, in defining tumour types [4]. The updated classification, which includes molecular markers (Fig. 5.17.1), demonstrates the het - erogeneity of different malignant brain tumours a n d t h e d i ffi c u l t y o f classifying these tumours using his - tology alone",
+      "454 SUMMARY ● The revised WHO classifica - tion of malignant tumours of the central nervous system includes molecular data, along with his - tology, in defining tumour types. ● The topic of mobile phones and brain tumours remains con - troversial despite decades of research and results from nu - merous observational studies",
+      "PRImaR y CeNTRal NeRVOUS Sy STem TUmOURS 497 The most widely used classification system is the WhO 2007 scheme (see Table 22.2). This classifies CNS tumours into the basic types of tumours of neuroepithelial tissues, germ cell tumours, tumours of the peripheral nerves, tumours of the meninges, lymphomas and haematopoeitic tumours, tumours of the sellar region, and metastatic tumours. each type has further subdivisions",
+      ". The rate for Table 40-1 World Health Organization (WHO) Classification of Tumors of the Central Nervous System WHO grade I Pilocytic astrocytoma Meningioma Myxopapillary ependymoma Craniopharyngioma Subependymoma WHO grade II Diffuse astrocytoma Ependymoma Pleomorphic xanthoastrocytoma Pineocytoma Oligodendroglioma Atypical meningioma Oligoastrocytoma WHO grade III Anaplastic astrocytoma Anaplastic oligoastrocytoma Anaplastic oligodendroglioma Anaplastic ependymoma Anaplastic (malignant)",
+      "172 26 SECONDARY MALIGNANT TUMORS OF THE CENTRAL NERVOUS SYSTEM Tomáš Blažek 26.1 EPIDEMIOLOGY Secondary malignant tumors of the central nervous system occupy a relatively important position within CNS malignancies. The incidence of these neoplasms is up to 10 times higher compared to primary brain tumors. These include metastatic tumors of the brain and cerebral vessels, spinal cord, spinal canal and vertebral bodies",
+      "SECTION 43.2 Neoplasms of the Central Nervous System Cancer: Principles & Practice of Oncology SECTION 43.2 Neoplasms of the Central Nervous System VICTOR A. LEVIN STEVEN A. LEIBEL PHILIP H",
+      ". Brain Pathol. 2008;18:360-369. 51. Theeler BJ, Yung WK, Fuller GN, De Groot JF . Moving toward molecular classification of diffuse gliomas in adults. Neurology. 2012;79:1917-1926. 52. World Health Organization. WHO Classification of Tumours of the Central Nervous System . Lyon, France: International Agency for Research on Cancer; 2007. 53. Shaw E. Management of low-grade gliomas in adults. Brain Cancer. 2002;279-302. 54. Bauman G, Lote K, Larson D, et al",
+      ". The importance of the revised classification has been demonstrat - ed in large tumour data sets with clinical and demographic charac - teristics. Tumours with certain mo - lecular markers have been shown to have distinct clinical behaviour"
+    ],
+    "rerank_scores": [
+      0.9970207810401917,
+      0.9941805601119995,
+      0.6337854862213135,
+      0.5796030163764954,
+      0.43902772665023804,
+      0.20395749807357788,
+      0.1381232738494873,
+      0.13180923461914062
+    ]
+  },
+  "Q048": {
+    "contexts": [
+      ". If the site or type is not listed and the platelet count is ≥50 000/mm3, grade haemorrhage/bleeding without grade 3 or 4 thrombocytopenia, and specify the site or type in the OTHER category Haemorrhage/bleeding with grade 3 or 4 thrombocytopenia none Mild without transfusion Requiring transfusion Catastrophic bleeding, requiring major non- elective intervention Also consider platelets, Haemoglobin, Transfusion: platelets, Transfusion: pRBCs, site or type of bleeding",
+      ". Severe thrombocytopenia, defined as grade 3 or greater, occurred in 8 of 25 patients. Meyers et al.120 evaluated the triplet of paclitaxel-carboplatin-methotrexate in 23 assessable patients. Adjunctive care included leucovorin and granulocyte colony-stimulating factor (G-CSF). Fourteen of 23 patients (61%) responded, including four complete responses, resulting in a median survival of 16 months. The primary toxicities were neutropenia and neurotoxicity",
+      ". 3. Toxicity a. Dose-limiting. Cumulative myelosuppression, which may be severe and prolonged (particularly thrombocytopenia) b. Common. Mild nausea and vomiting, anorexia; a vesicant drug that can cause necrosis if injected subcutaneously (skin erythema and ulceration can occur weeks to months after administration and may appear at a site distant from the site of injection) c. Occasional",
+      ". If the site is not listed, grade as Haemorrhage—Other (specify, __________) note: this adverse event must be graded for any bleeding with grade 3 or 4 thrombocytopenia Haemorrhage/bleeding without grade 3 or 4 thrombocytopenia none Mild without transfusion Requiring transfusion Catastrophic bleeding, requiring major non- elective intervention Also consider Platelets, Haemoglobin, Transfusion: platelets; Transfusion: pRBCs, haemorrhage—Other (specify, __________) note: bleeding in the absence",
+      ". Platelet alloimmunization in conjunction with platelet transfusion 4. Idiopathic thrombocytopenic purpura when severe or life-threatening hemorrhage occurs, when severe thrombocytopenia refractory to steroids occurs during pregnancy, or when splenectomy is performed and hemostasis is a problem 2. Hazards a. Allergy. All plasma preparations are associated with a small incidence of serum sickness reactions. Fever, urticaria, or erythema may also occur in reaction to residual leukocyte antigens",
+      "COMMOn TO xICITY CRITERIA (CTC) 813 Grade Adverse event 0 1 2 3 4 Weight loss is graded in the COnSTITUTIOnAL SYMPTOMS category Gastrointestinal—Other (specify, _________) none Mild Moderate Severe Life-threatening or disabling HAEMORRHAGE notes: transfusion in this section refers to pRBC infusion For any bleeding with grade 3 or 4 platelets (<50 000), always grade haemorrhage/bleeding with grade 3 or 4 thrombocytopenia",
+      "synthesis without affecting DNA synthesis b. Metabolism. Unknown, eliminated in the urine (40%) 3. Toxicity. Renal and hepatic damage are rare with dosage schedules used for hypercalcemia a. Dose-limiting. Thrombocytopenia; coagulation defects may occur in the absence of thrombocytopenia and result in a severe hemorrhagic diathesis (usually with frequent doses). b. Common",
+      "none – Requiring medical management or non-surgical treatment Uncontrolled by outpatient medical management; requiring hospitalization or surgery Life-threatening bleeding, requiring emergency surgery Also consider Haemorrhage/bleeding with grade 3 or 4 thrombocytopenia, Haemorrhage/bleeding without grade 3 or 4 thrombocytopenia Haematemesis is graded in the HAEMORRHAGE category Haematochezia is graded in the HAEMORRHAGE category as Rectal bleeding/haematochezia Ileus (or neuroconstipation)"
+    ],
+    "rerank_scores": [
+      0.28865286707878113,
+      0.25046664476394653,
+      0.24470509588718414,
+      0.20941950380802155,
+      0.19359564781188965,
+      0.10915131866931915,
+      0.09134926646947861,
+      0.07820203900337219
+    ]
+  },
+  "Q049": {
+    "contexts": [
+      "proliferation or stimulation of a preexisting tumor are possible underlying factors",
+      ". The physiological processes underlying the development of these symptoms include different neuro- immune-endocrine mechanisms. It has been suggested that the activation of the pro-inflammatory cytokine system in cancer patients is associated with this syndrome (13)",
+      ". The mechanism for this with- drawal response phenomenon is not clearly understood. Starting of some hormonal manipulations may be accom-• panied by an exacerbation of cancer-related symptoms ( flare ). This might appear within hours or days, and last for several days or weeks. Flare might be associated with an increase of serum tumor markers, alkaline phos- phatase, and hypercalcaemia",
+      ". thromboembolic disease. also, tumour flare may occur at the start of treatment. despite this, they are of clinical benefit, e.g. high-dose progestogens for advanced endometrial and breast cancers.",
+      ". Each of the primary modalities of cancer therapy is associated with a series of specific chronic pain syndromes with characteristic pain patterns and clinical presentations ( Table 56.1-4, Table 56.1-5, and Table 56.1-6). Although it is consoling to both the patient and the physician to realize that the pain does not represent recurrent or progressive disease, the persistence of the pain is a constant reminder of the previous diagnosis of cancer.",
+      ". A recent US Intergroup study of 318 adolescent and young adult (AYA) patients (median age, 24 years) treated with a pediatric-inspired regimen was reported. With a median follow-up of 28 months, the estimated 5-year EFS and OS rates were 45% and 55%, respectively (59). Presence of MRD at day 28 following initiation of induc- tion therapy and presence of a Ph-like gene expression signature were significantly associated with worse EFS and OS",
+      ". • Onset usually within hours or days of commencing chemotherapy. • Can also occur: • after steroid monotherapy—e.g. in lymphoma or lymphoblastic leukaemia • following radiotherapy—for a similar range of cancers • spontaneously—in tumours with high cell turnover (typically without hyperphosphataemia). Metabolic abnormalities • Hyperuricaemia—release of nucleic acids metabolized to uric acid",
+      ". Anecdotal cases have also been reported in solid tumors such as small cell lung cancer, germ-cell tumors, breast cancer, medulloblastoma, and others (1,7,8). Although the tumor lysis syndrome most often develops following the administration of chemotherapeutic agents, it may also occur following radiotherapy, hormonal therapy, or treatment with monoclonal antibodies or inter- feron, and occasionally it is seen spontaneously"
+    ],
+    "rerank_scores": [
+      0.7721179723739624,
+      0.48613986372947693,
+      0.2969828248023987,
+      0.26037871837615967,
+      0.05643131583929062,
+      0.03065076842904091,
+      0.00851970911026001,
+      0.007424593903124332
+    ]
+  },
+  "Q050": {
+    "contexts": [
+      ". Overall Chronic gastritis Gastric carcinoma Relative abundance (%) Fig. 5.4.5. The influence of Helicobacter pylori in the microbiota composition of chronic gastritis and gastric carcinoma. Relative abundance of the different bacterial phyla overall (i.e. in all patients), in patients with chronic gastritis only, and in patients with gastric carcinoma. NS, not significant. Taxa Chronic gastritis (%) Gastric carcinoma (%) P value Proteobacteria 68.8 70.2 NS Helicobacter spp",
+      ". These data were collected from registries where there was no information on H. pylori infection status, but given the socioeconomic status of these cases and the predominant locali - zation of the tumours to the corpus of the stomach, H. pylori infection is unlikely to have played a role. One hypothesis is that gastric cancer in these patients is the consequence of autoimmunity related to dysbio - sis of the gastric microbiome [16]",
+      ". The detection of CDH1 promoter methylation in blood samples has been proposed as a diagnostic tool [38]. Other non-invasive biomarkers have been proposed for gastric cancer diag - nosis and follow-up, including long non-coding RNAs and small non- coding RNAs such as microRNAs , 100 80 60 40 20 0 Other Fusobacteria Actinobacteria Bacteroidetes Firmicutes Non-Helicobacter Proteobacteria Helicobacter spp. Overall Chronic gastritis Gastric carcinoma Relative abundance (%) Fig. 5.4.5",
+      "338 (mainly C. colicanis), Fusobacterium (F. nucleatum), and Lactobacillus (L. gasseri and L. reuteri ) [31]. A study in Xi'an, China, observed significant microbial dysbiosis in cases of intes- tinal metaplasia and gastric cancer compared with cases of superficial gastritis only (n = 81) and highlighted a group of five species of oral bac - teria that are associated with gastric cancer [32]",
+      ". However, human studies linking variation in the gut microbiome with colorectal cancer are limited, and more are needed. A small case–control study with available faecal samples demon - strated differences between colorec- tal cancer cases and controls in the relative abundance of bacterial taxa, with enrichment of Bacteroidetes and depletion of Firmicutes in cases [36]",
+      ". Taxa Chronic gastritis (%) Gastric carcinoma (%) P value Proteobacteria 68.8 70.2 NS Helicobacter spp. 41.7 5.9 < 0.001 Non- Helicobacter Proteobacteria 27.1 64.3 < 0.001 Firmicutes 13.6 16.4 0.040 Bacteroidetes 10.6 6.6 0.003 Actinobacteria 3.3 5.9 < 0.001 Fusobacteria 1.8 0.5 < 0.001",
+      ". pylori is not the only bacterium that is found in the stomach, and the question of the newly recognized role of the microbiota in gastric carcino - genesis has emerged. Recent studies, mainly in Asia, have identified the microbiota from gastric biopsies by 16S ribosomal DNA sequencing and compared the microbiota of patients with gastritis , precancerous lesions, and gastric cancer",
+      ". ● Among emerging risk fac - tors, a modified composition of the gastric microbiota may contribute to gastric carcino - genesis by increasing inflam - mation and producing carci - nogenic compounds. ● The molecular profiles of gastric cancer were recently identified, and two molecular classifica - tions are based on sequencing; these will provide a roadmap for trials of targeted therapies"
+    ],
+    "rerank_scores": [
+      0.943514347076416,
+      0.2689397931098938,
+      0.1493224799633026,
+      0.1408136785030365,
+      0.13143090903759003,
+      0.11765339225530624,
+      0.0698484256863594,
+      0.06380259245634079
+    ]
+  }
+}

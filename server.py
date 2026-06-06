@@ -15,6 +15,83 @@ from generator.generate import generate_answer
 
 app = Flask(__name__, static_folder="frontend")
 
+# ── Lightweight category classifier (keyword-based, no LLM overhead) ─────────
+def _classify_category(query: str) -> str:
+    """
+    Map a clinical question to one of the 14 question categories used by
+    Dynamic Prompting and Few-Shot Prompting in generator/generate.py.
+    Runs in microseconds — no extra LLM call needed.
+    """
+    q = query.lower()
+    if any(w in q for w in [
+        "marker", "mutation", "gene", "receptor", "amplification",
+        "translocation", "fusion", "chromosome", "psa", "ca-125",
+        "ca 125", "cea", "her2", "brca", "egfr", "braf", "kras",
+        "biomarker", "allele", "expression", "overexpression",
+    ]):
+        return "biomarker"
+    if any(w in q for w in [
+        "histolog", "patholog", "biopsy", "grade ", "differentiat",
+        "morpholog", "microscop", "carcinoma in situ",
+    ]):
+        return "pathology"
+    if any(w in q for w in [
+        "stage", "staging", "tnm", "classified", " t1", " t2",
+        " t3", " t4", " n0", " n1", " m0", " m1",
+    ]):
+        return "staging"
+    if any(w in q for w in [
+        "side effect", "toxicity", "adverse", "complication",
+        "late effect", "nausea", "neutropenia",
+    ]):
+        return "side_effects"
+    if any(w in q for w in [
+        "surgery", "resection", "margin", "orchiectomy", "mastectomy",
+        "radical", "lymph node dissection",
+    ]):
+        return "surgery"
+    if any(w in q for w in [
+        "imaging", "scan", "mri", "ct ", "pet", "ultrasound",
+        "laboratory", "blood test", "serum", "biopsy confirm",
+    ]):
+        return "investigation"
+    if any(w in q for w in [
+        "mechanism", "pathway", "how does", "molecular", "enzyme",
+        "protein", "activat", "inhibit", "kinase", "phosph",
+    ]):
+        return "mechanism"
+    if any(w in q for w in [
+        "incidence", "prevalence", "epidemiolog", "risk factor",
+        "worldwide", "population", "associated with", "linked to",
+    ]):
+        return "epidemiology"
+    if any(w in q for w in [
+        "prognos", "survival", "outcome", "recurrence", "mortality",
+        "predict", "5-year", "overall survival",
+    ]):
+        return "prognosis"
+    if any(w in q for w in [
+        "treat", "therapy", "chemotherapy", "radiation", "drug",
+        "regimen", "immunotherapy", "targeted", "antibody",
+    ]):
+        return "treatment"
+    if any(w in q for w in [
+        "diagnos", "present", "symptom", "sign ", "criteria", "finding",
+        "triad", "classic",
+    ]):
+        return "diagnosis"
+    if any(w in q for w in [
+        "clinical feature", "manifest", "clinical presentation",
+    ]):
+        return "clinical_features"
+    if any(w in q for w in [
+        "cause", "etiology", "aetiology", "carcinogen", "virus",
+        "exposure", "risk of",
+    ]):
+        return "etiology"
+    return "general"
+
+
 # Extract EVAL_QA from evaluate_200q.py for live dashboard
 EVAL_QA = []
 try:
@@ -64,17 +141,21 @@ def api_agent():
     original_query = data['query']
     
     try:
+        # Classify question category for Dynamic + Few-Shot prompting
+        category = _classify_category(original_query)
+        print(f"[CATEGORY] '{category}' for: {original_query[:60]}")
+
         # Run your pipeline
         query = rewrite_query(original_query)
         sub_queries = decompose_query(query)
         results = crag_retrieve_multi(sub_queries)
         results = filter_metadata(results)
-        results, scores = rerank_with_scores(query, results, top_k=5, min_score=-2.0)
+        results, scores = rerank_with_scores(query, results, top_k=3, min_score=0.0)
 
-        # Fallback: if the best cross-encoder score is weak (< 1.0),
+        # Fallback: if the best cross-encoder score is weak (< 0.5),
         # run an additional retrieval pass using the original unmodified query
         # to catch cases where query rewriting lost specific keywords.
-        if not scores or scores[0] < 1.0:
+        if not scores or scores[0] < 0.5:
             fallback_raw = crag_retrieve_multi([original_query])
             fallback_raw = filter_metadata(fallback_raw)
             # Merge with existing results (dedup by text)
@@ -82,10 +163,10 @@ def api_agent():
             extra = [r for r in fallback_raw if r.metadata.get("text","") not in existing_texts]
             if extra:
                 combined = results + extra
-                results, scores = rerank_with_scores(query, combined, top_k=5, min_score=-2.0)
+                results, scores = rerank_with_scores(query, combined, top_k=3, min_score=0.0)
 
-        compressed_context = compress_context(results)
-        answer = generate_answer(query, compressed_context)
+        compressed_context = compress_context(results, query=query)
+        answer = generate_answer(query, compressed_context, category=category)
         
         # Log reranker scores to server console for threshold tuning
         print(f"[RERANK SCORES] query='{original_query[:60]}'")

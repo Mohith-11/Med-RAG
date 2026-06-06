@@ -1,0 +1,62 @@
+
+========================================================================
+GENERATOR COMPARISON — MedGemma-4B (Q4_K_M)
+Ollama tag  : hf.co/unsloth/medgemma-1.5-4b-it-GGUF:Q4_K_M
+Timestamp   : 2026-06-02 00:16:52
+Questions   : 50
+LLM Judge   : enabled
+========================================================================
+
+-- Accuracy & F1 ─────────────────────────────────────────────────────
+Exact Match (EM)        : 0.0000
+Token Precision         : 0.2413
+Token Recall            : 0.3112
+Token F1                : 0.2587
+
+-- BLEU / GLEU / METEOR ──────────────────────────────────────────────
+BLEU-1                  : 0.2004
+BLEU-4                  : 0.0439
+GLEU                    : 0.0827
+METEOR                  : 0.2255
+
+-- ROUGE ──────────────────────────────────────────────────────────────
+ROUGE-1                 : 0.3203
+ROUGE-2                 : 0.1260
+ROUGE-L                 : 0.2425
+ROUGE-Lsum              : 0.2480
+
+-- Diversity ──────────────────────────────────────────────────────────
+DISTINCT-1              : 0.4806
+DISTINCT-2              : 0.8596
+
+-- Semantic Similarity ─────────────────────────────────────────────────
+SBERT Cosine Sim        : 0.6858
+BERTScore F1            : 0.8645
+Answer Relevance        : 0.7421
+
+-- Retrieval Quality (proxy-labelled @ thresh=0.45) ──────
+Precision@5             : 0.7600
+Recall@5                : 0.9800
+Hit-Rate@5              : 0.9800
+MRR                     : 0.8807
+NDCG@5                  : 0.9023
+Avg Rerank Score        : 0.5494
+Context Relevance       : 0.5843
+Avg Confidence          : 0.5889
+
+-- Faithfulness / Hallucination ───────────────────────────────────────
+Faithfulness (LLM)      : 0.6680
+
+-- S.C.O.P.E Framework (1-5 scale) ────────────────────────────────────
+Sufficiency    (S x0.20): 3.34 / 5
+Correctness    (C x0.30): 3.56 / 5
+Organization   (O x0.15): 4.04 / 5
+Pertinence     (P x0.25): 4.08 / 5
+Exactness      (E x0.10): 2.58 / 5
+SCOPE Weighted Avg      : 3.62 / 5
+SCOPE Simple Avg        : 3.52 / 5
+
+-- LLM-as-a-Judge (0-1) ───────────────────────────────────────────────
+LLM Judge Score         : 0.7000
+
+========================================================================

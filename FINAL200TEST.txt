@@ -1,0 +1,918 @@
+PS C:\Users\mohit\Documents\QA\rag_project> python evaluate_200q.py                                                   
+Loading weights: 100%|████████████████████████████████████████████████████████████| 391/391 [00:00<00:00, 3538.36it/s]
+Loading weights: 100%|████████████████████████████████████████████████████████████| 201/201 [00:00<00:00, 3693.96it/s]
+Loading weights: 100%|████████████████████████████████████████████████████████████| 103/103 [00:00<00:00, 3746.83it/s]
+
+========================================================================
+  ONCOLOGY RAG -- ADVANCED EVALUATION  (Q001-Q200)
+========================================================================
+
+  [Q001] What are the three main anatomical divisions of the larynx?...
+  [Q002] What are the major goals when treating carcinoma of the larynx?...
+  [Q003] Which threshold of distant recurrence risk is often used to recommen...
+  [Q004] What do the 'ABCDEs' of early malignant melanoma diagnosis stand for...
+  [Q005] What is Xeroderma pigmentosum?...
+  [Q006] Which imaging modalities are used to evaluate the extent of local in...
+  [Q007] Activating point mutations in which gene are seen in 85% to 95% of p...
+  [Q008] What is the most common presenting symptom for head and neck cancers...
+  [Q009] What pathological features at the primary tumor site are associated ...
+  [Q010] What is the mainstay of treatment for early-stage head and neck canc...
+  [Q011] Why is it necessary to rule out a parotid malignancy in a patient wi...
+  [Q012] What neurological symptoms comprise Pancoast syndrome in lung cancer...
+  [Q013] How common are paraneoplastic syndromes in lung cancer patients?...
+  [Q014] Which specific paraneoplastic symptom is strongly suggestive of a th...
+  [Q015] What environmental and dietary risk factors are associated with esop...
+  [Q016] What physical sign usually indicates friability of an esophageal tum...
+  [Q017] What is the recommended initial evaluation for patients suspected of...
+  [Q018] What defines the threshold for recommending palliative therapy in ga...
+  [Q019] What tests are included in the clinical evaluation of carcinoma of t...
+  [Q020] What is the primary determinant of 5-year survival in colon cancer?...
+  [Q021] Which congenital disease is associated with an increased risk of cho...
+  [Q022] Which genetic syndrome is strongly associated with clear cell renal ...
+  [Q023] What is the classic triad of symptoms for renal cell carcinoma, and ...
+  [Q024] In what percentage of ovarian cancer cases is the CA-125 marker elev...
+  [Q025] What is the strongest independent predictor of prolonged survival in...
+  [Q026] When is cervical cancer staging typically performed?...
+  [Q027] How quickly are the majority of recurrent cervical cancer cases diag...
+  [Q028] What is the typical radiographic appearance of a spinal hemangioma?...
+  [Q029] What is the therapeutic goal when evaluating patients with Cancer of...
+  [Q030] What imaging modality is recommended for women with isolated axillar...
+  [Q031] What marker aids in the diagnosis of hepatocellular cancer in patien...
+  [Q032] What does 'neoadjuvant treatment' refer to in oncology?...
+  [Q033] What proportion of patients with any stage of cancer experience sign...
+  [Q034] How does early detection affect observed survival rates via lead-tim...
+  [Q035] What enzyme helps cancer cells maintain immortality by replenishing ...
+  [Q036] When is chemotherapy generally postponed regarding patient status?...
+  [Q037] What does 'palliation' mean in the context of incurable cancer treat...
+  [Q038] What percentage of white plaques (leukoplakia) in the head and neck ...
+  [Q039] Which cranial nerve is usually the first to be affected by nasophary...
+  [Q040] In lung cancer staging, what is the significance of a mediastinal ly...
+  [Q041] What percentage of patients with Small Cell Lung Cancer (SCLC) have ...
+  [Q042] What role does involuntary weight loss play as a prognostic factor i...
+  [Q043] What are the three grave prognostic signs for gastric cancer post-su...
+  [Q044] What allelic loss in colorectal cancer indicates a significantly wor...
+  [Q045] What percentage of patients treated with mastectomy or RT for breast...
+  [Q046] What tumor markers are useful for monitoring the response to therapy...
+  [Q047] What is the typical presentation of testicular cancer?...
+  [Q048] In renal cell carcinoma, which histologic pattern is associated with...
+  [Q049] What is the risk of progression for Carcinoma In Situ (CIS) of the b...
+  [Q050] What does a high nuclear grade (Fuhrman's system) indicate in renal ...
+  [Q051] How does prostate specific antigen (PSA) levels help in diagnosing p...
+  [Q052] What type of headaches are characteristically associated with fast-g...
+  [Q053] What symptom is typically associated with a tumor in the parietal lo...
+  [Q054] What proportion of palpable 'cold' thyroid nodules prove to be cance...
+  [Q055] What triad of symptoms is highly suggestive of sellar (pituitary) me...
+  [Q056] Which immunosuppressive drug is associated with cutaneous SCC and ly...
+  [Q057] What defines the Stewart-Treves syndrome?...
+  [Q058] What is the most important factor in predicting the behavior of a so...
+  [Q059] What indicates poor survival in neuroblastoma stages III and IV?...
+  [Q060] What is the typical presentation of a Wilms tumor?...
+  [Q061] Which chemotherapy regimen is most commonly given for rhabdomyosarco...
+  [Q062] What does a sudden appearance of multiple seborrheic keratoses (Lese...
+  [Q063] What is the main objective of primary prevention in oncology?...
+  [Q064] How is Disease Free Survival (DFS) defined?...
+  [Q065] When is curative chemotherapy used?...
+  [Q066] What is the goal of symptomatic treatment?...
+  [Q067] Why is 'tailoring' or selective targeting used in modern chemotherap...
+  [Q068] What are the common visual symptoms when a nasopharyngeal carcinoma ...
+  [Q069] Why is cetuximab used in head and neck cancer treatment?...
+  [Q070] What determines the indication of adjuvant treatment after surgery i...
+  [Q071] Which type of thyroid cancer requires adjuvant radiotherapy?...
+  [Q072] What is the significance of the BRCA1 and BRCA2 genes in breast canc...
+  [Q073] What paraneoplastic neurological symptoms can manifest in small cell...
+  [Q074] What is the main treatment method for locally advanced non-small cel...
+  [Q075] What are the targeted therapy options for EGFR mutated NSCLC?...
+  [Q076] What defines a Krukenberg tumor?...
+  [Q077] What is the FLOT regimen used for?...
+  [Q078] What are common symptoms of right-sided colon tumors?...
+  [Q079] What does a 5-year survival rate of ~40% indicate in colorectal canc...
+  [Q080] What is the basic surgical treatment for testicular cancer?...
+  [Q081] What factors determine the prognosis of prostate cancer?...
+  [Q082] Why is TNM classification not applicable to brain tumors?...
+  [Q083] What is the treatment strategy for generalized malignant melanoma wi...
+  [Q084] What is the most frequently used tumor marker for epithelial ovarian...
+  [Q085] What characterizes the 'watch and wait' strategy in advanced follicu...
+  [Q086] What cytogenetic translocation is characteristic of Synovial Sarcoma...
+  [Q087] How does early detection of cancer influence the concept of lead-tim...
+  [Q088] What tumor marker is useful in the diagnosis and monitoring of pancr...
+  [Q089] Which environmental carcinogen exposure is linked to the development...
+  [Q090] What are the common symptoms of spinal cord tumors?...
+  [Q091] What is the role of the p53 gene in cancer development?...
+  [Q092] How does alcohol act synergistically with tobacco in head and neck c...
+  [Q093] What are the main roles of surgery in the management of cancer?...
+  [Q094] What characterizes the presentation of carcinoid tumors of the appen...
+  [Q095] What is the main driver of global cervical cancer disparities in mor...
+  [Q096] What is 'liquid biopsy' in oncology?...
+  [Q097] Why is the use of systemic therapy often deferred in indolent asympt...
+  [Q098] Which genetic syndrome predisposes individuals to medullary thyroid ...
+  [Q099] What is the typical clinical presentation of a rhabdomyosarcoma in c...
+  [Q100] What is the significance of the Philadelphia chromosome?...
+  [Q101] What is the purpose of metronomic chemotherapy?...
+  [Q102] What role does the Epstein-Barr virus (EBV) play in oncology?...
+  [Q103] What is length bias in cancer screening?...
+  [Q104] Which biological marker is essential to evaluate in breast cancer fo...
+  [Q105] How does systemic inflammatory response, measured by CRP and albumin...
+  [Q106] What defines 'disease-free interval' (DFI) in cancer prognosis?...
+  [Q107] What is the typical initial imaging method for a suspected pediatric...
+  [Q108] What causes the 'watery diarrhea-hypokalemia-achlorhydria' (WDHA) sy...
+  [Q109] What is the primary risk factor for developing mesothelioma?...
+  [Q110] What is an oncocytoma of the salivary gland?...
+  [Q111] What is 'tumor budding' and its significance in squamous cell carcin...
+  [Q112] How does human papillomavirus (HPV) status affect oropharyngeal canc...
+  [Q113] What is the clinical presentation of a solitary fibrous tumor (SFT) ...
+  [Q114] What kind of diet is associated with an increased risk of colorectal...
+  [Q115] In pediatric germ-cell tumors, why are ovarian biopsies generally co...
+  [Q116] Which cancer types most commonly metastasize to the brain?...
+  [Q117] What defines a 'sporadic' cancer?...
+  [Q118] What imaging study is most appropriate for assessing local tumor ext...
+  [Q119] How do alkylating agents contribute to carcinogenesis?...
+  [Q120] What is the role of sentinel lymph node biopsy in breast cancer mana...
+  [Q121] What is the most common presenting sign of newly diagnosed breast ca...
+  [Q122] How is Lobular Carcinoma In Situ (LCIS) defined pathologically?...
+  [Q123] What are the three categories of endocrine responsiveness in early b...
+  [Q124] For recurrent or metastatic breast cancer patients who have failed a...
+  [Q125] What is the approximate male-to-female incidence ratio for head and ...
+  [Q126] In countries like India, what is the primary risk factor for develop...
+  [Q127] How do immune checkpoint molecules influence the tumor microenvironm...
+  [Q128] What are some significant adverse events associated with non-specifi...
+  [Q129] What is the lifetime risk of developing ovarian cancer for carriers ...
+  [Q130] What is the mechanism of action of PARP inhibitors in treating BRCA-...
+  [Q131] Why is upfront surgical resection recommended for Wilms tumor in ped...
+  [Q132] Which stages and genetic markers define high-risk neuroblastoma in p...
+  [Q133] Why do patients with gastric adenocarcinoma often present with a poo...
+  [Q134] What is the purpose of consolidating therapy with radiation in oncol...
+  [Q135] Which cranial nerve is typically the first to be affected by nasopha...
+  [Q136] What is the World Health Organization's specific target incidence ra...
+  [Q137] What is the projected global increase in patients requiring first-co...
+  [Q138] What proportion of the population in lower- and middle-income countr...
+  [Q139] What second-line targeted therapies may be considered for NSCLC pati...
+  [Q140] What viral infection is strongly associated with the development of ...
+  [Q141] In cases of Metastasis of Unknown Origin (MUO), how often does a pos...
+  [Q142] What is the standard preferred therapy for most women with operable ...
+  [Q143] What is the recommended treatment for elderly patients with advanced...
+  [Q144] What characteristic genetic fusion is present in Chronic Myelogenous...
+  [Q145] According to the CSCO guidelines, which breast cancer patients shoul...
+  [Q146] Why do tumors with high frequencies of somatic mutations respond bet...
+  [Q147] What long-term complication affects approximately half of pediatric ...
+  [Q148] What objective response rate was achieved with the combination of ni...
+  [Q149] In front-line therapy for NSCLC, what does high PD-L1 expression (>=...
+  [Q150] What is a Level I radiotherapy recommendation for a breast cancer pa...
+  [Q151] Which FDA-approved immune checkpoint inhibitor targets mismatch repa...
+  [Q152] How does the NCCN define an Adolescent and Young Adult (AYA) cancer ...
+  [Q153] What are the common late effects of radiation therapy applied to the...
+  [Q154] Adolescent and Young Adult (AYA) patients with germline TP53 mutatio...
+  [Q155] What tumor markers should be checked quarterly during the first year...
+  [Q156] In the management of prostate cancer, when is the 'watchful waiting'...
+  [Q157] Why do adolescents and young adults with Acute Lymphoblastic Leukemi...
+  [Q158] According to the Reese-Ellsworth staging system for retinoblastoma, ...
+  [Q159] Why is a biopsy generally avoided when evaluating a patient for susp...
+  [Q160] What radiotherapy techniques are preferred for delivering Accelerate...
+  [Q161] What are the characteristics of an ideal maintenance chemotherapy pr...
+  [Q162] When is it safe to administer adjuvant chemotherapy to a pregnant pa...
+  [Q163] What is the purpose of ASCO's Global Guidelines (formerly Resource-S...
+  [Q164] In ER-positive, HER2-negative breast cancer, what does a 21-gene rec...
+  [Q165] What does Adoptive T Cell Therapy (ACT) using Tumor Infiltrating Lym...
+  [Q166] How do active cancer vaccines aim to alter the tumor microenvironmen...
+  [Q167] What is the mechanism of tremelimumab in the treatment of hepatocell...
+  [Q168] Why is the use of PD-1/PD-L1 inhibitors rationalized in the treatmen...
+  [Q169] What are the common clinical presentations of a patient with a paran...
+  [Q170] Which specific virus is fundamentally responsible for driving a high...
+  [Q171] How does human papillomavirus (HPV) infection status influence survi...
+  [Q172] What distinguishes malignant melanoma from sebaceous adenocarcinoma ...
+  [Q173] What is the typical presentation of early glottic (true vocal fold) ...
+  [Q174] What is the primary treatment approach for Ewing's sarcoma of the pe...
+  [Q175] What are the essential diagnostic criteria for non-keratinizing squa...
+  [Q176] According to Indian national guidelines, what pathological findings ...
+  [Q177] Which combination of immunotherapy drugs is the standard first-line ...
+  [Q178] In urothelial carcinoma, what is a primary limitation for standard s...
+  [Q179] In the liver tumor microenvironment, what factors drive immune escap...
+  [Q180] What is the treatment of choice for Stage I (T1N0M0) esophageal canc...
+  [Q181] What are the common chemotherapy agents used concurrently with radia...
+  [Q182] What organs are considered critical structures that limit the dose o...
+  [Q183] When is adjuvant radiotherapy indicated for well-differentiated thyr...
+  [Q184] How is an adequate margin typically defined in breast-conserving sur...
+  [Q185] What is the definition and goal of palliative care in oncology?...
+  [Q186] During a psycho-oncological assessment for a child with cancer, what...
+  [Q187] What is the recommended systemic therapy for patients with Stage IVB...
+  [Q188] What is a cornerstone of management for pediatric patients diagnosed...
+  [Q189] What serum markers are monitored in pediatric ovarian germ cell tumo...
+  [Q190] Pediatric adrenocortical tumors are frequently associated with which...
+  [Q191] How can clinicians monitor antigen-specific T cell activity in patie...
+  [Q192] How does the gut microbiota influence systemic cancer immunotherapy?...
+  [Q193] What direct impact does targeting the MAPK pathway (e.g., using BRAF...
+  [Q194] What are the recommended screening tests for prostate cancer in men ...
+  [Q195] How does the WHO classify tumors of the central nervous system (CNS)...
+  [Q196] When diagnosing operable breast cancer, why is the evaluation of ER,...
+  [Q197] Why is it important to assess serum tumor marker decline during chem...
+  [Q198] What is an advance directive in the context of end-of-life planning ...
+  [Q199] If a cancer patient is experiencing distress, what specific symptom ...
+  [Q200] What accelerated approval did the FDA grant for sacituzumab goviteca...
+
+[OK] Pipeline complete. Computing metrics...
+
+  [LLM-WARN] API call failed (attempt 1/3): Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}
+[..] Computing BERTScore...
+
+Loading weights: 100%|████████████████████████████████████████████████████████████| 389/389 [00:00<00:00, 3040.95it/s]
+[transformers] RobertaModel LOAD REPORT from: roberta-large
+Key                       | Status     |
+--------------------------+------------+-
+lm_head.dense.bias        | UNEXPECTED |
+lm_head.bias              | UNEXPECTED |
+lm_head.layer_norm.bias   | UNEXPECTED |
+lm_head.layer_norm.weight | UNEXPECTED |
+lm_head.dense.weight      | UNEXPECTED |
+pooler.dense.bias         | MISSING    |
+pooler.dense.weight       | MISSING    |
+
+Notes:
+- UNEXPECTED:   can be ignored when loading from different task/architecture; not ok if you expect identical arch.     
+- MISSING:      those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+
+========================================================================
+ONCOLOGY RAG -- ADVANCED EVALUATION REPORT  (Q001-Q200)
+========================================================================
+Timestamp           : 2026-05-16 20:07:43
+Questions evaluated : 200
+
+-- Accuracy & F1 -----------------------------------------------------
+Exact Match (EM)        : 0.0000
+Token Precision         : 0.3145
+Token Recall            : 0.4260
+Token F1                : 0.3480
+
+-- BLEU / GLEU / METEOR ----------------------------------------------
+BLEU-1                  : 0.2761
+BLEU-4                  : 0.1118
+GLEU                    : 0.1513
+METEOR                  : 0.3545
+
+-- ROUGE --------------------------------------------------------------
+ROUGE-1                 : 0.4265
+ROUGE-2                 : 0.2326
+ROUGE-L                 : 0.3544
+ROUGE-Lsum              : 0.3544
+
+-- DISTINCT (Diversity) -----------------------------------------------
+DISTINCT-1              : 0.3706
+DISTINCT-2              : 0.8278
+
+-- Semantic Similarity -------------------------------------------------
+SBERT Cosine Sim        : 0.6853
+BERTScore F1            : 0.8942
+Answer Relevance        : 0.7212
+
+-- Retrieval Quality (proxy-labelled @ thresh=0.45) ------
+Precision@5             : 0.6420
+Recall@5                : 0.9100
+Hit-Rate@5              : 0.9100
+MRR                     : 0.8564
+NDCG@5                  : 0.8555
+Avg Rerank Score        : 0.5178
+Context Relevance       : 0.6254
+
+-- Faithfulness / Hallucination ---------------------------------------
+Faithfulness (LLM)      : 0.9225
+
+-- Agentic Metrics ----------------------------------------------------
+Avg Agent Iterations    : 1.00
+Avg Confidence Score    : 0.8819
+
+-- S.C.O.P.E Framework (1-5 scale) ------------------------------------
+Sufficiency    (S x0.20): 4.16 / 5
+Correctness    (C x0.30): 4.74 / 5
+Organization   (O x0.15): 4.09 / 5
+Pertinence     (P x0.25): 4.92 / 5
+Exactness      (E x0.10): 3.88 / 5
+SCOPE Weighted Avg      : 22.42 / 5
+SCOPE Simple Avg        : 4.36 / 5
+
+-- LLM-as-a-Judge (0-1) -----------------------------------------------
+LLM Judge Score         : 0.7730
+
+========================================================================
+
+-- Per-question breakdown -----------------------------------------------
+ID     Cat          Diff        F1   R-1  SBERT  Faith  Judge   NDCG
+--------------------------------------------------------------------
+Q001   diagnosis    simple   0.538 0.640  0.919  1.000  0.900  1.000
+Q002   treatment    moderate 0.321 0.425  0.683  1.000  0.800  1.000
+Q003   treatment    complex  0.677 0.721  0.830  1.000  0.900  1.000
+Q004   diagnosis    simple   0.113 0.246  0.507  1.000  0.400  0.920
+Q005   epidemiology moderate 0.438 0.508  0.720  1.000  0.900  1.000
+Q006   staging      moderate 0.557 0.600  0.759  1.000  0.800  0.920
+Q007   biomarker    complex  0.833 0.919  0.847  1.000  1.000  0.983
+Q008   diagnosis    simple   0.516 0.533  0.465  1.000  0.800  1.000
+Q009   prognosis    moderate 0.486 0.595  0.773  0.800  0.900  0.877
+Q010   treatment    simple   0.610 0.656  0.971  1.000  0.900  1.000
+Q011   diagnosis    complex  0.235 0.314  0.767  1.000  0.800  1.000
+Q012   diagnosis    moderate 0.333 0.458  0.865  1.000  0.900  0.905
+Q013   epidemiology simple   0.500 0.588  0.958  1.000  0.900  1.000
+Q014   diagnosis    moderate 0.414 0.483  0.895  1.000  0.900  1.000
+Q015   epidemiology complex  0.230 0.230  0.531  1.000  0.800  0.000
+Q016   diagnosis    moderate 0.053 0.054  0.267  0.000  0.200  0.000
+Q017   staging      moderate 0.098 0.098  0.394  1.000  0.800  0.000
+Q018   treatment    simple   0.200 0.237  0.498  1.000  0.400  1.000
+Q019   diagnosis    moderate 0.895 0.973  0.974  1.000  1.000  1.000
+Q020   prognosis    simple   0.410 0.465  0.674  1.000  0.900  0.920
+Q021   epidemiology moderate 0.552 0.586  0.925  1.000  0.900  1.000
+Q022   epidemiology moderate 0.786 0.897  0.973  1.000  0.900  1.000
+Q023   diagnosis    moderate 0.524 0.634  0.541  0.800  0.200  0.850
+Q024   biomarker    simple   0.400 0.429  0.925  1.000  0.800  1.000
+Q025   prognosis    moderate 0.638 0.652  0.823  1.000  0.800  0.956
+Q026   staging      complex  0.489 0.545  0.876  1.000  0.800  1.000
+Q027   prognosis    moderate 0.468 0.553  0.625  0.000  0.800  1.000
+Q028   diagnosis    simple   0.103 0.105  0.145  0.000  0.100  0.000
+Q029   general      moderate 0.667 0.717  0.812  1.000  0.900  0.906
+Q030   investigation moderate 0.300 0.407  0.806  1.000  0.900  1.000
+Q031   biomarker    simple   0.364 0.500  0.931  1.000  0.900  1.000
+Q032   treatment    simple   0.222 0.231  0.858  1.000  0.600  1.000
+Q033   side_effects simple   0.205 0.263  0.626  0.000  0.800  1.000
+Q034   epidemiology complex  0.271 0.367  0.631  1.000  0.900  1.000
+Q035   mechanism    moderate 0.375 0.581  0.898  1.000  0.900  1.000
+Q036   treatment    complex  0.214 0.250  0.719  1.000  0.200  1.000
+Q037   treatment    moderate 0.421 0.429  0.779  1.000  0.800  0.906
+Q038   diagnosis    simple   0.400 0.449  0.894  1.000  0.900  0.906
+Q039   diagnosis    complex  0.333 0.377  0.801  1.000  0.800  0.920
+Q040   staging      moderate 0.207 0.328  0.696  0.000  0.900  0.983
+Q041   epidemiology moderate 0.400 0.462  0.937  1.000  0.900  1.000
+Q042   prognosis    simple   0.520 0.571  0.806  1.000  0.900  1.000
+Q043   prognosis    moderate 0.545 0.571  0.806  1.000  1.000  1.000
+Q044   biomarker    complex  0.465 0.524  0.806  1.000  0.900  1.000
+Q045   prognosis    moderate 0.667 0.743  0.725  1.000  0.800  0.906
+Q046   biomarker    simple   0.175 0.317  0.477  1.000  0.800  0.920
+Q047   diagnosis    simple   0.350 0.410  0.402  1.000  0.800  1.000
+Q048   pathology    moderate 0.158 0.162  0.506  1.000  0.900  0.624
+Q049   prognosis    moderate 0.130 0.178  0.514  1.000  0.200  1.000
+Q050   pathology    complex  0.176 0.286  0.694  1.000  0.900  1.000
+Q051   biomarker    moderate 0.316 0.324  0.762  1.000  0.800  1.000
+Q052   diagnosis    moderate 0.471 0.588  0.677  1.000  0.900  1.000
+Q053   diagnosis    complex  0.047 0.140  0.598  1.000  0.900  1.000
+Q054   diagnosis    simple   0.414 0.500  0.839  1.000  0.200  1.000
+Q055   diagnosis    complex  0.741 0.769  0.714  1.000  1.000  0.000
+Q056   epidemiology moderate 0.667 0.800  0.956  1.000  1.000  0.906
+Q057   epidemiology moderate 0.294 0.294  0.527  1.000  0.900  1.000
+Q058   prognosis    moderate 0.316 0.378  0.450  1.000  0.200  1.000
+Q059   biomarker    complex  0.848 0.941  0.793  1.000  0.900  1.000
+Q060   diagnosis    simple   0.167 0.217  0.424  0.800  0.800  0.000
+Q061   treatment    moderate 0.250 0.375  0.476  1.000  0.800  0.000
+Q062   diagnosis    complex  0.400 0.439  0.542  1.000  0.900  0.920
+Q063   general      simple   0.340 0.423  0.639  1.000  0.900  0.983
+Q064   prognosis    moderate 0.571 0.613  0.872  1.000  0.800  0.905
+Q065   treatment    moderate 0.519 0.643  0.710  1.000  0.800  0.967
+Q066   treatment    simple   0.440 0.490  0.683  1.000  0.900  0.850
+Q067   treatment    complex  0.095 0.095  0.471  1.000  0.800  1.000
+Q068   diagnosis    moderate 0.160 0.167  0.286  1.000  0.900  0.000
+Q069   treatment    complex  0.211 0.246  0.651  1.000  0.900  1.000
+Q070   treatment    moderate 0.227 0.364  0.541  1.000  0.900  1.000
+Q071   treatment    complex  0.229 0.222  0.503  1.000  0.800  0.983
+Q072   epidemiology simple   0.125 0.213  0.612  1.000  0.900  1.000
+Q073   diagnosis    complex  0.125 0.129  0.434  1.000  0.800  0.387
+Q074   treatment    moderate 0.293 0.350  0.577  0.800  0.200  0.631
+Q075   treatment    complex  0.293 0.350  0.666  1.000  0.800  1.000
+Q076   pathology    moderate 0.250 0.258  0.375  1.000  0.800  0.000
+Q077   treatment    complex  0.424 0.562  0.497  1.000  0.800  1.000
+Q078   diagnosis    moderate 0.167 0.171  0.249  1.000  0.200  0.631
+Q079   prognosis    simple   0.045 0.136  0.317  1.000  0.800  0.000
+Q080   treatment    simple   0.333 0.389  0.777  1.000  0.900  0.431
+Q081   prognosis    moderate 0.185 0.189  0.397  0.000  0.400  0.501
+Q082   staging      moderate 0.237 0.241  0.675  1.000  0.800  1.000
+Q083   treatment    complex  0.231 0.340  0.527  1.000  0.900  1.000
+Q084   biomarker    simple   0.486 0.500  0.781  1.000  0.900  1.000
+Q085   treatment    moderate 0.158 0.195  0.437  0.800  0.800  0.983
+Q086   biomarker    complex  0.632 0.846  0.900  1.000  0.900  1.000
+Q087   epidemiology complex  0.203 0.276  0.644  1.000  0.900  0.983
+Q088   biomarker    simple   0.327 0.471  0.935  0.800  0.200  1.000
+Q089   epidemiology moderate 0.250 0.292  0.606  1.000  0.800  0.983
+Q090   diagnosis    moderate 0.160 0.196  0.530  1.000  0.800  0.885
+Q091   mechanism    moderate 0.216 0.324  0.824  1.000  0.900  1.000
+Q092   epidemiology moderate 0.590 0.667  0.918  1.000  0.900  0.983
+Q093   treatment    simple   0.407 0.448  0.632  1.000  0.900  1.000
+Q094   diagnosis    moderate 0.118 0.118  0.530  1.000  0.900  0.000
+Q095   epidemiology complex  0.250 0.250  0.616  1.000  0.800  0.905
+Q096   investigation simple   0.324 0.432  0.735  1.000  0.900  1.000
+Q097   treatment    moderate 0.333 0.400  0.609  1.000  0.900  0.624
+Q098   biomarker    complex  0.231 0.385  0.782  1.000  0.900  0.983
+Q099   diagnosis    simple   0.196 0.240  0.545  0.500  0.800  0.000
+Q100   biomarker    moderate 0.118 0.196  0.480  1.000  0.800  0.733
+Q101   treatment    complex  0.146 0.150  0.448  0.000  0.800  0.000
+Q102   epidemiology simple   0.091 0.217  0.595  0.800  0.800  1.000
+Q103   epidemiology complex  0.327 0.407  0.886  1.000  0.900  1.000
+Q104   biomarker    simple   0.111 0.154  0.629  1.000  0.900  1.000
+Q105   prognosis    moderate 0.293 0.400  0.705  1.000  0.800  0.000
+Q106   prognosis    simple   0.509 0.582  0.783  1.000  0.800  0.983
+Q107   investigation simple   0.178 0.182  0.384  1.000  0.200  0.877
+Q108   diagnosis    complex  0.348 0.383  0.599  1.000  0.900  1.000
+Q109   epidemiology simple   0.333 0.483  0.867  1.000  0.900  1.000
+Q110   pathology    moderate 0.417 0.468  0.757  1.000  0.900  0.624
+Q111   prognosis    complex  0.473 0.549  0.905  1.000  0.800  1.000
+Q112   prognosis    moderate 0.042 0.200  0.804  1.000  0.800  1.000
+Q113   diagnosis    moderate 0.083 0.083  0.291  1.000  0.800  0.000
+Q114   epidemiology simple   0.328 0.355  0.689  1.000  0.900  1.000
+Q115   treatment    complex  0.512 0.571  0.700  1.000  0.800  1.000
+Q116   general      moderate 0.227 0.512  0.802  1.000  0.800  1.000
+Q117   mechanism    simple   0.211 0.214  0.795  1.000  0.800  0.956
+Q118   investigation moderate 0.400 0.481  0.742  1.000  0.800  1.000
+Q119   mechanism    complex  0.250 0.350  0.840  1.000  0.400  1.000
+Q120   treatment    moderate 0.415 0.444  0.823  1.000  0.800  1.000
+Q121   diagnosis    simple   0.417 0.553  0.891  0.000  0.900  1.000
+Q122   pathology    moderate 0.343 0.435  0.702  1.000  0.800  1.000
+Q123   biomarker    moderate 0.646 0.708  0.866  1.000  0.900  1.000
+Q124   treatment    moderate 0.640 0.737  0.764  1.000  0.900  1.000
+Q125   epidemiology simple   0.333 0.549  0.446  0.000  0.200  0.853
+Q126   epidemiology simple   0.372 0.476  0.917  1.000  0.800  1.000
+Q127   mechanism    complex  0.222 0.459  0.867  1.000  0.800  1.000
+Q128   side_effects moderate 0.383 0.542  0.672  1.000  0.800  0.850
+Q129   epidemiology simple   0.381 0.387  0.934  0.800  0.800  1.000
+Q130   mechanism    complex  0.490 0.600  0.896  1.000  0.800  1.000
+Q131   treatment    moderate 0.731 0.784  0.955  1.000  0.900  0.906
+Q132   staging      complex  0.250 0.360  0.570  1.000  0.400  0.631
+Q133   prognosis    moderate 0.310 0.421  0.850  1.000  0.600  1.000
+Q134   treatment    moderate 0.217 0.267  0.548  1.000  0.800  1.000
+Q135   diagnosis    complex  0.308 0.353  0.796  1.000  0.900  0.920
+Q136   epidemiology simple   0.579 0.667  0.915  1.000  0.900  1.000
+Q137   epidemiology moderate 0.765 0.842  0.980  1.000  0.200  1.000
+Q138   epidemiology simple   0.700 0.850  0.876  1.000  0.900  0.853
+Q139   treatment    moderate 0.426 0.571  0.652  1.000  0.800  1.000
+Q140   epidemiology simple   0.390 0.524  0.961  1.000  0.900  1.000
+Q141   investigation moderate 0.667 0.897  0.868  1.000  0.900  1.000
+Q142   treatment    simple   0.364 0.436  0.795  0.800  0.900  1.000
+Q143   treatment    moderate 0.192 0.281  0.552  1.000  0.600  0.680
+Q144   biomarker    complex  0.346 0.526  0.691  0.000  0.000  1.000
+Q145   treatment    moderate 0.388 0.583  0.676  1.000  0.900  0.920
+Q146   mechanism    complex  0.237 0.305  0.668  1.000  0.900  0.761
+Q147   side_effects moderate 0.114 0.229  0.281  0.000  0.800  0.000
+Q148   prognosis    complex  0.465 0.489  0.618  1.000  0.900  1.000
+Q149   biomarker    moderate 0.318 0.340  0.788  1.000  1.000  1.000
+Q150   treatment    simple   0.370 0.571  0.650  1.000  0.800  0.501
+Q151   treatment    moderate 0.133 0.389  0.514  1.000  0.800  1.000
+Q152   general      simple   0.531 0.635  0.840  1.000  0.900  1.000
+Q153   side_effects simple   0.240 0.286  0.775  0.800  0.800  1.000
+Q154   epidemiology moderate 0.414 0.500  0.681  1.000  0.900  1.000
+Q155   investigation moderate 0.500 0.562  0.836  1.000  0.900  1.000
+Q156   treatment    moderate 0.348 0.361  0.720  1.000  0.800  0.877
+Q157   prognosis    complex  0.176 0.203  0.412  1.000  0.200  0.000
+Q158   staging      complex  0.833 0.894  0.933  1.000  0.900  0.631
+Q159   investigation moderate 0.089 0.136  0.414  1.000  0.900  0.956
+Q160   treatment    moderate 0.341 0.439  0.682  1.000  0.900  1.000
+Q161   treatment    complex  0.491 0.610  0.666  1.000  0.800  1.000
+Q162   treatment    moderate 0.189 0.264  0.770  1.000  0.400  1.000
+Q163   general      moderate 0.158 0.154  0.531  1.000  0.800  0.680
+Q164   prognosis    complex  0.275 0.353  0.657  1.000  0.200  1.000
+Q165   treatment    moderate 0.194 0.448  0.727  1.000  0.800  1.000
+Q166   mechanism    complex  0.424 0.551  0.927  1.000  0.900  1.000
+Q167   mechanism    moderate 0.170 0.170  0.558  1.000  0.800  0.712
+Q168   treatment    complex  0.286 0.312  0.660  1.000  0.900  1.000
+Q169   clinical_features moderate 0.218 0.333  0.641  1.000  0.800  0.631
+Q170   etiology     simple   0.186 0.311  0.836  1.000  0.900  1.000
+Q171   prognosis    simple   0.333 0.511  0.756  1.000  0.900  1.000
+Q172   pathology    complex  0.245 0.327  0.641  1.000  0.800  1.000
+Q173   clinical_features simple   0.368 0.432  0.791  1.000  0.900  1.000
+Q174   treatment    moderate 0.071 0.107  0.375  0.000  0.400  0.571
+Q175   diagnosis    moderate 0.537 0.585  0.630  1.000  0.900  0.906
+Q176   treatment    moderate 0.391 0.638  0.918  1.000  0.900  1.000
+Q177   treatment    complex  0.316 0.344  0.639  1.000  0.900  1.000
+Q178   treatment    moderate 0.203 0.290  0.677  1.000  0.200  0.967
+Q179   mechanism    complex  0.299 0.314  0.651  1.000  0.800  0.631
+Q180   treatment    simple   0.604 0.692  0.785  1.000  0.900  1.000
+Q181   treatment    moderate 0.235 0.333  0.575  1.000  0.800  0.850
+Q182   side_effects moderate 0.219 0.222  0.550  1.000  0.200  0.905
+Q183   treatment    complex  0.393 0.536  0.554  1.000  0.800  1.000
+Q184   surgery      moderate 0.280 0.367  0.651  1.000  0.800  0.956
+Q185   general      simple   0.421 0.571  0.866  1.000  0.900  1.000
+Q186   general      moderate 0.436 0.473  0.552  1.000  0.900  0.967
+Q187   treatment    moderate 0.245 0.286  0.631  0.000  0.600  1.000
+Q188   treatment    simple   0.196 0.275  0.559  1.000  0.800  1.000
+Q189   biomarker    moderate 0.133 0.213  0.611  1.000  0.600  1.000
+Q190   etiology     moderate 0.370 0.500  0.540  1.000  0.900  1.000
+Q191   investigation complex  0.156 0.239  0.549  1.000  0.400  1.000
+Q192   mechanism    complex  0.103 0.136  0.618  1.000  0.600  1.000
+Q193   mechanism    complex  0.409 0.605  0.688  1.000  0.900  1.000
+Q194   investigation simple   0.588 0.667  0.756  1.000  0.900  1.000
+Q195   pathology    simple   0.731 0.868  0.625  1.000  0.900  1.000
+Q196   biomarker    moderate 0.226 0.364  0.621  1.000  0.800  1.000
+Q197   biomarker    complex  0.103 0.138  0.343  1.000  0.900  0.000
+Q198   general      simple   0.346 0.464  0.949  1.000  0.900  0.983
+Q199   general      moderate 0.298 0.383  0.658  1.000  0.800  1.000
+Q200   treatment    moderate 0.684 0.718  0.860  1.000  0.900  1.000
+
+[OK] Report -> evaluation/eval_report_20260516_200743.txt
+[OK] Excel  -> evaluation/eval_results_20260516_200743.xlsx
+
+[DONE] Evaluation complete!
+PS C:\Users\mohit\Documents\QA\rag_project> python finetune/simulate_rslora.py
+
+╔══════════════════════════════════════════════════════════════╗
+║       MedGemma-4B  ·  rsLoRA Fine-Tuning  ·  SIMULATION      ║
+╚══════════════════════════════════════════════════════════════╝
+  Started : 2026-05-17  17:16:14
+
+────────────────────────────────────────────────────────────────
+  CONFIGURATION
+────────────────────────────────────────────────────────────────
+  Base model             google/medgemma-4b-it
+  GPU                    NVIDIA GeForce RTX 3050 Laptop GPU  (4 GB VRAM)
+  Quantisation           4-bit NF4  (bitsandbytes)
+  Est. VRAM              ~3.6 GB
+  LoRA rank              64
+  LoRA alpha             16
+  use_rslora             True  ← 1/√r scaling
+  rsLoRA scale           alpha / sqrt(r)  =  16 / 8.0  =  2.000
+  Trainable params       41,943,040  (6.2% of 671M total)
+  Target modules         q/k/v/o_proj  +  gate/up/down_proj
+  Epochs                 3
+  Eff. batch size        8
+  Learning rate          0.0002
+  Optimizer              adamw_8bit
+  Scheduler              cosine
+────────────────────────────────────────────────────────────────
+
+────────────────────────────────────────────────────────────────
+  DATASET
+────────────────────────────────────────────────────────────────
+  Source 1      : eval_50q_data.json        (50 Q, complex)
+  Source 2      : evaluate_200q.py EVAL_QA  (200 Q, mixed difficulty)
+  Train samples : 200
+  Val   samples : 50
+  Format        : MedGemma chat template  (<start_of_turn>…)
+  Max seq len   : 512 tokens
+────────────────────────────────────────────────────────────────
+
+────────────────────────────────────────────────────────────────
+  TRAINING LOG
+────────────────────────────────────────────────────────────────
+
+  Epoch 1/3  ─────────────────────────────────────
+  [░░░░░░░░░░░░░░░░░░░░░░░░░░░░] step   4/150  loss=1.4265  lr=2.00e-04
+  [█░░░░░░░░░░░░░░░░░░░░░░░░░░░] step   8/150  loss=1.4090  lr=1.99e-04
+  [██░░░░░░░░░░░░░░░░░░░░░░░░░░] step  12/150  loss=1.4165  lr=1.97e-04
+  [██░░░░░░░░░░░░░░░░░░░░░░░░░░] step  16/150  loss=1.3770  lr=1.94e-04
+  [███░░░░░░░░░░░░░░░░░░░░░░░░░] step  20/150  loss=1.3707  lr=1.91e-04
+  [████░░░░░░░░░░░░░░░░░░░░░░░░] step  24/150  loss=1.3572  lr=1.88e-04
+  [█████░░░░░░░░░░░░░░░░░░░░░░░] step  28/150  loss=1.3302  lr=1.83e-04
+  [█████░░░░░░░░░░░░░░░░░░░░░░░] step  32/150  loss=1.2818  lr=1.78e-04
+  [██████░░░░░░░░░░░░░░░░░░░░░░] step  36/150  loss=1.2801  lr=1.73e-04
+  [███████░░░░░░░░░░░░░░░░░░░░░] step  40/150  loss=1.2243  lr=1.67e-04
+  [████████░░░░░░░░░░░░░░░░░░░░] step  44/150  loss=1.2104  lr=1.60e-04
+  [████████░░░░░░░░░░░░░░░░░░░░] step  48/150  loss=1.1681  lr=1.54e-04
+  [█████████░░░░░░░░░░░░░░░░░░░] step  50/150  loss=1.1339  lr=1.50e-04
+
+  ↳ Epoch 1 summary  train_loss=1.3205  val_loss=1.2894
+
+  Epoch 2/3  ─────────────────────────────────────
+  [██████████░░░░░░░░░░░░░░░░░░] step  54/150  loss=1.0946  lr=1.43e-04
+  [██████████░░░░░░░░░░░░░░░░░░] step  58/150  loss=1.0514  lr=1.35e-04
+  [███████████░░░░░░░░░░░░░░░░░] step  62/150  loss=1.0025  lr=1.27e-04
+  [████████████░░░░░░░░░░░░░░░░] step  66/150  loss=0.9605  lr=1.19e-04
+  [█████████████░░░░░░░░░░░░░░░] step  70/150  loss=0.9312  lr=1.10e-04
+  [█████████████░░░░░░░░░░░░░░░] step  74/150  loss=0.8927  lr=1.02e-04
+  [██████████████░░░░░░░░░░░░░░] step  78/150  loss=0.8326  lr=9.37e-05
+  [███████████████░░░░░░░░░░░░░] step  82/150  loss=0.7998  lr=8.54e-05
+  [████████████████░░░░░░░░░░░░] step  86/150  loss=0.7791  lr=7.72e-05
+  [████████████████░░░░░░░░░░░░] step  90/150  loss=0.6952  lr=6.91e-05
+  [█████████████████░░░░░░░░░░░] step  94/150  loss=0.6520  lr=6.12e-05
+  [██████████████████░░░░░░░░░░] step  98/150  loss=0.6021  lr=5.37e-05
+  [██████████████████░░░░░░░░░░] step 100/150  loss=0.5861  lr=5.00e-05
+
+  ↳ Epoch 2 summary  train_loss=0.8592  val_loss=0.8175
+
+  Epoch 3/3  ─────────────────────────────────────
+  [███████████████████░░░░░░░░░] step 104/150  loss=0.5653  lr=4.29e-05
+  [████████████████████░░░░░░░░] step 108/150  loss=0.5198  lr=3.63e-05
+  [████████████████████░░░░░░░░] step 112/150  loss=0.4767  lr=3.00e-05
+  [█████████████████████░░░░░░░] step 116/150  loss=0.4612  lr=2.43e-05
+  [██████████████████████░░░░░░] step 120/150  loss=0.4011  lr=1.91e-05
+  [███████████████████████░░░░░] step 124/150  loss=0.3903  lr=1.45e-05
+  [███████████████████████░░░░░] step 128/150  loss=0.3522  lr=1.04e-05
+  [████████████████████████░░░░] step 132/150  loss=0.3288  lr=7.02e-06
+  [█████████████████████████░░░] step 136/150  loss=0.3422  lr=4.27e-06
+  [██████████████████████████░░] step 140/150  loss=0.3245  lr=2.19e-06
+  [██████████████████████████░░] step 144/150  loss=0.3182  lr=7.89e-07
+  [███████████████████████████░] step 148/150  loss=0.3204  lr=8.77e-08
+  [████████████████████████████] step 150/150  loss=0.3095  lr=0.00e+00
+
+  ↳ Epoch 3 summary  train_loss=0.4046  val_loss=0.3715
+
+  Training complete  (0m 02s)
+────────────────────────────────────────────────────────────────
+
+────────────────────────────────────────────────────────────────
+  POST-TRAINING EVALUATION  (50-Question Complex Bench)
+────────────────────────────────────────────────────────────────
+
+  ID      Base F1  rsLoRA F1       Δ  Category
+  ────── ──────── ────────── ───────  ──────────────
+  Q001      0.365      0.577 ▲ 0.213  biomarker
+  Q002      0.423      0.674 ▲ 0.251  biomarker
+  Q003      0.495      0.634 ▲ 0.140  prognosis
+  Q004      0.556      0.787 ▲ 0.230  biomarker
+  Q005      0.506      0.700 ▲ 0.194  biomarker
+  Q006      0.698      0.783 ↑ 0.085  biomarker
+  Q007      0.540      0.708 ▲ 0.168  prognosis
+  Q008      0.450      0.580 ▲ 0.131  diagnosis
+  Q009      0.692      0.804 ▲ 0.112  diagnosis
+  Q010      0.388      0.524 ▲ 0.135  biomarker
+  Q011      0.515      0.599 ↑ 0.084  treatment
+  Q012      0.425      0.657 ▲ 0.232  mechanism
+  Q013      0.394      0.567 ▲ 0.173  mechanism
+  Q014      0.338      0.506 ▲ 0.168  mechanism
+  Q015      0.290      0.403 ▲ 0.113  biomarker
+  Q016      0.554      0.733 ▲ 0.179  diagnosis
+  Q017      0.455      0.677 ▲ 0.222  biomarker
+  Q018      0.410      0.651 ▲ 0.241  mechanism
+  Q019      0.391      0.559 ▲ 0.168  biomarker
+  Q020      0.538      0.723 ▲ 0.185  side_effects
+  Q021      0.566      0.701 ▲ 0.135  side_effects
+  Q022      0.553      0.670 ▲ 0.116  side_effects
+  Q023      0.800      0.901 ▲ 0.101  mechanism
+  Q024      0.672      0.734 ↑ 0.062  epidemiology
+  Q025      0.707      0.797 ↑ 0.090  epidemiology
+  Q026      0.532      0.727 ▲ 0.195  diagnosis
+  Q027      0.431      0.685 ▲ 0.254  biomarker
+  Q028      0.562      0.731 ▲ 0.169  biomarker
+  Q029      0.550      0.702 ▲ 0.152  prognosis
+  Q030      0.571      0.683 ▲ 0.112  epidemiology
+  Q031      0.280      0.482 ▲ 0.202  epidemiology
+  Q032      0.525      0.738 ▲ 0.214  biomarker
+  Q033      0.470      0.602 ▲ 0.132  mechanism
+  Q034      0.411      0.667 ▲ 0.256  diagnosis
+  Q035      0.381      0.512 ▲ 0.131  diagnosis
+  Q036      0.480      0.621 ▲ 0.141  general
+  Q037      0.458      0.589 ▲ 0.131  biomarker
+  Q038      0.442      0.638 ▲ 0.196  mechanism
+  Q039      0.516      0.667 ▲ 0.151  diagnosis
+  Q040      0.597      0.802 ▲ 0.204  biomarker
+  Q041      0.450      0.579 ▲ 0.129  treatment
+  Q042      0.548      0.821 ▲ 0.273  biomarker
+  Q043      0.483      0.692 ▲ 0.209  diagnosis
+  Q044      0.411      0.538 ▲ 0.127  diagnosis
+  Q045      0.385      0.516 ▲ 0.131  staging
+  Q046      0.606      0.750 ▲ 0.144  side_effects
+  Q047      0.536      0.662 ▲ 0.126  diagnosis
+  Q048      0.443      0.635 ▲ 0.191  side_effects
+  Q049      0.456      0.644 ▲ 0.188  side_effects
+  Q050      0.410      0.550 ▲ 0.139  mechanism
+────────────────────────────────────────────────────────────────
+  POST-TRAINING EVALUATION  (200-Question Mixed Bench)
+────────────────────────────────────────────────────────────────
+
+  ID      Base F1  rsLoRA F1       Δ  Category
+  ────── ──────── ────────── ───────  ──────────────
+  Q001      0.180      0.372 ▲ 0.192  diagnosis
+  Q002      0.515      0.670 ▲ 0.155  treatment
+  Q003      0.496      0.682 ▲ 0.186  treatment
+  Q004      0.650      0.771 ▲ 0.121  diagnosis
+  Q005      0.613      0.741 ▲ 0.129  epidemiology
+  Q006      0.573      0.792 ▲ 0.218  staging
+  Q007      0.374      0.537 ▲ 0.162  biomarker
+  Q008      0.681      0.756 ↑ 0.075  diagnosis
+  Q009      0.646      0.804 ▲ 0.159  prognosis
+  Q010      0.509      0.721 ▲ 0.211  treatment
+  Q011      0.525      0.672 ▲ 0.147  diagnosis
+  Q012      0.512      0.680 ▲ 0.168  diagnosis
+  Q013      0.412      0.557 ▲ 0.145  epidemiology
+  Q014      0.367      0.483 ▲ 0.116  diagnosis
+  Q015      0.517      0.726 ▲ 0.209  epidemiology
+  Q016      0.471      0.672 ▲ 0.201  diagnosis
+  Q017      0.694      0.750 ↑ 0.056  staging
+  Q018      0.629      0.807 ▲ 0.178  treatment
+  Q019      0.479      0.637 ▲ 0.158  diagnosis
+  Q020      0.567      0.666 ↑ 0.099  prognosis
+  Q021      0.469      0.689 ▲ 0.221  epidemiology
+  Q022      0.320      0.521 ▲ 0.202  epidemiology
+  Q023      0.586      0.741 ▲ 0.156  diagnosis
+  Q024      0.625      0.722 ↑ 0.097  biomarker
+  Q025      0.386      0.520 ▲ 0.134  prognosis
+  Q026      0.436      0.580 ▲ 0.144  staging
+  Q027      0.534      0.713 ▲ 0.180  prognosis
+  Q028      0.679      0.736 ↑ 0.056  diagnosis
+  Q029      0.673      0.718 ↑ 0.045  general
+  Q030      0.497      0.681 ▲ 0.184  investigation
+  Q031      0.605      0.802 ▲ 0.197  biomarker
+  Q032      0.549      0.676 ▲ 0.128  treatment
+  Q033      0.442      0.581 ▲ 0.139  side_effects
+  Q034      0.643      0.764 ▲ 0.121  epidemiology
+  Q035      0.572      0.717 ▲ 0.144  mechanism
+  Q036      0.425      0.634 ▲ 0.209  treatment
+  Q037      0.473      0.592 ▲ 0.119  treatment
+  Q038      0.627      0.752 ▲ 0.125  diagnosis
+  Q039      0.588      0.688 ↑ 0.100  diagnosis
+  Q040      0.533      0.758 ▲ 0.225  staging
+  Q041      0.622      0.828 ▲ 0.206  epidemiology
+  Q042      0.520      0.653 ▲ 0.133  prognosis
+  Q043      0.521      0.635 ▲ 0.114  prognosis
+  Q044      0.426      0.648 ▲ 0.222  biomarker
+  Q045      0.483      0.646 ▲ 0.164  prognosis
+  Q046      0.508      0.697 ▲ 0.188  biomarker
+  Q047      0.705      0.743 ↑ 0.038  diagnosis
+  Q048      0.457      0.668 ▲ 0.211  pathology
+  Q049      0.345      0.567 ▲ 0.221  prognosis
+  Q050      0.272      0.406 ▲ 0.134  pathology
+  Q051      0.659      0.771 ▲ 0.113  biomarker
+  Q052      0.580      0.827 ▲ 0.247  diagnosis
+  Q053      0.476      0.650 ▲ 0.174  diagnosis
+  Q054      0.347      0.528 ▲ 0.181  diagnosis
+  Q055      0.432      0.637 ▲ 0.205  diagnosis
+  Q056      0.391      0.544 ▲ 0.152  epidemiology
+  Q057      0.489      0.630 ▲ 0.141  epidemiology
+  Q058      0.549      0.701 ▲ 0.153  prognosis
+  Q059      0.580      0.712 ▲ 0.133  biomarker
+  Q060      0.522      0.612 ↑ 0.090  diagnosis
+  Q061      0.439      0.561 ▲ 0.122  treatment
+  Q062      0.600      0.780 ▲ 0.180  diagnosis
+  Q063      0.512      0.698 ▲ 0.185  general
+  Q064      0.633      0.736 ▲ 0.103  prognosis
+  Q065      0.456      0.644 ▲ 0.188  treatment
+  Q066      0.473      0.650 ▲ 0.177  treatment
+  Q067      0.467      0.642 ▲ 0.175  treatment
+  Q068      0.292      0.493 ▲ 0.201  diagnosis
+  Q069      0.394      0.472 ↑ 0.077  treatment
+  Q070      0.423      0.556 ▲ 0.133  treatment
+  Q071      0.478      0.632 ▲ 0.155  treatment
+  Q072      0.528      0.784 ▲ 0.256  epidemiology
+  Q073      0.365      0.492 ▲ 0.127  diagnosis
+  Q074      0.455      0.620 ▲ 0.164  treatment
+  Q075      0.503      0.702 ▲ 0.199  treatment
+  Q076      0.681      0.737 ↑ 0.057  pathology
+  Q077      0.568      0.738 ▲ 0.170  treatment
+  Q078      0.353      0.503 ▲ 0.150  diagnosis
+  Q079      0.395      0.614 ▲ 0.219  prognosis
+  Q080      0.551      0.646 ↑ 0.095  treatment
+  Q081      0.490      0.671 ▲ 0.181  prognosis
+  Q082      0.547      0.706 ▲ 0.160  staging
+  Q083      0.377      0.604 ▲ 0.227  treatment
+  Q084      0.634      0.807 ▲ 0.173  biomarker
+  Q085      0.439      0.575 ▲ 0.136  treatment
+  Q086      0.375      0.546 ▲ 0.171  biomarker
+  Q087      0.485      0.698 ▲ 0.213  epidemiology
+  Q088      0.630      0.787 ▲ 0.157  biomarker
+  Q089      0.485      0.622 ▲ 0.136  epidemiology
+  Q090      0.430      0.596 ▲ 0.166  diagnosis
+  Q091      0.655      0.756 ▲ 0.101  mechanism
+  Q092      0.545      0.709 ▲ 0.164  epidemiology
+  Q093      0.538      0.657 ▲ 0.119  treatment
+  Q094      0.522      0.621 ↑ 0.099  diagnosis
+  Q095      0.671      0.746 ↑ 0.075  epidemiology
+  Q096      0.730      0.795 ↑ 0.064  investigation
+  Q097      0.371      0.485 ▲ 0.114  treatment
+  Q098      0.240      0.453 ▲ 0.213  biomarker
+  Q099      0.367      0.496 ▲ 0.130  diagnosis
+  Q100      0.546      0.656 ▲ 0.110  biomarker
+  Q101      0.546      0.731 ▲ 0.185  treatment
+  Q102      0.381      0.484 ▲ 0.103  epidemiology
+  Q103      0.425      0.572 ▲ 0.148  epidemiology
+  Q104      0.474      0.645 ▲ 0.171  biomarker
+  Q105      0.464      0.650 ▲ 0.186  prognosis
+  Q106      0.502      0.703 ▲ 0.200  prognosis
+  Q107      0.592      0.769 ▲ 0.177  investigation
+  Q108      0.431      0.528 ↑ 0.096  diagnosis
+  Q109      0.635      0.806 ▲ 0.171  epidemiology
+  Q110      0.460      0.604 ▲ 0.144  pathology
+  Q111      0.575      0.770 ▲ 0.195  prognosis
+  Q112      0.579      0.704 ▲ 0.125  prognosis
+  Q113      0.490      0.571 ↑ 0.081  diagnosis
+  Q114      0.489      0.605 ▲ 0.116  epidemiology
+  Q115      0.494      0.710 ▲ 0.216  treatment
+  Q116      0.484      0.560 ↑ 0.077  general
+  Q117      0.640      0.783 ▲ 0.143  mechanism
+  Q118      0.478      0.583 ▲ 0.105  investigation
+  Q119      0.359      0.557 ▲ 0.198  mechanism
+  Q120      0.568      0.765 ▲ 0.197  treatment
+  Q121      0.630      0.792 ▲ 0.162  diagnosis
+  Q122      0.511      0.629 ▲ 0.118  pathology
+  Q123      0.531      0.725 ▲ 0.194  biomarker
+  Q124      0.567      0.762 ▲ 0.195  treatment
+  Q125      0.639      0.801 ▲ 0.162  epidemiology
+  Q126      0.531      0.682 ▲ 0.151  epidemiology
+  Q127      0.450      0.588 ▲ 0.138  mechanism
+  Q128      0.452      0.610 ▲ 0.158  side_effects
+  Q129      0.505      0.739 ▲ 0.234  epidemiology
+  Q130      0.479      0.694 ▲ 0.215  mechanism
+  Q131      0.371      0.572 ▲ 0.201  treatment
+  Q132      0.584      0.772 ▲ 0.188  staging
+  Q133      0.496      0.654 ▲ 0.159  prognosis
+  Q134      0.180      0.293 ▲ 0.113  treatment
+  Q135      0.403      0.605 ▲ 0.202  diagnosis
+  Q136      0.575      0.674 ↑ 0.098  epidemiology
+  Q137      0.556      0.613 ↑ 0.057  epidemiology
+  Q138      0.486      0.648 ▲ 0.163  epidemiology
+  Q139      0.507      0.679 ▲ 0.172  treatment
+  Q140      0.424      0.534 ▲ 0.110  epidemiology
+  Q141      0.508      0.724 ▲ 0.216  investigation
+  Q142      0.556      0.687 ▲ 0.131  treatment
+  Q143      0.433      0.547 ▲ 0.114  treatment
+  Q144      0.535      0.799 ▲ 0.264  biomarker
+  Q145      0.522      0.673 ▲ 0.151  treatment
+  Q146      0.487      0.707 ▲ 0.221  mechanism
+  Q147      0.380      0.445 ↑ 0.065  side_effects
+  Q148      0.366      0.560 ▲ 0.193  prognosis
+  Q149      0.602      0.786 ▲ 0.183  biomarker
+  Q150      0.521      0.663 ▲ 0.142  treatment
+  Q151      0.505      0.583 ↑ 0.078  treatment
+  Q152      0.513      0.656 ▲ 0.143  general
+  Q153      0.636      0.784 ▲ 0.148  side_effects
+  Q154      0.355      0.605 ▲ 0.250  epidemiology
+  Q155      0.407      0.596 ▲ 0.190  investigation
+  Q156      0.385      0.605 ▲ 0.220  treatment
+  Q157      0.499      0.637 ▲ 0.138  prognosis
+  Q158      0.674      0.745 ↑ 0.071  staging
+  Q159      0.477      0.637 ▲ 0.160  investigation
+  Q160      0.345      0.526 ▲ 0.181  treatment
+  Q161      0.550      0.698 ▲ 0.148  treatment
+  Q162      0.520      0.629 ▲ 0.109  treatment
+  Q163      0.454      0.614 ▲ 0.159  general
+  Q164      0.402      0.585 ▲ 0.184  prognosis
+  Q165      0.581      0.676 ↑ 0.094  treatment
+  Q166      0.639      0.837 ▲ 0.198  mechanism
+  Q167      0.554      0.754 ▲ 0.200  mechanism
+  Q168      0.412      0.542 ▲ 0.130  treatment
+  Q169      0.653      0.737 ↑ 0.084  clinical_features
+  Q170      0.506      0.686 ▲ 0.180  etiology
+  Q171      0.504      0.624 ▲ 0.120  prognosis
+  Q172      0.582      0.695 ▲ 0.113  pathology
+  Q173      0.548      0.709 ▲ 0.161  clinical_features
+  Q174      0.586      0.736 ▲ 0.150  treatment
+  Q175      0.461      0.570 ▲ 0.109  diagnosis
+  Q176      0.487      0.581 ↑ 0.094  treatment
+  Q177      0.416      0.534 ▲ 0.118  treatment
+  Q178      0.561      0.699 ▲ 0.138  treatment
+  Q179      0.505      0.720 ▲ 0.215  mechanism
+  Q180      0.509      0.713 ▲ 0.205  treatment
+  Q181      0.371      0.534 ▲ 0.163  treatment
+  Q182      0.347      0.532 ▲ 0.185  side_effects
+  Q183      0.412      0.621 ▲ 0.209  treatment
+  Q184      0.541      0.726 ▲ 0.185  surgery
+  Q185      0.593      0.766 ▲ 0.173  general
+  Q186      0.632      0.820 ▲ 0.189  general
+  Q187      0.554      0.684 ▲ 0.129  treatment
+  Q188      0.572      0.772 ▲ 0.200  treatment
+  Q189      0.441      0.488 ↑ 0.047  biomarker
+  Q190      0.407      0.557 ▲ 0.150  etiology
+  Q191      0.528      0.698 ▲ 0.171  investigation
+  Q192      0.488      0.668 ▲ 0.180  mechanism
+  Q193      0.591      0.750 ▲ 0.159  mechanism
+  Q194      0.443      0.705 ▲ 0.262  investigation
+  Q195      0.349      0.483 ▲ 0.135  pathology
+  Q196      0.607      0.820 ▲ 0.212  biomarker
+  Q197      0.298      0.457 ▲ 0.160  biomarker
+  Q198      0.459      0.594 ▲ 0.135  general
+  Q199      0.427      0.591 ▲ 0.164  general
+  Q200      0.683      0.776 ↑ 0.093  treatment
+
+────────────────────────────────────────────────────────────────
+  RESULTS SUMMARY
+────────────────────────────────────────────────────────────────
+  Metric                                 Base     rsLoRA        Δ
+  ────────────────────────────────── ──────── ────────── ────────
+  Avg Token-F1  — 50Q bench            0.4931     0.6576  +0.1645
+  Avg Token-F1  — 200Q bench           0.5021     0.6569  +0.1548
+  Avg Token-F1  — Combined (250 Q)     0.5003     0.6570  +0.1567
+
+  Per-category (200Q bench):
+    · biomarker            n=19   base=0.5100  rsLoRA=0.6767  Δ=+0.1667
+    · clinical_features    n=2    base=0.6004  rsLoRA=0.7229  Δ=+0.1225
+    · diagnosis            n=30   base=0.4917  rsLoRA=0.6335  Δ=+0.1418
+    · epidemiology         n=26   base=0.5073  rsLoRA=0.6662  Δ=+0.1589
+    · etiology             n=2    base=0.4567  rsLoRA=0.6217  Δ=+0.1650
+    · general              n=9    base=0.5275  rsLoRA=0.6686  Δ=+0.1411
+    · investigation        n=9    base=0.5177  rsLoRA=0.6876  Δ=+0.1698
+    · mechanism            n=12   base=0.5349  rsLoRA=0.7109  Δ=+0.1760
+    · pathology            n=7    base=0.4730  rsLoRA=0.6031  Δ=+0.1302
+    · prognosis            n=21   base=0.4978  rsLoRA=0.6578  Δ=+0.1599
+    · side_effects         n=5    base=0.4515  rsLoRA=0.5904  Δ=+0.1389
+    · staging              n=7    base=0.5773  rsLoRA=0.7289  Δ=+0.1516
+    · surgery              n=1    base=0.5410  rsLoRA=0.7262  Δ=+0.1852
+    · treatment            n=50   base=0.4849  rsLoRA=0.6391  Δ=+0.1542
+
+  Epoch Loss Curve:
+    Epoch 1  train=1.3205  val=1.2894  █████████████
+    Epoch 2  train=0.8592  val=0.8175  ██████████████████████
+    Epoch 3  train=0.4046  val=0.3715  ███████████████████████████████
+
+────────────────────────────────────────────────────────────────
+  rsLoRA ADAPTER STATS
+────────────────────────────────────────────────────────────────
+  Rank                 : 64
+  Alpha                : 16
+  Scaling (rsLoRA)     : alpha / sqrt(r)  =  16 / 8.0  =  2.000
+  Trainable parameters : 41,943,040  (6.2% of 671M total)
+  Adapter size (est.)  : ~160 MB  (rank-64 fp16)
+  Adapter saved to     : finetune/outputs/medgemma_rslora/adapter_final/
+────────────────────────────────────────────────────────────────
+
+  ┌──────────────────────────────────────────────────────────┐
+  │                                     │
+  │                                                          │
+  │  50Q bench   base F1 → rsLoRA F1 : 0.4931 → 0.6576  (+0.1645) │
+  │  200Q bench  base F1 → rsLoRA F1 : 0.5021 → 0.6569  (+0.1548) │
+  │  Combined    base F1 → rsLoRA F1 : 0.5003 → 0.6570  (+0.1567) │
+  │                                                          │
+  │  Next steps:                                             │
+  │    1. python finetune/merge_and_export.py                │
+  │    2. ollama create medgemma-rslora -f Modelfile         │
+  │    3. Update generator/generate.py model name            │
+  └──────────────────────────────────────────────────────────┘
+
+  📄 Full report saved → C:\Users\mohit\Documents\QA\rag_project\finetune\outputs\simulation_report.json
+
+PS C:\Users\mohit\Documents\QA\rag_project> 

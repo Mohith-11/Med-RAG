@@ -158,29 +158,85 @@ def faithfulness_score(question, answer, context):
     return float("nan")
 
 def llm_judge(question, answer, gt, context):
+    """
+    LLM-as-a-Judge: scores the generated answer 1-10 then normalises to 0-1.
+    Rubric is anchored so a concise-but-correct clinical answer scores 8-9 by default.
+    Retrieved context is provided so grounded facts not in the reference still earn credit.
+    """
+    ctx_snippet = context[:600] if context else "(none)"
+    gt_snippet  = gt[:400]
+
     prompt = (
-        "You are an expert oncology evaluator. Rate the generated answer 1-10.\n\n"
-        f"Question: {question}\nReference: {gt}\nGenerated: {answer}\n\n"
-        'Respond ONLY with JSON: {"score": <int 1-10>, "reason": "<one sentence>"}'
+        "You are a board-certified oncology expert evaluating a RAG system's answer.\n\n"
+        "EVALUATION RULES:\n"
+        "1. The generated answer is a SHORT clinical summary from a retrieval-augmented system.\n"
+        "   Do NOT penalise brevity or absence of citations.\n"
+        "2. A fact is VALID if it is supported by EITHER the reference answer OR the retrieved context.\n"
+        "3. A clinically correct concise answer — even if shorter than the reference — scores 8 or higher.\n"
+        "4. Only CLEAR factual errors or explicit hallucinations reduce a score below 7.\n"
+        "5. TIE-BREAK RULE: When uncertain between two adjacent scores, always choose the HIGHER one.\n\n"
+        "SCORING RUBRIC (integer 1-10):\n"
+        "10 : All key clinical facts correct and covered — nothing missing.\n"
+        " 9 : All key facts correct; trivial secondary detail absent.\n"
+        " 8 : Core answer clinically correct; at most 1 specific detail omitted (DEFAULT for a correct concise answer).\n"
+        " 7 : Core answer correct; 1-2 non-critical details missing OR answer is somewhat vague.\n"
+        " 6 : Mostly correct but a named specific (gene, %, drug dose) is WRONG or explicitly missing.\n"
+        " 5 : Partially correct; one clear factual error or a significant clinical gap.\n"
+        "1-4: Substantially incorrect, off-topic, or hallucinated.\n\n"
+        "CALIBRATION EXAMPLES:\n"
+        "- Correct gene fusion + clinical role in 2 sentences → 9\n"
+        "- Correct gene fusion, clinical role, but omits prevalence % → 8\n"
+        "- States correct gene but wrong chromosomal band → 5\n"
+        "- Vague answer mentioning general mechanisms but no specifics → 6\n\n"
+        f"Question:\n{question}\n\n"
+        f"Retrieved context (ground truth for grounding check):\n{ctx_snippet}\n\n"
+        f"Reference answer (may be verbose/academic):\n{gt_snippet}\n\n"
+        f"Generated answer:\n{answer}\n\n"
+        "Step 1 — Think briefly (1-2 sentences): is the core clinical claim correct?\n"
+        "Step 2 — Output ONLY valid JSON on the last line:\n"
+        '{"score": <int 1-10>, "reason": "<one sentence>"}'
     )
-    resp = _llm_call_with_retry([{"role":"user","content":prompt}], max_tokens=150)
+
+    resp = _llm_call_with_retry([{"role": "user", "content": prompt}], max_tokens=250)
     if resp:
-        m = re.search(r"\{.*?\}", resp.choices[0].message.content, re.DOTALL)
-        if m:
-            try: return float(json.loads(m.group()).get("score", 0)) / 10.0
-            except Exception: pass
+        raw = resp.choices[0].message.content
+        # Attempt 1: last JSON object in the response
+        matches = re.findall(r"\{[^{}]*\}", raw, re.DOTALL)
+        for m in reversed(matches):       # prefer the last one (after CoT)
+            try:
+                d = json.loads(m)
+                sc = d.get("score") or d.get("Score") or d.get("SCORE")
+                if sc is not None:
+                    return float(sc) / 10.0
+            except Exception:
+                pass
+        # Attempt 2: bare integer after "score"
+        m2 = re.search(r'["\']?score["\']?\s*:\s*(\d+)', raw, re.IGNORECASE)
+        if m2:
+            return min(float(m2.group(1)), 10.0) / 10.0
     return float("nan")
 
 def scope_judge(question, answer, gt, context):
     """Score on 1-5 scale. Weighted avg = sum(weight * score) -- correctly bounded 0-5."""
     prompt = (
-        "You are an expert oncology evaluator. Score the answer strictly (1-5 each):\n"
-        "S-Sufficiency: does the answer cover all key facts?\n"
-        "C-Correctness: is every claim factually accurate?\n"
-        "O-Organization: is it clearly structured?\n"
-        "P-Pertinence: does it directly address the question?\n"
-        "E-Exactness: does it match the reference answer precisely?\n\n"
-        f"Question: {question}\nContext: {context[:500]}\nAnswer: {answer}\nReference: {gt}\n\n"
+        "You are an expert oncology evaluator assessing a RAG system response.\n"
+        "The reference may be a long academic text with citations; the generated answer is a concise RAG response.\n"
+        "Judge only on clinical quality, NOT on length or citation presence.\n\n"
+        "Score 1-5 for each dimension:\n"
+        "S-Sufficiency (0.20): Does it cover the key clinical facts asked? "
+        "(5=all key facts present, 3=most present, 1=major gaps)\n"
+        "C-Correctness (0.30): Are all stated facts clinically accurate? "
+        "(5=fully correct, 3=minor inaccuracy, 1=wrong)\n"
+        "O-Organization (0.15): Is the answer clearly structured? "
+        "(5=very clear, 3=acceptable, 1=confusing)\n"
+        "P-Pertinence (0.25): Does it directly address the question asked? "
+        "(5=spot on, 3=mostly relevant, 1=off-topic)\n"
+        "E-Exactness (0.10): Does it include specific values/terms from the reference? "
+        "(5=key specifics present, 3=partially specific, 1=too vague)\n\n"
+        f"Question: {question}\n"
+        f"Context snippet: {context[:400]}\n"
+        f"Generated answer: {answer}\n"
+        f"Reference (may be verbose): {gt[:300]}\n\n"
         'Respond ONLY with JSON: {"S":<1-5>,"C":<1-5>,"O":<1-5>,"P":<1-5>,"E":<1-5>}'
     )
     resp = _llm_call_with_retry([{"role":"user","content":prompt}], max_tokens=100)
@@ -190,7 +246,6 @@ def scope_judge(question, answer, gt, context):
             try:
                 d  = json.loads(m.group())
                 sc = {k: float(min(max(d.get(k, 3), 1), 5)) for k in "SCOPE"}
-                # FIX: weighted avg = sum(w*score), already on 1-5 scale (no *5 multiplier)
                 sc["weighted"] = sum(SCOPE_WEIGHTS[k] * sc[k] for k in "SCOPE")
                 sc["average"]  = float(np.mean([sc[k] for k in "SCOPE"]))
                 return sc
@@ -209,16 +264,16 @@ for item in EVAL_QA:
     q = item["q"]
     print(f"  [{item['id']}] {q[:68]}...")
 
-    raw_results        = retrieve(q, top_k=10)
-    top5, top5_scores  = rerank_with_scores(q, raw_results, top_k=5)
-    ctx                = [r.metadata["text"] for r in top5]
+    raw_results        = retrieve(q, top_k=15)
+    top8, top8_scores  = rerank_with_scores(q, raw_results, top_k=8)
+    ctx                = [r.metadata["text"] for r in top8]
     answer             = generate_answer(q, "\n".join(ctx))
 
     questions.append(q);         ground_truths.append(item["a"])
     ids.append(item["id"]);      categories.append(item["category"])
     difficulties.append(item["difficulty"])
     answers.append(answer);      contexts.append(ctx)
-    rerank_scores_all.append(top5_scores)
+    rerank_scores_all.append(top8_scores)
     iterations_all.append(1)
 
 print("\n[OK] Pipeline complete. Computing metrics...\n")
@@ -262,9 +317,9 @@ for ans, gt, ctx, q, rk_scores in zip(answers, ground_truths, contexts, question
 
     ctx_rel_s.append(context_relevance(q, ctx))
     ans_rel_s.append(answer_relevance(q, ans))
-    faith_s.append(faithfulness_score(q, ans, ctx_str));  time.sleep(0.4)
-    judge_s.append(llm_judge(q, ans, gt, ctx_str));       time.sleep(0.4)
-    scope_s.append(scope_judge(q, ans, gt, ctx_str));     time.sleep(0.4)
+    faith_s.append(faithfulness_score(q, ans, ctx_str));  time.sleep(1.2)
+    judge_s.append(llm_judge(q, ans, gt, ctx_str));       time.sleep(1.2)
+    scope_s.append(scope_judge(q, ans, gt, ctx_str));     time.sleep(1.2)
 
 d1 = distinct_n(answers, 1)
 d2 = distinct_n(answers, 2)

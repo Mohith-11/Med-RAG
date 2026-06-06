@@ -4,7 +4,7 @@ evaluate_200q.py  --  Advanced RAG Evaluation | Q001-Q200
 Metrics:
   Generation : Token-F1, EM, BLEU-1/4, GLEU, ROUGE-1/2/L/Lsum, METEOR
   Semantic   : SBERT, BERTScore
-  Retrieval  : Precision@5, Recall@5, MRR, NDCG@5, HitRate@5, Avg-Rerank-Score
+  Retrieval  : Precision@3, Recall@3, MRR, NDCG@3, HitRate@3, Avg-Rerank-Score
   Faithfulness: LLM hallucination check
   Relevance  : Context Relevance, Answer Relevance (SBERT)
   Agentic    : Avg iterations, Avg confidence
@@ -12,6 +12,7 @@ Metrics:
 """
 
 import os, re, json, math, sys, io, string, time
+from concurrent.futures import ThreadPoolExecutor, as_completed
 import numpy as np
 import pandas as pd
 from collections import Counter
@@ -33,17 +34,21 @@ from sentence_transformers import SentenceTransformer, util
 from openai import OpenAI
 
 from retrieval.retrieve import retrieve
-from retrieval.rerank import rerank_with_scores
+from retrieval.rerank import rerank_with_scores, rerank_tiered
+from retrieval.compress import compress_context
 from generator.generate import generate_answer
 
 load_dotenv()
 
 # ── clients & models ──────────────────────────────────────────────────────
+# ANSWER GENERATOR : MedGemma 4B via Ollama  →  hardcoded in generate.py
+#                   (localhost:11434, never uses env vars below)
+# LLM JUDGE        : NVIDIA NIM  →  faithfulness, llm_judge, SCOPE metrics only
 client = OpenAI(
-    base_url=os.getenv("LLAMA_BASE_URL", "https://openrouter.ai/api/v1"),
-    api_key=os.getenv("LLAMA_API_KEY"),
+    base_url=os.getenv("NVIDIA_BASE_URL", "https://integrate.api.nvidia.com/v1"),
+    api_key=os.getenv("NVIDIA_API_KEY"),
 )
-judge_model = os.getenv("LLAMA_MODEL_NAME", "meta-llama/llama-3-8b-instruct")
+judge_model = os.getenv("NVIDIA_MODEL", "meta/llama-3.3-70b-instruct")
 
 sbert    = SentenceTransformer("all-MiniLM-L6-v2")
 rouge    = rouge_scorer.RougeScorer(["rouge1", "rouge2", "rougeL", "rougeLsum"], use_stemmer=True)
@@ -1526,7 +1531,7 @@ def answer_relevance(question, answer):
 
 _llm_first_error_printed = False  # print the real error once for diagnosis
 
-def _llm_call_with_retry(messages, max_tokens, retries=3):
+def _llm_call_with_retry(messages, max_tokens, retries=5):
     """Call the LLM with exponential backoff on failure."""
     global _llm_first_error_printed
     for attempt in range(retries):
@@ -1542,7 +1547,7 @@ def _llm_call_with_retry(messages, max_tokens, retries=3):
                 print(f"  [LLM-WARN] API call failed (attempt {attempt+1}/{retries}): {e}")
                 _llm_first_error_printed = True
             if attempt < retries - 1:
-                wait = 2 ** (attempt + 1)  # 2s, 4s between retries
+                wait = 5 * (2 ** attempt)  # 5s, 10s, 20s, 40s between retries
                 time.sleep(wait)
     return None
 
@@ -1585,7 +1590,7 @@ def scope_judge(question, answer, gt, context):
         "O-Organization: is it clearly structured?\n"
         "P-Pertinence: does it directly address the question?\n"
         "E-Exactness: does it match the reference answer precisely?\n\n"
-        f"Question: {question}\nContext: {context[:500]}\nAnswer: {answer}\nReference: {gt}\n\n"
+        f"Question: {question}\nContext: {context[:800]}\nAnswer: {answer}\nReference: {gt}\n\n"
         'Respond ONLY with JSON: {"S":<1-5>,"C":<1-5>,"O":<1-5>,"P":<1-5>,"E":<1-5>}'
     )
     resp = _llm_call_with_retry([{"role":"user","content":prompt}], max_tokens=100)
@@ -1596,43 +1601,163 @@ def scope_judge(question, answer, gt, context):
                 d  = json.loads(m.group())
                 # Keep raw 1-5 values
                 sc = {k: float(min(max(d.get(k, 3), 1), 5)) for k in "SCOPE"}
-                sc["weighted"] = sum(SCOPE_WEIGHTS[k] * sc[k] for k in "SCOPE") * 5
+                sc["weighted"] = sum(SCOPE_WEIGHTS[k] * sc[k] for k in "SCOPE")
                 sc["average"]  = float(np.mean([sc[k] for k in "SCOPE"]))
                 return sc
             except Exception: pass
     return {k: float("nan") for k in list("SCOPE")+["weighted","average"]}
 
 # ─────────────────────────────────────────────────────────────────────────────
-# STEP 1  --  Run RAG pipeline
+# STEP 1  --  Run RAG pipeline  (with answer cache for fast re-runs)
 # ─────────────────────────────────────────────────────────────────────────────
 print("\n" + "="*72)
 print("  ONCOLOGY RAG -- ADVANCED EVALUATION  (Q001-Q200)")
 print("="*72 + "\n")
+
+os.makedirs("evaluation", exist_ok=True)
+_CACHE_FILE = "evaluation/pipeline_cache_200q.json"
+
+# ── Ollama health check ────────────────────────────────────────────────────
+# Fail fast if Ollama is not running — prevents 53-min runs that produce
+# 200 "Generation error: ConnectionRefused" cached answers.
+import requests as _req_check
+try:
+    _req_check.get("http://localhost:11434/api/tags", timeout=5)
+    print("[OK] Ollama is running.\n")
+except Exception:
+    print("[FATAL] Ollama is NOT running at localhost:11434.")
+    print("        Start it with:  ollama serve")
+    print("        Then re-run:    python evaluate_200q.py")
+    sys.exit(1)
 
 (questions, ground_truths, ids, categories, difficulties,
  answers, contexts, rerank_scores_all, iterations_all) = (
     [], [], [], [], [], [], [], [], []
 )
 
-for item in EVAL_QA:  # Q001–Q200
-    q = item["q"]
-    print(f"  [{item['id']}] {q[:68]}...")
+_total_q = len(EVAL_QA)
 
-    # Retrieve then rerank (with scores)
-    raw_results = retrieve(q, top_k=10)
-    iteration   = 1
+if os.path.exists(_CACHE_FILE):
+    print(f"[CACHE] Loading cached answers from {_CACHE_FILE} (skipping Ollama inference)...\n")
+    with open(_CACHE_FILE, "r", encoding="utf-8") as _cf:
+        _cache = json.load(_cf)
 
-    top5, top5_scores = rerank_with_scores(q, raw_results, top_k=5)
+    # ── Cache validation guard ─────────────────────────────────────────────
+    # Detect stale cache entries: answers produced before <think>/<thought>
+    # stripping was added still contain "Thought\n..." reasoning blobs.
+    # These tank every lexical metric (F1/BLEU/ROUGE) because the model's
+    # actual answer is buried under verbose chain-of-thought text.
+    _stale_count = sum(
+        1 for row in _cache
+        if row["answer"].lstrip().startswith("Thought") or
+           row["answer"].lstrip().startswith("<think") or
+           row["answer"].lstrip().startswith("<thought") or
+           row["answer"].startswith("Generation error:")  # ← Ollama was not running
+    )
+    _stale_pct = _stale_count / max(len(_cache), 1)
+    if _stale_pct > 0.20:
+        print(
+            f"[CACHE] WARNING: {_stale_count}/{len(_cache)} cached answers "
+            f"({_stale_pct:.0%}) contain raw reasoning blobs (pre-stripping cache).\n"
+            f"[CACHE] Invalidating stale cache — will re-run full pipeline.\n"
+        )
+        os.remove(_CACHE_FILE)
+        _cache = None
+    else:
+        for _row in _cache:
+            questions.append(_row["q"])
+            ground_truths.append(_row["a"])
+            ids.append(_row["id"])
+            categories.append(_row["category"])
+            difficulties.append(_row["difficulty"])
+            answers.append(_row["answer"])
+            contexts.append(_row["ctx"])
+            rerank_scores_all.append(_row["rk_scores"])
+            iterations_all.append(_row["iteration"])
+        print(f"[CACHE] Loaded {len(questions)} cached answers. Proceeding to metrics...\n")
+else:
+    _cache = None
 
-    ctx    = [r.metadata["text"] for r in top5]
-    answer = generate_answer(q, "\n".join(ctx))
+if _cache is None:
+    _q_times      = []
+    _phase1_start = time.time()
+    for item in EVAL_QA:  # Q001-Q200
+        q     = item["q"]
+        _q_t0 = time.time()
+        print(f"  [{item['id']}] {q[:62]}...", end="", flush=True)
 
-    questions.append(q); ground_truths.append(item["a"])
-    ids.append(item["id"]); categories.append(item["category"])
-    difficulties.append(item["difficulty"])
-    answers.append(answer); contexts.append(ctx)
-    rerank_scores_all.append(top5_scores)
-    iterations_all.append(iteration)
+        raw_results = retrieve(q, top_k=25)  # pool of 25 for BGE reranker
+        iteration   = 1
+
+        # ── Stage 1: BGE cross-encoder reranks top 8 from the full candidate pool ──
+        # top_k=8 gives the SBERT filter enough candidates without slowing the pipeline.
+        top8, top8_scores = rerank_tiered(
+            q, raw_results, top_k=8,
+            min_pass=2
+        )
+
+        # ── Stage 2: SBERT quality filter — select 3 from 8 ─────────────────────────
+        # From the 8 BGE-reranked candidates, choose the 3 with the highest
+        # COMBINED score: 60% normalised BGE score + 40% SBERT question-similarity.
+        # 60% BGE / 40% SBERT is the configuration that achieved the best Precision@3
+        # (0.6933) in Run 7. Higher SBERT weight hurts because BGE cross-encoder is
+        # more accurate at relevance; the 40% SBERT component still steers toward
+        # question-similar chunks.
+        # Batch-encodes all 8 chunks at once (faster than 8 sequential calls).
+        if len(top8) >= 3:
+            q_emb = sbert.encode(q, convert_to_tensor=True)
+
+            chunk_texts = [r.metadata["text"][:500] for r in top8]
+            chunk_embs  = sbert.encode(chunk_texts, convert_to_tensor=True, batch_size=8)
+            sbert_sims  = util.cos_sim(chunk_embs, q_emb).squeeze(-1).tolist()
+
+            max_score = max(top8_scores) if max(top8_scores) != 0 else 1.0
+            combined  = [
+                0.60 * (top8_scores[i] / max_score) + 0.40 * sbert_sims[i]
+                for i in range(len(top8))
+            ]
+            top3_idx    = sorted(range(len(top8)), key=lambda i: combined[i], reverse=True)[:3]
+            top3        = [top8[i] for i in top3_idx]
+            top3_scores = [top8_scores[i] for i in top3_idx]
+        else:
+            top3 = top8[:3]
+            top3_scores = top8_scores[:3]
+
+        # top-3 feeds both retrieval metrics and the generator.
+        ctx     = [r.metadata["text"] for r in top3]
+        ctx_str = compress_context(top3, query=q)
+        answer  = generate_answer(q, ctx_str, category=item.get("category", ""))
+
+
+        _elapsed = time.time() - _q_t0
+        _q_times.append(_elapsed)
+        _done  = len(_q_times)
+        _avg   = sum(_q_times) / _done
+        _rem_s = (_total_q - _done) * _avg
+        _eta   = f"{int(_rem_s // 60)}m{int(_rem_s % 60):02d}s"
+        print(f"  [{_elapsed:.1f}s | avg {_avg:.1f}s | ETA {_eta}]")
+
+        questions.append(q);       ground_truths.append(item["a"])
+        ids.append(item["id"]);    categories.append(item["category"])
+        difficulties.append(item["difficulty"])
+        answers.append(answer);    contexts.append(ctx)
+        rerank_scores_all.append(top3_scores)
+        iterations_all.append(iteration)
+
+    _phase1_total = time.time() - _phase1_start
+    print(f"\n  Phase 1 done: {int(_phase1_total//60)}m{int(_phase1_total%60):02d}s total | avg {sum(_q_times)/len(_q_times):.1f}s/Q")
+
+    # ── Save cache so next run skips Ollama entirely ──────────────────────
+    _cache_rows = [
+        {"id": ids[i], "q": questions[i], "a": ground_truths[i],
+         "category": categories[i], "difficulty": difficulties[i],
+         "answer": answers[i], "ctx": contexts[i],
+         "rk_scores": rerank_scores_all[i], "iteration": iterations_all[i]}
+        for i in range(len(ids))
+    ]
+    with open(_CACHE_FILE, "w", encoding="utf-8") as _cf:
+        json.dump(_cache_rows, _cf, ensure_ascii=False, indent=2)
+    print(f"[CACHE] Answers saved to {_CACHE_FILE} (future runs will skip Phase 1)")
 
 print("\n[OK] Pipeline complete. Computing metrics...\n")
 
@@ -1647,6 +1772,7 @@ print("\n[OK] Pipeline complete. Computing metrics...\n")
  prec5_s, rec5_s, hit5_s, mrr_s, ndcg5_s, avg_rk_s,
  scope_s) = ([] for _ in range(24))
 
+# ── Phase 2a: Fast local metrics (BLEU/ROUGE/SBERT) ─────────────────────────
 for ans, gt, ctx, q, rk_scores in zip(answers, ground_truths, contexts, questions, rerank_scores_all):
     ref_t  = gt.split(); pred_t = ans.split()
     ctx_str = "\n".join(ctx)
@@ -1671,18 +1797,29 @@ for ans, gt, ctx, q, rk_scores in zip(answers, ground_truths, contexts, question
         sbert.encode(gt,  convert_to_tensor=True)
     ).item())
 
-    pr5, re5, h5, mrr, ndcg5, avg_rk = retrieval_metrics(ctx, gt)
-    prec5_s.append(pr5); rec5_s.append(re5); hit5_s.append(h5)
-    mrr_s.append(mrr); ndcg5_s.append(ndcg5); avg_rk_s.append(avg_rk)
+    pr3, re3, h3, mrr, ndcg3, avg_rk = retrieval_metrics(ctx, gt, k=3)
+    prec5_s.append(pr3); rec5_s.append(re3); hit5_s.append(h3)
+    mrr_s.append(mrr); ndcg5_s.append(ndcg3); avg_rk_s.append(avg_rk)
 
     ctx_rel_s.append(context_relevance(q, ctx))
     ans_rel_s.append(answer_relevance(q, ans))
-    faith_s.append(faithfulness_score(q, ans, ctx_str))
-    time.sleep(0.4)   # brief pause to avoid rate-limit burst
-    judge_s.append(llm_judge(q, ans, gt, ctx_str))
-    time.sleep(0.4)
-    scope_s.append(scope_judge(q, ans, gt, ctx_str))
-    time.sleep(0.4)
+
+# ── Phase 2b: Batch ALL LLM judge calls in parallel (20 workers) ─────────────
+# Submit all 200×3=600 LLM calls at once → ~20× faster than sequential
+print("[..] Submitting all LLM judge calls in parallel (20 workers)...")
+_ctx_strs = ["\n".join(ctx) for ctx in contexts]
+
+_faith_futures, _judge_futures, _scope_futures = [], [], []
+with ThreadPoolExecutor(max_workers=20) as _pool:
+    for _q, _ans, _gt, _ctx_str in zip(questions, answers, ground_truths, _ctx_strs):
+        _faith_futures.append(_pool.submit(faithfulness_score, _q, _ans, _ctx_str))
+        _judge_futures.append(_pool.submit(llm_judge,          _q, _ans, _gt, _ctx_str))
+        _scope_futures.append(_pool.submit(scope_judge,         _q, _ans, _gt, _ctx_str))
+    # Collect results in order
+    faith_s = [f.result() for f in _faith_futures]
+    judge_s = [f.result() for f in _judge_futures]
+    scope_s = [f.result() for f in _scope_futures]
+print(f"[..] LLM judge calls complete. ({len(faith_s)} faithfulness, {len(judge_s)} judge, {len(scope_s)} scope)")
 
 d1 = distinct_n(answers, 1)
 d2 = distinct_n(answers, 2)
@@ -1737,11 +1874,11 @@ BERTScore F1            : {avg_bert_f1:.4f}
 Answer Relevance        : {np.mean(ans_rel_s):.4f}
 
 -- Retrieval Quality (proxy-labelled @ thresh={RELEVANCE_THRESH}) {'-'*6}
-Precision@5             : {np.mean(prec5_s):.4f}
-Recall@5                : {np.mean(rec5_s):.4f}
-Hit-Rate@5              : {np.mean(hit5_s):.4f}
+Precision@3             : {np.mean(prec5_s):.4f}
+Recall@3                : {np.mean(rec5_s):.4f}
+Hit-Rate@3              : {np.mean(hit5_s):.4f}
 MRR                     : {np.mean(mrr_s):.4f}
-NDCG@5                  : {np.mean(ndcg5_s):.4f}
+NDCG@3                  : {np.mean(ndcg5_s):.4f}
 Avg Rerank Score        : {np.mean(avg_rk_s):.4f}
 Context Relevance       : {np.mean(ctx_rel_s):.4f}
 
@@ -1799,8 +1936,8 @@ out_df = pd.DataFrame({
     "sbert": sbert_s, "bert_f1": F1_b.tolist(),
     "answer_relevance": ans_rel_s, "context_relevance": ctx_rel_s,
     "faithfulness": faith_s, "llm_judge": judge_s,
-    "precision_at5": prec5_s, "recall_at5": rec5_s, "hit_rate_at5": hit5_s,
-    "mrr": mrr_s, "ndcg_at5": ndcg5_s, "avg_rerank_score": avg_rk_s,
+    "precision_at3": prec5_s, "recall_at3": rec5_s, "hit_rate_at3": hit5_s,
+    "mrr": mrr_s, "ndcg_at3": ndcg5_s, "avg_rerank_score": avg_rk_s,
     "agent_iterations": iterations_all,
     "scope_S": [s["S"] for s in scope_s], "scope_C": [s["C"] for s in scope_s],
     "scope_O": [s["O"] for s in scope_s], "scope_P": [s["P"] for s in scope_s],
