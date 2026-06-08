@@ -1,0 +1,203 @@
+PS C:\Users\mohit\Documents\QA\rag_project> python .\evaluate_50q.py
+Loading weights: 100%|████████████████████████████████████████████████████████████| 391/391 [00:00<00:00, 2129.65it/s]
+Loading weights: 100%|████████████████████████████████████████████████████████████| 201/201 [00:00<00:00, 2360.52it/s]
+Loading weights: 100%|████████████████████████████████████████████████████████████| 103/103 [00:00<00:00, 3355.21it/s]
+Loaded 50 questions from eval_50q_data.json
+
+========================================================================
+  ONCOLOGY RAG -- ADVANCED EVALUATION  (50 Complex Questions)
+========================================================================
+
+  [Q001] What specific genetic fusion and its associated prevalence are patho...
+  [Q002] In acinic cell carcinoma of the head and neck, which chromosomal reg...
+  [Q003] What is the prognostic significance of a 'worst pattern of invasion'...
+  [Q004] Which genetic mutations and fusions respectively define the classic ...
+  [Q005] Which specific translocation and resulting fusion gene define micros...
+  [Q006] In adenoid cystic carcinoma of the head and neck, what is the most c...
+  [Q007] How does the tumor-stroma ratio impact disease-specific survival (DS...
+  [Q008] What are the distinct histological and behavioral characteristics of...
+  [Q009] Describe the histological hallmarks and clinical behavior of basaloi...
+  [Q010] What immunohistochemical marker profile distinguishes a Ventana SP14...
+  [Q011] What objective response rate and Grade 3-4 toxicity rate were observ...
+  [Q012] How does the presence of high mutational burden (TMB) influence the ...
+  [Q013] What role do myeloid-derived suppressor cells (MDSCs) play in immune...
+  [Q014] How is the 'alpha/beta parameter' utilized within the linear-quadrat...
+  [Q015] What genetic fusion is characteristic of Chronic Myelogenous Leukemi...
+  [Q016] How do Amsterdam II criteria differ from Amsterdam I criteria in the...
+  [Q017] What is the clinical significance of a 1p/19q chromosomal deletion i...
+  [Q018] Explain the mechanism behind genetic pro-drug activation therapy uti...
+  [Q019] Why is testing for thiopurine methyltransferase and dihydropyridine ...
+  [Q020] According to the NCIC Common Toxicity Criteria, what clinical manife...
+  [Q021] What clinical findings constitute Grade 4 radiation dermatitis accor...
+  [Q022] How does the presence of the UGT1A1*28 allele affect irinotecan meta...
+  [Q023] What is the precise mechanism by which topoisomerase II (Top2) inhib...
+  [Q024] Which specific gene mutation is heavily implicated in familial atypi...
+  [Q025] What genetic mutation defines Peutz-Jeghers syndrome and what is its...
+  [Q026] Beyond CTCs and ctDNA, what other analytes are encompassed within th...
+  [Q027] What are the primary technical disadvantages and limitations of usin...
+  [Q028] How does pyrosequencing differ analytically from traditional Sanger ...
+  [Q029] What characterizes the 'Intermediate prognosis' category for nonsemi...
+  [Q030] What is the specific role of the Human Development Index (HDI) in gl...
+  [Q031] In the context of the REVEAL study, what clinical and virological pr...
+  [Q032] How do E-cadherin (CDH1) epigenetic alterations and mutations serve ...
+  [Q033] What distinct genomic alterations differentiate the Epstein-Barr vir...
+  [Q034] What specific analytical vulnerabilities exist when utilizing circul...
+  [Q035] In the FAB classification of acute myelogenous leukemia, what immuno...
+  [Q036] How is a Q-TWiST analysis uniquely applied to measure outcomes in on...
+  [Q037] What is the clinical significance of detecting the TMPRSS2:ERG rearr...
+  [Q038] How do epigenetic alterations to the MLH1 gene contribute to colorec...
+  [Q039] Why is the determination of perineural invasion (PNI) in head and ne...
+  [Q040] What is the primary analytical advantage of utilizing the SNaPshot (...
+  [Q041] What specific alterations dictate the administration of targeted the...
+  [Q042] How do frameshift or non-sense mutations in the APC gene relate to t...
+  [Q043] What are the criteria for defining 'Progressive Disease' (PD) accord...
+  [Q044] Why is the concept of pseudo-progression critical when utilizing iRE...
+  [Q045] In pediatric oncology, how is PRETEXT staging utilized in the manage...
+  [Q046] What is the clinical application of measuring urinary electrolyte wa...
+  [Q047] How does the revised WHO classification define malignant tumors of t...
+  [Q048] What defines 'Catastrophic bleeding' (Grade 4 Hemorrhage) associated...
+  [Q049] How does the 'tumor flare' syndrome clinically manifest following th...
+  [Q050] How does the relative abundance of the microbiome taxa shift from ch...
+
+[OK] Pipeline complete. Computing metrics...
+
+  [LLM-WARN] API call failed (attempt 1/3): Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}
+[..] Computing BERTScore...
+
+Loading weights: 100%|████████████████████████████████████████████████████████████| 389/389 [00:00<00:00, 2854.49it/s]
+[transformers] RobertaModel LOAD REPORT from: roberta-large
+Key                       | Status     |
+--------------------------+------------+-
+lm_head.layer_norm.bias   | UNEXPECTED |
+lm_head.bias              | UNEXPECTED |
+lm_head.dense.weight      | UNEXPECTED |
+lm_head.dense.bias        | UNEXPECTED |
+lm_head.layer_norm.weight | UNEXPECTED |
+pooler.dense.weight       | MISSING    |
+pooler.dense.bias         | MISSING    |
+
+Notes:
+- UNEXPECTED:   can be ignored when loading from different task/architecture; not ok if you expect identical arch.     
+- MISSING:      those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+
+========================================================================
+ONCOLOGY RAG -- ADVANCED EVALUATION REPORT  (50 Complex Questions)
+========================================================================
+Timestamp           : 2026-05-16 21:13:48
+Questions evaluated : 50
+
+-- Accuracy & F1 -----------------------------------------------------
+Exact Match (EM)        : 0.0000
+Token Precision         : 0.3168
+Token Recall            : 0.2778
+Token F1                : 0.2847
+
+-- BLEU / GLEU / METEOR ----------------------------------------------
+BLEU-1                  : 0.2247
+BLEU-4                  : 0.0640
+GLEU                    : 0.1035
+METEOR                  : 0.2284
+
+-- ROUGE --------------------------------------------------------------
+ROUGE-1                 : 0.3588
+ROUGE-2                 : 0.1527
+ROUGE-L                 : 0.2766
+ROUGE-Lsum              : 0.2769
+
+-- DISTINCT (Diversity) -----------------------------------------------
+DISTINCT-1              : 0.5701
+DISTINCT-2              : 0.9311
+
+-- Semantic Similarity -------------------------------------------------
+SBERT Cosine Sim        : 0.6951
+BERTScore F1            : 0.8755
+Answer Relevance        : 0.6950
+
+-- Retrieval Quality (proxy-labelled @ thresh=0.45) ------
+Precision@5             : 0.6800
+Recall@5                : 0.9200
+Hit-Rate@5              : 0.9200
+MRR                     : 0.9000
+NDCG@5                  : 0.8936
+Avg Rerank Score        : 0.5316
+Context Relevance       : 0.5889
+
+-- Faithfulness / Hallucination ---------------------------------------
+Faithfulness (LLM)      : 0.8600
+
+-- Agentic Metrics ----------------------------------------------------
+Avg Agent Iterations    : 1.00
+Avg Confidence Score    : 0.7736
+
+-- S.C.O.P.E Framework (1-5 scale) ------------------------------------
+Sufficiency    (S x0.20): 3.86 / 5
+Correctness    (C x0.30): 4.36 / 5
+Organization   (O x0.15): 4.06 / 5
+Pertinence     (P x0.25): 4.80 / 5
+Exactness      (E x0.10): 3.72 / 5
+SCOPE Weighted Avg      : 4.26 / 5
+SCOPE Simple Avg        : 4.16 / 5
+
+-- LLM-as-a-Judge (0-1) -----------------------------------------------
+LLM Judge Score         : 0.5980
+
+========================================================================
+
+-- Per-question breakdown -----------------------------------------------
+ID     Cat          Diff        F1   R-1  SBERT  Faith  Judge   NDCG
+--------------------------------------------------------------------
+Q001   biomarker    complex  0.195 0.333  0.686  1.000  0.800  1.000
+Q002   biomarker    complex  0.462 0.450  0.644  1.000  0.000  1.000
+Q003   prognosis    complex  0.182 0.222  0.583  1.000  0.800  0.877
+Q004   biomarker    complex  0.246 0.241  0.445  1.000  0.200  0.947
+Q005   biomarker    complex  0.571 0.585  0.870  0.000  0.000  1.000
+Q006   biomarker    complex  0.367 0.471  0.578  1.000  0.800  0.631
+Q007   prognosis    complex  0.176 0.341  0.808  1.000  0.800  1.000
+Q008   diagnosis    complex  0.417 0.571  0.871  1.000  0.800  1.000
+Q009   diagnosis    complex  0.231 0.264  0.595  1.000  0.800  0.905
+Q010   biomarker    complex  0.333 0.500  0.751  1.000  0.800  1.000
+Q011   treatment    complex  0.465 0.435  0.769  1.000  0.200  1.000
+Q012   mechanism    complex  0.213 0.302  0.550  0.900  0.800  1.000
+Q013   mechanism    complex  0.159 0.215  0.669  1.000  0.800  1.000
+Q014   mechanism    complex  0.277 0.310  0.605  1.000  0.800  1.000
+Q015   biomarker    complex  0.157 0.339  0.712  0.000  0.200  1.000
+Q016   diagnosis    complex  0.233 0.355  0.810  1.000  0.800  1.000
+Q017   biomarker    complex  0.292 0.453  0.872  1.000  0.900  1.000
+Q018   mechanism    complex  0.240 0.325  0.484  1.000  0.800  1.000
+Q019   biomarker    complex  0.370 0.400  0.826  1.000  0.900  1.000
+Q020   side_effects complex  0.281 0.310  0.789  0.000  0.800  1.000
+Q021   side_effects complex  0.293 0.429  0.923  1.000  0.800  1.000
+Q022   side_effects complex  0.364 0.533  0.791  1.000  0.800  1.000
+Q023   mechanism    complex  0.185 0.281  0.742  1.000  0.400  1.000
+Q024   epidemiology complex  0.235 0.286  0.644  1.000  0.800  0.983
+Q025   epidemiology complex  0.642 0.737  0.965  1.000  0.900  0.983
+Q026   diagnosis    complex  0.453 0.621  0.876  1.000  0.900  1.000
+Q027   biomarker    complex  0.385 0.481  0.597  1.000  0.800  0.956
+Q028   biomarker    complex  0.385 0.491  0.919  1.000  0.800  1.000
+Q029   prognosis    complex  0.192 0.222  0.636  0.000  0.200  0.761
+Q030   epidemiology complex  0.421 0.483  0.644  0.800  0.800  0.000
+Q031   epidemiology complex  0.267 0.375  0.585  0.000  0.200  1.000
+Q032   biomarker    complex  0.229 0.225  0.560  1.000  0.900  0.920
+Q033   mechanism    complex  0.413 0.567  0.840  0.500  0.200  0.853
+Q034   diagnosis    complex  0.178 0.298  0.683  1.000  0.800  0.947
+Q035   diagnosis    complex  0.039 0.111  0.452  1.000  0.200  1.000
+Q036   general      complex  0.123 0.143  0.708  1.000  0.600  0.000
+Q037   biomarker    complex  0.189 0.218  0.765  1.000  0.200  1.000
+Q038   mechanism    complex  0.267 0.261  0.708  1.000  0.800  1.000
+Q039   diagnosis    complex  0.110 0.107  0.263  0.800  0.200  0.000
+Q040   biomarker    complex  0.233 0.279  0.619  1.000  0.800  0.983
+Q041   treatment    complex  0.240 0.243  0.784  0.000  0.200  0.000
+Q042   biomarker    complex  0.286 0.414  0.753  1.000  0.200  0.967
+Q043   diagnosis    complex  0.290 0.349  0.606  1.000  0.200  0.983
+Q044   diagnosis    complex  0.083 0.080  0.254  1.000  0.800  1.000
+Q045   staging      complex  0.237 0.267  0.669  1.000  0.600  1.000
+Q046   side_effects complex  0.203 0.306  0.641  1.000  0.800  1.000
+Q047   diagnosis    complex  0.320 0.440  0.735  1.000  0.800  1.000
+Q048   side_effects complex  0.326 0.391  0.716  1.000  0.400  0.983
+Q049   side_effects complex  0.263 0.286  0.823  1.000  0.800  1.000
+Q050   mechanism    complex  0.522 0.596  0.934  1.000  0.200  1.000
+
+[OK] Report -> evaluation/eval50q_report_20260516_211348.txt
+[OK] Excel  -> evaluation/eval50q_results_20260516_211348.xlsx
+
+[DONE] Evaluation complete!

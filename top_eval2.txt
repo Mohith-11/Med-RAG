@@ -1,0 +1,272 @@
+========================================================================
+ONCOLOGY RAG -- ADVANCED EVALUATION REPORT  (Q001-Q200)
+========================================================================
+Timestamp           : 2026-05-15 18:34:50
+Questions evaluated : 200
+
+-- Accuracy & F1 -----------------------------------------------------
+Exact Match (EM)        : 0.0200
+Token Precision         : 0.4012
+Token Recall            : 0.3720
+Token F1                : 0.3733
+
+-- BLEU / GLEU / METEOR ----------------------------------------------
+BLEU-1                  : 0.3038
+BLEU-4                  : 0.1418
+GLEU                    : 0.1831
+METEOR                  : 0.3270
+
+-- ROUGE --------------------------------------------------------------
+ROUGE-1                 : 0.4542
+ROUGE-2                 : 0.2572
+ROUGE-L                 : 0.3855
+ROUGE-Lsum              : 0.3855
+
+-- DISTINCT (Diversity) -----------------------------------------------
+DISTINCT-1              : 0.4359
+DISTINCT-2              : 0.8547
+
+-- Semantic Similarity -------------------------------------------------
+SBERT Cosine Sim        : 0.6760
+BERTScore F1            : 0.8989
+Answer Relevance        : 0.6751
+
+-- Retrieval Quality (proxy-labelled @ thresh=0.45) ------
+Precision@5             : 0.6410
+Recall@5                : 0.9100
+Hit-Rate@5              : 0.9100
+MRR                     : 0.8564
+NDCG@5                  : 0.8554
+Avg Rerank Score        : 0.5985
+Context Relevance       : 0.6253
+
+-- Faithfulness / Hallucination ---------------------------------------
+Faithfulness (LLM)      : 0.8500
+
+-- Agentic Metrics ----------------------------------------------------
+Avg Agent Iterations    : 1.00
+Avg Confidence Score    : nan
+
+-- S.C.O.P.E Framework (Weighted, 0-1) --------------------------------
+Sufficiency    (S x0.20): 0.9484
+Correctness    (C x0.30): 0.9953
+Organization   (O x0.15): 0.9781
+Pertinence     (P x0.25): 0.9875
+Exactness      (E x0.10): 0.9906
+SCOPE Weighted Avg      : 0.9809
+SCOPE Simple Avg        : 0.9800
+
+-- LLM-as-a-Judge (0-1) -----------------------------------------------
+LLM Judge Score         : 0.7664
+
+========================================================================
+
+-- Per-question breakdown -----------------------------------------------
+ID     Cat          Diff        F1   R-1  SBERT  Faith  Judge   NDCG
+--------------------------------------------------------------------
+Q001   diagnosis    simple   0.538 0.640  0.919  1.000  0.900  1.000
+Q002   treatment    moderate 0.444 0.566  0.729  1.000  0.800  1.000
+Q003   treatment    complex  0.857 0.917  0.982  1.000  0.900  1.000
+Q004   diagnosis    simple   0.113 0.246  0.507  0.800  0.800  0.920
+Q005   epidemiology moderate 0.423 0.510  0.702  0.800  0.900  1.000
+Q006   staging      moderate 0.652 0.756  0.940  1.000  0.800  0.920
+Q007   biomarker    complex  0.833 0.919  0.847  1.000  0.900  0.983
+Q008   diagnosis    simple   0.815 0.846  0.930  0.800  0.200  1.000
+Q009   prognosis    moderate 0.323 0.387  0.671  1.000  0.900  0.877
+Q010   treatment    simple   0.923 1.000  1.000  1.000  0.900  1.000
+Q011   diagnosis    complex  0.667 0.744  0.970  1.000  0.900  1.000
+Q012   diagnosis    moderate 0.581 0.710  0.908  0.800  0.800  0.905
+Q013   epidemiology simple   0.789 0.865  0.977  1.000  0.800  1.000
+Q014   diagnosis    moderate 0.133 0.138  0.560  1.000  0.800  1.000
+Q015   epidemiology complex  0.174 0.267  0.373  0.800  0.800  0.000
+Q016   diagnosis    moderate 0.278 0.286  0.248  0.800  0.200  0.000
+Q017   staging      moderate 0.158 0.158  0.344  1.000  0.800  0.000
+Q018   treatment    simple   0.089 0.091  0.335  0.000  0.200  1.000
+Q019   diagnosis    moderate 0.895 0.973  0.974  1.000  0.900  1.000
+Q020   prognosis    simple   0.842 1.000  1.000  1.000  0.900  0.920
+Q021   epidemiology moderate 0.182 0.303  0.780  1.000  0.900  1.000
+Q022   epidemiology moderate 0.714 0.897  0.972  1.000  0.900  1.000
+Q023   diagnosis    moderate 0.550 0.667  0.588  0.800  0.800  0.850
+Q024   biomarker    simple   0.333 0.480  0.931  1.000  0.900  1.000
+Q025   prognosis    moderate 0.882 0.909  0.836  1.000  0.900  0.956
+Q026   staging      complex  0.424 0.500  0.911  0.800  0.900  1.000
+Q027   prognosis    moderate 0.457 0.529  0.563  0.800  0.800  1.000
+Q028   diagnosis    simple   0.129 0.133  0.173  0.000  0.200  0.000
+Q029   general      moderate 0.900 0.974  0.977  1.000  0.900  0.906
+Q030   investigation moderate 0.195 0.300  0.729    N/A  0.900  1.000
+Q031   biomarker    simple   0.364 0.500  0.931  1.000  0.900  1.000
+Q032   treatment    simple   0.214 0.222  0.866  1.000  0.600  1.000
+Q033   side_effects simple   0.356 0.409  0.591  0.000  0.800  1.000
+Q034   epidemiology complex  0.105 0.158  0.523  0.800  0.900  1.000
+Q035   mechanism    moderate 0.562 0.600  0.866  1.000  0.900  1.000
+Q036   treatment    complex  0.190 0.238  0.721  0.800  0.200  1.000
+Q037   treatment    moderate 0.609 0.682  0.913  1.000  0.800  0.906
+Q038   diagnosis    simple   0.769 0.880  0.998  1.000  0.800  0.906
+Q039   diagnosis    complex  0.571 0.667  0.897  1.000  0.800  0.920
+Q040   staging      moderate 0.476 0.571  0.870  0.800  0.800  0.983
+Q041   epidemiology moderate 0.545 0.667  0.953    N/A  0.900  1.000
+Q042   prognosis    simple   0.378 0.389  0.718  1.000  0.800  1.000
+Q043   prognosis    moderate 0.688 0.710  0.786  1.000  0.900  1.000
+Q044   biomarker    complex  0.606 0.688  0.916  1.000  0.900  1.000
+Q045   prognosis    moderate 0.919 1.000  1.000  1.000  0.800  0.906
+Q046   biomarker    simple   0.229 0.439  0.563  0.800  0.800  0.920
+Q047   diagnosis    simple   0.400 0.414  0.359  0.800  0.800  1.000
+Q048   pathology    moderate 0.174 0.182  0.506  1.000  0.900  0.624
+Q049   prognosis    moderate 0.533 0.621  0.729  0.800  0.900  1.000
+Q050   pathology    complex  0.250 0.387  0.769  1.000  0.900  1.000
+Q051   biomarker    moderate 0.133 0.182  0.732  0.800  0.800  1.000
+Q052   diagnosis    moderate 0.364 0.364  0.572  1.000  0.800  1.000
+Q053   diagnosis    complex  0.000 0.000  0.423  1.000  0.800  1.000
+Q054   diagnosis    simple   0.316 0.444  0.659  0.500  0.200  1.000
+Q055   diagnosis    complex  0.741 0.769  0.714  1.000  0.900  0.000
+Q056   epidemiology moderate 0.667 0.800  0.956  1.000  0.900  0.906
+Q057   epidemiology moderate 0.294 0.294  0.527  0.800  0.900  1.000
+Q058   prognosis    moderate 0.222 0.308  0.379  1.000  0.200  1.000
+Q059   biomarker    complex  0.909 1.000  1.000  0.800  0.900  1.000
+Q060   diagnosis    simple   0.205 0.256  0.460  0.800  0.400  0.000
+Q061   treatment    moderate 0.182 0.381  0.705  0.800  0.800  0.000
+Q062   diagnosis    complex  0.250 0.348  0.551  0.800  0.900  0.920
+Q063   general      simple   0.605 0.714  0.709  1.000  1.000  0.983
+Q064   prognosis    moderate 0.615 0.706  0.898  1.000  0.900  0.905
+Q065   treatment    moderate 0.433 0.557  0.697  1.000  0.900  0.967
+Q066   treatment    simple   0.187 0.258  0.659  0.800  0.800  0.850
+Q067   treatment    complex  0.256 0.256  0.485  0.800  0.400  1.000
+Q068   diagnosis    moderate 0.174 0.273  0.344  1.000  0.900  0.000
+Q069   treatment    complex  0.146 0.146  0.609  1.000  0.800  1.000
+Q070   treatment    moderate 0.718 0.789  0.641  1.000  0.800  1.000
+Q071   treatment    complex  0.067 0.129  0.565  0.800  0.800  0.967
+Q072   epidemiology simple   0.158 0.216  0.633  0.800  0.800  1.000
+Q073   diagnosis    complex  0.125 0.129  0.461  1.000  0.900  0.387
+Q074   treatment    moderate 0.200 0.200  0.520  0.800  0.900  0.631
+Q075   treatment    complex  0.462 0.560  0.798  0.800  0.900  1.000
+Q076   pathology    moderate 0.276 0.357  0.515  0.800  0.800  0.000
+Q077   treatment    complex  0.326 0.419  0.485  1.000  0.800  1.000
+Q078   diagnosis    moderate 0.167 0.171  0.249  0.800  0.400  0.631
+Q079   prognosis    simple   0.108 0.108  0.106  0.000  0.900  0.000
+Q080   treatment    simple   0.560 0.640  0.905  0.800  0.800  0.431
+Q081   prognosis    moderate 0.154 0.158  0.311  0.800  0.400  0.501
+Q082   staging      moderate 0.298 0.304  0.660  0.800  0.800  1.000
+Q083   treatment    complex  0.188 0.364  0.848  1.000  0.900  1.000
+Q084   biomarker    simple   0.276 0.345  0.826  0.800  0.900  1.000
+Q085   treatment    moderate 0.240 0.370  0.664  0.800  0.800  0.983
+Q086   biomarker    complex  0.632 0.833  0.893  1.000  0.900  1.000
+Q087   epidemiology complex  0.293 0.300  0.498  0.800  0.800  0.983
+Q088   biomarker    simple   0.467 0.625  0.932  1.000  0.900  1.000
+Q089   epidemiology moderate 0.258 0.267  0.544  0.800  0.900  0.983
+Q090   diagnosis    moderate 0.043 0.128  0.378  0.800  0.800  0.885
+Q091   mechanism    moderate 0.364 0.465  0.875  0.800  0.800  1.000
+Q092   epidemiology moderate 0.048 0.098  0.630  0.000  0.400  0.983
+Q093   treatment    simple   0.286 0.355  0.652  0.800  0.800  1.000
+Q094   diagnosis    moderate 0.077 0.080  0.549  0.000  0.800  0.000
+Q095   epidemiology complex  0.316 0.316  0.630    N/A  0.800  0.905
+Q096   investigation simple   0.392 0.436  0.708  1.000  0.800  1.000
+Q097   treatment    moderate 0.378 0.444  0.636  1.000  0.800  0.624
+Q098   biomarker    complex  0.171 0.286  0.587  0.800  0.900  0.983
+Q099   diagnosis    simple   0.182 0.279  0.345  1.000  0.400  0.000
+Q100   biomarker    moderate 0.158 0.211  0.452  1.000  0.800  0.733
+Q101   treatment    complex  0.222 0.311  0.414  0.000  0.200  0.000
+Q102   epidemiology simple   0.200 0.176  0.509  0.800  0.800  1.000
+Q103   epidemiology complex  0.091 0.130  0.416  0.800  0.800  1.000
+Q104   biomarker    simple   0.167 0.222  0.622  1.000  0.900  1.000
+Q105   prognosis    moderate 0.171 0.294  0.542  1.000  0.900  0.000
+Q106   prognosis    simple   0.537 0.585  0.552  1.000  0.600  0.983
+Q107   investigation simple   0.167 0.171  0.342  1.000  0.200  0.877
+Q108   diagnosis    complex  0.432 0.486  0.638  1.000  0.800  1.000
+Q109   epidemiology simple   0.400 0.417  0.643  0.800  0.800  1.000
+Q110   pathology    moderate 0.615 0.684  0.770  1.000  0.900  0.624
+Q111   prognosis    complex  0.377 0.423  0.880  1.000  0.900  1.000
+Q112   prognosis    moderate 0.067 0.194  0.822  0.800  0.800  1.000
+Q113   diagnosis    moderate 0.114 0.111  0.171  0.800  0.200  0.000
+Q114   epidemiology simple   0.409 0.455  0.672  1.000  0.800  1.000
+Q115   treatment    complex  0.647 0.727  0.767  1.000  1.000  1.000
+Q116   general      moderate 0.294 0.667  0.821  1.000  0.800  1.000
+Q117   mechanism    simple   0.162 0.222  0.691  0.800  0.800  0.956
+Q118   investigation moderate 0.393 0.436  0.749  0.800  0.800  1.000
+Q119   mechanism    complex  0.250 0.350  0.840  1.000  0.800  1.000
+Q120   treatment    moderate 0.444 0.500  0.808  1.000  0.800  1.000
+Q121   diagnosis    simple   0.300 0.462  0.770  0.800  0.800  1.000
+Q122   pathology    moderate 0.327 0.407  0.701  0.800  0.800  1.000
+Q123   biomarker    moderate 0.646 0.708  0.866  1.000  0.900  1.000
+Q124   treatment    moderate 0.308 0.356  0.660  0.800  0.800  1.000
+Q125   epidemiology simple   0.182 0.359  0.362  0.000  0.200  0.853
+Q126   epidemiology simple   0.615 0.800  0.984  1.000  0.900  1.000
+Q127   mechanism    complex  0.333 0.383  0.862  0.800  0.600  1.000
+Q128   side_effects moderate 0.456 0.552  0.683  0.800  0.800  0.850
+Q129   epidemiology simple   0.318 0.419  0.920  1.000    N/A  1.000
+Q130   mechanism    complex  0.509 0.643  0.900    N/A    N/A  1.000
+Q131   treatment    moderate 0.717 0.769  0.941    N/A    N/A  0.906
+Q132   staging      complex  0.286 0.364  0.537    N/A    N/A  0.631
+Q133   prognosis    moderate 0.263 0.324  0.634    N/A    N/A  1.000
+Q134   treatment    moderate 0.217 0.267  0.548    N/A    N/A  1.000
+Q135   diagnosis    complex  0.615 0.720  0.913    N/A    N/A  0.920
+Q136   epidemiology simple   0.471 0.514  0.585    N/A    N/A  1.000
+Q137   epidemiology moderate 0.645 0.706  0.919    N/A    N/A  1.000
+Q138   epidemiology simple   0.700 0.850  0.876    N/A    N/A  0.853
+Q139   treatment    moderate 0.488 0.619  0.678    N/A    N/A  1.000
+Q140   epidemiology simple   0.552 0.733  0.976    N/A    N/A  1.000
+Q141   investigation moderate 0.667 0.897  0.868    N/A    N/A  1.000
+Q142   treatment    simple   0.419 0.465  0.791    N/A    N/A  1.000
+Q143   treatment    moderate 0.222 0.341  0.552    N/A    N/A  0.680
+Q144   biomarker    complex  0.341 0.489  0.463    N/A    N/A  1.000
+Q145   treatment    moderate 0.453 0.552  0.699    N/A    N/A  0.920
+Q146   mechanism    complex  0.043 0.078  0.412    N/A    N/A  0.761
+Q147   side_effects moderate 0.121 0.242  0.271    N/A    N/A  0.000
+Q148   prognosis    complex  0.514 0.556  0.877    N/A    N/A  1.000
+Q149   biomarker    moderate 0.278 0.368  0.576    N/A    N/A  1.000
+Q150   treatment    simple   0.500 0.714  0.690    N/A    N/A  0.501
+Q151   treatment    moderate 0.263 0.293  0.480    N/A    N/A  1.000
+Q152   general      simple   0.723 0.826  0.898    N/A    N/A  1.000
+Q153   side_effects simple   0.074 0.077  0.287    N/A    N/A  1.000
+Q154   epidemiology moderate 0.483 0.571  0.686    N/A    N/A  1.000
+Q155   investigation moderate 0.462 0.552  0.821    N/A    N/A  1.000
+Q156   treatment    moderate 0.182 0.227  0.564    N/A    N/A  0.877
+Q157   prognosis    complex  0.130 0.170  0.371    N/A    N/A  0.000
+Q158   staging      complex  0.783 0.844  0.934    N/A    N/A  0.631
+Q159   investigation moderate 0.158 0.162  0.234    N/A    N/A  0.956
+Q160   treatment    moderate 0.375 0.438  0.790    N/A    N/A  1.000
+Q161   treatment    complex  0.591 0.720  0.763    N/A    N/A  1.000
+Q162   treatment    moderate 0.267 0.311  0.752    N/A    N/A  1.000
+Q163   general      moderate 0.158 0.154  0.531    N/A    N/A  0.680
+Q164   prognosis    complex  0.233 0.341  0.600    N/A    N/A  1.000
+Q165   treatment    moderate 0.241 0.433  0.780    N/A    N/A  1.000
+Q166   mechanism    complex  0.480 0.528  0.871    N/A    N/A  1.000
+Q167   mechanism    moderate 0.083 0.083  0.423    N/A    N/A  0.712
+Q168   treatment    complex  0.280 0.305  0.676    N/A    N/A  1.000
+Q169   clinical_features moderate 0.182 0.326  0.654    N/A    N/A  0.631
+Q170   etiology     simple   0.071 0.276  0.548    N/A    N/A  1.000
+Q171   prognosis    simple   0.500 0.759  0.971    N/A    N/A  1.000
+Q172   pathology    complex  0.105 0.105  0.497    N/A    N/A  1.000
+Q173   clinical_features simple   0.824 0.909  0.926    N/A    N/A  1.000
+Q174   treatment    moderate 0.167 0.169  0.450    N/A    N/A  0.571
+Q175   diagnosis    moderate 0.519 0.769  0.957    N/A    N/A  0.906
+Q176   treatment    moderate 0.531 0.720  0.890    N/A    N/A  1.000
+Q177   treatment    complex  0.348 0.296  0.706    N/A    N/A  1.000
+Q178   treatment    moderate 0.129 0.258  0.728    N/A    N/A  0.967
+Q179   mechanism    complex  0.267 0.282  0.650    N/A    N/A  0.631
+Q180   treatment    simple   0.324 0.389  0.649    N/A    N/A  1.000
+Q181   treatment    moderate 0.167 0.400  0.709    N/A    N/A  0.850
+Q182   side_effects moderate 0.146 0.150  0.375    N/A    N/A  0.905
+Q183   treatment    complex  0.562 0.625  0.607    N/A    N/A  1.000
+Q184   surgery      moderate 0.154 0.275  0.671    N/A    N/A  0.956
+Q185   general      simple   0.383 0.696  0.917    N/A    N/A  1.000
+Q186   general      moderate 0.500 0.512  0.577    N/A    N/A  0.967
+Q187   treatment    moderate 0.263 0.263  0.309    N/A    N/A  1.000
+Q188   treatment    simple   0.105 0.211  0.551    N/A    N/A  1.000
+Q189   biomarker    moderate 0.323 0.571  0.783    N/A    N/A  1.000
+Q190   etiology     moderate 0.370 0.500  0.540    N/A    N/A  1.000
+Q191   investigation complex  0.140 0.233  0.515    N/A    N/A  1.000
+Q192   mechanism    complex  0.150 0.195  0.576    N/A    N/A  1.000
+Q193   mechanism    complex  0.595 0.722  0.751    N/A    N/A  1.000
+Q194   investigation simple   0.588 0.667  0.756    N/A    N/A  1.000
+Q195   pathology    simple   0.692 0.830  0.615    N/A    N/A  1.000
+Q196   biomarker    moderate 0.093 0.255  0.531    N/A    N/A  1.000
+Q197   biomarker    complex  0.111 0.167  0.387    N/A    N/A  0.000
+Q198   general      simple   0.421 0.450  0.912    N/A    N/A  0.983
+Q199   general      moderate 0.304 0.304  0.561    N/A    N/A  1.000
+Q200   treatment    moderate 0.684 0.718  0.860    N/A    N/A  1.000
+
+[OK] Report -> evaluation/eval_report_20260515_183450.txt
+[OK] Excel  -> evaluation/eval_results_20260515_183450.xlsx
+
+[DONE] Evaluation complete!
+PS C:\Users\mohit\Documents\QA\rag_project> 
