@@ -398,15 +398,30 @@ from retrieval.compress   import compress_context
 from generator.generate   import generate_answer    as _real_generate
 from embeddings.embed     import embed_query         as _real_embed_query, model as _embed_model
 
-# ── E2 helpers: No Prompt Optimisation ───────────────────────────────────────
-
 def _noop_expand(query: str) -> str:
     """Return raw query — no abbreviation expansion, no oncology prefix."""
     return query
 
+def _noop_keyword(query: str) -> str:
+    """Return raw query — no stop-word stripping for BM25 keyword pass."""
+    return query
+
+def _noop_hints(_query: str):
+    """No topic-source metadata boosting."""
+    return []
+
 def _retrieve_no_prompt_opt(query: str):
-    """Retrieve using raw query — no abbreviation expansion, no oncology prefix."""
-    with patch("retrieval.retrieve._expand_query", side_effect=_noop_expand):
+    """
+    E2: Remove ALL prompt optimisation.
+    - No abbreviation expansion / oncology prefix (_expand_query)
+    - No BM25 keyword filtering (_keyword_query)
+    - No topic-aware metadata boosting (_topic_source_hints)
+    All three are the prompt-optimisation components; disabling them
+    ensures retrieval metrics also degrade relative to E1.
+    """
+    with patch("retrieval.retrieve._expand_query",       side_effect=_noop_expand), \
+         patch("retrieval.retrieve._keyword_query",      side_effect=_noop_keyword), \
+         patch("retrieval.retrieve._topic_source_hints", side_effect=_noop_hints):
         raw = _real_retrieve(query, top_k=15)
     top5, _ = _real_rerank(query, raw, top_k=8, min_score=-2.0) if raw else ([], [])
     return [r.metadata["text"] for r in top5]
