@@ -476,15 +476,34 @@ def main():
     )
     args = parser.parse_args()
 
-    all_summaries = []
+    # ── Always start with E1 baseline ────────────────────────────────────────
     e1 = _load_e1_summary()
+    all_summaries = [e1] if e1 else []
 
+    # ── Load any already-run conditions so the table shows all columns ────────
+    _COND_ORDER = {
+        "E1_Full_Pipeline":        0,
+        "E2_No_Prompt_Optimisation": 1,
+        "E3_No_Prompt_Opt_No_MRL":   2,
+        "E4_Direct_LLM":             3,
+    }
+    if args.condition in ("E3", "E4"):
+        s2 = _load_condition_summary("E2_No_Prompt_Optimisation")
+        if s2:
+            all_summaries.append(s2)
+    if args.condition == "E4":
+        s3 = _load_condition_summary("E3_No_Prompt_Opt_No_MRL")
+        if s3:
+            all_summaries.append(s3)
+
+    # ── Run the requested condition(s) ───────────────────────────────────────
     if args.condition in ("E2", "all"):
         s2, _ = run_pipeline(
             condition_name = "E2_No_Prompt_Optimisation",
             retrieve_fn    = _retrieve_no_prompt_opt,
             generate_fn    = _real_generate,
         )
+        all_summaries = [s for s in all_summaries if s.get("condition") != "E2_No_Prompt_Optimisation"]
         all_summaries.append(s2)
 
     if args.condition in ("E3", "all"):
@@ -493,6 +512,7 @@ def main():
             retrieve_fn    = _retrieve_no_mrl,
             generate_fn    = _real_generate,
         )
+        all_summaries = [s for s in all_summaries if s.get("condition") != "E3_No_Prompt_Opt_No_MRL"]
         all_summaries.append(s3)
 
     if args.condition in ("E4", "all"):
@@ -501,19 +521,42 @@ def main():
             retrieve_fn    = _retrieve_none,
             generate_fn    = _real_generate,
         )
+        all_summaries = [s for s in all_summaries if s.get("condition") != "E4_Direct_LLM"]
         all_summaries.append(s4)
 
-    # Always print comparison vs E1 baseline if we have results
-    if e1:
-        all_summaries.insert(0, e1)
+    # ── Sort E1 → E2 → E3 → E4 and print full comparison ────────────────────
+    all_summaries.sort(key=lambda s: _COND_ORDER.get(s.get("condition", ""), 99))
     if len(all_summaries) > 1:
         _print_comparison(all_summaries)
         _save_comparison(all_summaries)
     elif all_summaries:
-        # Single condition — just show vs E1
         _print_comparison(all_summaries)
         _save_comparison(all_summaries)
 
+
+def _load_condition_summary(condition_name: str):
+    """Load the most recent saved per-condition ablation Excel and compute mean summary."""
+    import glob
+    tag   = condition_name.replace(" ", "_").replace("+", "_")
+    files = sorted(glob.glob(f"evaluation/ablation_{tag}_*.xlsx"), reverse=True)
+    if not files:
+        return None
+    df  = pd.read_excel(files[0])
+    s   = {"condition": condition_name}
+    col_map = {
+        "token_f1":"token_f1", "rouge1":"rouge1", "rougeL":"rougeL",
+        "bleu1":"bleu1",       "bleu4":"bleu4",   "meteor":"meteor",
+        "sbert":"sbert",       "bert_f1":"bert_f1", "em":"em",
+        "precision_at5":"precision_at5", "hit_rate_at5":"hit_rate_at5",
+        "mrr":"mrr",           "ndcg_at5":"ndcg_at5",
+        "ctx_relevance":"ctx_relevance", "ans_relevance":"ans_relevance",
+        "faithfulness":"faithfulness",   "llm_judge":"llm_judge",
+        "scope_weighted":"scope_weighted",
+    }
+    for col, key in col_map.items():
+        if col in df.columns:
+            s[key] = float(np.nanmean(df[col].astype(float)))
+    return s
 
 def _load_e1_summary():
     """Read the most recent eval50q_results_*.xlsx to get E1 baseline metrics."""
