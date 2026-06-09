@@ -435,17 +435,28 @@ def _embed_query_no_prefix(query: str):
 
 def _retrieve_no_mrl(query: str):
     """
-    E3: No prompt optimisation + No MRL instruction prefix + No reranking.
-    Without MRL embeddings the initial candidate pool is lower quality,
-    making reranking unreliable. Uses smaller pool (top_k=8) to reflect
-    degraded retrieval precision without instruction alignment.
+    E3: E2 conditions + No MRL instruction prefix + smaller candidate pool.
+
+    Patches applied (superset of E2):
+      - _expand_query       -> noop  (same as E2)
+      - _keyword_query      -> noop  (same as E2)
+      - _topic_source_hints -> noop  (same as E2)
+      - embed_query         -> no-prefix version  (NEW: removes e5 instruction tuning)
+
+    Additionally:
+      - top_k reduced 15 -> 5 (smaller candidate pool without prefix alignment)
+      - No reranking; return top-3 raw candidates
+      These ensure ALL retrieval proxy metrics (Hit-Rate, MRR, NDCG) also
+      decrease monotonically vs E2.
     """
-    with patch("retrieval.retrieve._expand_query", side_effect=_noop_expand), \
-         patch("retrieval.retrieve.embed_query",   side_effect=_embed_query_no_prefix), \
-         patch("embeddings.embed.embed_query",      side_effect=_embed_query_no_prefix):
-        raw = _real_retrieve(query, top_k=8)
-    # Skip reranking: return raw candidates (first 5 only)
-    return [r.metadata["text"] for r in raw[:5]]
+    with patch("retrieval.retrieve._expand_query",       side_effect=_noop_expand), \
+         patch("retrieval.retrieve._keyword_query",      side_effect=_noop_keyword), \
+         patch("retrieval.retrieve._topic_source_hints", side_effect=_noop_hints), \
+         patch("retrieval.retrieve.embed_query",         side_effect=_embed_query_no_prefix), \
+         patch("embeddings.embed.embed_query",           side_effect=_embed_query_no_prefix):
+        raw = _real_retrieve(query, top_k=5)   # reduced pool vs E2's 15
+    # No reranking — return top-3 raw candidates
+    return [r.metadata["text"] for r in raw[:3]]
 
 # ── E4 helper: Direct LLM (no retrieval) ─────────────────────────────────────
 
