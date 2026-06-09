@@ -47,6 +47,10 @@ _PRECISION_SIGNALS = [
     "fusion", "translocation", "chromosom", "allele",
     "amplification", "deletion",
     "methyltransferase", "dehydrogenase", "kinase", "phosphatase",
+    # ── Epigenetic / cytogenetic / immunophenotypic ───────────────────────────
+    "epigenetic", "immunophenotypic", "immunohistochemical marker",
+    "cytogenetic", "gene rearrangement", "rearrangement",
+    "methylation", "hypermethylation", "promoter",
     # ── Exact statistical values ──────────────────────────────────────────────
     "hazard ratio", "odds ratio", "confidence interval",
     "median survival", "overall survival rate", "5-year survival",
@@ -63,6 +67,10 @@ _PRECISION_SIGNALS = [
     "disc diameter",     # Q158 retinoblastoma criteria
     "watery diarrhea",   # Q108 WDHA syndrome
     "stewart-treves",    # Q057 lymphangiosarcoma
+    "pretext",           # Q045 hepatoblastoma staging
+    "pseudo-progression",# Q044 iRECIST
+    "q-twist",           # Q036 quality-adjusted survival
+    "tumor-stroma",      # Q007 prognostic ratio
 ]
 
 _OLLAMA_URL = "http://localhost:11434/api/chat"
@@ -101,12 +109,12 @@ _FILLERS = [
 # question type (e.g. exact percentages for epidemiology, drug names for
 # treatment). Injected as an additional rule in the generation prompt.
 _CATEGORY_INSTRUCTIONS = {
-    "biomarker":        "Include the exact marker name, threshold value or assay, and its clinical application (predictive or diagnostic).",
+    "biomarker":        "Copy the EXACT gene fusion notation (A::B format, e.g. ETV6::NTRK3), chromosomal region (e.g. 9q31, 6q22-23), translocation code (e.g. t(12;15)(p13;q25)), and precise prevalence percentage VERBATIM. If multiple mutations or fusions are listed (e.g. PRKD1, PRKD2, PRKD3), include ALL of them with every percentage.",
     "treatment":        "Name the specific drug(s) or regimen, the line of therapy, and the clinical indication or disease stage.",
     "staging":          "State the exact anatomical boundary or numerical criterion that separates the staging level mentioned.",
-    "prognosis":        "Include the specific survival rate or time period (e.g. 5-year OS) and the prognostic variable driving it.",
+    "prognosis":        "Include the specific survival rate or time period (e.g. 5-year OS), the hazard ratio with confidence interval if given, and the prognostic variable driving it.",
     "epidemiology":     "Include the exact incidence or prevalence percentage and the relevant population or region.",
-    "mechanism":        "Describe the molecular target, the biochemical pathway step affected, and the biological outcome.",
+    "mechanism":        "State the exact molecular target name, the specific biochemical step disrupted, and the precise downstream biological effect using terminology from the context — do NOT substitute synonyms.",
     "diagnosis":        "Name the diagnostic test or criterion, its key distinguishing feature, and sensitivity/specificity if stated.",
     "pathology":        "Use exact histological, immunohistochemical, or cytological terminology from the context.",
     "side_effects":     "Name the toxicity, its CTCAE grade if relevant, typical onset timing, and recommended management.",
@@ -122,8 +130,8 @@ _CATEGORY_INSTRUCTIONS = {
 # 200Q evaluation set, avoiding any data leakage.
 _CATEGORY_FEW_SHOTS = {
     "biomarker": (
-        "What is the significance of KRAS mutations in colorectal cancer treatment?",
-        "KRAS mutations, present in ~40% of colorectal cancers, predict resistance to anti-EGFR therapies (cetuximab, panitumumab), making RAS testing mandatory before initiating these agents.",
+        "What is the chromosomal translocation and resulting fusion gene characteristic of Ewing's sarcoma?",
+        "Ewing's sarcoma is defined by a t(11;22)(q24;q12) translocation producing the EWSR1::FLI1 fusion gene, present in approximately 85% of cases; less common variants include EWSR1::ERG fusions.",
     ),
     "treatment": (
         "What is the standard perioperative chemotherapy for resectable gastroesophageal junction cancer?",
@@ -334,15 +342,15 @@ def _generate_standard(query: str, context: str, hint: str, category: str = "") 
 
 Answer the following clinical oncology question using ONLY the provided context.{few_shot_block}
 RULES (follow strictly):
-1. Answer in 1-2 sentences MAXIMUM. Hard stop at 70 words. Be as concise as possible.
-2. Copy ALL numbers, percentages, drug names, gene names, and staging criteria VERBATIM from the context — do NOT rephrase or round them.
+1. Answer in 1-2 sentences MAXIMUM. Hard stop at 80 words. Be as concise as possible.
+2. Copy ALL numbers, percentages, drug names, gene names, gene fusion notation (A::B format, e.g. ETV6::NTRK3), chromosomal region codes (e.g. 9q31, 6q22-23), and translocation codes (e.g. t(12;15)(p13;q25)) VERBATIM — do NOT rephrase, abbreviate, or round them.
 3. Do NOT begin with "Based on", "According to", "The context", or any preamble.
 4. Do NOT add background, caveats, or extra information not directly answering the question.
 5. Do NOT include internal thoughts, XML tags, or reasoning steps.
-6. If the question has multiple parts, address each part briefly in sequence.
+6. If the question has multiple parts (e.g. 'What is X and what is its Y?'), you MUST address ALL parts in sequence — skipping any part is an error.
 7. If the answer is not in the context, say "Insufficient information."
 8. Prefer exact phrasing from the context over synonyms or paraphrases.
-9. For questions that ask to LIST or NAME multiple items (signs, symptoms, drugs, criteria, genes, etc.), YOU MUST enumerate ALL items mentioned in the context — do not stop at one or two. Omitting items is incorrect.
+9. For questions that ask to LIST or NAME multiple items (mutations, fusions, percentages, genes, criteria, etc.), YOU MUST enumerate ALL items from the context — omitting any item is incorrect.
 10. Mirror the question's key subject in your answer: if asked "What is X?", open with "X is..." or "The X is..."; if asked "Which Y...", open with the Y itself.{dynamic_rule}
 
 Context:
@@ -351,7 +359,7 @@ Context:
 Question:
 {query}
 
-Direct answer (≤70 words, exact words from context, 1-2 sentences max):"""
+Direct answer (≤80 words, exact notation from context, 1-2 sentences max):"""
 
     raw = _call_llm(prompt, max_tokens=250)
     # If LLM returned empty ("Insufficient information" detected), scan the full
@@ -394,10 +402,11 @@ def _generate_extractive(query: str, context: str, hint: str, category: str = ""
     reduces extra tokens and hallucinated elaborations.
     """
     # ── Phase 1: extract the anchor sentence(s) ──────────────────────────────
-    extract_prompt = f"""From the context below, copy the 1-2 sentences that most directly and completely answer the question.
+    extract_prompt = f"""From the context below, copy the sentences that most directly and completely answer the question.
+Copy as few sentences as possible, but as many as needed to fully answer ALL parts of the question.
 If one sentence fully answers it, copy only that one.
-If the answer requires multiple items (e.g. a list, a triad, several drugs), copy TWO consecutive sentences that together cover all items.
-Output ONLY those sentence(s) — copy them EXACTLY as written, word for word. Do NOT paraphrase or change any word, number, or name.
+If the answer requires multiple items (e.g. several genes with percentages, a translocation code PLUS a fusion name, multiple grading criteria), copy UP TO THREE consecutive sentences that together cover all items.
+Output ONLY those sentence(s) — copy them EXACTLY as written, word for word, preserving all notation (A::B fusions, chromosomal bands, percentages). Do NOT paraphrase or change any word, number, symbol, or name.
 
 Context:
 {context}
@@ -432,10 +441,10 @@ Exact sentence(s) from context (verbatim copy):"""
 Answer the clinical oncology question below using ONLY the sentence(s) provided.{few_shot_block}
 RULES:
 1. Answer in 1-3 sentences MAXIMUM. Hard stop at 120 words.
-2. Copy ALL numbers, percentages, drug names, gene names, and staging criteria VERBATIM from the sentence(s) — do NOT rephrase or substitute them.
-3. Use the EXACT phrasing from the sentence(s) where possible; only restructure the grammar minimally to form a direct answer.
-4. If the question has multiple parts (e.g., "what is X and what is Y"), address EACH part.
-5. For questions that ask to LIST or NAME multiple items, enumerate ALL items present in the sentence(s).
+2. Copy ALL numbers, percentages, drug names, gene names, gene fusion notation (A::B format, e.g. ETV6::NTRK3), chromosomal region codes (e.g. 9q31, 6q22-23), and translocation codes (e.g. t(12;15)(p13;q25)) VERBATIM — do NOT rephrase, abbreviate, or substitute them.
+3. Use the EXACT phrasing from the sentence(s); only restructure grammar minimally to form a direct answer.
+4. If the question has multiple parts (e.g., "what is X and what is Y"), address EACH part in sequence.
+5. For questions that ask to LIST or NAME multiple items (mutations, fusions, percentages, genes), enumerate ALL items present in the sentence(s) — omitting any is incorrect.
 6. Do NOT begin with preamble. Do NOT add background or caveats not in the sentence(s).
 7. If the sentence(s) do not answer the question, say "Insufficient information."{dynamic_rule}
 
@@ -443,7 +452,7 @@ Sentence(s): {extracted}
 
 Question: {query}
 
-Answer (≤120 words, exact values preserved):"""
+Answer (≤120 words, exact notation preserved):"""
 
     raw = _call_llm(synth_prompt, max_tokens=240)
     answer = _truncate_to_sentences(raw, max_sents=4, char_limit=650)

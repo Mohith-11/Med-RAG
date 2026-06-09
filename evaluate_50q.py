@@ -41,10 +41,10 @@ load_dotenv()
 
 # ── clients & models ──────────────────────────────────────────────────────────
 client = OpenAI(
-    base_url=os.getenv("LLAMA_BASE_URL", "https://integrate.api.nvidia.com/v1"),
-    api_key=os.getenv("LLAMA_API_KEY"),
+    base_url=os.getenv("NVIDIA_BASE_URL", "https://integrate.api.nvidia.com/v1"),
+    api_key =os.getenv("NVIDIA_API_KEY"),
 )
-judge_model = os.getenv("LLAMA_MODEL_NAME", "meta/llama-3.1-8b-instruct")
+judge_model = os.getenv("NVIDIA_MODEL", "meta/llama-3.3-70b-instruct")
 
 sbert    = SentenceTransformer("all-MiniLM-L6-v2")
 rouge    = rouge_scorer.RougeScorer(["rouge1", "rouge2", "rougeL", "rougeLsum"], use_stemmer=True)
@@ -315,7 +315,7 @@ for ans, gt, ctx, q, rk_scores in zip(answers, ground_truths, contexts, question
     prec5_s.append(pr5); rec5_s.append(re5); hit5_s.append(h5)
     mrr_s.append(mrr); ndcg5_s.append(ndcg5); avg_rk_s.append(avg_rk)
 
-    ctx_rel_s.append(context_relevance(q, ctx))
+    ctx_rel_s.append(context_relevance(q, ctx[:5]))  # @5 consistent with other retrieval metrics
     ans_rel_s.append(answer_relevance(q, ans))
     faith_s.append(faithfulness_score(q, ans, ctx_str));  time.sleep(1.2)
     judge_s.append(llm_judge(q, ans, gt, ctx_str));       time.sleep(1.2)
