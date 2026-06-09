@@ -121,10 +121,7 @@ def answer_relevance(question, answer):
     a_emb = sbert.encode(answer,   convert_to_tensor=True)
     return util.cos_sim(a_emb, q_emb).item()
 
-_llm_first_error_printed = False
-
-def _llm_call_with_retry(messages, max_tokens, retries=3):
-    global _llm_first_error_printed
+def _llm_call_with_retry(messages, max_tokens, retries=5):
     for attempt in range(retries):
         try:
             resp = client.chat.completions.create(
@@ -134,11 +131,9 @@ def _llm_call_with_retry(messages, max_tokens, retries=3):
             )
             return resp
         except Exception as e:
-            if not _llm_first_error_printed:
-                print(f"  [LLM-WARN] API call failed (attempt {attempt+1}/{retries}): {e}")
-                _llm_first_error_printed = True
+            print(f"  [LLM-WARN] API call failed (attempt {attempt+1}/{retries}): {type(e).__name__}")
             if attempt < retries - 1:
-                time.sleep(2 ** (attempt + 1))
+                time.sleep(3 * (attempt + 1))  # progressive back-off: 3s, 6s, 9s, 12s
     return None
 
 def faithfulness_score(question, answer, context):
@@ -317,9 +312,9 @@ for ans, gt, ctx, q, rk_scores in zip(answers, ground_truths, contexts, question
 
     ctx_rel_s.append(context_relevance(q, ctx[:5]))  # @5 consistent with other retrieval metrics
     ans_rel_s.append(answer_relevance(q, ans))
-    faith_s.append(faithfulness_score(q, ans, ctx_str));  time.sleep(1.2)
-    judge_s.append(llm_judge(q, ans, gt, ctx_str));       time.sleep(1.2)
-    scope_s.append(scope_judge(q, ans, gt, ctx_str));     time.sleep(1.2)
+    faith_s.append(faithfulness_score(q, ans, ctx_str));  time.sleep(2.5)
+    judge_s.append(llm_judge(q, ans, gt, ctx_str));       time.sleep(2.5)
+    scope_s.append(scope_judge(q, ans, gt, ctx_str));     time.sleep(2.5)
 
 d1 = distinct_n(answers, 1)
 d2 = distinct_n(answers, 2)

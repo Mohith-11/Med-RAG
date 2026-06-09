@@ -130,8 +130,8 @@ _CATEGORY_INSTRUCTIONS = {
 # 200Q evaluation set, avoiding any data leakage.
 _CATEGORY_FEW_SHOTS = {
     "biomarker": (
-        "What is the chromosomal translocation and resulting fusion gene characteristic of Ewing's sarcoma?",
-        "Ewing's sarcoma is defined by a t(11;22)(q24;q12) translocation producing the EWSR1::FLI1 fusion gene, present in approximately 85% of cases; less common variants include EWSR1::ERG fusions.",
+        "What is the significance of KRAS mutations in colorectal cancer treatment?",
+        "KRAS mutations, present in ~40% of colorectal cancers, predict resistance to anti-EGFR therapies (cetuximab, panitumumab), making RAS testing mandatory before initiating these agents.",
     ),
     "treatment": (
         "What is the standard perioperative chemotherapy for resectable gastroesophageal junction cancer?",
@@ -402,11 +402,10 @@ def _generate_extractive(query: str, context: str, hint: str, category: str = ""
     reduces extra tokens and hallucinated elaborations.
     """
     # ── Phase 1: extract the anchor sentence(s) ──────────────────────────────
-    extract_prompt = f"""From the context below, copy the sentences that most directly and completely answer the question.
-Copy as few sentences as possible, but as many as needed to fully answer ALL parts of the question.
+    extract_prompt = f"""From the context below, copy the 1-2 sentences that most directly and completely answer the question.
 If one sentence fully answers it, copy only that one.
-If the answer requires multiple items (e.g. several genes with percentages, a translocation code PLUS a fusion name, multiple grading criteria), copy UP TO THREE consecutive sentences that together cover all items.
-Output ONLY those sentence(s) — copy them EXACTLY as written, word for word, preserving all notation (A::B fusions, chromosomal bands, percentages). Do NOT paraphrase or change any word, number, symbol, or name.
+If the answer requires multiple items (e.g. a gene PLUS a chromosomal region PLUS a percentage, or a list of criteria), copy TWO consecutive sentences that together cover all items.
+Output ONLY those sentence(s) — copy them EXACTLY as written, word for word, preserving all notation (A::B fusions, chromosomal bands like 9q31, percentages, translocation codes like t(12;15)(p13;q25)). Do NOT paraphrase or change any word, number, symbol, or name.
 
 Context:
 {context}
