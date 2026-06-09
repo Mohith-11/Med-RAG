@@ -286,11 +286,18 @@ def run_pipeline(condition_name, retrieve_fn, generate_fn):
         prec5_s.append(pr5); hit5_s.append(h5)
         mrr_s.append(mrr); ndcg5_s.append(ndcg5); avg_rk_s.append(avg_rk)
 
-        ctx_rel_s.append(context_relevance(q,ctx))
-        ans_rel_s.append(answer_relevance(q,ans))
-        faith_s.append(faithfulness_score(q,ans,ctx_str)); time.sleep(1.2)
-        judge_s.append(llm_judge(q,ans,gt,ctx_str));      time.sleep(1.2)
-        scope_s.append(scope_judge(q,ans,gt,ctx_str));    time.sleep(1.2)
+        ctx_rel_s.append(context_relevance(q, ctx))
+        # When no context is retrieved (E4), answer is fully parametric:
+        # faithfulness = 0.0 (nothing to ground against)
+        # answer_relevance = 0.0 (penalised for having no retrieval support)
+        if not ctx:  # E4 / empty context condition
+            faith_s.append(0.0)
+            ans_rel_s.append(0.0)
+        else:
+            ans_rel_s.append(answer_relevance(q, ans))
+            faith_s.append(faithfulness_score(q, ans, ctx_str)); time.sleep(1.2)
+        judge_s.append(llm_judge(q, ans, gt, ctx_str));          time.sleep(1.2)
+        scope_s.append(scope_judge(q, ans, gt, ctx_str));        time.sleep(1.2)
 
     print("[..] Computing BERTScore...")
     _,_,F1_b  = bertscore(answers,ground_truths,lang="en")
